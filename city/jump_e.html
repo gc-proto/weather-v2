@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]--><head>
+		<meta charset="utf-8" />
+		<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta name="dcterms.creator" content="Environment Canada" />
+		<meta name="dcterms.language" title="ISO639-2" content="eng" />
+	<title>Change city result - Environment Canada</title>
+	<meta name="dcterms.description" content="Change city result - Environment Canada" />
+	<meta name="dcterms.subject" title="scheme" content="Meteorology; Weather" />
+   <meta name="dcterms.issued" title="W3CDTF" content="2013-04-16" />
+   <meta name="dcterms.modified" title="W3CDTF" content="2017-05-25" />
+			<!-- Meta data-->
+		<!--[if gte IE 9 | !IE ]><!-->
+<link href="/weather/template/gcweb/v4.0.22/assets/favicon.ico" rel="icon" type="image/x-icon" />
+<link rel="stylesheet" href="/weather/template/gcweb/v4.0.22/css/theme.min.css" />
+<!--<![endif]-->
+
+<!--[if lt IE 9]>
+<link href="/weather/template/gcweb/v4.0.22/assets/favicon.ico" rel="shortcut icon" />
+
+<link rel="stylesheet" href="/weather/template/gcweb/v4.0.22/css/ie8-wet-boew.min.css" />
+<link rel="stylesheet" href="/weather/template/wxo/css/wxo-ie8.css"/weather/>
+<script src="/weather//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/weather/template/gcweb/v4.0.22/js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+
+<![endif]-->
+
+<noscript><link rel="stylesheet" href="/weather/template/gcweb/v4.0.22/css/noscript.min.css" /></noscript>
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<script>dataLayer1 = [];</script>
+<!-- End Google Tag Manager -->
+<link rel="stylesheet" href="/weather/cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" href="/weather/template/wxo/css/wxo.css" />
+</head>
+<body vocab="http://schema.org/" typeof="WebPage">
+	<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<noscript><iframe title="Google Tag Manager" src="/weather//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
+<!-- End Google Tag Manager -->
+
+<ul id="wb-tphp">
+	<li class="wb-slc">
+		<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+	</li>
+	<li class="wb-slc visible-sm visible-md visible-lg">
+		<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+	</li>
+</ul>
+<header role="banner">
+	<div id="wb-bnr" class="container">
+
+		<section id="wb-lng" class="visible-md visible-lg text-right">
+			<h2 class="wb-inv">Language selection</h2>
+			<div class="row">
+	<div class="col-md-12">
+		<ul class="list-inline margin-bottom-none">
+			<li><a lang="fr" href="/weather/include/lang.php">Français</a></li>
+		</ul>
+	</div>
+</div>
+
+		</section>
+
+<div class="row">
+			
+	<div class="brand col-xs-8 col-sm-9 col-md-6">
+		<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="/weather/template/gcweb/v4.0.22/assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+	</div>
+
+	<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn" >
+				<h2>Search and menus</h2>
+				<ul class="list-inline text-right chvrn">
+	<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl"></div>
+
+			</section>
+
+
+			<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+				<h2>Search</h2>
+				<form action="http://recherche-search.gc.ca/rGs/s_r?#wb-land" method="get" name="cse-search-box" role="search" class="form-inline">
+	<div class="form-group">
+		<label for="wb-srch-q" class="wb-inv">Search website</label>
+		<input name="cdn" value="canada" type="hidden"/weather/>
+		<input name="st" value="s" type="hidden"/weather/>
+		<input name="num" value="10" type="hidden"/weather/>
+		<input name="langs" value="eng" type="hidden"/weather/>
+		<input name="st1rt" value="0" type="hidden">
+		<input name="s5bm3ts21rch" value="x" type="hidden"/weather/>
+		<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca" />
+		<datalist id="wb-srch-q-ac">
+			<!--[if lte IE 9]><select><![endif]-->
+			<!--[if lte IE 9]></select><![endif]-->
+		</datalist>
+	</div>
+	<div class="form-group submit">
+		<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+	</div>
+</form>
+			</section>
+		</div>
+	</div>
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-replace="/weather/data/pco-fetch/sitemenu-en.html" typeof="SiteNavigationElement">
+<div class="container nvbar">
+	<h2>Topics menu</h2>
+    <div class="row">
+        <ul class="list-inline menu">
+            <li><a href="http://www.esdc.gc.ca/en/jobs/index.page">Jobs</a></li>
+            <li><a href="http://www.cic.gc.ca/english/index.asp">Immigration</a></li>
+            <li><a href="http://travel.gc.ca">Travel</a></li>
+            <li><a href="http://www.canada.ca/en/services/business/index.html">Business</a></li>
+            <li><a href="http://www.canada.ca/en/services/benefits/index.html">Benefits</a></li>
+            <li><a href="http://healthycanadians.gc.ca/index-eng.php">Health</a></li>
+            <li><a href="http://www.canada.ca/en/services/taxes/index.html">Taxes</a></li>
+            <li><a href="http://www.canada.ca/en/services/index.html">More services</a></li>
+        </ul>
+    </div>
+</div>
+	</nav>
+
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+		<h2>You are here:</h2>
+		<div class="container">
+	<div class="row">
+		<ol class="breadcrumb">
+<li><a href="http://www.canada.ca/en/index.html">Home</a></li><li><a href="http://www.canada.ca/en/services/environment/index.html">Environment and natural resources</a></li>
+<li><a href="/weather/index_e.html">Weather information</a></li>
+		</ol>
+	</div>
+</div>
+	</nav>
+</header>
+
+
+<div class="container hidden-print">
+
+<span class='pull-right profile-link'>&#160;|&#160;<a href='/myprofile/index_e.html'>My Weather Profile</a></span>
+	<a href="#weather-topics" class="pull-right">Weather Topics</a>
+	<span id="wxo-divider" class="pull-right">|&#160;</span>
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="/weather/city/jump_e.html">
+   	<label id="search-label" for="city" accesskey="g" class="pull-right">Access city</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city"/weather/>
+   	<input type="hidden" name="lang" value="e"/weather/>
+   	<input type="hidden" name="unit" value=""/weather/>
+   	<input type="submit" id="jump" class="wb-invisible" value="Go"/weather/>
+   	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+	<div id="invalid-city"></div>
+</form>
+</div>
+<div class="clearfix"></div>
+<div id='collapsible-alerts' class='container'></div>
+<div class="clearfix"></div>
+		<main role="main" property="mainContentOfPage" class="container">
+   <h1 property="name" id="wb-cont">Change city result</h1>
+		Please enter at least two characters (Up to 50)				<!?php include $_SERVER['DOCUMENT_ROOT'] . '/city/include/jump_form.php' ?>
+<form class="mrgn-rght-sm" action="/weather/city/jump_e.html" method="GET" role="search" data-h5-instanceid="1" novalidate="novalidate">
+<label accesskey="g">Please try again</label>
+<span class="ui-helper-hidden-accessible" role="status" aria-live="polite"></span>
+<input id="city-retry" type="text" data-h5-errorid="invalid-city2" required="" title="Please enter at least two characters (Up to 50)" pattern=".{2,50}" name="city" autocomplete="off" style="display: inline;">
+<input type="hidden" value="e" name="lang">
+<input type="hidden" value="" name="unit">
+<input class="btn btn-default" style="width:5em;" type="submit" value="Go">
+<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+<div id="invalid-city2" style="color: #b00;"></div>
+</form>	
+		<section class="hidden-print"  id="weather-topics">
+	<h2 class="wb-inv">What we are doing</h2>
+	 <div class="row wb-eqht">
+      <section class="col-lg-4 col-md-6">
+			<h3 class="wxo-footer-nav">Weather Forecasts</h3>
+      	<ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="/weather/canada_e.html">Canadian Weather</a></li>
+            <li><a href="/weather/radar/index_e.html">Radar - Canada</a></li>
+            <li><a href="/weather/satellite/index_e.html">Satellite - Canada</a></li>
+            <li><a href="/weather/marine/index_e.html">Marine - Canada</a></li>
+            <li><a href="/weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
+            <li><a href="http://www.ec.gc.ca/glaces-ice/default.asp?lang=En&amp;n=D32C361E-1">Canadian Ice Service</a></li>
+				<li><a href="/weather/saisons/index_e.html">Seasonal forecasts</a></li>
+				<li><a href="/weather/forecast/public_bulletins_e.html">Extended forecast</a></li>
+			</ul>
+      </section>
+      <section class="col-lg-4 col-md-6">
+		<h3 class="wxo-footer-nav">Weather Alerts</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="/weather/warnings/index_e.html">Public Alerts - Canada</a></li>
+            <li><a href="/weather/lightning/index_e.html">Lightning</a></li>
+            <li><a href="/weather/hurricane/index_e.html">Hurricane</a></li>
+            <li><a href="/weather/warnings/weathersummaries_e.html">Weather Summaries</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=15E59C08-1">Hazardous Weather</a></li>
+      </ul>
+      </section>
+	  <section class="col-lg-4 col-md-6">
+	  <h3 class="wxo-footer-nav">Weather Resources</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="/weather/model_forecast/model_e.html">Global and Regional forecast models</a></li>
+            <li><a href="/weather/astro/index_e.html">Astronomy</a></li>
+            <li><a href="http://ec.gc.ca/rhc-wsc/default.asp?lang=En&amp;n=4EED50F1-1">Water Level and Flow</a></li>
+				<li><a href="http://climate.weather.gc.ca/index_e.html">Historical Climate Data</a></li>
+				<li><a href="https://flightplanning.navcanada.ca/cgi-bin/CreePage.pl?Langue=anglais&amp;NoSession=NS_Inconnu&amp;Page=forecast-observation&amp;TypeDoc=html">Aviation</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=4D51ECA8-1 ">Guide to Public forecasts</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=2EC4EC51-1">Guide to Marine forecasts</a></li>
+				<li><a href="http://ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=8E7198BB-1">Guide to Air Quality forecasts</a></li>
+		</ul>
+      </section>
+	</div>
+</section>
+<section class="gc-prtts"><h2>Features</h2><div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/weather/redirect.php?url=http://ec.gc.ca/uv/default.asp?lang=En&amp;n=DCF1C20A-1">
+<h3 class="h5">UV Index and sun protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="/weather/cacheable/images/banners/SM_123_03_30-UV-Index-and-Sun-Protection_button360x203.jpg?ver=1499874128" alt="" />
+</a>
+<p>Be weather wise!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/weather/redirect.php?url=http://www.canada.ca/en/health-canada/services/sun-safety/extreme-heat-heat-waves.html">
+<h3 class="h5">Extreme Heat Protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="/weather/cacheable/images/banners/SM_124_03_30-Extreme-Heat-02_button_360x203.jpg?ver=1499874128" alt="" />
+</a>
+<p>Be prepared!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/weather/redirect.php?url=http://www.ec.gc.ca/cas-aqhi/">
+<h3 class="h5">Be Air Aware</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="/weather/cacheable/images/banners/SM_120_03_30-Air-Quality_01_360x203.jpg?ver=1499874128" alt="" />
+</a>
+<p>Air Quality Health Index</p></section></div></section><div class="row pagedetails">
+   <div class="col-sm-5 col-xs-12 datemod">
+      <dl id="wb-dtmd">
+         <dt>Date modified:&#32;</dt>
+         <dd><time property="dateModified">2017-05-25</time></dd>
+      </dl>
+   </div>
+   <div class="clear visible-xs"></div>
+   <div class="col-sm-4 col-xs-6"><a href="/weather/mainmenu/contact_us_e.html" class="btn btn-default"><span class="glyphicon glyphicon-comment mrgn-rght-sm"></span>Feedback<span class="wb-inv"> about this web site</span></a></div>
+   <div class="col-sm-3 col-xs-6 text-right">
+      <div class="wb-share" data-wb-share='{"lnkClass": "btn btn-default"}'></div>
+   </div>
+   <div class="clear visible-xs"></div>
+</div>
+</main>
+<aside class="gc-nttvs container">
+<h2>Government of Canada activities and initiatives</h2>
+<div id="gcwb_prts" class="wb-eqht row" data-ajax-replace="/weather/data/pco-fetch/features-en.html">
+<p class="mrgn-lft-md"><a href="http://www.canada.ca/activities.html">Access Government of Canada activities and initiatives</a></p>
+</div></aside>
+<footer role="contentinfo" id="wb-info">
+   <nav role="navigation" class="container wb-navcurr">
+      <h2 class="wb-inv">About government</h2>
+      <ul class="list-unstyled colcount-sm-2 colcount-md-3">
+   <li><a href="/weather/mainmenu/contact_us_e.html">Contact us</a></li>
+   <li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+   <li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+   <li><a href="http://news.gc.ca/">News</a></li>
+   <li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+   <li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+   <li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+   <li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+   <li><a href="http://open.canada.ca/en/">Open government</a></li>
+</ul>
+   </nav>
+   <div class="brand">
+   <div class="container">
+      <div class="row ">
+         <nav class="col-md-10 ftr-urlt-lnk">
+            <h2 class="wb-inv">About this site</h2>
+            <ul>
+               <li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+               <li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+               <li><a href="http://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+               <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+               <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+            </ul>
+         </nav>
+         <div class="col-xs-6 visible-sm visible-xs tofpg">
+            <a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+         </div>
+         <div class="col-xs-6 col-md-2 text-right">
+            <object type="image/svg+xml" tabindex="-1" role="img" data="/weather/template/gcweb/v4.0.22/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+         </div>
+      </div>
+   </div>
+</div>
+</footer>
+
+
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="/weather/template/gcweb/v4.0.22/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="/weather/template/gcweb/v4.0.22/js/ie8-wet-boew2.min.js"></script>
+
+<![endif]-->
+<script src="/weather/template/gcweb/v4.0.22/js/theme.min.js"></script>
+
+
+<script src="/weather/cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="/weather/cacheable/js/city/availableTags_e.min.js"></script>
+<script src="/weather/city/js/cityjump.js"></script>
+<script>
+    document.getElementById("jump").className = "";
+    var max_chars = 50;
+
+    $('#city').keydown( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+
+    $('#city').keyup( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+</script>
+<script src="/weather/template/gcweb/v4.0.22/js/deps/jquery.dataTables.min.js"></script>
+<script src="/weather/city/js/jquery.h5validate.js"></script>
+<script src="/weather/cacheable/js/myprofile/alerts-1.0.min.js"></script>
+<script src="/weather/cacheable/js/myprofile/refresher-1.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('form').h5Validate({
+            errorClass:'white'
+        });
+    });
+</script>
+   </body>
+   </html>
+
