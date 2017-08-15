@@ -23,28 +23,29 @@
 <!--<![endif]-->
 
 <!--[if lt IE 9]>
-<link href="/template/gcweb/v4.0.22/assets/favicon.ico" rel="shortcut icon" />
-<link rel="stylesheet" href="/template/gcweb/v4.0.22/css/ie8-wet-boew.min.css" />
-<link rel="stylesheet" href="/template/wxo/css/wxo-ie8.css"/>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="/template/gcweb/v4.0.22/js/ie8-wet-boew.min.js"></script>
+<!-- Not sure what this is doing <link rel="stylesheet" href="/template/gcweb/v4.0.22/css/ie8-wet-boew.min.css" /> -->
+<link href="/weather/GCWeb/assets/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="/weather/GCWeb/css/ie8-theme.min.css" />
+<link rel="stylesheet" href="/weather/cacheable/css/city/jquery-ui-1.10.3.custom.min.css">
+<script src="/weather/wet-boew/js/ie8-wet-boew.min.js"></script>
 <![endif]-->
 <!--[if lte IE 9]>
+
 <![endif]-->
 
-<noscript><link rel="stylesheet" href="/template/gcweb/v4.0.22/css/noscript.min.css" /></noscript>
+<noscript><link rel="stylesheet" href="/weather/wet-boew/css/noscript.min.css" /></noscript>
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
 <link rel="stylesheet" href="/cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
 <link rel="stylesheet" href="/template/wxo/css/wxo.css" />
 <!--[if IE 8]>
-<link href="/cacheable/css/radar/radar-ie8.css" rel="stylesheet" type="text/css" />
+<link href="/weather/cacheable/css/radar/radar2.css" rel="stylesheet" type="text/css" />
 <![endif]-->
-<script type="text/javascript" src="/cacheable/js/radar/Base.js"></script>
+<script type="text/javascript" src="/weather/cacheable/js/radar/Base.js"></script>
 
-<link rel="stylesheet" href="/cacheable/css/radar/controller.css" />
-<link rel="stylesheet" href="/cacheable/css/radar/radar2.css" />
+<link rel="stylesheet" href="/weather/cacheable/css/radar/controller.css" />
+<link rel="stylesheet" href="/weather/cacheable/css/radar/radar2.css" />
 <script>
 	if (typeof composite_cities_active === 'undefined'){
 		var composite_cities_active = 'yes';
@@ -83,7 +84,7 @@
 <div class="row">
 			
 	<div class="brand col-xs-8 col-sm-9 col-md-6">
-		<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="/template/gcweb/v4.0.22/assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+		<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="/weather/GCweb/assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
 	</div>
 
 	<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn" >
@@ -120,7 +121,7 @@
 			</section>
 		</div>
 	</div>
-<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-replace="/data/pco-fetch/sitemenu-en.html" typeof="SiteNavigationElement">
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-replace="/weather/ajax/sitemenu-en.html" typeof="SiteNavigationElement">
 <div class="container nvbar">
 	<h2>Topics menu</h2>
     <div class="row">
@@ -213,18 +214,18 @@
 										<img 
 						width="580" 
 						height="480" 
-						src="/cacheable/images/radar/layers_detailed/default_cities/xft_towns.gif" 
+						src="/weather/cacheable/images/radar/layers_detailed/default_cities/xft_towns.gif" 
 						alt="Cities" id="composite-cities-image" class="overlay-img-nojs overlay-img img-responsive " style="z-index: 60;">
 					
-									<img width="580" height="480" src="/cacheable/images/radar/layers_detailed/additional_cities/xft_towns.gif" alt="More Cities" class="overlay-img-nojs overlay-img img-responsive  wxo-hide-overlay" id="additional_cities" style="z-index: 59;">
+									<img width="580" height="480" src="/weather/cacheable/images/radar/layers_detailed/additional_cities/xft_towns.gif" alt="More Cities" class="overlay-img-nojs overlay-img img-responsive  wxo-hide-overlay" id="additional_cities" style="z-index: 59;">
 					
-					<img class="overlay-img-nojs overlay-img img-responsive 	" width="580" height="480" src="/cacheable/images/radar/layers_detailed/roads/XFT_roads.gif?ver=1410285168" id="roads" alt="Roads" style="z-index: 56;">
+					<img class="overlay-img-nojs overlay-img img-responsive 	" width="580" height="480" src="/weather/cacheable/images/radar/layers_detailed/roads/XFT_roads.gif?ver=1410285168" id="roads" alt="Roads" style="z-index: 56;">
 										
-					<img class="overlay-img-nojs overlay-img img-responsive  wxo-hide-overlay" width="580" height="480" src="/cacheable/images/radar/layers_detailed/road_labels/xft_labs.gif" id="road_num" alt="Road Numbers" style="z-index: 57;">
+					<img class="overlay-img-nojs overlay-img img-responsive  wxo-hide-overlay" width="580" height="480" src="/weather/cacheable/images/radar/layers_detailed/road_labels/xft_labs.gif" id="road_num" alt="Road Numbers" style="z-index: 57;">
 					
-					<img class="overlay-img-nojs overlay-img img-responsive   wxo-hide-overlay" width="580" height="480" src="/cacheable/images/radar/layers_detailed/rivers/xft_rivers.gif" id="river" alt="Rivers" style="z-index: 55;">
+					<img class="overlay-img-nojs overlay-img img-responsive   wxo-hide-overlay" width="580" height="480" src="/weather/cacheable/images/radar/layers_detailed/rivers/xft_rivers.gif" id="river" alt="Rivers" style="z-index: 55;">
 					
-					<img class="overlay-img-nojs overlay-img img-responsive " width="580" height="480" src="/cacheable/images/radar/layers_detailed/radar_circle/radar_circle.gif" alt="Radar Circles" id="radar_circle" style="z-index: 58;">
+					<img class="overlay-img-nojs overlay-img img-responsive " width="580" height="480" src="/weather/cacheable/images/radar/layers_detailed/radar_circle/radar_circle.gif" alt="Radar Circles" id="radar_circle" style="z-index: 58;">
 					
 										</div>
 		</div>
