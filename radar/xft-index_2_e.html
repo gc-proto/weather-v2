@@ -23,14 +23,12 @@
 
 <!--[if lt IE 9]>
 <link href="/template/gcweb/v4.0.22/assets/favicon.ico" rel="shortcut icon" />
-
 <link rel="stylesheet" href="/template/gcweb/v4.0.22/css/ie8-wet-boew.min.css" />
 <link rel="stylesheet" href="/template/wxo/css/wxo-ie8.css"/>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/template/gcweb/v4.0.22/js/ie8-wet-boew.min.js"></script>
 <![endif]-->
 <!--[if lte IE 9]>
-
 <![endif]-->
 
 <noscript><link rel="stylesheet" href="/template/gcweb/v4.0.22/css/noscript.min.css" /></noscript>
@@ -913,7 +911,6 @@
 <!--<![endif]-->
 <!--[if lt IE 9]>
 <script src="/template/gcweb/v4.0.22/js/ie8-wet-boew2.min.js"></script>
-
 <![endif]-->
 <script src="/template/gcweb/v4.0.22/js/theme.min.js"></script>
 
@@ -924,13 +921,11 @@
 <script>
     document.getElementById("jump").className = "";
     var max_chars = 50;
-
     $('#city').keydown( function(e){
         if ($(this).val().length > max_chars) {
             $(this).val($(this).val().substr(0, max_chars));
         }
     });
-
     $('#city').keyup( function(e){
         if ($(this).val().length > max_chars) {
             $(this).val($(this).val().substr(0, max_chars));
@@ -962,7 +957,6 @@
 	var loaded = 0;
 	$(document).ready(function(e) {
 		window.animator = new Animator("XFT",{"regionName":"Franktown","displayProduct":true,"image":{"width":"580px","height":"480px"},"overlay":{"height":"480px"},"products":{"active":"PRECIP_RAIN"},"durations":{"active":"short"},"timezone":{"id":"Canada\/Eastern","title":"","offset":""},"settings":"final"});
-
 		$('[name=duration]').click(function(){
 			var val = this.id + "-mob";
 			$("#" + val).prop('checked', true); 
@@ -970,11 +964,9 @@
 		addCityOverlay();
 		resizeComponents();
 	});
-
 	$(window).resize(function(){
 		resizeComponents();
 	}); 
-
 	$('img#animation-image').load( function() {
 		if (!loaded){
 			$('img[usemap]').rwdImageMaps();
@@ -989,4 +981,3 @@
 <div class="device-lg visible-lg"></div>
 	</body>
 </html>
-
