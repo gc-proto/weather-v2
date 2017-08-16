@@ -124,11 +124,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </header>
 
 <div class="container hidden-print">
-    <a href='/myprofile/index_e.html' class='pull-right profile-link'>My Weather Profile</a>
-    <span class='pull-right profile-link'>&nbsp;|&nbsp;</span>
-   <a class="pull-right" href="#weather-topics">Weather Topics</a>
-   <span id="wxo-divider" class="pull-right">&nbsp;|&nbsp;</span>
-<form class="pull-right" role="search" id="cityjump" method="GET" action="/city/jump_e.html">
+
+<span class='pull-right profile-link'>&#160;|&#160;<a href='/myprofile/index_e.html'>My Weather Profile</a></span>
+	<a href="#weather-topics" class="pull-right">Weather Topics</a>
+	<span id="wxo-divider" class="pull-right">|&#160;</span>
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="/city/jump_e.html">
    	<label id="search-label" for="city" accesskey="g" class="pull-right">Access city</label>
    	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city"/>
    	<input type="hidden" name="lang" value="e"/>
@@ -137,6 +137,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
    	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
 	<div id="invalid-city"></div>
 </form>
+
 </div>
 <div class="clearfix"></div>
 <div id='collapsible-alerts' class='container'></div>
