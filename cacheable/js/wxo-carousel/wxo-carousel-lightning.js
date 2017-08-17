@@ -428,22 +428,22 @@ $(document).ready(function(){
     {
         if(state.allImagesLoaded == null)
         {
-          // state.allImagesLoaded = false;
-          //  $.when(
-            //    $.ajax({
-              //      type: 'GET',
-                //    url: 'https://gc-proto.github.io/weather/lightning/include/xhr.php',
-                  //  data: {id: animator.attr('data-image-lightning-id')}
-               // })).done(function(content) {
-                 //   state.imageSrcs = $.parseJSON(content)['imageSrc'];
+           state.allImagesLoaded = false;
+          $.when(
+               $.ajax({
+                   type: 'GET',
+                   url: 'https://gc-proto.github.io/weather/lightning/include/xhr.php',
+                    data: {id: animator.attr('data-image-lightning-id')}
+               })).done(function(content) {
+                   state.imageSrcs = $.parseJSON(content)['imageSrc'];
                     
-                   // for (var i = 0; i < state.totalImgNum; i++){ //load both in -xs
-                     //   loadImage(i);
-                       // loadIE8Image(i);
-                    //}
-                    //loadOnDemand(func);
-                    //state.lastImageSrcDownloaded = new Date();
-           // });
+                   for (var i = 0; i < state.totalImgNum; i++){ //load both in -xs
+                       loadImage(i);
+                       loadIE8Image(i);
+                   }
+                    loadOnDemand(func);
+                   state.lastImageSrcDownloaded = new Date();
+            });
         }
         else if(state.allImagesLoaded == false)
         {
