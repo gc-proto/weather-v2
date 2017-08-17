@@ -208,6 +208,8 @@ $(document).ready(function(){
         }
     }
 
+    //Jennifer-testing removing things
+    
     //Force browser to load image into cache, then draw it.
     //The first image is loaded directly into DOM by PHP as a performance improvement.
     //Most browsers will cache the image, even though it is hidden
