@@ -438,7 +438,7 @@ $(document).ready(function(){
                     data: {id: animator.attr('data-image-lightning-id')}
                })).done(function(content) {
                    //state.imageSrcs = $.parseJSON(content)['imageSrc'];
-              state.imageSrcs = $.parseJSON(content)['\../data\/lightning_images\/lightning_1.png","\../data\/lightning_images\/lightning_2.png","\../data\/lightning_images\/lightning_3.png","\../data\/lightning_images\/lightning_4.png","\../data\/lightning_images\/lightning_5.png","\../data\/lightning_images\/lightning_6.png","\../data\/lightning_images\/lightning_7.png'];
+              state.imageSrcs = $.parseJSON(content)['"../data/lightning_images/lightning_1.png","../data/lightning_images/lightning_2.png","../data/lightning_images/lightning_3.png","../data/lightning_images/lightning_4.png","../data/lightning_images/lightning_5.png","../data/lightning_images/lightning_6.png","../data/lightning_images/lightning_7.png'];
 
            
                    for (var i = 0; i < state.totalImgNum; i++){ //load both in -xs
