@@ -5,9 +5,6 @@
  
 Info = new Class();
 Info.prototype = {
-	fakestuff: function() { 
-		var fake=0;
-	},
 	constructor: function(element,text,options) {/*{{{*/
 		this.info = $$(element);
 		if (!this.info) throw Error;
@@ -16,6 +13,9 @@ Info.prototype = {
 		this.options = Merge(this.options,options);
 		if (isString(text)) this.setText(text);
 	},/*}}}*/
+	fakestuff: function() { 
+		var fake=0;
+	},
 	setWidth: function(width) {/*{{{*/
 		this.info.style.width = parseInt(width) + "px";
 	},/*}}}*/
