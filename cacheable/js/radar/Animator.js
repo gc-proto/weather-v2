@@ -1,4 +1,6 @@
 /* Animation Info Object {{{*/
+
+
  
 Info = new Class();
 Info.prototype = {
@@ -617,7 +619,9 @@ Animator.prototype = {
 			newImgArray[i].setAttribute('id','preloadedImage');//Add an id to the tag just incase.. although not required.
 
 			newImgArray[i].src = this.products[clean]['images'][duration][i].src;//Set the source of the img tag to the appropriate image.
-			newDiv.appendChild(newImgArray[i]);//append the newly created img tag to the div.
+			newDiv = '<div id="hidden-Preloaded-Images"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_14_40.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_14_50.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_15_00.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_15_10.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_15_20.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_15_30.GIF"><img id="preloadedImage" src=",,/data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_14_40.GIF"></div>';
+			
+			//newDiv.appendChild(newImgArray[i]);//append the newly created img tag to the div.
 		}
 		animationImage = document.getElementById(this.options.ids.imageWrapper);//Get a reference to the image wrapper div
 		animationImage.appendChild(newDiv);//append our created div with hidden images to the document.
@@ -1001,6 +1005,7 @@ Animator.prototype = {
 			var img = new Image();
 			img.src = this.products[clean]['images'][duration][i]['src'];
 			this.products[clean]['frames'][duration].push(img);
+			
 		}
 	},/*}}}*/
 	updateFrame: function(stringUpdate) {/*{{{*/
@@ -1076,8 +1081,8 @@ Animator.prototype = {
 				}.bind(this),300);
 			}
 		}
-	},/*}}}*/
-	callEvent: function(type,el,skipTest) {/*{{{*/
+	}
+	callEvent: function(type,el,skipTest) {
 		var clean = this.clean(this.current);
 		if (!this.products[clean]){
 			this.updateInfo = true;
@@ -1094,7 +1099,8 @@ Animator.prototype = {
 			}
 		}
 		return false;
-	},/*}}}*/
+	}, 
+	
 	/***************************************************************************************************************** 
 	 *	Method: buttonMatch(el)
 	 *	Use: return true depending on which button is selected.
