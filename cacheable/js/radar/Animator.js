@@ -1,5 +1,8 @@
 /* Animation Info Object {{{*/
 
+fakestuff: function() { 
+	var fake=0;
+},
 
  
 Info = new Class();
