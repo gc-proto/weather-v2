@@ -1085,7 +1085,7 @@ Animator.prototype = {
 				}.bind(this),300);
 			}
 		}
-	}
+	},
 	callEvent: function(type,el,skipTest) {
 		var clean = this.clean(this.current);
 		if (!this.products[clean]){
