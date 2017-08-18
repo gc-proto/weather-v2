@@ -1,12 +1,13 @@
 /* Animation Info Object {{{*/
 
-fakestuff: function() { 
-	var fake=0;
-},
+
 
  
 Info = new Class();
 Info.prototype = {
+	fakestuff: function() { 
+		var fake=0;
+	},
 	constructor: function(element,text,options) {/*{{{*/
 		this.info = $$(element);
 		if (!this.info) throw Error;
