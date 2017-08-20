@@ -810,15 +810,15 @@ Animator.prototype = {
 				var responseProxy = {};
 				responseProxy.responseText = '{"short":[{"src":"\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_14_40.GIF","\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_14_50.GIF","\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_15_00.GIF","\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_15_10.GIF","\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_15_20.GIF","\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_15_30.GIF","\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_15_40.GIF"], "long": [{"src":"\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-01.20.50.225145.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-01.30.49.171911.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-01.40.48.344227.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-01.50.45.005327.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-02.00.45.700197.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-02.10.54.592851.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-02.20.51.003063.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-02.30.48.336901.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-02.40.51.169949.gif","XFT-25-JUN-17-02.51.00.126236.gif"}]';
 			this.loadProduct(responseProxy, animator, productName, display, play);
-			} else {
-				this.displayProduct(productName,play);
+			//} else {
+			//	this.displayProduct(productName,play);
 			}
 			// last of trying direct insert
-		} else {
-			this.frame.hideImage();
-			this.info.hide();
-			this.frame.addPage("<h1>" + _("Error") + "</h1><p>" + _("This product does not exist for this region") + "</p>",'error-message');
-		}
+	//	} else {
+	//		this.frame.hideImage();
+	//		this.info.hide();
+	//		this.frame.addPage("<h1>" + _("Error") + "</h1><p>" + _("This product does not exist for this region") + "</p>",'error-message');
+	//	}
 
 	},/*}}}*/
 	getImages: function(){/*{{{*/
