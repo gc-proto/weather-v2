@@ -623,9 +623,9 @@ Animator.prototype = {
 			newImgArray[i].setAttribute('id','preloadedImage');//Add an id to the tag just incase.. although not required.
 
 			newImgArray[i].src = this.products[clean]['images'][duration][i].src;//Set the source of the img tag to the appropriate image.
-			newDiv = '<div id="hidden-Preloaded-Images"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_14_40.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_14_50.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_15_00.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_15_10.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_15_20.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_15_30.GIF"><img id="preloadedImage" src=",,/data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_14_40.GIF"></div>';
+			//newDiv = '<div id="hidden-Preloaded-Images"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_14_40.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_14_50.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_15_00.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_15_10.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_15_20.GIF"><img id="preloadedImage" src="../data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_15_30.GIF"><img id="preloadedImage" src=",,/data/radar/detailed/temp_image//XFT/XFT_PRECIP_RAIN_2017_08_18_14_40.GIF"></div>';
 			
-			//newDiv.appendChild(newImgArray[i]);//append the newly created img tag to the div.
+			newDiv.appendChild(newImgArray[i]);//append the newly created img tag to the div.
 		}
 		animationImage = document.getElementById(this.options.ids.imageWrapper);//Get a reference to the image wrapper div
 		animationImage.appendChild(newDiv);//append our created div with hidden images to the document.
@@ -803,12 +803,17 @@ Animator.prototype = {
 					lang: lang,
 					format: 'json',
 					rand: random
-				});/*}}}*/
+				});/*HERE*/
 				//alert('test');
-				this.ajaxProduct = new XHR(url,this.loadProduct,this,productName,display,play,true);
+				//this.ajaxProduct = new XHR(url,this.loadProduct,this,productName,display,play,true);
+				// Jen trying to direct insert images into loader
+				var responseProxy = {};
+				responseProxy.responseText = '{"short":[{"src":"\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_14_40.GIF","\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_14_50.GIF","\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_15_00.GIF","\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_15_10.GIF","\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_15_20.GIF","\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_15_30.GIF","\../data\/radar\/detailed\/temp_image\/XFT_PRECIP_RAIN_2017_08_18_15_40.GIF"], "long": [{"src":"\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-01.20.50.225145.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-01.30.49.171911.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-01.40.48.344227.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-01.50.45.005327.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-02.00.45.700197.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-02.10.54.592851.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-02.20.51.003063.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-02.30.48.336901.gif","\../data\/radar\/detailed\/temp_image\/XFT-25-JUN-17-02.40.51.169949.gif","XFT-25-JUN-17-02.51.00.126236.gif"}]';
+			this.loadProduct(responseProxy, animator, productName, display, play);
 			} else {
 				this.displayProduct(productName,play);
 			}
+			// last of trying direct insert
 		} else {
 			this.frame.hideImage();
 			this.info.hide();
