@@ -11,12 +11,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
 <!-- Meta data-->
 <!--[if gte IE 9 | !IE ]><!-->
+<link rel="stylesheet" href="./cacheable/css/mainmenu/index-e.css" media="screen">
 <link href="./GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
 <link rel="stylesheet" href="./GCWeb/css/theme.min.css">
 <!--<![endif]-->
 <!--[if lt IE 9]>
 <link href="./GCWeb/assets/favicon.ico" rel="shortcut icon" />
-
+<link rel="stylesheet" href="/cacheable/css/mainmenu/index-ie8-e.css" media="screen">
 <link rel="stylesheet" href="./GCWeb/css/ie8-theme.min.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="./wet-boew/js/ie8-wet-boew.min.js"></script>
@@ -29,6 +30,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
+<link rel="stylesheet" href="./cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" href="./template/wxo/css/wxo.css" />
+
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
@@ -132,7 +136,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                         <div role="tabpanel" id="tab1" class="in fade">
                            <figure>
                               <a href="/canada_e.html">
-											<img src="data/wxoimages/homeCurrent_750x223_e.png" alt="">
+											<img src="./data/wxoimages/homeCurrent_750x223_e.png" alt="">
 										</a>
                               <figcaption>
                                 	<p><a href="/canada_e.html">Current Conditions</a></p>
@@ -142,7 +146,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                         <div role="tabpanel" id="tab2" class="out fade">
                            <figure>
                               <a href="/warnings/index_e.html">
-											<img src="data/wxoimages/homeAlert_750x223_e.png" alt="">
+											<img src="./data/wxoimages/homeAlert_750x223_e.png" alt="">
 										</a>
                               <figcaption>
                                  <p><a href="/warnings/index_e.html" class="learnmore"> Public Alerts </a></p>
@@ -152,7 +156,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                         <div role="tabpanel" id="tab3" class="out fade">
                            <figure>
                               <a href="/radar/index_e.html">
-											<img alt="Canadian Weather RADAR" src="data/wxoimages/homeRadar_750x223.png">
+											<img alt="Canadian Weather RADAR" src="./data/wxoimages/homeRadar_750x223.png">
 										</a>
                               <figcaption>
                                  <p><a href="/radar/index_e.html"> Radar </a></p>
@@ -162,7 +166,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                         <div role="tabpanel" id="tab4" class="out fade">
                            <figure>
 										<a href="/satellite/index_e.html">
-	                              <img src="data/wxoimages/homeSatellite_750x223.png" alt="">
+	                              <img src="./data/wxoimages/homeSatellite_750x223.png" alt="">
 										</a>
                               <figcaption>
                                  <p><a href="/satellite/index_e.html" class="learnmore"> Satellite </a></p>
@@ -174,7 +178,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                                           <div role="tabpanel" id="tab5" class="out fade">
                            <figure>
                               <a href="/jet_stream/index_e.html">
-											<img src="data/wxoimages/homeJet_750x223_e.png" alt="">
+											<img src="./data/wxoimages/homeJet_750x223_e.png" alt="">
 										</a>
                               <figcaption>
                                  <p><a href="/jet_stream/index_e.html" class="learnmore"> Jet Stream </a></p>
@@ -399,5 +403,62 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 <![endif]-->
 <script src="./GCWeb/js/theme.min.js"></script>
-</body>
+
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="./template/gcweb/v4.0.22/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="/template/gcweb/v4.0.22/js/ie8-wet-boew2.min.js"></script>
+
+<![endif]-->
+<script src="./template/gcweb/v4.0.22/js/theme.min.js"></script>
+
+
+<script src="./cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="./cacheable/js/city/availableTags_e.min.js"></script>
+<script src="./city/js/cityjump.js"></script>
+<script>
+    document.getElementById("jump").className = "";
+    var max_chars = 50;
+
+    $('#city').keydown( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+
+    $('#city').keyup( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+</script>
+<script src=".template/gcweb/v4.0.22/js/deps/jquery.dataTables.min.js"></script>
+<script src="./city/js/jquery.h5validate.js"></script>
+<script src="./cacheable/js/myprofile/alerts-1.0.min.js"></script>
+<script src="./cacheable/js/myprofile/refresher-1.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('form').h5Validate({
+            errorClass:'white'
+        });
+    });
+</script>
+<script>LANG = "en-CA";</script><script src="./gps/js/translate.js"></script>
+<script src="./gps/js/gps.js"></script>
+<script src="./gps/js/langStrings.js"></script>
+<script src="./gps/js/cityLatLon.js"></script>
+
+<script>
+$(document).ready(function(){
+		    $('#gps-jq').click(function(){
+	       if (!$("#gps-jq" ).hasClass("open"))
+		       getGPSLocation();
+	     });
+ 	});
+</script>
+
+	</body>
 </html>
+
