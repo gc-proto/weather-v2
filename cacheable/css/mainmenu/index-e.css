@@ -3,12 +3,12 @@
 #iconmenu li {width: 150px; height: 130px; position: absolute; top: 2px; display: block; list-style: none;}
 #iconmenu a {width: 150px; height: 130px; display: block; border: solid 1px #fff;}
 #iconmenu a:hover {border: solid 1px #000;}
-#iconmenu #panel1c {left: 0px; background: url(/data/wxoimages/homeCurrent_750x223_e.png); background-size: 438px 130px; background-position: -144px 0px;}
-#iconmenu #panel2c {left: 21%; background: url(/data/wxoimages/homeAlert_750x223_e.png); background-size: 438px 130px; background-position: -144px 0px;}
-#iconmenu #panel3c {left: 42%; background: url(/data/wxoimages/homeRadar_750x223.png); background-size: 438px 130px; background-position: -144px 0px;} 
-#iconmenu #panel4c {left: 63%; background: url(/data/wxoimages/homeSatellite_750x223.png); background-size: 390px 130px; background-position: -120px 0px;}
-#iconmenu #panel5c {left: 84%; background: url(/data/wxoimages/homeJet_750x223_e.png); background-size: 380px 130px; background-position: -115px 0px;}
-#iconmenu #panel5b {left: 84%; background: url(/data/wxoimages/homeHurricane_750x223.png); background-size: 438px 130px; background-position: -144px 0px;} 
+#iconmenu #panel1c {left: 0px; background: url(http://gc-proto.github.io/weather/data/wxoimages/homeCurrent_750x223_e.png); background-size: 438px 130px; background-position: -144px 0px;}
+#iconmenu #panel2c {left: 21%; background: url(http://gc-proto.github.io/weather/data/wxoimages/homeAlert_750x223_e.png); background-size: 438px 130px; background-position: -144px 0px;}
+#iconmenu #panel3c {left: 42%; background: url(http://gc-proto.github.io/weather/data/wxoimages/homeRadar_750x223.png); background-size: 438px 130px; background-position: -144px 0px;} 
+#iconmenu #panel4c {left: 63%; background: url(http://gc-proto.github.io/weather/data/wxoimages/homeSatellite_750x223.png); background-size: 390px 130px; background-position: -120px 0px;}
+#iconmenu #panel5c {left: 84%; background: url(http://gc-proto.github.io/weather/data/wxoimages/homeJet_750x223_e.png); background-size: 380px 130px; background-position: -115px 0px;}
+#iconmenu #panel5b {left: 84%; background: url(http://gc-proto.github.io/weather/data/wxoimages/homeHurricane_750x223.png); background-size: 438px 130px; background-position: -144px 0px;} 
 
 #linkmenu {position: relative; margin: 10px auto; padding: 15px; width: 96.5%;}
 #linkmenu li {width: 150px; text-align:center; position: absolute; top: 0px; list-style: none;}
