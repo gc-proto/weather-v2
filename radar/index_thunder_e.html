@@ -17,35 +17,35 @@
 <meta name="dcterms.modified" title="W3CDTF" content="2017-05-25" />
 		<!-- Meta data-->
 		<!--[if gte IE 9 | !IE ]><!-->
-<link href="/template/gcweb/v4.0.22/assets/favicon.ico" rel="icon" type="image/x-icon" />
-<link rel="stylesheet" href="/template/gcweb/v4.0.22/css/theme.min.css" />
+<link href="../template/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+<link rel="stylesheet" href="../template/GCWeb/css/theme.min.css" />
 <!--<![endif]-->
 
 <!--[if lt IE 9]>
-<link href="/template/gcweb/v4.0.22/assets/favicon.ico" rel="shortcut icon" />
+<link href="/template/GCWeb/assets/favicon.ico" rel="shortcut icon" />
 
-<link rel="stylesheet" href="/template/gcweb/v4.0.22/css/ie8-wet-boew.min.css" />
+<link rel="stylesheet" href="/template/GCWeb/css/ie8-wet-boew.min.css" />
 <link rel="stylesheet" href="/template/wxo/css/wxo-ie8.css"/>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="/template/gcweb/v4.0.22/js/ie8-wet-boew.min.js"></script>
+<script src="/template/GCWeb/js/ie8-wet-boew.min.js"></script>
 <![endif]-->
 <!--[if lte IE 9]>
 
 <![endif]-->
 
-<noscript><link rel="stylesheet" href="/template/gcweb/v4.0.22/css/noscript.min.css" /></noscript>
+<noscript><link rel="stylesheet" href="../css/noscript.min.css" /></noscript>
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
-<link rel="stylesheet" href="/cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
-<link rel="stylesheet" href="/template/wxo/css/wxo.css" />
+<link rel="stylesheet" href="../cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" href="../template/wxo/css/wxo.css" />
 <!--[if IE 8]>
 <link href="/cacheable/css/radar/radar-ie8.css" rel="stylesheet" type="text/css" />
 <![endif]-->
-<script type="text/javascript" src="/cacheable/js/radar/Base.js"></script>
+<script type="text/javascript" src="../cacheable/js/radar/Base.js"></script>
 
-<link rel="stylesheet" href="/cacheable/css/radar/controller.css" />
-<link rel="stylesheet" href="/cacheable/css/radar/radar2.css" />
+<link rel="stylesheet" href="../cacheable/css/radar/controller.css" />
+<link rel="stylesheet" href="../cacheable/css/radar/radar2.css" />
 <script>
 	if (typeof composite_cities_active === 'undefined'){
 		var composite_cities_active = 'yes';
@@ -158,7 +158,7 @@
 <div class="row">
 			
 	<div class="brand col-xs-8 col-sm-9 col-md-6">
-		<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="/template/gcweb/v4.0.22/assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+		<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="../template/GCWeb/assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
 	</div>
 
 	<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn" >
@@ -255,17 +255,33 @@
 		</div>
 	</div>
 
+	<!--
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+-->
+
 <div class="animator" id="animator">
+
 	<div class="content row">
+	
 		<div id="animation" class="col-xs-12">
 		
 					<p id="wxo-rad-choose" class="pagetag text-center">Choose a province or radar station (radar stations are represented by black dots.)</p>
-						<noscript>
-			<p class="text-center margin-bottom-none"> 2017-08-23, 14:40 UTC</p>
-		</noscript>		
+						
+			<p class="text-center margin-bottom-none center-block img-responsive" style="background-color: black; width: 600px; color: white";> 2017-08-23, 14:40 UTC</p>
+			
 				<div id="animation-info" class="row text-center animation-info"></div>
 			<div class="animation-frame-nat-nojs" id="animation-frame">
-				<noscript class="visible-xs js-hide">
+				
+				<!-- <noscript class="visible-xs js-hide">
 					<img id="animation-image" 
 					alt="xRadar image for Canada." 
 					title="xRadar image for Canada." 
@@ -277,7 +293,7 @@
 										<div id="composite-animation-image-wrapper">
 						<img id="composite-cities-image" class="overlay-img-nojs hidden-xs wxo-radar-img-nojs overlay-img img-responsive " 
 													width="600" height="522" 
-												usemap="#COMPOSITE_NAT_XS" src="/cacheable/images/radar/layers_detailed/composite_cities/nat_composite.gif" alt="Cities">
+												usemap="#COMPOSITE_NAT_XS" src="../cacheable/images/radar/layers_detailed/composite_cities/nat_composite.gif" alt="Cities">
 					</div>
 									</noscript>
 				<img id="animation-image" 
@@ -288,16 +304,38 @@
 					height="522" 
 					class="wxo-radar-img hidden-xs wxo-radar-img-nojs img-responsive"
 					usemap="#COMPOSITE_NAT" />
+					
+					
 
 									<div id="composite-animation-image-wrapper">
 						<img id="composite-cities-image" class="overlay-img-nojs hidden-xs wxo-radar-img-nojs overlay-img-tog  img-responsive " 
 													width="600" height="522" 
-												usemap="#COMPOSITE_NAT" src="/cacheable/images/radar/layers_detailed/composite_cities/nat_composite.gif" alt="Cities">
+												usemap="#COMPOSITE_NAT" src="../cacheable/images/radar/layers_detailed/composite_cities/nat_composite.gif" alt="Cities">
 					</div>
 					
-										</div>
+										</div> -->
+										
+										
 		</div>
-<div class="clearfix"></div>
+		
+		<div class="wrapper">
+			
+			
+				<div id="wxo-animator" data-image-current="6" data-image-count="7" data-image-lightning-id="NAT" data-wxo-anim-0="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_1.gif" data-wxo-label-0="#1" data-wxo-anim-1="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_1.gif" data-wxo-label-1="#2" data-wxo-anim-2="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_2.gif" data-wxo-label-2="#3" data-wxo-anim-3="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_3.gif" data-wxo-label-3="#4" data-wxo-anim-4="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_4.gif" data-wxo-label-4="#5" data-wxo-anim-5="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_5.gif" data-wxo-label-5="#6" data-wxo-anim-6="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_6.gif" data-wxo-label-6="#7" data-wxo-anim-7="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_7.gif" >
+
+					<div id="wxo-carousel" class="wxo-ie8-hide">
+					
+						<p class="wxo-loading-msg text-center mrgn-tp-lg mrgn-bttm-lg">Loading images...</p>
+											
+						<canvas id="wxo-canvas" class="wxo-active img-responsive center-block " data-image-current="6" data-image-count="7">Please enable JavaScript to view the animation.</canvas>
+						
+				
+					
+					</div>
+
+				</div> 
+				
+			</div>
 
 
 
@@ -328,7 +366,7 @@
 
 				<div class="hidden-sm hidden-md hidden-lg mrgn-lft-lg">N/O - Non-operational</div>
 			</div>
-	<noscript>
+	<!-- <noscript>
 	<div class="row">
 		<p class="text-center">Please enable JavaScript to view the animation.</p>
 		<p class="text-center" >The following images are available for PRECIPET - Rain:</p>
@@ -363,7 +401,22 @@
 		</div>
 		<div class="col-lg-3 col-md-2"></div>
 	</div>
-</noscript>
+</noscript> -->
+
+<!--
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+-->
+<div class="clearfix"></div>
+
 	<div id="animator-controller" class="hidden-print wxo-radar-width ">
 		<div class="hidden-xs hidden-sm hidden-md hidden-lg">
 			<b>Animation</b>
@@ -371,121 +424,64 @@
 
 		<div class="controller-box row hidden-xs hidden-sm hidden-md hidden-lg">
 			<div class="col-sm-5 col-xs-10 controller-set  margin-top-medium">
-				<button 
-						id="play-button"
-						title="Play" 
-						onclick="animator.callEvent('play',this); return false;" 
-						onfocus="animator.callEvent('depress',this);" 
-						onblur="animator.callEvent('uplift',this);" 
-						onmouseover="animator.callEvent('depress',this);" 
-						onmouseout="animator.callEvent('uplift',this);" 
-						class="btn btn-default btn-sm">
-						<span class="glyphicon glyphicon-play "></span>
-				</button>              
-				<button 
-					id="pause-button"
-					title="Pause" 
-					onclick="return animator.callEvent('pause',this);"
-					onfocus="animator.callEvent('depress',this);"
-					onblur="animator.callEvent('uplift',this);"
-					onmouseover="animator.callEvent('depress',this);"
-					onmouseout="animator.callEvent('uplift',this);"
-					class="btn btn-default  btn-sm">
+				
+				<button class="wxo-anim-play btn btn-default btn-sm" title="Play">
+          			<span class="glyphicon glyphicon-play"></span>
+          			<span class="wb-inv">Play</span> 
+				</button>
+				   
+				 <button class="wxo-anim-stop btn btn-default btn-sm" title="Pause">
 					<span class="glyphicon glyphicon-stop"></span>
+					<span class="wb-inv">Pause</span>
 				</button>
-				<button	
-					id="first-frame-button"
-					title="First Image" 
-					onclick="return animator.callEvent('first',this);"
-					onfocus="animator.callEvent('depress',this);"
-					onblur="animator.callEvent('uplift',this);"
-					onmouseover="animator.callEvent('depress',this);"
-					onmouseout="animator.callEvent('uplift',this);"
-					class="btn btn-default  btn-sm">
-					<span class="glyphicon glyphicon-fast-backward"></span>						
+				
+				<button class="wxo-anim-first btn btn-default btn-sm" title="First Image">
+					<span class="glyphicon glyphicon-fast-backward"></span>
+					<span class="wb-inv">First Image</span>
 				</button>
-				<button
-					id="previous-frame-button"
-					title="Previous Image" 
-					onclick="return animator.callEvent('previous',this);"
-					onfocus="animator.callEvent('depress',this);"
-					onblur="animator.callEvent('uplift',this);"
-					onmouseover="animator.callEvent('depress',this);"
-					onmouseout="animator.callEvent('uplift',this);"
-					class="btn btn-default  btn-sm">
-					<span class="glyphicon glyphicon-backward"></span>	
+	  
+				 <button class="wxo-anim-prev btn btn-default btn-sm" title="Previous Image">
+					<span class="glyphicon glyphicon-backward"></span>
+					<span class="wb-inv">Previous Image</span>
 				</button>
-				<button 
-					id="next-frame-button"
-					title="Next Image" 
-					onclick="return animator.callEvent('next',this);"
-					onfocus="animator.callEvent('depress',this);"
-					onblur="animator.callEvent('uplift',this);"
-					onmouseover="animator.callEvent('depress',this);"
-					onmouseout="animator.callEvent('uplift',this);"
-					class="btn btn-default  btn-sm">
-					<span class="glyphicon glyphicon-forward"></span>	
+
+				<button class="wxo-anim-next btn btn-default btn-sm" title="Next Image">
+					<span class="glyphicon glyphicon-forward"></span>
+					<span class="wb-inv">Next Image</span>
 				</button>
-				<button 
-					id="last-frame-button"
-					title="Last Image" 
-					onclick="return animator.callEvent('last',this);"
-					onfocus="animator.callEvent('depress',this);"
-					onblur="animator.callEvent('uplift',this);"
-					onmouseover="animator.callEvent('depress',this);"
-					onmouseout="animator.callEvent('uplift',this);"
-					class="btn btn-default btn-sm">
+
+				<button class="wxo-anim-last btn btn-default btn-sm mrgn-rght-md" title="Last Image">
 					<span class="glyphicon glyphicon-fast-forward"></span>
+					<span class="wb-inv">Last Image</span>
 				</button>
 			</div>
 			<div class="col-sm-4 col-xs-10 controller-set margin-top-medium">
 				<span>
 					Speed:
 				</span>
-				<button
-					id="slowdown-button"
-					title="Slower" 
-					onclick="return animator.callEvent('slower',this);"
-					onfocus="animator.callEvent('depress',this);"
-					onblur="animator.callEvent('uplift',this);"
-					onmouseover="animator.callEvent('depress',this);"
-					onmouseout="animator.callEvent('uplift',this);"
-					class="btn btn-default btn-sm">
-					<span class="glyphicon glyphicon-minus-sign"></span>
+				 <button class="wxo-anim-slower btn btn-default btn-sm" title="Slower">
+						<span class="glyphicon glyphicon-minus-sign"></span>
+						<span class="wb-inv">Slower</span>
 				</button>
-				<button 
-					id="speedup-button"
-					title="Faster" 
-					onclick="return animator.callEvent('faster',this);"
-					onfocus="animator.callEvent('depress',this);"
-					onblur="animator.callEvent('uplift',this);"
-					onmouseover="animator.callEvent('depress',this);"
-					onmouseout="animator.callEvent('uplift',this);"
-					class="btn btn-default btn-sm">
-					<span class="glyphicon glyphicon-plus-sign"></span>
+				
+				<button class="wxo-anim-faster btn btn-default btn-sm" title="Faster">
+						<span class="glyphicon glyphicon-plus-sign"></span>
+						<span class="wb-inv">"Faster</span>
 				</button>
-				<button 
-					id="speed-reset-button"
-					title="Reset Speed" 
-					onclick="return animator.callEvent('speedreset',this);"
-					onfocus="animator.callEvent('depress',this);"
-					onblur="animator.callEvent('uplift',this);"
-					onmouseover="animator.callEvent('depress',this);"
-					onmouseout="animator.callEvent('uplift',this);"
-					class="btn btn-default btn-sm">
-					Reset
+				
+				<button class="wxo-anim-speed-reset btn btn-default btn-sm">Reset
 				</button>
+			
 			</div>
 
 			<div class="hidden-xs col-sm-3 controller-set margin-top-small">
-				<fieldset>
-					<legend class="wb-inv">Time</legend>
+			
 					<div id="duration-label" >Time:</div>
-					<div id="duration-content">
-						<ul id="animation-duration" class="form-inline">
-						</ul>
-					</div>
-				</fieldset>
+	
+			<div class="radio"><label><input type="radio" checked="checked" name="duration-mob" id="short-mob" value="short" />Short (1 Hour)</label></div>
+			<div class="radio"><label><input type="radio"  name="duration-mob" id="long-mob" value="long" />Long (3 Hour)</label></div>
+				
+	
 			</div>
 
 		</div>
@@ -752,17 +748,17 @@
 <section class="gc-prtts"><h2>Features</h2><div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md">
 <a rel="external" href="/redirect.php?url=http://ec.gc.ca/uv/default.asp?lang=En&amp;n=DCF1C20A-1">
 <h3 class="h5">UV Index and sun protection</h3>
-<img class="img-responsive thumbnail mrgn-bttm-sm" src="/cacheable/images/banners/SM_123_03_30-UV-Index-and-Sun-Protection_button360x203.jpg?ver=1501615386" alt="" />
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="../cacheable/images/banners/SM_123_03_30-UV-Index-and-Sun-Protection_button360x203.jpg?ver=1501615386" alt="" />
 </a>
 <p>Be weather wise!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
 <a rel="external" href="/redirect.php?url=http://www.canada.ca/en/health-canada/services/sun-safety/extreme-heat-heat-waves.html">
 <h3 class="h5">Extreme Heat Protection</h3>
-<img class="img-responsive thumbnail mrgn-bttm-sm" src="/cacheable/images/banners/SM_124_03_30-Extreme-Heat-02_button_360x203.jpg?ver=1501615386" alt="" />
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="../cacheable/images/banners/SM_124_03_30-Extreme-Heat-02_button_360x203.jpg?ver=1501615386" alt="" />
 </a>
 <p>Be prepared!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
 <a rel="external" href="/redirect.php?url=http://www.ec.gc.ca/foudre-lightning/default.asp?lang=En&amp;n=974AFF95-1">
 <h3 class="h5">Lightning Safety</h3>
-<img class="img-responsive thumbnail mrgn-bttm-sm" src="/cacheable/images/banners/SM_121_03_30-Lightning-Safety_Button_360x203.jpg?ver=1501615386" alt="" />
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="../cacheable/images/banners/SM_121_03_30-Lightning-Safety_Button_360x203.jpg?ver=1501615386" alt="" />
 </a>
 <p>When thunder roars, GO INDOORS!</p></section></div></section><div class="row pagedetails">
    <div class="col-sm-5 col-xs-12 datemod">
@@ -816,7 +812,7 @@
             <a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
          </div>
          <div class="col-xs-6 col-md-2 text-right">
-            <object type="image/svg+xml" tabindex="-1" role="img" data="/template/gcweb/v4.0.22/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+            <object type="image/svg+xml" tabindex="-1" role="img" data="../template/GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
          </div>
       </div>
    </div>
@@ -826,18 +822,18 @@
 
 <!--[if gte IE 9 | !IE ]><!-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-<script src="/template/gcweb/v4.0.22/js/wet-boew.min.js"></script>
+<script src="../template/GCWeb/js/wet-boew.min.js"></script>
 <!--<![endif]-->
 <!--[if lt IE 9]>
-<script src="/template/gcweb/v4.0.22/js/ie8-wet-boew2.min.js"></script>
+<script src="/template/GCWeb/js/ie8-wet-boew2.min.js"></script>
 
 <![endif]-->
-<script src="/template/gcweb/v4.0.22/js/theme.min.js"></script>
+<script src="../template/GCWeb/js/theme.min.js"></script>
 
 
-<script src="/cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="/cacheable/js/city/availableTags_e.min.js"></script>
-<script src="/city/js/cityjump.js"></script>
+<script src="../cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="../cacheable/js/city/availableTags_e.min.js"></script>
+<script src="../city/js/cityjump.js"></script>
 <script>
     document.getElementById("jump").className = "";
     var max_chars = 50;
@@ -854,10 +850,10 @@
         }
     });
 </script>
-<script src="/template/gcweb/v4.0.22/js/deps/jquery.dataTables.min.js"></script>
-<script src="/city/js/jquery.h5validate.js"></script>
-<script src="/cacheable/js/myprofile/alerts-1.0.min.js"></script>
-<script src="/cacheable/js/myprofile/refresher-1.0.min.js"></script>
+<script src="../template/GCWeb/js/deps/jquery.dataTables.min.js"></script>
+<script src="../city/js/jquery.h5validate.js"></script>
+<script src="../cacheable/js/myprofile/alerts-1.0.min.js"></script>
+<script src="../cacheable/js/myprofile/refresher-1.0.min.js"></script>
 <script>
     $(document).ready(function () {
         $('form').h5Validate({
@@ -866,15 +862,17 @@
     });
 </script>
 
-<script type="text/javascript" src="/cacheable/js/radar/init.js"></script>
-<script src="/cacheable/js/responsive/jquery.rwdImageMaps.js"></script>
-<script src="/cacheable/js/radar/cities_overlay.js"></script>
-<script src="/cacheable/js/radar/intensity_scale_local.js"></script>
-<script src="/cacheable/js/radar/cookie_manager.js"></script>
+<script type="text/javascript" src="../cacheable/js/radar/init.js"></script>
+<script src="../cacheable/js/responsive/jquery.rwdImageMaps.js"></script>
+<script src="../cacheable/js/radar/cities_overlay.js"></script>
+<script src="../cacheable/js/radar/intensity_scale_local.js"></script>
+<script src="../cacheable/js/radar/cookie_manager.js"></script>
 
-<script src="/cacheable/js/radar/xmlhttpifr.js"></script> 
-<script src="/cacheable/js/radar/radar_controller.js"></script>
-<script src="/cacheable/js/radar/Animator.js"></script>
+<script src="../cacheable/js/radar/xmlhttpifr.js"></script> 
+<script src="../cacheable/js/radar/radar_controller.js"></script>
+<script src="../cacheable/js/radar/Animator.js"></script>
+
+<script src="../cacheable/js/radar/wxo-carousel-radar-CANADA-thunder.js"></script>
 <script>
 	var loaded = 0;
 	$(document).ready(function(e) {
