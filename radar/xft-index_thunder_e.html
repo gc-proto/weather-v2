@@ -1,0 +1,1038 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]--><head>
+		<meta charset="utf-8" />
+		<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta name="dcterms.creator" content="Environment Canada" />
+		<meta name="dcterms.language" title="ISO639-2" content="eng" />
+<title>Weather Radar - Franktown, ON - Environment Canada</title>
+<meta name="dcterms.title" content="Weather Radar - Franktown, ON - Environment Canada" />
+<meta name="description" content="A radar image indicating where precipitation is occurring. Customize your map to view overlays such as cities, roads, rivers, radar circles, and animations in short (1hr) and long (3hr) format." />
+<meta name="dcterms.subject" title="scheme" content="Radar;Remote sensing;" />
+<meta name="dcterms.issued" title="W3CDTF" content="2013-04-16" />
+<meta name="dcterms.modified" title="W3CDTF" content="2017-05-25" />
+		<!-- Meta data-->
+		<!--[if gte IE 9 | !IE ]><!-->
+<link href="../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="../GCWeb/css/theme.min.css">
+
+
+<!--<![endif]-->
+
+<!--[if lt IE 9]>
+<!-- Not sure what this is doing <link rel="stylesheet" href="/template/GCWeb/v4.0.22/css/ie8-wet-boew.min.css" /> -->
+<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
+<link rel="stylesheet" href="../cacheable/css/city/jquery-ui-1.10.3.custom.min.css">
+<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
+
+
+<![endif]-->
+<!--[if lte IE 9]>
+<![endif]-->
+
+<noscript><link rel="stylesheet" href="../wet-boew/css/noscript.min.css" /></noscript>
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<script>dataLayer1 = [];</script>
+<!-- End Google Tag Manager -->
+<link rel="stylesheet" href="../cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
+<!-- <link rel="stylesheet" href="/template/wxo/css/wxo.css" /> -->
+<!--[if IE 8]>
+<link href="../cacheable/css/radar/radar2.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="../cacheable/js/radar/Base.js"></script>
+
+
+<link rel="stylesheet" href="../cacheable/css/radar/controller.css" />
+<link rel="stylesheet" href="../cacheable/css/radar/radar2.css" />
+
+<script>
+	if (typeof composite_cities_active === 'undefined'){
+		var composite_cities_active = 'yes';
+	}
+</script>  
+</head>
+<body class="secondary" vocab="http://schema.org/" typeof="WebPage">
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
+<!-- End Google Tag Manager -->
+
+<ul id="wb-tphp">
+	<li class="wb-slc">
+		<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+	</li>
+	<li class="wb-slc visible-sm visible-md visible-lg">
+		<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+	</li>
+</ul>
+<header role="banner">
+	<div id="wb-bnr" class="container">
+
+		<section id="wb-lng" class="visible-md visible-lg text-right">
+			<h2 class="wb-inv">Language selection</h2>
+			<div class="row">
+	<div class="col-md-12">
+		<ul class="list-inline margin-bottom-none">
+			<li><a lang="fr" href="/include/lang.php">Français</a></li>
+		</ul>
+	</div>
+</div>
+
+		</section>
+
+<div class="row">
+			
+	<div class="brand col-xs-8 col-sm-9 col-md-6">
+		<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="../GCWeb/assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+	</div>
+
+	<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn" >
+				<h2>Search and menus</h2>
+				<ul class="list-inline text-right chvrn">
+	<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl"></div>
+
+			</section>
+
+
+			<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+				<h2>Search</h2>
+				<form action="http://recherche-search.gc.ca/rGs/s_r?#wb-land" method="get" name="cse-search-box" role="search" class="form-inline">
+	<div class="form-group">
+		<label for="wb-srch-q" class="wb-inv">Search website</label>
+		<input name="cdn" value="canada" type="hidden"/>
+		<input name="st" value="s" type="hidden"/>
+		<input name="num" value="10" type="hidden"/>
+		<input name="langs" value="eng" type="hidden"/>
+		<input name="st1rt" value="0" type="hidden">
+		<input name="s5bm3ts21rch" value="x" type="hidden"/>
+		<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca" />
+		<datalist id="wb-srch-q-ac">
+			<!--[if lte IE 9]><select><![endif]-->
+			<!--[if lte IE 9]></select><![endif]-->
+		</datalist>
+	</div>
+	<div class="form-group submit">
+		<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+	</div>
+</form>
+			</section>
+		</div>
+	</div>
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-replace="../ajax/sitemenu-en.html" typeof="SiteNavigationElement">
+<div class="container nvbar">
+	<h2>Topics menu</h2>
+    <div class="row">
+        <ul class="list-inline menu">
+            <li><a href="http://www.esdc.gc.ca/en/jobs/index.page">Jobs</a></li>
+            <li><a href="http://www.cic.gc.ca/english/index.asp">Immigration</a></li>
+            <li><a href="http://travel.gc.ca">Travel</a></li>
+            <li><a href="http://www.canada.ca/en/services/business/index.html">Business</a></li>
+            <li><a href="http://www.canada.ca/en/services/benefits/index.html">Benefits</a></li>
+            <li><a href="http://healthycanadians.gc.ca/index-eng.php">Health</a></li>
+            <li><a href="http://www.canada.ca/en/services/taxes/index.html">Taxes</a></li>
+            <li><a href="http://www.canada.ca/en/services/index.html">More services</a></li>
+        </ul>
+    </div>
+</div>
+	</nav>
+
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+		<h2>You are here:</h2>
+		<div class="container">
+	<div class="row">
+		<ol class="breadcrumb">
+<li><a href="http://www.canada.ca/en/index.html">Home</a></li><li><a href="http://www.canada.ca/en/services/environment/index.html">Environment and natural resources</a></li>
+<li><a href="/index_e.html">Weather information</a></li>
+<li><a href="/mainmenu/weather_menu_e.html">Weather</a></li>
+<li><a href="/radar/index_e.html">Radar</a></li>
+		</ol>
+	</div>
+</div>
+	</nav>
+</header>
+
+
+<div class="container hidden-print">
+
+<span class='pull-right profile-link'>&#160;|&#160;<a href='/myprofile/index_e.html'>My Weather Profile</a></span>
+	<a href="#weather-topics" class="pull-right">Weather Topics</a>
+	<span id="wxo-divider" class="pull-right">|&#160;</span>
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="/city/jump_e.html">
+   	<label id="search-label" for="city" accesskey="g" class="pull-right">Access city</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city"/>
+   	<input type="hidden" name="lang" value="e"/>
+   	<input type="hidden" name="unit" value=""/>
+   	<input type="submit" id="jump" class="wb-invisible" value="Go"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+	<div id="invalid-city"></div>
+</form>
+</div>
+<div class="clearfix"></div>
+<div id='collapsible-alerts' class='container'></div>
+<div class="clearfix"></div>
+		<main role="main" property="mainContentOfPage" class="container">
+
+<section>
+	<div class="row profile">
+		<div class="col-xs-12">
+			<h1 id="wb-cont" property="name">Weather Radar - Franktown, ON</h1>
+		</div>
+	</div>
+	
+<!--
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+-->
+	
+	
+
+	
+	
+<div class="animator" id="animator">
+
+	<div class="content row ">
+
+		<div id="animation" class="col-md-8">
+
+		
+				<p class="text-center margin-bottom-none center-block img-responsive" style="background-color: black; width: 580px; color: white";>PRECIPET - Rain 2017-07-26, 01:30 PM EDT</p>
+			
+
+			<div id="animation-info" class="row text-center animation-info">
+			</div>
+
+			<div class="animation-frame-nat-nojs" id="animation-frame">
+
+				<!--
+				<noscript class="visible-xs js-hide">
+					<img id="animation-image" 
+					alt="xRadar image for Franktown." 
+					title="xRadar image for Franktown." 
+					src="../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_00.GIF" 
+					width="580" 
+					height="480" 
+					class="wxo-radar-img wxo-radar-img-nojs img-responsive"
+					/> 
+				</noscript> 
+				-->
+
+				<!--
+				<img id="animation-image" 
+				alt="Radar image for Franktown." 
+				title="Radar image for Franktown." 
+				src="../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_00.GIF" 
+				width="580" 
+				height="480" 
+				class="wxo-radar-img hidden-xs wxo-radar-img-nojs img-responsive" 
+				
+				/>
+				-->
+
+			</div>	
+
+			<img 
+			width="580" 
+			height="480" 
+			src="../cacheable/images/radar/layers_detailed/default_cities/xft_towns.gif" 
+			alt="Cities" id="composite-cities-image" class="overlay-img-nojs overlay-img img-responsive " style="z-index: 60;">
+
+			<img width="580" height="480" src="../cacheable/images/radar/layers_detailed/additional_cities/xft_towns.gif" alt="More Cities" class="overlay-img-nojs overlay-img img-responsive  wxo-hide-overlay" id="additional_cities" style="z-index: 59;">
+
+			<img class="overlay-img-nojs overlay-img img-responsive " width="580" height="480" src="../cacheable/images/radar/layers_detailed/roads/XFT_roads.gif" id="roads" alt="Roads" style="z-index: 56;">
+
+			<img class="overlay-img-nojs overlay-img img-responsive wxo-hide-overlay" width="580" height="480" src="../cacheable/images/radar/layers_detailed/road_labels/xft_labs.gif" id="road_num" alt="Road Numbers" style="z-index: 57;">
+
+			<img class="overlay-img-nojs overlay-img img-responsive wxo-hide-overlay" width="580" height="480" src="../cacheable/images/radar/layers_detailed/rivers/xft_rivers.gif" id="river" alt="Rivers" style="z-index: 55;">
+
+			<img class="overlay-img-nojs overlay-img img-responsive " width="580" height="480" src="../cacheable/images/radar/layers_detailed/radar_circle/radar_circle.gif" alt="Radar Circles" id="radar_circle" style="z-index: 58;">
+
+			<div class="wrapper">
+			
+			
+				<div id="wxo-animator" data-image-current="6" data-image-count="7" data-image-lightning-id="NAT" data-wxo-anim-0="../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_00.GIF" data-wxo-label-0="#1" data-wxo-anim-1="../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_00.GIF" data-wxo-label-1="#2" data-wxo-anim-2="../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_10.GIF" data-wxo-label-2="#3" data-wxo-anim-3="../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_20.GIF" data-wxo-label-3="#4" data-wxo-anim-4="../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_30.GIF" data-wxo-label-4="#5" data-wxo-anim-5="../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_40.GIF" data-wxo-label-5="#6" data-wxo-anim-6="../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_11_00.GIF" data-wxo-label-6="#7"  >
+
+					<div id="wxo-carousel" class="wxo-ie8-hide">
+					
+						<p class="wxo-loading-msg text-center mrgn-tp-lg mrgn-bttm-lg">Loading images...</p>
+											
+						<canvas id="wxo-canvas" class="wxo-active img-responsive center-block " data-image-current="6" data-image-count="7">Please enable JavaScript to view the animation.</canvas>
+						
+				
+					
+					</div>
+
+				</div> 
+				
+			</div><!-- wrapper -->
+
+		</div><!-- id="animation" class="col-md-8" -->
+ 
+		<aside class="col-md-4 hidden-xs hidden-sm hidden-print">
+		<div class="well">
+		<h2 class="mrgn-tp-0">Weather Links</h2>
+		<ul class="lst-spcd">
+		<li><a href="/canada_e.html">Canadian Weather</a></li>
+		<li><a href="/warnings/index_e.html">Public Alerts - Canada</a></li>
+		<li><a href="/radar/index_e.html">Radar - Canada</a></li>
+		<li><a href="/satellite/index_e.html">Satellite - Canada</a></li>
+		<li><a href="/saisons/index_e.html">Seasonal forecasts</a></li>
+		<li><a href="/mainmenu/airquality_menu_e.html">Air Quality </a></li>
+		<li><a href="/marine/index_e.html">Marine - Canada</a></li>
+		<li><a href="http://ec.gc.ca/rhc-wsc/default.asp?lang=En&amp;n=4EED50F1-1">Water Level and Flow</a></li>
+		</ul>
+		</div>
+		</aside>
+		
+	</div><!-- class="content row" -->
+	
+</div><!-- class="animator" id="animator" -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+	<!--
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+-->
+ 
+<div class="clearfix"></div>
+
+
+
+
+
+			</div>
+
+
+</div>
+	
+	<div id="animator-controller" class="hidden-print">
+		<div class="hidden-xs hidden-sm hidden-md hidden-lg">
+			<b>Animation</b>
+		</div>
+
+		<div class="controller-box row hidden-xs hidden-sm hidden-md hidden-lg">
+			<div class="col-sm-5 col-xs-10 controller-set  margin-top-medium">
+				
+				<button class="wxo-anim-play btn btn-default btn-sm" title="Play">
+          			<span class="glyphicon glyphicon-play"></span>
+          			<span class="wb-inv">Play</span> 
+				</button>
+				   
+				 <button class="wxo-anim-stop btn btn-default btn-sm" title="Pause">
+					<span class="glyphicon glyphicon-stop"></span>
+					<span class="wb-inv">Pause</span>
+				</button>
+				
+				<button class="wxo-anim-first btn btn-default btn-sm" title="First Image">
+					<span class="glyphicon glyphicon-fast-backward"></span>
+					<span class="wb-inv">First Image</span>
+				</button>
+	  
+				 <button class="wxo-anim-prev btn btn-default btn-sm" title="Previous Image">
+					<span class="glyphicon glyphicon-backward"></span>
+					<span class="wb-inv">Previous Image</span>
+				</button>
+
+				<button class="wxo-anim-next btn btn-default btn-sm" title="Next Image">
+					<span class="glyphicon glyphicon-forward"></span>
+					<span class="wb-inv">Next Image</span>
+				</button>
+
+				<button class="wxo-anim-last btn btn-default btn-sm mrgn-rght-md" title="Last Image">
+					<span class="glyphicon glyphicon-fast-forward"></span>
+					<span class="wb-inv">Last Image</span>
+				</button>
+			</div>
+			<div class="col-sm-4 col-xs-10 controller-set margin-top-medium">
+				<span>
+					Speed:
+				</span>
+				 <button class="wxo-anim-slower btn btn-default btn-sm" title="Slower">
+						<span class="glyphicon glyphicon-minus-sign"></span>
+						<span class="wb-inv">Slower</span>
+				</button>
+				
+				<button class="wxo-anim-faster btn btn-default btn-sm" title="Faster">
+						<span class="glyphicon glyphicon-plus-sign"></span>
+						<span class="wb-inv">"Faster</span>
+				</button>
+				
+				<button class="wxo-anim-speed-reset btn btn-default btn-sm">Reset
+				</button>
+			
+			</div>
+
+			<div class="hidden-xs col-sm-3 controller-set margin-top-small">
+			
+					<div id="duration-label" >Time:</div>
+	
+			<div class="radio"><label><input type="radio" checked="checked" name="duration-mob" id="short-mob" value="short" />Short (1 Hour)</label></div>
+			<div class="radio"><label><input type="radio"  name="duration-mob" id="long-mob" value="long" />Long (3 Hour)</label></div>
+				
+	
+			</div>
+
+		</div>
+
+				<div class="hidden-xs margin-top-large">
+			<form action="/radar/index_e.html" method="get">
+	<b>Overlays</b>
+	<div class="controller-box">
+		<!-- starts empty -->
+		<table id="animation-overlays" class="hidden-md hidden-lg hidden-sm animation-overlays" >
+			<tbody>
+				<tr>
+					<td class="check">
+						<input type="checkbox" class="overlay-box" id="overlay_default_cities" checked>
+					</td>
+					<td>
+						<label for="overlay_default_cities" class="wxo-lbl-clr">Cities</label>
+					</td>
+					<td class="check">
+						<input type="checkbox" class="overlay-box" id="overlay_additional_cities" >
+					</td>
+					<td>
+						<label for="overlay_additional_cities" class="wxo-lbl-clr">More Cities</label>
+					</td>
+					<td class="check">
+						<input type="checkbox" checked class="overlay-box" id="overlay_roads">
+					</td>
+					<td>
+						<label for="overlay_roads" class="wxo-lbl-clr">Roads</label>
+					</td>
+				</tr>
+				<tr>
+					<td class="check">
+						<input type="checkbox"  class="overlay-box"  id="overlay_road_labels">
+					</td>
+					<td>
+						<label for="overlay_road_labels" class="wxo-lbl-clr">Road Numbers</label>
+					</td>
+					<td class="check">
+						<input type="checkbox"  class="overlay-box"  id="overlay_rivers">
+					</td>
+					<td>
+						<label for="overlay_rivers" class="wxo-lbl-clr">Rivers</label>
+					</td>
+					<td class="check">
+						<input type="checkbox" class="overlay-box" id="overlay_radar_circle" checked>
+					</td>
+					<td>
+						<label for="overlay_radar_circle" class="wxo-lbl-clr">Radar Circles</label>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+			<noscript>
+			<table id="animation-overlays-nojs" class="animation-overlays">
+				<tbody>					
+					<tr>
+						<td class="check">
+							<input name="overlay_cities" class="overlay-box" id="overlay_cities" type="checkbox" checked/>
+						</td>
+						<td>
+							<label class="wxo-lbl-clr" for="overlay_cities">Cities</label>
+						</td>
+						<td class="check">
+							<input name="overlay_cities2" class="overlay-box" id="overlay_cities2" type="checkbox"  />
+						</td>
+						<td>
+							<label class="wxo-lbl-clr" for="overlay_cities2">More Cities</label>
+						</td>
+						<td class="check">
+							<input name="overlay_roads" class="overlay-box "id="overlay_roads_ns" type="checkbox"  checked/>
+						</td>
+						<td>
+							<label class="wxo-lbl-clr" for="overlay_roads_ns">Roads</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="check">
+							<input name="overlay_roadnum" class="overlay-box "id="overlay_roadnum" type="checkbox"  />
+						</td>
+						<td>
+							<label class="wxo-lbl-clr" for="overlay_roadnum">Road Numbers</label>
+						</td>
+						<td class="check">
+							<input name="overlay_rivers" class="overlay-box" id="overlay_rivers_ns" type="checkbox"  />
+						</td>
+						<td>
+							<label class="wxo-lbl-clr" for="overlay_rivers_ns">Rivers</label>
+						</td>
+						<td class="check">
+							<input name="overlay_radcirc" class="overlay-box" id="overlay_radcirc" type="checkbox" checked/>
+						</td>
+						<td>
+							<label class="wxo-lbl-clr" for="overlay_radcirc">Radar Circles</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+											
+							<input type="hidden" value="XFT" name="id">
+							<input type="hidden" value="1" name="overlay_form2">							
+							<input class="submit" type="submit" title="Submit" value="Submit"/>
+						</td>
+
+					</tr>
+				</tbody>
+			</table>
+			</noscript>
+
+		<!--<ul id="animation-overlays"></ul>-->
+	</div>
+</form>
+		</div>
+								
+		
+	<div class="hidden-xs margin-top-medium">
+				<b>Intensity Scale</b>
+					<form action="/radar/index_e.html" method="get">
+						<div class="controller-box ">
+										<input type="hidden" value="XFT" name="id">
+					
+					<input id="intensity-detailed" type="radio" checked="checked" value=1 name="intensity_detailed">
+					<label id="intensity-detailed-label" for="intensity-detailed" class="wxo-lbl-clr">8 colours</label>
+					<input id="intensity-standard" type="radio"  value=0 name="intensity_detailed">
+					<label id="intensity-standard-label" for="intensity-standard" class="wxo-lbl-clr">14 colours</label>
+					<noscript><br><input class="submit" type="submit" title="submit-intensity" value="Submit"/></noscript>
+						</div>
+					</form>
+			</div>
+		</div>
+</div>
+
+<div class="hidden-sm hidden-md hidden-lg">
+	<!-- No javascript stuff, not needed	<noscript class="">
+		<div class="col-xs-12" style="padding-left: 35px">
+			<form action="/radar/index_e.html" method="get">
+			<h5>Overlays</h5>
+			<div class="checkbox">
+				<input name="overlay_cities" id="overlay_citiesxs" type="checkbox" checked/>
+				<label class="wxo-lbl-clr" for="overlay_cities">Cities</label>
+			</div>
+						<div class="checkbox">
+				<input name="overlay_cities2" id="overlay_cities2xs" type="checkbox"  />
+				<label class="wxo-lbl-clr" for="overlay_cities2">More Cities</label>
+			</div>
+			<div class="checkbox">
+				<input name="overlay_roads" id="overlay_roads_nsxs" type="checkbox"  checked/>
+				<label class="wxo-lbl-clr" for="overlay_roads_ns">Roads</label>
+			</div>
+			<div class="checkbox">
+				<input name="overlay_roadnum" id="overlay_roadnumxs" type="checkbox"  />
+				<label class="wxo-lbl-clr" for="overlay_roadnum">Road Numbers</label>
+			</div>
+			<div class="checkbox">
+				<input name="overlay_rivers" id="overlay_rivers_nsxs" type="checkbox"  />
+				<label class="wxo-lbl-clr" for="overlay_rivers_ns">Rivers</label>
+			</div>
+			<div class="checkbox">
+				<input name="overlay_radcirc" id="overlay_radcircxs" type="checkbox" checked/>
+				<label class="wxo-lbl-clr" for="overlay_radcirc">Radar Circles</label>
+			</div>
+			
+					
+			<input class="submit" type="submit" title="Submit" value="Submit"/>
+							
+			<input type="hidden" value="XFT" name="id">
+			<input type="hidden" value="1" name="overlay_form2">	
+			</form>
+						<form action="/radar/index_e.html" method="get">
+			<h5>Intensity Scale</h5>
+			<div class="radio">
+				<input id="intensity-detailedxs" type="radio" checked="checked" value=1 name="intensity_detailed">
+				<label id="intensity-detailed-labelxs" for="intensity-detailed" >8 colours</label>
+			</div>
+			<div class="radio">
+				<input id="intensity-standardxs" type="radio"  value=0 name="intensity_detailed">
+				<label id="intensity-standard-labelxs" for="intensity-standard" >14 colours</label> 
+			</div>
+			<input class="submit" type="submit" title="Submit" value="Submit"/>
+										
+			<input type="hidden" value="XFT" name="id">
+			
+			</form>
+		</div>
+	</noscript> -->
+	<details class="no-js-hide hidden-xs">
+		<summary>Overlays</summary>
+		<div class="checkbox">
+			<label><input id="wxo-overlay-cities" type="checkbox" checked/>Cities</label>
+		</div>
+				<div class="checkbox">
+			<label><input id="wxo-overlay-more-cities" type="checkbox"  />More Cities</label>
+		</div>
+		<div class="checkbox">
+			<label><input id="wxo-overlay-roads" type="checkbox" checked />Roads</label>
+		</div>
+		<div class="checkbox">
+			<label><input id="wxo-overlay-road-numbers" type="checkbox"  />Road Numbers</label>
+		</div>
+		<div class="checkbox">
+			<label><input id="wxo-overlay-river" type="checkbox"  />River</label>
+		</div>
+		<div class="checkbox">
+			<label><input id="wxo-overlay-radar-circles" type="checkbox" checked />Radar Circles</label>
+		</div>
+			</details>
+	
+ 
+	<details class="no-js-hide hidden-xs">
+		<summary>Intensity Scale</summary>
+			<div class="radio "><label><input type="radio" checked="checked" name="intensity-mob" id="intensity-detailed-mob" />8 Colours</label></div>
+			 <div class="radio"><label><input type="radio"  name="intensity-mob" id="intensity-standard-mob" />14 Colours</label></div> 
+	</details> 
+	<details class="no-js-hide hidden-xs">
+		<summary>Time Frame</summary>
+			<div class="radio"><label><input type="radio" checked="checked" name="duration-mob" id="short-mob" value="short" />Short (1 Hour)</label></div>
+			<div class="radio"><label><input type="radio"  name="duration-mob" id="long-mob" value="long"/>Long (3 Hour)</label></div>
+	</details>
+	
+	
+	<div class="clearfix"></div>
+	
+	
+	<details>
+		<summary>Radar - Canada</summary>
+		<ul class="cdn-ul">
+			<li> <a href="index_e.html">Canada</a></li>
+		</ul>
+		<details>
+			<summary>Pacific</summary>
+			<ul>
+				<li class="rad-loc"> <a href="index_e.html?id=PAC">Pacific Region</a></li>                         
+				<li class="rad-loc"> <a href="index_e.html?id=WUJ">Aldergrove (near Vancouver)</a></li>
+				<li class="rad-loc"> <a href="index_e.html?id=XPG">Prince George</a></li>
+				<li class="rad-loc"> <a href="index_e.html?id=XSS">Silver Star Mountain (near Vernon)</a></li>
+				<li class="rad-loc"> <a href="index_e.html?id=XSI">Victoria</a></li>	
+			</ul>					
+		</details>
+		<details>
+			<summary>Prairies</summary>
+			<ul>
+				<li class="rad-loc"><a href="index_e.html?id=WRN">Prairies Region</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XBE">Bethune (near Regina)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WHK">Carvel (near Edmonton)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XFW">Foxwarren (near Brandon)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WHN">Jimmy Lake (near Cold Lake)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XRA">Radisson (near Saskatoon)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XBU">Schuler (near Medicine Hat)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WWW">Spirit River (near Grande Prairie)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XSM">Strathmore (near Calgary)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XWL">Woodlands (near Winnipeg)</a></li>
+			</ul>
+		</details>  
+		<details>
+			<summary>Ontario</summary>
+			<ul>
+				<li class="rad-loc"><a href="index_e.html?id=ONT">Ontario Region</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WBI">Britt (Near Sudbury)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XDR">Dryden</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WSO">Exeter (near London)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XFT">Franktown (near Ottawa)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WKR">King City (near Toronto)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WGJ">Montreal River (near Sault Ste Marie)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XTI">Northeast Ontario (near Timmins)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XNI">Superior West (near Thunder Bay)</a></li>
+			</ul>
+		</details> 
+		<details>
+			<summary>Quebec</summary>
+			<ul>
+				<li class="rad-loc"><a href="index_e.html?id=QUE">Quebec Region</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WMB">Lac Castor (near Saguenay)</a></li>  
+				<li class="rad-loc"><a href="index_e.html?id=XLA">Landrienne (near Rouyn-Noranda)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WMN">McGill (near Montréal)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XAM">Val d'Irène (near Mont Joli)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WVY">Villeroy (near Trois-Rivières)</a></li>
+			</ul>
+		</details> 
+		<details>
+			<summary>Atlantic</summary>
+			<ul>
+				<li class="rad-loc"><a href="index_e.html?id=ERN">Atlantic Region</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XNC">Chipman (near Fredericton)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XGO">Halifax</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WTP">Holyrood (near St. John's)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XME">Marble Mountain</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XMB">Marion Bridge (near Sydney)</a></li>
+			</ul>
+		</details>							      
+	</details>
+	<details>
+		<summary>Help</summary>         
+		<ul>
+			<li class="rad-loc"><a href="http://www.ec.gc.ca/meteo-../default.asp?lang=En&amp;n=2B931828-1" title="About Image">About Image</a></li>
+			<li class="rad-loc"><a href="/radar/how-to-use_e.html" title="How to Use">How to Use</a></li>
+			<li class="rad-loc"><a href="http://climate.weather.gc.ca/radar/index_e.html" title="Historical Images">Historical Images</a></li>
+		</ul>
+	</details>
+</div>
+
+
+<div class="clearfix"></div>
+<div id="links" class="hidden-xs hidden-print">        
+	<div class="city-header" id="top-header">
+		<a href="index_e.html">Radar - Canada</a>
+	</div>
+	<div class="city-container" id="container5">
+	<div class="city-container" id="container4">
+	<div class="city-container" id="container3">
+	<div class="city-container" id="container2">
+	<div class="city-container" id="container1">
+		<div class="city-col" id="col1">
+		<div class="city-header" id="bold"><a href="index_e.html?id=PAC">Pacific</a></div>
+			<ul>
+				<li><a href="index_e.html?id=WUJ">Aldergrove<br/>(near Vancouver)</a></li>
+				<li><a href="index_e.html?id=XPG">Prince George</a></li>
+				<li><a href="index_e.html?id=XSS">Silver Star Mountain<br/>(near Vernon)</a></li>
+				<li><a href="index_e.html?id=XSI">Victoria</a></li>
+			</ul>
+		</div>
+		<div class="city-col" id="col2">
+		<div class="city-header"><a href="index_e.html?id=WRN">Prairies</a></div>
+			<ul>
+				<li><a href="index_e.html?id=XBE">Bethune<br/>(near Regina)</a></li>
+				<li><a href="index_e.html?id=WHK">Carvel<br/>(near Edmonton)</a></li>
+				<li><a href="index_e.html?id=XFW">Foxwarren<br/>(near Brandon)</a></li>
+				<li><a href="index_e.html?id=WHN">Jimmy Lake<br/>(near Cold Lake)</a></li>
+				<li><a href="index_e.html?id=XRA">Radisson<br/>(near Saskatoon)</a></li>
+				<li><a href="index_e.html?id=XBU">Schuler<br/>(near Medicine Hat)</a></li>
+				<li><a href="index_e.html?id=WWW">Spirit River<br/>(near Grande Prairie)</a></li>
+				<li><a href="index_e.html?id=XSM">Strathmore<br/>(near Calgary)</a></li>
+				<li><a href="index_e.html?id=XWL">Woodlands<br/>(near Winnipeg)</a></li>
+				
+			</ul>
+		</div>
+		<div class="city-col" id="col3">
+		<div class="city-header"><a href="index_e.html?id=ONT">Ontario</a></div>
+			<ul>
+				<li><a href="index_e.html?id=WBI">Britt<br/>(near Sudbury)</a></li>
+				<li><a href="index_e.html?id=XDR">Dryden</a></li>
+				<li><a href="index_e.html?id=WSO">Exeter<br/>(near London)</a></li>
+				<li><a href="index_e.html?id=XFT">Franktown<br/>(near Ottawa)</a></li>
+				<li><a href="index_e.html?id=WKR">King City<br/>(near Toronto)</a></li>
+				<li><a href="index_e.html?id=WGJ">Montreal River<br/>(near Sault Ste Marie)</a></li>
+				<li><a href="index_e.html?id=XTI">Northeast Ontario<br/>(near Timmins)</a></li>
+				<li><a href="index_e.html?id=XNI">Superior West<br/>(near Thunder Bay)</a></li>
+			</ul>
+		</div>
+		<div class="city-col" id="col4">
+		<div class="city-header"><a href="index_e.html?id=QUE">Quebec</a></div>
+			<ul>
+				<li><a href="index_e.html?id=WMB">Lac Castor<br/>(near Saguenay)</a></li>
+				<li><a href="index_e.html?id=XLA">Landrienne<br/>(near Rouyn-Noranda)</a></li>
+				<li><a href="index_e.html?id=WMN">McGill<br/>(near Montr&#233;al)</a></li>
+				<li><a href="index_e.html?id=XAM">Val d'Ir&#232;ne<br/>(near Mont Joli)</a></li>
+				<li><a href="index_e.html?id=WVY">Villeroy<br/>(near Trois-Rivi&#232;res)</a></li>
+			</ul>
+		</div>
+		<div class="city-col" id="col5">
+		<div class="city-header"><a href="index_e.html?id=ERN">Atlantic</a></div>
+			<ul>
+				<li><a href="index_e.html?id=XNC">Chipman<br/>(near Fredericton)</a></li>
+				<li><a href="index_e.html?id=XGO">Halifax</a></li>
+				<li><a href="index_e.html?id=WTP">Holyrood<br/>(near St. John's)</a></li>
+				<li><a href="index_e.html?id=XME">Marble Mountain</a></li>
+				<li><a href="index_e.html?id=XMB">Marion Bridge<br/>(near Sydney)</a></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<div class="city-footer" id="top-footer">
+		<ul class="arrowedList">
+			<li><a href="http://www.ec.gc.ca/meteo-../default.asp?lang=En&amp;n=2B931828-1" title="About Image">About Image</a></li>
+			<li><a href="/radar/how-to-use_e.html" title="How to Use">How to Use</a></li>
+			<li><a href="http://climate.weather.gc.ca/radar/index_e.html" title="Historical Images">Historical Images</a></li>
+		</ul>
+	</div>
+</div>
+<div class="clearfix"></div>
+
+</section>
+
+<section class="hidden-print"  id="weather-topics">
+	<h2 class="wb-inv">What we are doing</h2>
+	 <div class="row wb-eqht">
+      <section class="col-lg-4 col-md-6">
+			<h3 class="wxo-footer-nav">Weather Forecasts</h3>
+      	<ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="/canada_e.html">Canadian Weather</a></li>
+            <li><a href="/radar/index_e.html">Radar - Canada</a></li>
+            <li><a href="/satellite/index_e.html">Satellite - Canada</a></li>
+            <li><a href="/marine/index_e.html">Marine - Canada</a></li>
+            <li><a href="/mainmenu/airquality_menu_e.html">Air Quality</a></li>
+            <li><a href="http://www.ec.gc.ca/glaces-ice/default.asp?lang=En&amp;n=D32C361E-1">Canadian Ice Service</a></li>
+				<li><a href="/saisons/index_e.html">Seasonal forecasts</a></li>
+				<li><a href="/forecast/public_bulletins_e.html">Extended forecast</a></li>
+			</ul>
+      </section>
+      <section class="col-lg-4 col-md-6">
+		<h3 class="wxo-footer-nav">Weather Alerts</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="/warnings/index_e.html">Public Alerts - Canada</a></li>
+            <li><a href="/lightning/index_e.html">Lightning</a></li>
+            <li><a href="/hurricane/index_e.html">Hurricane</a></li>
+            <li><a href="/warnings/weathersummaries_e.html">Weather Summaries</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-../default.asp?lang=En&amp;n=15E59C08-1">Hazardous Weather</a></li>
+      </ul>
+      </section>
+	  <section class="col-lg-4 col-md-6">
+	  <h3 class="wxo-footer-nav">Weather Resources</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="/model_forecast/model_e.html">Global and Regional forecast models</a></li>
+            <li><a href="/astro/index_e.html">Astronomy</a></li>
+            <li><a href="http://ec.gc.ca/rhc-wsc/default.asp?lang=En&amp;n=4EED50F1-1">Water Level and Flow</a></li>
+				<li><a href="http://climate.weather.gc.ca/index_e.html">Historical Climate Data</a></li>
+				<li><a href="https://flightplanning.navcanada.ca/cgi-bin/CreePage.pl?Langue=anglais&amp;NoSession=NS_Inconnu&amp;Page=forecast-observation&amp;TypeDoc=html">Aviation</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-../default.asp?lang=En&amp;n=4D51ECA8-1 ">Guide to Public forecasts</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-../default.asp?lang=En&amp;n=2EC4EC51-1">Guide to Marine forecasts</a></li>
+				<li><a href="http://ec.gc.ca/meteo-../default.asp?lang=En&amp;n=8E7198BB-1">Guide to Air Quality forecasts</a></li>
+		</ul>
+      </section>
+	</div>
+</section>
+<section class="gc-prtts hidden-print"><h2>Features</h2><div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://ec.gc.ca/uv/default.asp?lang=En&amp;n=DCF1C20A-1">
+<h3 class="h5">UV Index and sun protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="../cacheable/images/banners/SM_123_03_30-UV-Index-and-Sun-Protection_button360x203.jpg" alt="" />
+</a>
+<p>Be weather wise!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://www.canada.ca/en/health-canada/services/sun-safety/extreme-heat-heat-waves.html">
+<h3 class="h5">Extreme Heat Protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="../cacheable/images/banners/SM_124_03_30-Extreme-Heat-02_button_360x203.jpg" alt="" />
+</a>
+<p>Be prepared!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://www.ec.gc.ca/cas-aqhi/">
+<h3 class="h5">Be Air Aware</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="../cacheable/images/banners/SM_120_03_30-Air-Quality_01_360x203.jpg" alt="" />
+</a>
+<p>Air Quality Health Index</p></section></div></section>
+<div class="row pagedetails">
+   <div class="col-sm-5 col-xs-12 datemod">
+      <dl id="wb-dtmd">
+         <dt>Date modified:&#32;</dt>
+         <dd><time property="dateModified">2017-07-21</time></dd>
+      </dl>
+   </div>
+   <div class="clear visible-xs"></div>
+   <div class="col-sm-4 col-xs-6">
+      <a href="/mainmenu/contact_us_e.html" class="btn btn-default"><span class="glyphicon glyphicon-comment mrgn-rght-sm"></span>Feedback<span class="wb-inv"> about this web site</span></a>
+   </div>
+   <div class="col-sm-3 col-xs-6 text-right">
+      <div class="wb-share" data-wb-share='{"lnkClass": "btn btn-default"}'></div>
+   </div>
+   <div class="clear visible-xs"></div>
+</div>
+
+<!-- removing extra buttons </main>
+<div class="row pagedetails">
+<div class="col-sm-6 col-lg-4 mrgn-tp-sm">
+<a href="https://www.canada.ca/en/report-problem.html" class="btn btn-default btn-block">Report a problem or mistake on this page</a>
+</div>
+<div class="col-sm-3 mrgn-tp-sm pull-right">
+<div class="wb-share" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>
+</div>
+<div class="datemod col-xs-12 mrgn-tp-lg">
+<dl id="wb-dtmd">
+<dt>Date modified:&#32;</dt>
+<dd><time property="dateModified">2017-07-22</time></dd>
+</dl>
+</div>
+</div>
+</main> -->
+
+<footer role="contentinfo" id="wb-info">
+   <nav role="navigation" class="container wb-navcurr">
+      <h2 class="wb-inv">About government</h2>
+      <ul class="list-unstyled colcount-sm-2 colcount-md-3">
+   <li><a href="/mainmenu/contact_us_e.html">Contact us</a></li>
+   <li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+   <li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+   <li><a href="http://news.gc.ca/">News</a></li>
+   <li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+   <li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+   <li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+   <li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+   <li><a href="http://open.canada.ca/en/">Open government</a></li>
+</ul>
+   </nav>
+   <div class="brand">
+   <div class="container">
+      <div class="row ">
+         <nav class="col-md-10 ftr-urlt-lnk">
+            <h2 class="wb-inv">About this site</h2>
+            <ul>
+               <li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+               <li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+               <li><a href="http://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+               <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+               <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+            </ul>
+         </nav>
+         <div class="col-xs-6 visible-sm visible-xs tofpg">
+            <a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+         </div>
+         <div class="col-xs-6 col-md-2 text-right">
+            <object type="image/svg+xml" tabindex="-1" role="img" data="../template/GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+         </div>
+      </div>
+   </div>
+</div>
+</footer>
+
+
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="../wet-boew/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+<script src="../GCWeb/js/theme.min.js"></script>
+<script src="../cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="../cacheable/js/city/availableTags_e.min.js"></script>
+<script src="../city/js/cityjump.js"></script>
+ <script>
+    document.getElementById("jump").className = "";
+    var max_chars = 50;
+    $('#city').keydown( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+    $('#city').keyup( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+</script> 
+
+<script src="../template/GCWeb/js/deps/jquery.dataTables.min.js"></script>
+<script src="../city/js/jquery.h5validate.js"></script>
+<script src="../cacheable/js/myprofile/alerts-1.0.min.js"></script>
+<script src="../cacheable/js/myprofile/refresher-1.0.min.js"></script>
+
+<script> <!-- trying to add play in seperate script -->
+    $(document).ready(function () {
+        $('form').h5Validate({
+            errorClass:'white'
+        });
+    });
+</script> 
+
+
+ <script>
+    $(document).ready(function () {
+        $('form').h5Validate({
+            errorClass:'white'
+        });
+    });
+	</script>
+	
+	
+	<script>
+	var loaded = 0;
+	$(document).ready(function(e) {
+		window.animator = new Animator("XFT",{"regionName":"Franktown","displayProduct":true,"image":{"width":"580px","height":"480px"},"overlay":{"height":"480px"},"products":{"active":"PRECIP_RAIN"},"durations":{"active":"short"},"timezone":{"id":"Canada\/Eastern","title":"","offset":""},"settings":"final"});
+		$('[name=duration]').click(function(){
+			var val = this.id + "-mob";
+			$("#" + val).prop('checked', true); 
+		});
+		addCityOverlay();
+		resizeComponents();
+	});
+	$(window).resize(function(){
+		resizeComponents();
+	}); 
+	$('img#animation-image').load( function() {
+		if (!loaded){
+			$('img[usemap]').rwdImageMaps();
+			loaded = 1;
+		}
+		resizeComponents();
+	});
+	
+	
+</script>
+
+
+<div class="device-xs visible-xs"></div>
+<div class="device-sm visible-sm"></div>
+<div class="device-md visible-md"></div>
+<div class="device-lg visible-lg"></div> 
+	
+	<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="../wet-boew/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
+
+<![endif]-->
+<script type="text/javascript" src="../cacheable/js/radar/init.js"></script>
+<script src="../cacheable/js/responsive/jquery.rwdImageMaps.js"></script>
+<script src="../cacheable/js/radar/cities_overlay.js"></script>
+<script src="../cacheable/js/radar/intensity_scale_local.js"></script>
+<script src="../cacheable/js/radar/cookie_manager.js"></script>
+<script src="../cacheable/js/radar/xmlhttpifr.js"></script> 
+<script src="../cacheable/js/radar/radar_controller.js"></script> 
+<script src="../cacheable/js/radar/wxo-carousel-radar.js"></script>
+
+<!--
+<script>
+    $(document).ready(function () {
+        $('form').h5Validate({
+            errorClass:'white'
+        });
+    });
+</script>
+<script src="../cacheable/js/wxo-carousel/wxo-carousel-gdps-speed.js"></script>
+
+<script src="../cacheable/js/wxo-carousel/map_resize_xs.js"></script>
+-->
+
+<script>
+resizeComponents();
+</script>
+
+</body>
+</html>
