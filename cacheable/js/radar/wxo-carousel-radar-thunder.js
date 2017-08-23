@@ -445,7 +445,7 @@ $(document).ready(function(){
                     data: {id: animator.attr('data-image-lightning-id')}
                })).done(function(content) {
                    //state.imageSrcs = $.parseJSON(content)['imageSrc'];
-              state.imageSrcs =["../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_00.GIF","../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_10.GIF","../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_20.GIF","../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_30.GIF","../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_40.GIF","../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_10_50.GIF","../data/radar/detailed/XFT_PRECIP_RAIN_2017_08_22_11_00.GIF"];
+              state.imageSrcs =["../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_10_00.GIF","../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_10_10.GIF","../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_10_20.GIF","../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_10_30.GIF","../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_10_40.GIF","../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_10_50.GIF","../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_11_00.GIF"];
 
            
                    for (var i = 0; i < state.totalImgNum; i++){ //load both in -xs
