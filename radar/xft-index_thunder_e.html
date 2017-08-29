@@ -198,14 +198,19 @@
 /* ============================================================ */
 /* ============================================================ */
 -->
+	<style>
+.radarimg {
 	
+	border: blue 3px;
 	
+}
 
+	</style>
 	
 	
-<div class="animator" id="animator">
+<div class="animator" id="animator" >
 
-	<div class="content row ">
+	<div class="content row">
 
 		<div id="animation" class="col-md-8">
 
@@ -216,34 +221,21 @@
 			<div id="animation-info" class="row text-center animation-info">
 			</div>
 
-			<div class="animation-frame-nat-nojs" id="animation-frame">
+			
+			<div style="position: relative;">
 
-				<!--
-				<noscript class="visible-xs js-hide">
-					<img id="animation-image" 
-					alt="xRadar image for Franktown." 
-					title="xRadar image for Franktown." 
-					src="../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_10_00.GIF" 
-					width="580" 
-					height="480" 
-					class="wxo-radar-img wxo-radar-img-nojs img-responsive"
-					/> 
-				</noscript> 
-				-->
-
-				<!--
-				<img id="animation-image" 
-				alt="Radar image for Franktown." 
+				<img 
+ 				alt="Radar image for Franktown." 
 				title="Radar image for Franktown." 
 				src="../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_10_00.GIF" 
-				width="580" 
-				height="480" 
-				class="wxo-radar-img hidden-xs wxo-radar-img-nojs img-responsive" 
-				
-				/>
-				-->
+				width="580"  
+				height="480"
+				class="wxo-radar-img hidden-xs img-responsive"
+				style="z-index: -1;"	
 
-			</div>	
+				/>
+			
+			
 
 			<img 
 			width="580" 
@@ -260,6 +252,8 @@
 			<img class="overlay-img-nojs overlay-img img-responsive wxo-hide-overlay" width="580" height="480" src="../cacheable/images/radar/layers_detailed/rivers/xft_rivers.gif" id="river" alt="Rivers" style="z-index: 55;">
 
 			<img class="overlay-img-nojs overlay-img img-responsive " width="580" height="480" src="../cacheable/images/radar/layers_detailed/radar_circle/radar_circle.gif" alt="Radar Circles" id="radar_circle" style="z-index: 58;">
+			
+			
 
 			<div class="wrapper">
 			
@@ -268,10 +262,9 @@
 
 					<div id="wxo-carousel" class="wxo-ie8-hide">
 					
-						<p class="wxo-loading-msg text-center mrgn-tp-lg mrgn-bttm-lg">Loading images...</p>
+					<p class="wxo-loading-msg text-center mrgn-tp-lg mrgn-bttm-lg">Loading images...</p>
 											
-						<canvas id="wxo-canvas" class="wxo-active img-responsive center-block " data-image-current="6" data-image-count="7">Please enable JavaScript to view the animation.</canvas>
-						
+						 <canvas id="wxo-canvas" class="wxo-active img-responsive center-block" data-image-current="6" data-image-count="7">Please enable JavaScript to view the animation.</canvas>
 				
 					
 					</div>
@@ -279,6 +272,8 @@
 				</div> 
 				
 			</div><!-- wrapper -->
+			
+			</div>
 
 		</div><!-- id="animation" class="col-md-8" -->
  
@@ -326,6 +321,7 @@
 /* ============================================================ */
 /* ============================================================ */
 -->
+ 
  
 <div class="clearfix"></div>
 
@@ -398,11 +394,29 @@
 			<div class="hidden-xs col-sm-3 controller-set margin-top-small">
 			
 					<div id="duration-label" >Time:</div>
+					
+					
+					<div class="radio">
+						<label>
+							<input type="radio" name="group1" value="short" checked> Short (1hr) <br>
+						</label> 
+					</div>
+				
+					<div class="radio">
+						<label>
+							<input type="radio" name="group1" value="long" onClick="window.location='https://www.canada.ca/home.html';" > Long (3hr) <br>
+						</label>
+				</div>
+					
+					
+					<!-- <div id="duration-label" >Time:</div>
 	
 			<div class="radio"><label><input type="radio" checked="checked" name="duration-mob" id="short-mob" value="short" />Short (1 Hour)</label></div>
 			<div class="radio"><label><input type="radio"  name="duration-mob" id="long-mob" value="long" />Long (3 Hour)</label></div>
 				
 	
+			</div> -->
+
 			</div>
 
 		</div>
