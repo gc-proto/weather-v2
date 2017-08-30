@@ -1,0 +1,878 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]--><head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>Satellite Images and Animation - Environment Canada</title>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link rel="stylesheet" href="../cacheable/css/mainmenu/index-e.css" media="screen">
+<link href="../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="../GCWeb/css/theme.min.css">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="/cacheable/css/mainmenu/index-ie8-e.css" media="screen">
+<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+<![endif]-->
+
+<noscript><link rel="stylesheet" href="../wet-boew/css/noscript.min.css" /></noscript>
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<script>dataLayer1 = [];</script>
+<!-- End Google Tag Manager -->
+<link rel="stylesheet" href="../cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" href="../template/wxo/css/wxo.css" />
+
+</head>
+<body vocab="http://schema.org/" typeof="WebPage">
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
+<!-- End Google Tag Manager -->
+<ul id="wb-tphp">
+<li class="wb-slc">
+<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+</li>
+<li class="wb-slc visible-sm visible-md visible-lg">
+<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+</li>
+</ul>
+<header role="banner">
+<div id="wb-bnr" class="container">
+<section id="wb-lng" class="visible-md visible-lg text-right">
+<h2 class="wb-inv">Language selection</h2>
+<div class="row">
+<div class="col-md-12">
+<ul class="list-inline margin-bottom-none">
+<li><a lang="fr" href="index-fr.html">Français</a></li>
+</ul>
+</div>
+</div>
+</section>
+<div class="row">
+<div class="brand col-xs-8 col-sm-9 col-md-6">
+<a href="https://www.canada.ca/en.html"><object type="image/svg+xml" tabindex="-1" data="../GCWeb/assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+</div>
+<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+<h2>Search and menus</h2>
+<ul class="list-inline text-right chvrn">
+<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl"></div>
+</section>
+<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+<h2>Search</h2>
+<form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
+<div class="form-group">
+<label for="wb-srch-q" class="wb-inv">Search website</label>
+<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca">
+<datalist id="wb-srch-q-ac">
+<!--[if lte IE 9]><select><![endif]-->
+<!--[if lte IE 9]></select><![endif]-->
+</datalist>
+</div>
+<div class="form-group submit">
+<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+</div>
+</form>
+</section>
+</div>
+</div>
+<nav role="navigation" id="wb-sm" data-ajax-replace="../ajax/sitemenu-en.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+<div class="container nvbar">
+<h2>Topics menu</h2>
+<div class="row">
+<ul class="list-inline menu">
+<li><a href="http://www.esdc.gc.ca/en/jobs/index.page">Jobs</a></li>
+<li><a href="http://www.cic.gc.ca/english/index.asp">Immigration</a></li>
+<li><a href="https://travel.gc.ca/">Travel</a></li>
+<li><a href="https://www.canada.ca/en/services/business.html">Business</a></li>
+<li><a href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
+<li><a href="http://healthycanadians.gc.ca/index-eng.php">Health</a></li>
+<li><a href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
+<li><a href="https://www.canada.ca/en/services.html">More services</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+		<h2>You are here:</h2>
+		<div class="container">
+	<div class="row">
+		<ol class="breadcrumb">
+<li><a href="../../weather/en.html">Home</a></li><li><a href="../../weather/services/environment.html">Environment and natural resources</a></li><li><a href="../../weather/index_e.html">Weather information</a></li><li><a href="../../weather/mainmenu/weather_menu_e.html">Weather</a></li>
+		</ol>
+	</div>
+</div>
+	</nav>
+</header>
+    
+  <div class="container hidden-print">
+
+<span class='pull-right profile-link'>&#160;|&#160;<a href='/myprofile/index_e.html'>My Weather Profile</a></span>
+	<a href="#weather-topics" class="pull-right">Weather Topics</a>
+	<span id="wxo-divider" class="pull-right">|&#160;</span>
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="/city/jump_e.html">
+   	<label id="search-label" for="city" accesskey="g" class="pull-right">Access city</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city"/>
+   	<input type="hidden" name="lang" value="e"/>
+   	<input type="hidden" name="unit" value=""/>
+   	<input type="submit" id="jump" class="wb-invisible" value="Go"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+	<div id="invalid-city"></div>
+</form>
+</div>
+<div class="clearfix"></div>
+<div id='collapsible-alerts' class='container'></div>
+<div class="clearfix"></div>
+
+
+<main role="main" property="mainContentOfPage" class="container">
+
+	<h1 id="wb-cont">Satellite Images and Animation</h1>
+		<div class="row">
+			<div class="col-md-8">
+				<p class="text-center">Satellites: (All satellite data courtesy of <abbr title="National Oceanic and Atmospheric Administration">NOAA</abbr>)</p>
+				<ul class="navBar row hidden-xs nopadding">
+					<li><a href="#goes_composites"><abbr title="Geostationary Operational Environmental Satellite">GOES</abbr>-Composites</a></li>
+					<li><a href="#goes_east"><abbr title="Geostationary Operational Environmental Satellite">GOES</abbr>-East</a></li>
+					<li><a href="#goes_west"><abbr title="Geostationary Operational Environmental Satellite">GOES</abbr>-West</a></li>
+					<li><a href="#hrpt"><abbr title="High Resolution Picture Transmissions">HRPT</abbr></a></li>
+				</ul>
+				<img  
+					src="../data/satellite/canadasatellite.jpg"
+					class="img-responsive image-actual center-block"
+					alt="GOES–East/West North American Composite Satellite Image (infrared and topography)" />
+			</div>
+			<aside class="col-md-4 hidden-xs hidden-sm hidden-print">
+	   			<div class="well">
+<h2 class="mrgn-tp-0">Weather Links</h2>
+	<ul class="lst-spcd">
+		<li><a href="/canada_e.html">Canadian Weather</a></li>
+		<li><a href="/warnings/index_e.html">Public Alerts - Canada</a></li>
+		<li><a href="/radar/index_e.html">Radar - Canada</a></li>
+		<li><a href="/satellite/index_e.html">Satellite - Canada</a></li>
+		<li><a href="/saisons/index_e.html">Seasonal forecasts</a></li>
+		<li><a href="/mainmenu/airquality_menu_e.html">Air Quality </a></li>
+		<li><a href="/marine/index_e.html">Marine - Canada</a></li>
+		<li><a href="http://ec.gc.ca/rhc-wsc/default.asp?lang=En&amp;n=4EED50F1-1">Water Level and Flow</a></li>
+	</ul>
+</div>
+			</aside>
+		</div>
+		<div class="row">
+			<div class="hidden-xs">
+				<div class="col-md-12">
+					<h2 class="underline" id="goes_composites"><abbr title="Geostationary Operational Environmental Satellite">GOES</abbr>-East/West</h2>
+					<div class="col-md-9"><h3>North American Composite <abbr title="updated hourly">*</abbr></h3>
+						<ul class="satList">
+						   <li><a href="/data/satellite/goes_nam_1070x_100.jpg"><abbr title="infra-red">IR</abbr> &amp; topography:</a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=nam&amp;type=1070x">Animation</a></span></li>
+							<li><a href="/data/satellite/goes_nam_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>):</a> 
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=nam&amp;type=1070">Animation</a></span></li>
+				 		   <li><a href="/data/satellite/goes_nam_visiblex_100.jpg">Visible &amp; topography:</a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=nam&amp;type=visiblex">Animation</a></span> </li>
+						   <li><a href="/data/satellite/goes_nam_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=nam&amp;type=vvi">Animation</a></span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="visible-xs mrgn-tp-sm">
+				<details id="d_goescomposites">
+					<summary id="s_goescomposites"><abbr title="Geostationary Operational Environmental Satellite">GOES</abbr>-East/West</summary>
+					<div class="col-md-12">
+				   	<div class="row mrgn-tp-md mrgn-bttm-sm"><b>North American Composite <abbr title="updated hourly">*</abbr></b></div>
+				   	<div class="row"><a href="/data/satellite/goes_nam_1070x_100.jpg"><abbr title="infra-red">IR</abbr> &amp; topography:</a></div>
+						<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=nam&amp;type=1070x">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_nam_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>):</a> 
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=nam&amp;type=1070">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_nam_visiblex_100.jpg">Visible &amp; topography:</a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=nam&amp;type=visiblex">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_nam_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=nam&amp;type=vvi">Animation</a></div>  
+					</div>
+				</details>
+			</div>
+			<div class="hidden-xs">
+				<div class="col-md-12">
+					<h2 class="underline" id="goes_east"><abbr title="Geostationary Operational Environmental Satellite">GOES</abbr>-East</h2>
+						<div class="col-md-9"><h3>Eastern Canada <abbr title="updated hourly">*</abbr></h3><ul class="satList">
+							<li><a href="/data/satellite/goes_ecan_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=ecan&amp;type=1070">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_ecan_visible_100.jpg">Visible:</a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=ecan&amp;type=visible">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_ecan_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=ecan&amp;type=vvi">Animation</a></span>  
+							</li>
+						</ul>
+						<h3>Eastern North America <abbr title="updated hourly">*</abbr></h3><ul class="satList">
+							<li><a href="/data/satellite/goes_enam_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=enam&amp;type=1070">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_enam_visible_100.jpg">Visible: </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=enam&amp;type=visible">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_enam_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=enam&amp;type=vvi">Animation</a></span>   
+							</li>
+						</ul>
+						<h3>Eastern <abbr title="United States of America">USA</abbr> <abbr title="updated hourly">*</abbr></h3><ul class="satList">	
+							<li><a href="/data/satellite/goes_eusa_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=eusa&amp;type=1070">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_eusa_visible_100.jpg">Visible: </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=eusa&amp;type=visible">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_eusa_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=eusa&amp;type=vvi">Animation</a></span>  
+							</li>
+						</ul>
+						<h3>North Atlantic</h3><ul class="satList">
+							<li><a href="/data/satellite/goes_sigwx_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=sigwx&amp;type=1070">Animation</a></span>  
+							</li>					
+							<li><a href="/data/satellite/goes_sigwx_visible_100.jpg">Visible: </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=sigwx&amp;type=visible">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_sigwx_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=sigwx&amp;type=vvi">Animation</a></span>  
+							</li>
+						</ul>
+						<h3>North and South America <abbr title="updated every three hours">**</abbr></h3><ul class="satList">
+							<li><a href="/data/satellite/goes_gedisk11_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=gedisk11&amp;type=1070">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_gedisk11_visible_100.jpg">Visible: </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=gedisk11&amp;type=visible">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_gedisk11_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=gedisk11&amp;type=vvi">Animation</a></span>  
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="visible-xs">
+				<details id="d_goeseast">
+					<summary id="s_goeseast"><abbr title="Geostationary Operational Environmental Satellite">GOES</abbr>-East</summary>
+					<div class="col-md-12">
+						<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Eastern Canada <abbr title="updated hourly">*</abbr></b></div>
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_ecan_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=ecan&amp;type=1070">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_ecan_visible_100.jpg">Visible:</a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=ecan&amp;type=visible">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_ecan_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=ecan&amp;type=vvi">Animation</a></div>  
+				
+						<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Eastern North America <abbr title="updated hourly">*</abbr></b></div>
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_enam_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=enam&amp;type=1070">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_enam_visible_100.jpg">Visible: </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=enam&amp;type=visible">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_enam_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=enam&amp;type=vvi">Animation</a></div>   
+				
+						<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Eastern <abbr title="United States of America">USA</abbr> <abbr title="updated hourly">*</abbr></b></div>	
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_eusa_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=eusa&amp;type=1070">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_eusa_visible_100.jpg">Visible: </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=eusa&amp;type=visible">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_eusa_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=eusa&amp;type=vvi">Animation</a></div>  
+				
+						<div class="row mrgn-tp-md mrgn-bttm-sm"><b>North Atlantic</b></div>
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_sigwx_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+						</div>					
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=sigwx&amp;type=1070">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_sigwx_visible_100.jpg">Visible: </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=sigwx&amp;type=visible">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_sigwx_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=sigwx&amp;type=vvi">Animation</a></div>  
+				
+						<div class="row mrgn-tp-md mrgn-bttm-sm"><b>North and South America <abbr title="updated every three hours">**</abbr></b></div>
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_gedisk11_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=gedisk11&amp;type=1070">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_gedisk11_visible_100.jpg">Visible: </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=gedisk11&amp;type=visible">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_gedisk11_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=gedisk11&amp;type=vvi">Animation</a></div>  
+				
+					</div>
+				</details>
+			</div>
+			<div class="hidden-xs">
+				<div class="col-md-12">
+					<h2 class="underline" id="goes_west"><abbr title="Geostationary Operational Environmental Satellite">GOES</abbr>-West</h2>
+						<div class="col-md-9"><h3>Western Canada <abbr title="updated hourly">*</abbr></h3><ul class="satList">
+							<li><a href="/data/satellite/goes_wcan_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=wcan&amp;type=1070">Animation</a></span>  
+							</li>
+					      <li><a href="/data/satellite/goes_wcan_visible_100.jpg">Visible: </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=wcan&amp;type=visible">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_wcan_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=wcan&amp;type=vvi">Animation</a></span>  
+							</li>
+						</ul>
+						<h3>Western North America <abbr title="updated hourly">*</abbr></h3><ul class="satList">
+							<li><a href="/data/satellite/goes_wnam_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=wnam&amp;type=1070">Animation</a></span>  
+							</li>					
+							<li><a href="/data/satellite/goes_wnam_visible_100.jpg">Visible: </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=wnam&amp;type=visible">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_wnam_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=wnam&amp;type=vvi">Animation</a></span>  
+							</li>
+						</ul>
+						<h3>North Pacific <abbr title="updated hourly">*</abbr></h3><ul class="satList">
+							<li><a href="/data/satellite/goes_pac_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=pac&amp;type=1070">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_pac_visible_100.jpg">Visible: </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=pac&amp;type=visible">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_pac_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=pac&amp;type=vvi">Animation</a></span>  
+							</li>
+						</ul>
+						<h3>Pacific and North America <abbr title="updated every three hours">**</abbr></h3><ul class="satList">
+							<li><a href="/data/satellite/goes_gwdisk11_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=gwdisk11&amp;type=1070">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_gwdisk11_visible_100.jpg">Visible: </a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=gwdisk11&amp;type=visible">Animation</a></span>  
+							</li>
+							<li><a href="/data/satellite/goes_gwdisk11_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+								<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=gwdisk11&amp;type=vvi">Animation</a></span>  
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="visible-xs">
+				<details id=d_goeswest>
+					<summary id="s_goeswest"><abbr title="Geostationary Operational Environmental Satellite">GOES</abbr>-West</summary>
+					<div class="col-md-12">
+						<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Western Canada <abbr title="updated hourly">*</abbr></b></div>
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_wcan_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=wcan&amp;type=1070">Animation</a></div>  
+				      <div class="row mrgn-tp-md"><a href="/data/satellite/goes_wcan_visible_100.jpg">Visible: </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=wcan&amp;type=visible">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_wcan_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=wcan&amp;type=vvi">Animation</a></div>  
+					
+						<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Western North America <abbr title="updated hourly">*</abbr></b></div>
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_wnam_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+						</div>					
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=wnam&amp;type=1070">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_wnam_visible_100.jpg">Visible: </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=wnam&amp;type=visible">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_wnam_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=wnam&amp;type=vvi">Animation</a></div>  
+					
+						<div class="row mrgn-tp-md mrgn-bttm-sm"><b>North Pacific <abbr title="updated hourly">*</abbr></b></div>
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_pac_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=pac&amp;type=1070">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_pac_visible_100.jpg">Visible: </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=pac&amp;type=visible">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_pac_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=pac&amp;type=vvi">Animation</a></div>  
+				
+						<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Pacific and North America <abbr title="updated every three hours">**</abbr></b></div>
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_gwdisk11_1070_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=gwdisk11&amp;type=1070">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_gwdisk11_visible_100.jpg">Visible: </a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=gwdisk11&amp;type=visible">Animation</a></div>  
+						<div class="row mrgn-tp-md"><a href="/data/satellite/goes_gwdisk11_vvi_100.jpg"><abbr title="infra-red">IR</abbr> + Visible:</a>
+						</div>
+							<div class="row"><a href="/satellite/satellite_anim_e.html?sat=goes&amp;area=gwdisk11&amp;type=vvi">Animation</a></div>  
+				
+					</div>
+				</details>
+			</div>
+			<div class="hidden-xs">
+				<div class="col-md-12">
+					<h2 class="underline" id="hrpt"><abbr title="High Resolution Picture Transmissions">HRPT</abbr> (<abbr title="National Oceanic and Atmospheric Administration">NOAA</abbr> polar orbiting)</h2>
+					<div class="col-md-9"><h3>Northern Canada and Arctic Ocean <abbr title="updated as available">***</abbr></h3><ul class="satList">
+					<!--<span>(Images NOAA courtoisie de P&ecirc;ches et Oc&eacute;ans Canada)</span>--> 
+			 		<li>
+					<a href="/data/satellite/hrpt_dfo_ir_100.jpg"><abbr title="infra-red">IR</abbr> (11 <abbr title="micrometre">&#181;m</abbr>): </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=dfo&amp;type=ir">Animation</a></span>  
+					</li>
+			 		<li>
+					<a href="/data/satellite/hrpt_dfo_nir_100.jpg">Visible: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=dfo&amp;type=nir">Animation</a></span>   
+					</li>
+			 		<li><a href="/data/satellite/hrpt_dfo_03_100.jpg">3 <abbr title="micrometre">&#181;m</abbr>: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=dfo&amp;type=03">Animation</a></span>  
+					</li>
+				</ul>
+					<h3>Canadian Arctic Composite <abbr title="updated as available">***</abbr>(<a href="composite_disclaimer_e.html">disclaimer</a>)</h3><ul class="satList">
+					<li><a href="/data/satellite/hrpt_canarc_ir_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=canarc&amp;type=ir">Animation</a></span>  
+					</li>
+					<li><a href="/data/satellite/hrpt_canarc_nir_100.jpg">Visible: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=canarc&amp;type=nir">Animation</a></span>  
+					</li>
+				</ul>
+					<h3>Baffin Island / Qikiqtaaluk <abbr title="updated as available">***</abbr></h3><ul class="satList">
+					<li><a href="/data/satellite/hrpt_yfb_ir_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=yfb&amp;type=ir">Animation</a></span>  
+					</li>
+					<li><a href="/data/satellite/hrpt_yfb_nir_100.jpg">Visible: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=yfb&amp;type=nir">Animation</a></span>  
+					</li>
+				</ul>
+					<h3>Yukon <abbr title="updated as available">***</abbr></h3><ul class="satList">
+					<li><a href="/data/satellite/hrpt_ykn_ir_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=ykn&amp;type=ir">Animation</a></span> 
+					</li>
+					<li><a href="/data/satellite/hrpt_ykn_nir_100.jpg">Visible: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=ykn&amp;type=nir">Animation</a></span>  
+					</li>
+					<li><a href="/data/satellite/hrpt_ykn_03_100.jpg">3 <abbr title="micrometre">&#181;m</abbr></a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=ykn&amp;type=03">Animation</a></span>  
+					</li>
+				</ul>
+					<h3>Northern Nunavut <abbr title="updated as available">***</abbr></h3><ul class="satList">
+					<li><a href="/data/satellite/hrpt_yrb_ir_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=yrb&amp;type=ir">Animation</a></span>  
+					</li>
+					<li><a href="/data/satellite/hrpt_yrb_nir_100.jpg">Visible: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=yrb&amp;type=nir">Animation</a></span>  
+					</li>
+				</ul>
+					<h3>Northwest Territories / Kivalliq / Kitikmeot <abbr title="updated as available">***</abbr></h3><ul class="satList">
+					<li><a href="/data/satellite/hrpt_wel_ir_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=wel&amp;type=ir">Animation</a></span>  
+					</li>
+					<li><a href="/data/satellite/hrpt_wel_nir_100.jpg">Visible: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=wel&amp;type=nir">Animation</a></span>  
+					</li>
+				</ul>
+					<h3>Hudson Bay <abbr title="updated as available">***</abbr></h3><ul class="satList">
+			 		<li><a href="/data/satellite/hrpt_hsb_ir_100.jpg"><abbr title="infra-red">IR</abbr> (11 <abbr title="micrometre">&#181;m</abbr>): </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=hsb&amp;type=ir">Animation</a></span>  
+					</li>
+			 		<li><a href="/data/satellite/hrpt_hsb_nir_100.jpg">Visible: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=hsb&amp;type=nir">Animation</a></span>  
+					</li>
+			 		<li><a href="/data/satellite/hrpt_hsb_03_100.jpg">3 <abbr title="micrometre">&#181;m</abbr>: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=hsb&amp;type=03">Animation</a></span>  
+					</li>
+				</ul>
+					<h3>British Columbia <abbr title="updated as available">***</abbr></h3><ul class="satList">  
+			 		<li><a href="/data/satellite/hrpt_bci_ir_100.jpg"><abbr title="infra-red">IR</abbr> (11 <abbr title="micrometre">&#181;m</abbr>): </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=bci&amp;type=ir">Animation</a></span>  
+					</li>
+			 		<li><a href="/data/satellite/hrpt_bci_nir_100.jpg">Visible: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=bci&amp;type=nir">Animation</a></span>  
+					</li>
+				</ul>
+					<h3>Prairies <abbr title="updated as available">***</abbr></h3><ul class="satList">
+					<li><a href="/data/satellite/hrpt_pry_03_100.jpg">3 <abbr title="micrometre">&#181;m</abbr>: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=pry&amp;type=03">Animation</a></span>  
+					</li>
+				</ul>
+					<h3>Ontario <abbr title="updated as available">***</abbr></h3><ul class="satList">
+					<li><a href="/data/satellite/hrpt_ont1_ir_100.jpg"><abbr title="infra-red">IR</abbr> (11 <abbr title="micrometre">&#181;m</abbr>): </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=ont1&amp;type=ir">Animation</a></span>  
+					</li>
+					<li><a href="/data/satellite/hrpt_ont1_vis_100.jpg">Visible: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=ont1&amp;type=vis">Animation</a></span>  
+					</li>
+				</ul>
+					<h3>Quebec and Labrador <abbr title="updated as available">***</abbr></h3><ul class="satList">
+					<li><a href="/data/satellite/hrpt_nque_ir_100.jpg"><abbr title="infra-red">IR</abbr> (11 <abbr title="micrometre">&#181;m</abbr>): </a>
+				<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=nque&amp;type=ir">Animation</a></span>  
+				</li>
+					<li><a href="/data/satellite/hrpt_nque_vis_100.jpg">Visible: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=nque&amp;type=vis">Animation</a></span>  
+					</li>
+				</ul>
+					<h3>Atlantic Canada <abbr title="updated as available">***</abbr></h3><ul class="satList">
+					<li><a href="/data/satellite/hrpt_emar_ir_100.jpg"><abbr title="infra-red">IR</abbr> (11 <abbr title="micrometre">&#181;m</abbr>): </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=emar&amp;type=ir">Animation</a></span>  
+					</li>
+					<li><a href="/data/satellite/hrpt_emar_vis_100.jpg">Visible: </a>
+					<span class="pull-right"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=emar&amp;type=vis">Animation</a></span>  
+					</li>
+				</ul>
+			</div></div></div>
+			<div class="visible-xs">
+				<details id="d_hrpt">
+					<summary id="s_hrpt"><abbr title="High Resolution Picture Transmissions">HRPT</abbr> (<abbr title="National Oceanic and Atmospheric Administration">NOAA</abbr> polar orbiting)</summary>
+					<div class="col-md-12">
+					<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Northern Canada and Arctic Ocean <abbr title="updated as available">***</abbr></b></div>
+					<!--<span>(Images NOAA courtoisie de P&ecirc;ches et Oc&eacute;ans Canada)</div>--> 
+			 		<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_dfo_ir_100.jpg"><abbr title="infra-red">IR</abbr> (11 <abbr title="micrometre">&#181;m</abbr>): </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=dfo&amp;type=ir">Animation</a></div>  
+			 		<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_dfo_nir_100.jpg">Visible: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=dfo&amp;type=nir">Animation</a></div>   
+			 		<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_dfo_03_100.jpg">3 <abbr title="micrometre">&#181;m</abbr>: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=dfo&amp;type=03">Animation</a></div>  
+				
+					<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Canadian Arctic Composite <abbr title="updated as available">***</abbr>(<a href="composite_disclaimer_e.html">disclaimer</a>)</b></div>
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_canarc_ir_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=canarc&amp;type=ir">Animation</a></div>  
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_canarc_nir_100.jpg">Visible: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=canarc&amp;type=nir">Animation</a></div>  
+				
+					<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Baffin Island / Qikiqtaaluk <abbr title="updated as available">***</abbr></b></div>
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_yfb_ir_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=yfb&amp;type=ir">Animation</a></div>  
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_yfb_nir_100.jpg">Visible: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=yfb&amp;type=nir">Animation</a></div>  
+				
+					<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Yukon <abbr title="updated as available">***</abbr></b></div>
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_ykn_ir_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=ykn&amp;type=ir">Animation</a></div> 
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_ykn_nir_100.jpg">Visible: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=ykn&amp;type=nir">Animation</a></div>  
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_ykn_03_100.jpg">3 <abbr title="micrometre">&#181;m</abbr></a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=ykn&amp;type=03">Animation</a></div>  
+				
+					<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Northern Nunavut <abbr title="updated as available">***</abbr></b></div>
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_yrb_ir_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=yrb&amp;type=ir">Animation</a></div>  
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_yrb_nir_100.jpg">Visible: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=yrb&amp;type=nir">Animation</a></div>  
+				
+					<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Northwest Territories / Kivalliq / Kitikmeot <abbr title="updated as available">***</abbr></b></div>
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_wel_ir_100.jpg"><abbr title="infra-red">IR</abbr> (10.7 <abbr title="micrometre">&#181;m</abbr>): </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=wel&amp;type=ir">Animation</a></div>  
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_wel_nir_100.jpg">Visible: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=wel&amp;type=nir">Animation</a></div>  
+				
+					<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Hudson Bay <abbr title="updated as available">***</abbr></b></div>
+			 		<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_hsb_ir_100.jpg"><abbr title="infra-red">IR</abbr> (11 <abbr title="micrometre">&#181;m</abbr>): </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=hsb&amp;type=ir">Animation</a></div>  
+			 		<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_hsb_nir_100.jpg">Visible: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=hsb&amp;type=nir">Animation</a></div>  
+			 		<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_hsb_03_100.jpg">3 <abbr title="micrometre">&#181;m</abbr>: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=hsb&amp;type=03">Animation</a></div>  
+				
+					<div class="row mrgn-tp-md mrgn-bttm-sm"><b>British Columbia <abbr title="updated as available">***</abbr></b></div>  
+			 		<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_bci_ir_100.jpg"><abbr title="infra-red">IR</abbr> (11 <abbr title="micrometre">&#181;m</abbr>): </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=bci&amp;type=ir">Animation</a></div>  
+			 		<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_bci_nir_100.jpg">Visible: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=bci&amp;type=nir">Animation</a></div>  
+				
+					<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Prairies <abbr title="updated as available">***</abbr></b></div>
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_pry_03_100.jpg">3 <abbr title="micrometre">&#181;m</abbr>: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=pry&amp;type=03">Animation</a></div>  
+				
+					<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Ontario <abbr title="updated as available">***</abbr></b></div>
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_ont1_ir_100.jpg"><abbr title="infra-red">IR</abbr> (11 <abbr title="micrometre">&#181;m</abbr>): </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=ont1&amp;type=ir">Animation</a></div>  
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_ont1_vis_100.jpg">Visible: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=ont1&amp;type=vis">Animation</a></div>  
+				
+					<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Quebec and Labrador <abbr title="updated as available">***</abbr></b></div>
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_nque_ir_100.jpg"><abbr title="infra-red">IR</abbr> (11 <abbr title="micrometre">&#181;m</abbr>): </a>
+				</div>
+				<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=nque&amp;type=ir">Animation</a></div>  
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_nque_vis_100.jpg">Visible: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=nque&amp;type=vis">Animation</a></div>  
+				
+					<div class="row mrgn-tp-md mrgn-bttm-sm"><b>Atlantic Canada <abbr title="updated as available">***</abbr></b></div>
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_emar_ir_100.jpg"><abbr title="infra-red">IR</abbr> (11 <abbr title="micrometre">&#181;m</abbr>): </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=emar&amp;type=ir">Animation</a></div>  
+					<div class="row mrgn-tp-md"><a href="/data/satellite/hrpt_emar_vis_100.jpg">Visible: </a>
+					</div>
+					<div class="row"><a href="/satellite/satellite_anim_e.html?sat=hrpt&amp;area=emar&amp;type=vis">Animation</a></div>  
+				
+					</div>
+				</details>
+			</div>
+		</div>
+		<div class="mrgn-tp-lg mrgn-bttm-lg">
+			<p class="text-center"><b>Additional Information</b></p>
+			<div class="visible-xs mrgn-tp-sm">
+				<details>
+					<summary>General</summary>
+					<dl class="infoDL">
+						<dt>*</dt> <dd>updated hourly</dd>
+						<dt>**</dt> <dd>updated every three hours</dd>
+						<dt>***</dt> <dd>updated as available</dd>
+
+						<dt>GOES</dt> <dd>Geostationary Operational Environmental Satellite</dd>
+						<dt>NOAA</dt> <dd>National Oceanic and Atmospheric Administration</dd>
+						<dt>HRPT</dt> <dd>High Resolution Picture Transmissions</dd>
+					</dl>
+				</details>
+				<details>
+					<summary>Image Formats</summary>
+					<div class="col-md-12">
+						<div class="row mrgn-tp-sm"><b>Large:</b></div>
+						<div class="row">1024<abbr title="by">x</abbr>1024 Size:<abbr title="approximately">&#126;</abbr>200<abbr title="kilobytes">k</abbr></div>
+						<div class="row mrgn-tp-sm"><b>Animation:</b></div> 
+						<div class="row">512<abbr title="by">x</abbr>512 Size:<abbr title="approximately">&#126;</abbr>50<abbr title="kilobytes">k</abbr></div>
+					</div>
+				</details>
+			</div>
+			<div class="infoBox hidden-xs">
+				<div class="legendBox brdr-rght">
+					<dl>
+						<dt>*</dt> <dd>updated hourly</dd>
+						<dt>**</dt> <dd>updated every three hours</dd>
+						<dt>***</dt> <dd>updated as available</dd>
+
+						<dt>GOES</dt> <dd>Geostationary Operational Environmental Satellite</dd>
+						<dt>NOAA</dt> <dd>National Oceanic and Atmospheric Administration</dd>
+						<dt>HRPT</dt> <dd>High Resolution Picture Transmissions</dd>
+					</dl>
+			  </div>
+				<div class="formatsBox">
+					<p>Image formats:</p>
+					<dl>
+						<dt>Large:</dt> <dd>1024<abbr title="by">x</abbr>1024 Size:<abbr title="approximately">&#126;</abbr>200<abbr title="kilobytes">k</abbr></dd>
+						<dt>Animation:</dt> <dd>512<abbr title="by">x</abbr>512 Size:<abbr title="approximately">&#126;</abbr>50<abbr title="kilobytes">k</abbr></dd>
+					</dl>
+				</div>
+				 <div class="clearfix"></div>
+			</div>
+		</div>
+<div class="clear"></div>
+
+
+<section class="hidden-print"  id="weather-topics">
+	<h2 class="wb-inv">What we are doing</h2>
+	 <div class="row wb-eqht">
+      <section class="col-lg-4 col-md-6">
+			<h3 class="wxo-footer-nav">Weather Forecasts</h3>
+      	<ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="/canada_e.html">Canadian Weather</a></li>
+            <li><a href="../../weather/radar/index_e.html">Radar - Canada</a></li>
+            <li><a href="/satellite/index_e.html">Satellite - Canada</a></li>
+            <li><a href="/marine/index_e.html">Marine - Canada</a></li>
+            <li><a href="../../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
+            <li><a href="http://www.ec.gc.ca/glaces-ice/default.asp?lang=En&amp;n=D32C361E-1">Canadian Ice Service</a></li>
+				<li><a href="/saisons/index_e.html">Seasonal forecasts</a></li>
+				<li><a href="/forecast/public_bulletins_e.html">Extended forecast</a></li>
+			</ul>
+      </section>
+      <section class="col-lg-4 col-md-6">
+		<h3 class="wxo-footer-nav">Weather Alerts</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="../../weather/warnings/index_e.html">Public Alerts - Canada</a></li>
+            <li><a href="../../weather/lightning/index_e.html">Lightning</a></li>
+            <li><a href="/hurricane/index_e.html">Hurricane</a></li>
+            <li><a href="/warnings/weathersummaries_e.html">Weather Summaries</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=15E59C08-1">Hazardous Weather</a></li>
+      </ul>
+      </section>
+	  <section class="col-lg-4 col-md-6">
+	  <h3 class="wxo-footer-nav">Weather Resources</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="/model_forecast/model_e.html">Global and Regional forecast models</a></li>
+            <li><a href="/astro/index_e.html">Astronomy</a></li>
+            <li><a href="http://ec.gc.ca/rhc-wsc/default.asp?lang=En&amp;n=4EED50F1-1">Water Level and Flow</a></li>
+				<li><a href="http://climate.weather.gc.ca/index_e.html">Historical Climate Data</a></li>
+				<li><a href="https://flightplanning.navcanada.ca/cgi-bin/CreePage.pl?Langue=anglais&amp;NoSession=NS_Inconnu&amp;Page=forecast-observation&amp;TypeDoc=html">Aviation</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=4D51ECA8-1 ">Guide to Public forecasts</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=2EC4EC51-1">Guide to Marine forecasts</a></li>
+				<li><a href="http://ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=8E7198BB-1">Guide to Air Quality forecasts</a></li>
+		</ul>
+      </section>
+	</div>
+</section>
+<section class="gc-prtts"><h2>Features</h2><div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://ec.gc.ca/uv/default.asp?lang=En&amp;n=DCF1C20A-1">
+<h3 class="h5">UV Index and sun protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="cacheable/images/banners/SM_123_03_30-UV-Index-and-Sun-Protection_button360x203.jpg?ver=1499874128" alt="" />
+</a>
+<p>Be weather wise!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://www.canada.ca/en/health-canada/services/sun-safety/extreme-heat-heat-waves.html">
+<h3 class="h5">Extreme Heat Protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="cacheable/images/banners/SM_124_03_30-Extreme-Heat-02_button_360x203.jpg?ver=1499874128" alt="" />
+</a>
+<p>Be prepared!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://www.ec.gc.ca/cas-aqhi/">
+<h3 class="h5">Be Air Aware</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="cacheable/images/banners/SM_120_03_30-Air-Quality_01_360x203.jpg?ver=1499874128" alt="" />
+</a>
+<p>Air Quality Health Index</p></section></div></section>
+<div class="row pagedetails">
+<div class="col-sm-6 col-lg-4 mrgn-tp-sm">
+<a href="https://www.canada.ca/en/report-problem.html" class="btn btn-default btn-block">Report a problem or mistake on this page</a>
+</div>
+<div class="col-sm-3 mrgn-tp-sm pull-right">
+<div class="wb-share" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>
+</div>
+<div class="datemod col-xs-12 mrgn-tp-lg">
+<dl id="wb-dtmd">
+<dt>Date modified:&#32;</dt>
+<dd><time property="dateModified">2017-07-22</time></dd>
+</dl>
+</div>
+</div>
+</main>
+
+
+<footer role="contentinfo" id="wb-info">
+<nav role="navigation" class="container wb-navcurr">
+<h2 class="wb-inv">About government</h2>
+<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
+<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+<li><a href="http://news.gc.ca/">News</a></li>
+<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+<li><a href="http://open.canada.ca/en/">Open government</a></li>
+</ul>
+</nav>
+<div class="brand">
+<div class="container">
+<div class="row">
+<nav class="col-md-10 ftr-urlt-lnk">
+<h2 class="wb-inv">About this site</h2>
+<ul>
+<li><a href="https://www1.canada.ca/en/contact/feedback.html">Feedback</a></li>
+<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+</ul>
+</nav>
+<div class="col-xs-6 visible-sm visible-xs tofpg">
+<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+</div>
+<div class="col-xs-6 col-md-2 text-right">
+<object type="image/svg+xml" tabindex="-1" role="img" data="../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="../wet-boew/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+<script src="../GCWeb/js/theme.min.js"></script>
+
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="../template/gcweb/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="/template/gcweb/js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+<script src="../GCWeb/css/theme.min.css"></script>
+
+
+<script src="../cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="../cacheable/js/city/availableTags_e.min.js"></script>
+<script src="../city/js/cityjump.js"></script>
+<script>
+    document.getElementById("jump").className = "";
+    var max_chars = 50;
+    $('#city').keydown( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+    $('#city').keyup( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+</script>
+<script src="../template/gcweb/v4.0.22/js/deps/jquery.dataTables.min.js"></script>
+<script src="../city/js/jquery.h5validate.js"></script>
+<script src="../cacheable/js/myprofile/alerts-1.0.min.js"></script>
+<script src="../cacheable/js/myprofile/refresher-1.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('form').h5Validate({
+            errorClass:'white'
+        });
+    });
+</script>
+<script>LANG = "en-CA";</script><script src="../gps/js/translate.js"></script>
+<script src="../gps/js/gps.js"></script>
+<script src="../gps/js/langStrings.js"></script>
+<script src="../gps/js/cityLatLon.js"></script>
+
+<script>
+$(document).ready(function(){
+		    $('#gps-jq').click(function(){
+	       if (!$("#gps-jq" ).hasClass("open"))
+		       getGPSLocation();
+	     });
+ 	});
+</script>
+
+	</body>
+</html>
