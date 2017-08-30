@@ -434,11 +434,11 @@ $(document).ready(function(){
           $.when(
                $.ajax({
                    type: 'GET',
-                   url: 'https://gc-proto.github.io/weather/lightning/include/xhr.php',
+                   url: 'https://gc-proto.github.io/weather/scenarioT/weather/lightning/include/xhr.php',
                     data: {id: animator.attr('data-image-lightning-id')}
                })).done(function(content) {
                    //state.imageSrcs = $.parseJSON(content)['imageSrc'];
-              state.imageSrcs =["../weather/data/lightning_images/lightning_1.png","../weather/data/lightning_images/lightning_2.png","../weather/data/lightning_images/lightning_3.png","../weather/data/lightning_images/lightning_4.png","../weather/data/lightning_images/lightning_5.png","../weather/data/lightning_images/lightning_6.png","../weather/data/lightning_images/lightning_7.png"];
+              state.imageSrcs =["../scenarioT/weather/data/lightning_images/lightning_1.png","../scenarioT/weather/data/lightning_images/lightning_2.png","../scenarioT/weather/data/lightning_images/lightning_3.png","../scenarioT/weather/data/lightning_images/lightning_4.png","../scenarioT/weather/data/lightning_images/lightning_5.png","../scenarioT/weather/data/lightning_images/lightning_6.png","../scenarioT/weather/data/lightning_images/lightning_7.png"];
 
            
                    for (var i = 0; i < state.totalImgNum; i++){ //load both in -xs
