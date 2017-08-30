@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]--><head>
+		<meta charset="utf-8" />
+		<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta name="dcterms.creator" content="Environment Canada" />
+		<meta name="dcterms.language" title="ISO639-2" content="eng" />
+<title>Canadian Weather Radar - Environment Canada</title>
+<meta name="dcterms.title" content="Canadian Weather Radar - Environment Canada" />
+<meta name="description" content="A national overview of where precipitation is occurring within Environment Canada's radar network. Customize your map to view animation in short (1hr) and long (3hr) format." />
+<meta name="dcterms.subject" title="scheme" content="Radar;Remote sensing;" />
+<meta name="dcterms.issued" title="W3CDTF" content="2013-04-16" />
+<meta name="dcterms.modified" title="W3CDTF" content="2017-05-25" />
+		<!-- Meta data-->
+		<!--[if gte IE 9 | !IE ]><!-->
+<link href="../template/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+<link rel="stylesheet" href="../template/GCWeb/css/theme.min.css" />
+<!--<![endif]-->
+
+<!--[if lt IE 9]>
+<link href="/template/GCWeb/assets/favicon.ico" rel="shortcut icon" />
+
+<link rel="stylesheet" href="/template/GCWeb/css/ie8-wet-boew.min.css" />
+<link rel="stylesheet" href="/template/wxo/css/wxo-ie8.css"/>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/template/GCWeb/js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+
+<![endif]-->
+
+<noscript><link rel="stylesheet" href="../css/noscript.min.css" /></noscript>
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<script>dataLayer1 = [];</script>
+<!-- End Google Tag Manager -->
+<link rel="stylesheet" href="../cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" href="../template/wxo/css/wxo.css" />
+<!--[if IE 8]>
+<link href="/cacheable/css/radar/radar-ie8.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="../cacheable/js/radar/Base.js"></script>
+
+<link rel="stylesheet" href="../cacheable/css/radar/controller.css" />
+<link rel="stylesheet" href="../cacheable/css/radar/radar2.css" />
+<script>
+	if (typeof composite_cities_active === 'undefined'){
+		var composite_cities_active = 'yes';
+	}
+</script>  
+</head>
+<body class="secondary" vocab="http://schema.org/" typeof="WebPage">
+<map id="COMPOSITE_NAT" name="COMPOSITE_NAT" title="National Radar Composite">
+  <area href="/radar/index_e.html?id=WUJ" alt="Aldergrove - Radar image for station WUJ located near Vancouver, British Columbia." title="Aldergrove - Radar image for station WUJ located near Vancouver, British Columbia." shape="circle" coords="68,370,5" />
+  <area href="/radar/index_e.html?id=XBE" alt="Bethune - Radar image for station XBE located near Regina, Saskatchewan." title="Bethune - Radar image for station XBE located near Regina, Saskatchewan." shape="circle" coords="200,373,8" />
+  <area href="/radar/index_e.html?id=WBI" alt="Britt - Radar image for station WBI located near Sudbury, Ontario" title="Britt - Radar image for station WBI located near Sudbury, Ontario" shape="circle" coords="401,385,9" />
+  <area href="/radar/index_e.html?id=WHK" alt="Carvel - Radar image for station WHK located near Edmonton, Alberta" title="Carvel - Radar image for station WHK located near Edmonton, Alberta" shape="circle" coords="141,334,8" />
+  <area href="/radar/index_e.html?id=XNC" alt="Chipman - Radar image for station XNC located near Frederiction, New Brunswick." title="Chipman - Radar image for station XNC located near Frederiction, New Brunswick." shape="circle" coords="505,317,6" />
+  <area href="/radar/index_e.html?id=XDR" alt="Dryden - Radar image for station XDR located near Dryden, Ontario" title="Dryden - Radar image for station XDR located near Dryden, Ontario" shape="circle" coords="294,372,7" />
+  <area href="/radar/index_e.html?id=WSO" alt="Exeter - Radar image for station WSO located near London, Ontario." title="Exeter - Radar image for station WSO located near London, Ontario." shape="circle" coords="407,416,8" />
+  <area href="/radar/index_e.html?id=XFW" alt="Foxwarren - Radar image for station XFW located near Brandon, Manitoba." title="Foxwarren - Radar image for station XFW located near Brandon, Manitoba." shape="circle" coords="231,373,8" />
+  <area href="../radar/xft-index_e.html" alt="Franktown - Radar image for station XFT located near Ottawa, Ontario." title="Franktown - Radar image for station XFT located near Ottawa, Ontario." shape="circle" coords="440,379,6" />
+  <area href="/radar/index_e.html?id=XGO" alt="Halifax - Radar image for station XGO located near Halifax, Nova Scotia." title="Halifax - Radar image for station XGO located near Halifax, Nova Scotia." shape="circle" coords="526,316,6" />
+  <area href="/radar/index_e.html?id=WTP" alt="Holyrood - Radar image for station WTP located near St. John's, Newfoundland and Labrador." title="Holyrood - Radar image for station WTP located near St. John's, Newfoundland and Labrador." shape="circle" coords="567,234,6" />
+  <area href="/radar/index_e.html?id=WHN" alt="Jimmy Lake - Radar image for station WHN located near Cold Lake, Alberta." title="Jimmy Lake - Radar image for station WHN located near Cold Lake, Alberta." shape="circle" coords="170,321,8" />
+  <area href="/radar/index_e.html?id=WKR" alt="King City - Radar image for station WKR located near Toronto, Ontario." title="King City - Radar image for station WKR located near Toronto, Ontario." shape="circle" coords="421,405,6" />
+  <area href="/radar/index_e.html?id=WMB" alt="Lac Castor - Radar image for station WMB located near Saguenay, Quebec." title="Lac Castor - Radar image for station WMB located near Saguenay, Quebec." shape="circle" coords="455,318,7" />
+  <area href="/radar/index_e.html?id=XLA" alt="Landrienne - Radar image for station XLA located near Rouyn-Noranda, Quebec." title="Landrienne - Radar image for station XLA located near Rouyn-Noranda, Quebec." shape="circle" coords="407,346,10" />
+  <area href="/radar/index_e.html?id=XME" alt="Marble Mountain - Radar image for station XME located near Corner Brook, Newfoundland and Labrador." title="Marble Mountain - Radar image for station XME located near Corner Brook, Newfoundland and Labrador." shape="circle" coords="528,249,6" />
+  <area href="/radar/index_e.html?id=XMB" alt="Marion Bridge - Radar image for station XMB located near Sydney, Nova Scotia." title="Marion Bridge - Radar image for station XMB located near Sydney, Nova Scotia." shape="circle" coords="541,288,6" />
+  <area href="/radar/index_e.html?id=WMN" alt="McGill - Radar image for station WMN located near Montréal, Quebec." title="McGill - Radar image for station WMN located near Montréal, Quebec." shape="circle" coords="454,363,7" />
+  <area href="/radar/index_e.html?id=WGJ" alt="Montreal River - Radar image for station WGJ located near Sault Ste. Marie, Ontario" title="Montreal River - Radar image for station WGJ located near Sault Ste. Marie, Ontario" shape="circle" coords="364,384,7" />
+  <area href="/radar/index_e.html?id=XTI" alt="Northeast Ontario - Radar image for station XTI located near Timmins, Ontario" title="Northeast Ontario - Radar image for station XTI located near Timmins, Ontario" shape="circle" coords="375,352,9" />
+  <area href="/radar/index_e.html?id=XPG" alt="Prince George - Radar image for station XPG located near Prince George, British Columbia." title="Prince George - Radar image for station XPG located near Prince George, British Columbia." shape="circle" coords="81,319,8" />
+  <area href="/radar/index_e.html?id=XRA" alt="Radisson - Radar image for station XRA located near Saskatoon, Saskatchewan." title="Radisson - Radar image for station XRA located near Saskatoon, Saskatchewan." shape="circle" coords="185,351,8" />
+  <area href="/radar/index_e.html?id=XBU" alt="Schuler - Radar image for station XBU located near Medicine Hat, Alberta." title="Schuler - Radar image for station XBU located near Medicine Hat, Alberta." shape="circle" coords="164,375,9" />
+  <area href="/radar/index_e.html?id=XSS" alt="Silver Star Mountain - Radar image for station XSS located near Vernon, British Columbia" title="Silver Star Mountain - Radar image for station XSS located near Vernon, British Columbia" shape="circle" coords="98,362,8" />
+  <area href="/radar/index_e.html?id=WWW" alt="Spirit River - Radar image for station WWW located near Grande Prairie, Alberta." title="Spirit River - Radar image for station WWW located near Grande Prairie, Alberta." shape="circle" coords="112,303,9" />
+  <area href="/radar/index_e.html?id=XSM" alt="Strathmore - Radar image for station XSM located near Calgary, Alberta." title="Strathmore - Radar image for station XSM located near Calgary, Alberta." shape="circle" coords="141,361,7" />
+  <area href="/radar/index_e.html?id=XNI" alt="Superior West - Radar image for station XNI located near Thunder Bay, Ontario" title="Superior West - Radar image for station XNI located near Thunder Bay, Ontario" shape="circle" coords="323,376,7" />
+  <area href="/radar/index_e.html?id=XAM" alt="Val d'Irène - Radar image for station XAM located near Mont-Joli, Quebec" title="Val d'Irène - Radar image for station XAM located near Mont-Joli, Quebec" shape="circle" coords="476,306,7" />
+  <area href="/radar/index_e.html?id=XSI" alt="Victoria - Radar image for station XSI located near Victoria, British Columbia." title="Victoria - Radar image for station XSI located near Victoria, British Columbia." shape="circle" coords="58,370,5" />
+  <area href="/radar/index_e.html?id=WVY" alt="Villeroy - Radar image for station WVY located near Trois-Rivières, Quebec" title="Villeroy - Radar image for station WVY located near Trois-Rivières, Quebec" shape="circle" coords="461,344,8" />
+  <area href="/radar/index_e.html?id=XWL" alt="Woodlands - Radar image for station XWL located near Winnipeg, Manitoba." title="Woodlands - Radar image for station XWL located near Winnipeg, Manitoba." shape="circle" coords="255,376,8" />
+  <area href="/radar/index_e.html?id=PAC" alt="Radar image for stations located in Pacific region" title="Radar image for stations located in Pacific region" shape="poly" coords="38,222,40,256,37,269,35,272,33,296,32,307,24,313,24,317,27,333,34,349,40,360,53,379,65,374,79,376,92,381,106,386,127,387,130,369,99,328,116,256,94,247,60,231" />
+  <area href="/radar/index_e.html?id=WRN" alt="Radar image for stations located in Prairies region" title="Radar image for stations located in Prairies region" shape="poly" coords="119,255,150,262,173,265,219,265,258,261,262,273,269,273,277,289,287,286,297,287,270,341,276,385,230,390,197,391,163,391,132,386,129,382,129,370,102,326,119,255" />
+  <area href="/radar/index_e.html?id=ONT" alt="Radar image for stations located in Ontario region" title="Radar image for stations located in Ontario region" shape="poly" coords="303,286,329,295,346,289,368,319,381,323,388,337,396,357,400,371,411,372,432,371,452,372,463,374,450,393,440,400,431,408,429,415,423,419,418,423,411,428,406,436,400,443,395,436,395,436,388,420,382,407,368,401,357,399,336,393,301,383,281,382,277,372,270,344" />
+  <area href="/radar/index_e.html?id=QUE" alt="Radar image for stations located in Quebec region" title="Radar image for stations located in Quebec region" shape="poly" coords="336,203,345,226,349,237,355,244,364,251,372,261,371,274,362,286,380,306,382,320,382,322,403,371,419,371,429,368,458,371,465,377,471,352,474,341,464,321,469,278,500,259,510,218,461,262,438,259,432,240,446,226,408,187,406,212,393,210,385,201,350,195" />
+  <area href="/radar/index_e.html?id=ERN" alt="Radar image for stations located in Atlantic region" title="Radar image for stations located in Atlantic region" shape="poly" coords="408,185,448,227,434,240,439,256,459,261,512,214,503,254,470,280,466,310,464,328,474,336,487,320,508,343,529,342,556,313,594,236,578,207,550,210,530,225,507,206,485,200,463,205,431,196" />
+</map><map id="COMPOSITE_NAT_XS" name="COMPOSITE_NAT_XS" title="National Radar Composite">
+  <area href="/radar/index_e.html?id=WUJ" alt="Aldergrove - Radar image for station WUJ located near Vancouver, British Columbia." title="Aldergrove - Radar image for station WUJ located near Vancouver, British Columbia." shape="circle" coords="48,259,5" />
+  <area href="/radar/index_e.html?id=XBE" alt="Bethune - Radar image for station XBE located near Regina, Saskatchewan." title="Bethune - Radar image for station XBE located near Regina, Saskatchewan." shape="circle" coords="140,261,8" />
+  <area href="/radar/index_e.html?id=WBI" alt="Britt - Radar image for station WBI located near Sudbury, Ontario" title="Britt - Radar image for station WBI located near Sudbury, Ontario" shape="circle" coords="281,270,9" />
+  <area href="/radar/index_e.html?id=WHK" alt="Carvel - Radar image for station WHK located near Edmonton, Alberta" title="Carvel - Radar image for station WHK located near Edmonton, Alberta" shape="circle" coords="99,234,8" />
+  <area href="/radar/index_e.html?id=XNC" alt="Chipman - Radar image for station XNC located near Frederiction, New Brunswick." title="Chipman - Radar image for station XNC located near Frederiction, New Brunswick." shape="circle" coords="354,222,6" />
+  <area href="/radar/index_e.html?id=XDR" alt="Dryden - Radar image for station XDR located near Dryden, Ontario" title="Dryden - Radar image for station XDR located near Dryden, Ontario" shape="circle" coords="206,260,7" />
+  <area href="/radar/index_e.html?id=WSO" alt="Exeter - Radar image for station WSO located near London, Ontario." title="Exeter - Radar image for station WSO located near London, Ontario." shape="circle" coords="285,291,8" />
+  <area href="/radar/index_e.html?id=XFW" alt="Foxwarren - Radar image for station XFW located near Brandon, Manitoba." title="Foxwarren - Radar image for station XFW located near Brandon, Manitoba." shape="circle" coords="162,261,8" />
+  <area href="../radar/xft-index_e.html" alt="Franktown - Radar image for station XFT located near Ottawa, Ontario." title="Franktown - Radar image for station XFT located near Ottawa, Ontario." shape="circle" coords="308,265,6" />
+  <area href="/radar/index_e.html?id=XGO" alt="Halifax - Radar image for station XGO located near Halifax, Nova Scotia." title="Halifax - Radar image for station XGO located near Halifax, Nova Scotia." shape="circle" coords="368,221,6" />
+  <area href="/radar/index_e.html?id=WTP" alt="Holyrood - Radar image for station WTP located near St. John's, Newfoundland and Labrador." title="Holyrood - Radar image for station WTP located near St. John's, Newfoundland and Labrador." shape="circle" coords="397,164,6" />
+  <area href="/radar/index_e.html?id=WHN" alt="Jimmy Lake - Radar image for station WHN located near Cold Lake, Alberta." title="Jimmy Lake - Radar image for station WHN located near Cold Lake, Alberta." shape="circle" coords="119,225,8" />
+  <area href="/radar/index_e.html?id=WKR" alt="King City - Radar image for station WKR located near Toronto, Ontario." title="King City - Radar image for station WKR located near Toronto, Ontario." shape="circle" coords="295,284,6" />
+  <area href="/radar/index_e.html?id=WMB" alt="Lac Castor - Radar image for station WMB located near Saguenay, Quebec." title="Lac Castor - Radar image for station WMB located near Saguenay, Quebec." shape="circle" coords="319,223,7" />
+  <area href="/radar/index_e.html?id=XLA" alt="Landrienne - Radar image for station XLA located near Rouyn-Noranda, Quebec." title="Landrienne - Radar image for station XLA located near Rouyn-Noranda, Quebec." shape="circle" coords="285,242,10" />
+  <area href="/radar/index_e.html?id=XME" alt="Marble Mountain - Radar image for station XME located near Corner Brook, Newfoundland and Labrador." title="Marble Mountain - Radar image for station XME located near Corner Brook, Newfoundland and Labrador." shape="circle" coords="370,174,6" />
+  <area href="/radar/index_e.html?id=XMB" alt="Marion Bridge - Radar image for station XMB located near Sydney, Nova Scotia." title="Marion Bridge - Radar image for station XMB located near Sydney, Nova Scotia." shape="circle" coords="379,202,6" />
+  <area href="/radar/index_e.html?id=WMN" alt="McGill - Radar image for station WMN located near Montréal, Quebec." title="McGill - Radar image for station WMN located near Montréal, Quebec." shape="circle" coords="318,254,7" />
+  <area href="/radar/index_e.html?id=WGJ" alt="Montreal River - Radar image for station WGJ located near Sault Ste. Marie, Ontario" title="Montreal River - Radar image for station WGJ located near Sault Ste. Marie, Ontario" shape="circle" coords="255,269,7" />
+  <area href="/radar/index_e.html?id=XTI" alt="Northeast Ontario - Radar image for station XTI located near Timmins, Ontario" title="Northeast Ontario - Radar image for station XTI located near Timmins, Ontario" shape="circle" coords="263,246,9" />
+  <area href="/radar/index_e.html?id=XPG" alt="Prince George - Radar image for station XPG located near Prince George, British Columbia." title="Prince George - Radar image for station XPG located near Prince George, British Columbia." shape="circle" coords="57,223,8" />
+  <area href="/radar/index_e.html?id=XRA" alt="Radisson - Radar image for station XRA located near Saskatoon, Saskatchewan." title="Radisson - Radar image for station XRA located near Saskatoon, Saskatchewan." shape="circle" coords="130,246,8" />
+  <area href="/radar/index_e.html?id=XBU" alt="Schuler - Radar image for station XBU located near Medicine Hat, Alberta." title="Schuler - Radar image for station XBU located near Medicine Hat, Alberta." shape="circle" coords="115,263,9" />
+  <area href="/radar/index_e.html?id=XSS" alt="Silver Star Mountain - Radar image for station XSS located near Vernon, British Columbia" title="Silver Star Mountain - Radar image for station XSS located near Vernon, British Columbia" shape="circle" coords="69,253,8" />
+  <area href="/radar/index_e.html?id=WWW" alt="Spirit River - Radar image for station WWW located near Grande Prairie, Alberta." title="Spirit River - Radar image for station WWW located near Grande Prairie, Alberta." shape="circle" coords="78,212,9" />
+  <area href="/radar/index_e.html?id=XSM" alt="Strathmore - Radar image for station XSM located near Calgary, Alberta." title="Strathmore - Radar image for station XSM located near Calgary, Alberta." shape="circle" coords="99,253,7" />
+  <area href="/radar/index_e.html?id=XNI" alt="Superior West - Radar image for station XNI located near Thunder Bay, Ontario" title="Superior West - Radar image for station XNI located near Thunder Bay, Ontario" shape="circle" coords="226,263,7" />
+  <area href="/radar/index_e.html?id=XAM" alt="Val d'Irène - Radar image for station XAM located near Mont-Joli, Quebec" title="Val d'Irène - Radar image for station XAM located near Mont-Joli, Quebec" shape="circle" coords="333,214,7" />
+  <area href="/radar/index_e.html?id=XSI" alt="Victoria - Radar image for station XSI located near Victoria, British Columbia." title="Victoria - Radar image for station XSI located near Victoria, British Columbia." shape="circle" coords="41,259,5" />
+  <area href="/radar/index_e.html?id=WVY" alt="Villeroy - Radar image for station WVY located near Trois-Rivières, Quebec" title="Villeroy - Radar image for station WVY located near Trois-Rivières, Quebec" shape="circle" coords="323,241,8" />
+  <area href="/radar/index_e.html?id=XWL" alt="Woodlands - Radar image for station XWL located near Winnipeg, Manitoba." title="Woodlands - Radar image for station XWL located near Winnipeg, Manitoba." shape="circle" coords="179,263,8" />
+  <area href="/radar/index_e.html?id=PAC" alt="Radar image for stations located in Pacific region" title="Radar image for stations located in Pacific region" shape="poly" coords="27,155,28,179,26,188,25,190,23,207,22,215,17,219,17,222,19,233,24,244,28,252,37,265,46,262,55,263,64,267,74,270,89,271,91,258,69,230,81,179,66,173,42,162" />
+  <area href="/radar/index_e.html?id=WRN" alt="Radar image for stations located in Prairies region" title="Radar image for stations located in Prairies region" shape="poly" coords="83,179,105,183,121,186,153,186,181,183,183,191,188,191,194,202,201,200,208,201,189,239,193,270,161,273,138,274,114,274,92,270,90,267,90,259,71,228,83,179" />
+  <area href="/radar/index_e.html?id=ONT" alt="Radar image for stations located in Ontario region" title="Radar image for stations located in Ontario region" shape="poly" coords="212,200,230,207,242,202,258,223,267,226,272,236,277,250,280,260,288,260,302,260,316,260,324,262,315,275,308,280,302,286,300,291,296,293,293,296,288,300,284,305,280,310,277,305,277,305,272,294,267,285,258,281,250,279,235,275,211,268,197,267,194,260,189,241" />
+  <area href="/radar/index_e.html?id=QUE" alt="Radar image for stations located in Quebec region" title="Radar image for stations located in Quebec region" shape="poly" coords="235,142,242,158,244,166,249,171,255,176,260,183,260,192,253,200,266,214,267,224,267,225,282,260,293,260,300,258,321,260,326,264,330,246,332,239,325,225,328,195,350,181,357,153,323,183,307,181,302,168,312,158,286,131,284,148,275,147,270,141,245,137" />
+  <area href="/radar/index_e.html?id=ERN" alt="Radar image for stations located in Atlantic region" title="Radar image for stations located in Atlantic region" shape="poly" coords="286,130,314,159,304,168,307,179,321,183,358,150,352,178,329,196,326,217,325,230,332,235,341,224,356,240,370,239,389,219,416,165,405,145,385,147,371,158,355,144,340,140,324,144,302,137" />
+</map><!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
+<!-- End Google Tag Manager -->
+
+<ul id="wb-tphp">
+	<li class="wb-slc">
+		<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+	</li>
+	<li class="wb-slc visible-sm visible-md visible-lg">
+		<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+	</li>
+</ul>
+<header role="banner">
+	<div id="wb-bnr" class="container">
+
+		<section id="wb-lng" class="visible-md visible-lg text-right">
+			<h2 class="wb-inv">Language selection</h2>
+			<div class="row">
+	<div class="col-md-12">
+		<ul class="list-inline margin-bottom-none">
+			<li><a lang="fr" href="/include/lang.php">Français</a></li>
+		</ul>
+	</div>
+</div>
+
+		</section>
+
+<div class="row">
+			
+	<div class="brand col-xs-8 col-sm-9 col-md-6">
+		<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="../template/GCWeb/assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+	</div>
+
+	<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn" >
+				<h2>Search and menus</h2>
+				<ul class="list-inline text-right chvrn">
+	<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl"></div>
+
+			</section>
+
+
+			<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+				<h2>Search</h2>
+				<form action="http://recherche-search.gc.ca/rGs/s_r?#wb-land" method="get" name="cse-search-box" role="search" class="form-inline">
+	<div class="form-group">
+		<label for="wb-srch-q" class="wb-inv">Search website</label>
+		<input name="cdn" value="canada" type="hidden"/>
+		<input name="st" value="s" type="hidden"/>
+		<input name="num" value="10" type="hidden"/>
+		<input name="langs" value="eng" type="hidden"/>
+		<input name="st1rt" value="0" type="hidden">
+		<input name="s5bm3ts21rch" value="x" type="hidden"/>
+		<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca" />
+		<datalist id="wb-srch-q-ac">
+			<!--[if lte IE 9]><select><![endif]-->
+			<!--[if lte IE 9]></select><![endif]-->
+		</datalist>
+	</div>
+	<div class="form-group submit">
+		<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+	</div>
+</form>
+			</section>
+		</div>
+	</div>
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-replace="/data/pco-fetch/sitemenu-en.html" typeof="SiteNavigationElement">
+<div class="container nvbar">
+	<h2>Topics menu</h2>
+    <div class="row">
+        <ul class="list-inline menu">
+            <li><a href="http://www.esdc.gc.ca/en/jobs/index.page">Jobs</a></li>
+            <li><a href="http://www.cic.gc.ca/english/index.asp">Immigration</a></li>
+            <li><a href="http://travel.gc.ca">Travel</a></li>
+            <li><a href="http://www.canada.ca/en/services/business/index.html">Business</a></li>
+            <li><a href="http://www.canada.ca/en/services/benefits/index.html">Benefits</a></li>
+            <li><a href="http://healthycanadians.gc.ca/index-eng.php">Health</a></li>
+            <li><a href="http://www.canada.ca/en/services/taxes/index.html">Taxes</a></li>
+            <li><a href="http://www.canada.ca/en/services/index.html">More services</a></li>
+        </ul>
+    </div>
+</div>
+	</nav>
+
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+		<h2>You are here:</h2>
+		<div class="container">
+	<div class="row">
+		<ol class="breadcrumb">
+<li><a href="../en.html">Home</a></li><li><a href="../services/environment.html">Environment and natural resources</a></li>
+<li><a href="../index_e.html">Weather information</a></li>
+<li><a href="../mainmenu/weather_menu_e.html">Weather</a></li>
+		</ol>
+	</div>
+</div>
+	</nav>
+</header>
+
+
+<div class="container hidden-print">
+
+<span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
+	<a href="#weather-shortcuts" class="overlay-lnk pull-right btn btn-default" aria-controls="mid-screen" role="button">Weather shortcuts</a>
+	<span id="wxo-divider" class="pull-right wb-invisible">|&#160;</span>
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
+   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Access city</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city" placeholder="Find a city" />
+   	<input type="hidden" name="lang" value="e"/>
+   	<input type="hidden" name="unit" value=""/>
+   	<input type="submit" id="jump" class="" value="Go"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+	<div id="invalid-city"></div>
+</form>
+<section id="weather-shortcuts" class="wb-overlay modal-content overlay-def wb-panel-r">
+	<header class="modal-header">
+		<h2 class="modal-title">Weather shortcuts</h2>
+	</header>
+	<div class="modal-body">
+	
+                                <li><a href="../../weather/canada_e.html">Canadian Weather</a></li>
+                                <li><a href="../../weather/radar/index_e.html">Radar - Canada</a></li>
+                                <li><a href="../../weather/satellite/index_e.html">Satellite - Canada</a></li>
+                                <li><a href="#">Marine - Canada</a></li>
+                                <li><a href="../../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
+                                <li><a href="#">Canadian Ice Service</a></li>
+                                <li><a href="#">Seasonal forecasts</a></li>
+                                <li><a href="#">Extended forecasts</a></li>
+                                <li><a href="../../weather/warnings/index_e.html">Public Alerts - Canada</a></li>
+                                <li><a href="../../weather/lightning/index_e.html">Lightning</a></li>
+                                <li><a href="#">Hurricane</a></li>
+                                <li><a href="#">Weather Summaries</a></li>
+                                <li><a href="#">Hazardous Weather</a></li>
+                                <li><a href="#">Global and Regional forecast models</a></li>
+                                <li><a href="#">Astronomy</a></li>
+                                <li><a href="#">Historical Climate Data</a></li>
+                                <li><a href="#">Aviation</a></li>
+                                <li><a href="#">Guide to Public forecasts</a></li>
+                                <li><a href="#">Guide to Marine forecasts</a></li>
+                                <li><a href="#">Guide to Air Quality forecasts</a></li>
+	</div>
+	</div>
+</section>
+
+<div class="clearfix"></div>
+<div id='collapsible-alerts' class='container'></div>
+<div class="clearfix"></div>
+		<main role="main" property="mainContentOfPage" class="container">
+
+<section>
+	<div class="row profile">
+		<div class="col-xs-12">
+			<h1 id="wb-cont" property="name">Canadian Weather Radar</h1>
+		</div>
+	</div>
+
+	<!--
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+-->
+
+<div class="animator" id="animator">
+
+	<div class="content row">
+	
+		<div id="animation" class="col-xs-12">
+		
+					<p id="wxo-rad-choose" class="pagetag text-center">Choose a province or radar station (radar stations are represented by black dots.)</p>
+						
+			<p class="text-center margin-bottom-none center-block img-responsive" style="background-color: black; width: 600px; color: white";> 2017-08-23, 14:40 UTC</p>
+			
+				<div id="animation-info" class="row text-center animation-info"></div>
+			<div class="animation-frame-nat-nojs" id="animation-frame">
+				
+				<!-- <noscript class="visible-xs js-hide">
+					<img id="animation-image" 
+					alt="xRadar image for Canada." 
+					title="xRadar image for Canada." 
+					src="/data/radar/detailed/temp_image//COMPOSITE_NAT/COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_14_40.GIF"
+					width="600" 
+					height="522" 
+					class="wxo-radar-img wxo-radar-img-nojs img-responsive"
+					usemap="#COMPOSITE_NAT_XS" />
+										<div id="composite-animation-image-wrapper">
+						<img id="composite-cities-image" class="overlay-img-nojs hidden-xs wxo-radar-img-nojs overlay-img img-responsive " 
+													width="600" height="522" 
+												usemap="#COMPOSITE_NAT_XS" src="../cacheable/images/radar/layers_detailed/composite_cities/nat_composite.gif" alt="Cities">
+					</div>
+									</noscript>
+				<img id="animation-image" 
+					alt="Radar image for Canada." 
+					title="Radar image for Canada." 
+					src="/data/radar/detailed/temp_image//COMPOSITE_NAT/COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_14_40.GIF"
+					width="600" 
+					height="522" 
+					class="wxo-radar-img hidden-xs wxo-radar-img-nojs img-responsive"
+					usemap="#COMPOSITE_NAT" />
+					
+					
+
+									<div id="composite-animation-image-wrapper">
+						<img id="composite-cities-image" class="overlay-img-nojs hidden-xs wxo-radar-img-nojs overlay-img-tog  img-responsive " 
+													width="600" height="522" 
+												usemap="#COMPOSITE_NAT" src="../cacheable/images/radar/layers_detailed/composite_cities/nat_composite.gif" alt="Cities">
+					</div>
+					
+										</div> -->
+										
+										
+		</div>
+		
+		<div class="wrapper">
+			
+			
+				<div id="wxo-animator" data-image-current="6" data-image-count="7" data-image-lightning-id="NAT" data-wxo-anim-0="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_1.gif" data-wxo-label-0="#1" data-wxo-anim-1="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_1.gif" data-wxo-label-1="#2" data-wxo-anim-2="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_2.gif" data-wxo-label-2="#3" data-wxo-anim-3="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_3.gif" data-wxo-label-3="#4" data-wxo-anim-4="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_4.gif" data-wxo-label-4="#5" data-wxo-anim-5="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_5.gif" data-wxo-label-5="#6" data-wxo-anim-6="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_6.gif" data-wxo-label-6="#7" data-wxo-anim-7="../data/radar/detailed/cad_thunder/CN_RADAR_THUNDER_7.gif" >
+
+					<div id="wxo-carousel" class="wxo-ie8-hide">
+					
+						<p class="wxo-loading-msg text-center mrgn-tp-lg mrgn-bttm-lg">Loading images...</p>
+											
+						<canvas id="wxo-canvas" class="wxo-active img-responsive center-block " data-image-current="6" data-image-count="7">Please enable JavaScript to view the animation.</canvas>
+						
+				
+					
+					</div>
+
+				</div> 
+				
+			</div>
+
+
+
+
+<div class="hidden-xs row mrgn-top-0 hidden-print mrgn-lft-md mrgn-rght-md">
+	<div class="col-sm-8 col-md-6 col-md-push-2 hidden-xs no-js-city-hide hidden">
+						
+		<form method="get" action="/radar/index_e.html" class="margin-bottom-none">
+			<input type="hidden" name="display" value="'COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_14_40'"/>
+			<span class="composite-cities-title">Overlay: </span>
+			<input name="overlay_cities" 
+				id="composite-cities-overlay" 
+				data-overlay_region="nat" 
+				data-overlay_src="/cacheable/images/radar/layers_detailed/composite_cities/nat_composite.gif" type="checkbox" 
+				checked />
+			<input type="hidden" value="NAT" name="id"/>
+			<input type="hidden" value="overlay_form" name="overlay_form"/>
+
+			<label class="wxo-lbl-clr" for="composite-cities-overlay">Cities</label>
+			<noscript><input class="submit" type="submit" title="Submit" value="Submit"/></noscript>
+		</form>
+	</div>
+			<div class="col-sm-4 hidden-xs">
+						
+		<p id="operational" class="text-right">N/O - Non-operational</p>
+	</div>
+</div>
+
+				<div class="hidden-sm hidden-md hidden-lg mrgn-lft-lg">N/O - Non-operational</div>
+			</div>
+	<!-- <noscript>
+	<div class="row">
+		<p class="text-center">Please enable JavaScript to view the animation.</p>
+		<p class="text-center" >The following images are available for PRECIPET - Rain:</p>
+		<div class="col-lg-3 col-md-2 col-sm-1"></div>
+		<div class="col-lg-3 col-md-4 col-xs-5">
+			<p>Short (1hr):</p>
+			<ul>
+									<li>2017-08-23, 14:40 UTC</li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_14_30'&amp;overlay_cities=1">2017-08-23, 14:30 UTC</a></li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_14_20'&amp;overlay_cities=1">2017-08-23, 14:20 UTC</a></li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_14_10'&amp;overlay_cities=1">2017-08-23, 14:10 UTC</a></li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_14_00'&amp;overlay_cities=1">2017-08-23, 14:00 UTC</a></li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_13_50'&amp;overlay_cities=1">2017-08-23, 13:50 UTC</a></li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_13_40'&amp;overlay_cities=1">2017-08-23, 13:40 UTC</a></li>
+												</ul>
+		</div>
+		<div class="col-lg-3 col-md-4 col-xs-5">
+			<p>Long (3hr):</p>
+			<ul>
+									<li>2017-08-23, 14:40 UTC</li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_14_20'&amp;overlay_cities=1">2017-08-23, 14:20 UTC</a></li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_14_00'&amp;overlay_cities=1">2017-08-23, 14:00 UTC</a></li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_13_40'&amp;overlay_cities=1">2017-08-23, 13:40 UTC</a></li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_13_20'&amp;overlay_cities=1">2017-08-23, 13:20 UTC</a></li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_13_00'&amp;overlay_cities=1">2017-08-23, 13:00 UTC</a></li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_12_40'&amp;overlay_cities=1">2017-08-23, 12:40 UTC</a></li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_12_20'&amp;overlay_cities=1">2017-08-23, 12:20 UTC</a></li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_12_00'&amp;overlay_cities=1">2017-08-23, 12:00 UTC</a></li>
+															<li><a href="/radar/index_e.html?id=NAT&amp;display='COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_11_40'&amp;overlay_cities=1">2017-08-23, 11:40 UTC</a></li>
+													
+			</ul>
+		</div>
+		<div class="col-lg-3 col-md-2"></div>
+	</div>
+</noscript> -->
+
+<!--
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+-->
+<div class="clearfix"></div>
+
+	<div id="animator-controller" class="hidden-print wxo-radar-width ">
+		<div class="hidden-xs hidden-sm hidden-md hidden-lg">
+			<b>Animation</b>
+		</div>
+
+		<div class="controller-box row hidden-xs hidden-sm hidden-md hidden-lg">
+			<div class="col-sm-5 col-xs-10 controller-set  margin-top-medium">
+				
+				<button class="wxo-anim-play btn btn-default btn-sm" title="Play">
+          			<span class="glyphicon glyphicon-play"></span>
+          			<span class="wb-inv">Play</span> 
+				</button>
+				   
+				 <button class="wxo-anim-stop btn btn-default btn-sm" title="Pause">
+					<span class="glyphicon glyphicon-stop"></span>
+					<span class="wb-inv">Pause</span>
+				</button>
+				
+				<button class="wxo-anim-first btn btn-default btn-sm" title="First Image">
+					<span class="glyphicon glyphicon-fast-backward"></span>
+					<span class="wb-inv">First Image</span>
+				</button>
+	  
+				 <button class="wxo-anim-prev btn btn-default btn-sm" title="Previous Image">
+					<span class="glyphicon glyphicon-backward"></span>
+					<span class="wb-inv">Previous Image</span>
+				</button>
+
+				<button class="wxo-anim-next btn btn-default btn-sm" title="Next Image">
+					<span class="glyphicon glyphicon-forward"></span>
+					<span class="wb-inv">Next Image</span>
+				</button>
+
+				<button class="wxo-anim-last btn btn-default btn-sm mrgn-rght-md" title="Last Image">
+					<span class="glyphicon glyphicon-fast-forward"></span>
+					<span class="wb-inv">Last Image</span>
+				</button>
+			</div>
+			<div class="col-sm-4 col-xs-10 controller-set margin-top-medium">
+				<span>
+					Speed:
+				</span>
+				 <button class="wxo-anim-slower btn btn-default btn-sm" title="Slower">
+						<span class="glyphicon glyphicon-minus-sign"></span>
+						<span class="wb-inv">Slower</span>
+				</button>
+				
+				<button class="wxo-anim-faster btn btn-default btn-sm" title="Faster">
+						<span class="glyphicon glyphicon-plus-sign"></span>
+						<span class="wb-inv">"Faster</span>
+				</button>
+				
+				<button class="wxo-anim-speed-reset btn btn-default btn-sm">Reset
+				</button>
+			
+			</div>
+
+			<div class="hidden-xs col-sm-3 controller-set margin-top-small">
+			
+					<div id="duration-label" >Time:</div>
+	
+			<div class="radio"><label><input type="radio" checked="checked" name="duration-mob" id="short-mob" value="short" />Short (1 Hour)</label></div>
+			<div class="radio"><label><input type="radio"  name="duration-mob" id="long-mob" value="long" />Long (3 Hour)</label></div>
+				
+	
+			</div>
+
+		</div>
+
+							<div class="hidden-xs margin-top-medium js-hide">
+				<b>Overlays</b>
+				<div class="controller-box">
+					<form method="get" action="/radar/index_e.html" class="margin-bottom-none">
+						<input type="hidden" name="display" value="'COMPOSITE_NAT_PRECIP_RAIN_2017_08_23_14_40'"/>
+						<input name="overlay_cities" 
+							id="composite-cities-overlaybottom" 
+							data-overlay_region="nat" 
+							data-overlay_src="/cacheable/images/radar/layers_detailed/composite_cities/nat_composite.gif" type="checkbox" 
+							checked />
+						<input type="hidden" value="NAT" name="id"/>
+						<input type="hidden" value="overlay_form" name="overlay_form"/>
+
+						<label class="wxo-lbl-clr" for="composite-cities-overlay">Cities</label>
+
+						<noscript><br><input class="submit" type="submit" title="Submit" value="Submit"/></noscript>
+					</form>
+				</div>
+			</div>
+					</div>
+</div>
+
+<div class="hidden-sm hidden-md hidden-lg">
+		<noscript class="">
+		<div class="col-xs-12" style="padding-left: 35px">
+			<form action="/radar/index_e.html" method="get">
+			<h5>Overlays</h5>
+			<div class="checkbox">
+				<input name="overlay_cities" id="overlay_citiesxs" type="checkbox" checked/>
+				<label class="wxo-lbl-clr" for="overlay_cities">Cities</label>
+			</div>
+					
+			<input class="submit" type="submit" title="Submit" value="Submit"/>
+							
+			<input type="hidden" value="NAT" name="id">
+			<input type="hidden" value="1" name="overlay_form2">	
+			</form>
+										
+			<input type="hidden" value="NAT" name="id">
+			
+			</form>
+		</div>
+	</noscript>
+	<details class="no-js-hide hidden-xs">
+		<summary>Overlays</summary>
+		<div class="checkbox">
+			<label><input id="wxo-overlay-cities" type="checkbox" checked/>Cities</label>
+		</div>
+			</details>
+	
+	<details class="no-js-hide hidden-xs">
+		<summary>Time Frame</summary>
+			<div class="radio"><label><input type="radio" checked="checked" name="duration-mob" id="short-mob" value="short" />Short (1 Hour)</label></div>
+			<div class="radio"><label><input type="radio"  name="duration-mob" id="long-mob" value="long"/>Long (3 Hour)</label></div>
+	</details>
+	<div class="clearfix"></div>
+	<details>
+		<summary>Radar - Canada</summary>
+		<ul class="cdn-ul">
+			<li> <a href="index_e.html">Canada</a></li>
+		</ul>
+		<details>
+			<summary>Pacific</summary>
+			<ul>
+				<li class="rad-loc"> <a href="index_e.html?id=PAC">Pacific Region</a></li>                         
+				<li class="rad-loc"> <a href="index_e.html?id=WUJ">Aldergrove (near Vancouver)</a></li>
+				<li class="rad-loc"> <a href="index_e.html?id=XPG">Prince George</a></li>
+				<li class="rad-loc"> <a href="index_e.html?id=XSS">Silver Star Mountain (near Vernon)</a></li>
+				<li class="rad-loc"> <a href="index_e.html?id=XSI">Victoria</a></li>	
+			</ul>					
+		</details>
+		<details>
+			<summary>Prairies</summary>
+			<ul>
+				<li class="rad-loc"><a href="index_e.html?id=WRN">Prairies Region</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XBE">Bethune (near Regina)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WHK">Carvel (near Edmonton)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XFW">Foxwarren (near Brandon)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WHN">Jimmy Lake (near Cold Lake)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XRA">Radisson (near Saskatoon)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XBU">Schuler (near Medicine Hat)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WWW">Spirit River (near Grande Prairie)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XSM">Strathmore (near Calgary)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XWL">Woodlands (near Winnipeg)</a></li>
+			</ul>
+		</details>  
+		<details>
+			<summary>Ontario</summary>
+			<ul>
+				<li class="rad-loc"><a href="index_e.html?id=ONT">Ontario Region</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WBI">Britt (Near Sudbury)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XDR">Dryden</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WSO">Exeter (near London)</a></li>
+				<li><a href="../radar/xft-index_thunder_e.html">Franktown (near Ottawa)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WKR">King City (near Toronto)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WGJ">Montreal River (near Sault Ste Marie)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XTI">Northeast Ontario (near Timmins)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XNI">Superior West (near Thunder Bay)</a></li>
+			</ul>
+		</details> 
+		<details>
+			<summary>Quebec</summary>
+			<ul>
+				<li class="rad-loc"><a href="index_e.html?id=QUE">Quebec Region</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WMB">Lac Castor (near Saguenay)</a></li>  
+				<li class="rad-loc"><a href="index_e.html?id=XLA">Landrienne (near Rouyn-Noranda)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WMN">McGill (near Montréal)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XAM">Val d'Irène (near Mont Joli)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WVY">Villeroy (near Trois-Rivières)</a></li>
+			</ul>
+		</details> 
+		<details>
+			<summary>Atlantic</summary>
+			<ul>
+				<li class="rad-loc"><a href="index_e.html?id=ERN">Atlantic Region</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XNC">Chipman (near Fredericton)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XGO">Halifax</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=WTP">Holyrood (near St. John's)</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XME">Marble Mountain</a></li>
+				<li class="rad-loc"><a href="index_e.html?id=XMB">Marion Bridge (near Sydney)</a></li>
+			</ul>
+		</details>							      
+	</details>
+	<details>
+		<summary>Help</summary>         
+		<ul>
+			<li class="rad-loc"><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=2B931828-1" title="About Image">About Image</a></li>
+			<li class="rad-loc"><a href="/radar/how-to-use_e.html" title="How to Use">How to Use</a></li>
+			<li class="rad-loc"><a href="http://climate.weather.gc.ca/radar/index_e.html" title="Historical Images">Historical Images</a></li>
+		</ul>
+	</details>
+</div>
+
+
+<div class="clearfix"></div>
+<div id="links" class="hidden-xs hidden-print">        
+	<div class="city-header" id="top-header">
+		<a href="index_e.html">Radar - Canada</a>
+	</div>
+	<div class="city-container" id="container5">
+	<div class="city-container" id="container4">
+	<div class="city-container" id="container3">
+	<div class="city-container" id="container2">
+	<div class="city-container" id="container1">
+		<div class="city-col" id="col1">
+		<div class="city-header" id="bold"><a href="index_e.html?id=PAC">Pacific</a></div>
+			<ul>
+				<li><a href="index_e.html?id=WUJ">Aldergrove<br/>(near Vancouver)</a></li>
+				<li><a href="index_e.html?id=XPG">Prince George</a></li>
+				<li><a href="index_e.html?id=XSS">Silver Star Mountain<br/>(near Vernon)</a></li>
+				<li><a href="index_e.html?id=XSI">Victoria</a></li>
+			</ul>
+		</div>
+		<div class="city-col" id="col2">
+		<div class="city-header"><a href="index_e.html?id=WRN">Prairies</a></div>
+			<ul>
+				<li><a href="index_e.html?id=XBE">Bethune<br/>(near Regina)</a></li>
+				<li><a href="index_e.html?id=WHK">Carvel<br/>(near Edmonton)</a></li>
+				<li><a href="index_e.html?id=XFW">Foxwarren<br/>(near Brandon)</a></li>
+				<li><a href="index_e.html?id=WHN">Jimmy Lake<br/>(near Cold Lake)</a></li>
+				<li><a href="index_e.html?id=XRA">Radisson<br/>(near Saskatoon)</a></li>
+				<li><a href="index_e.html?id=XBU">Schuler<br/>(near Medicine Hat)</a></li>
+				<li><a href="index_e.html?id=WWW">Spirit River<br/>(near Grande Prairie)</a></li>
+				<li><a href="index_e.html?id=XSM">Strathmore<br/>(near Calgary)</a></li>
+				<li><a href="index_e.html?id=XWL">Woodlands<br/>(near Winnipeg)</a></li>
+				
+			</ul>
+		</div>
+		<div class="city-col" id="col3">
+		<div class="city-header"><a href="index_e.html?id=ONT">Ontario</a></div>
+			<ul>
+				<li><a href="index_e.html?id=WBI">Britt<br/>(near Sudbury)</a></li>
+				<li><a href="index_e.html?id=XDR">Dryden</a></li>
+				<li><a href="index_e.html?id=WSO">Exeter<br/>(near London)</a></li>
+				<li><a href="../radar/xft-index_e.html">Franktown<br/>(near Ottawa)</a></li>
+				<li><a href="index_e.html?id=WKR">King City<br/>(near Toronto)</a></li>
+				<li><a href="index_e.html?id=WGJ">Montreal River<br/>(near Sault Ste Marie)</a></li>
+				<li><a href="index_e.html?id=XTI">Northeast Ontario<br/>(near Timmins)</a></li>
+				<li><a href="index_e.html?id=XNI">Superior West<br/>(near Thunder Bay)</a></li>
+			</ul>
+		</div>
+		<div class="city-col" id="col4">
+		<div class="city-header"><a href="index_e.html?id=QUE">Quebec</a></div>
+			<ul>
+				<li><a href="index_e.html?id=WMB">Lac Castor<br/>(near Saguenay)</a></li>
+				<li><a href="index_e.html?id=XLA">Landrienne<br/>(near Rouyn-Noranda)</a></li>
+				<li><a href="index_e.html?id=WMN">McGill<br/>(near Montr&#233;al)</a></li>
+				<li><a href="index_e.html?id=XAM">Val d'Ir&#232;ne<br/>(near Mont Joli)</a></li>
+				<li><a href="index_e.html?id=WVY">Villeroy<br/>(near Trois-Rivi&#232;res)</a></li>
+			</ul>
+		</div>
+		<div class="city-col" id="col5">
+		<div class="city-header"><a href="index_e.html?id=ERN">Atlantic</a></div>
+			<ul>
+				<li><a href="index_e.html?id=XNC">Chipman<br/>(near Fredericton)</a></li>
+				<li><a href="index_e.html?id=XGO">Halifax</a></li>
+				<li><a href="index_e.html?id=WTP">Holyrood<br/>(near St. John's)</a></li>
+				<li><a href="index_e.html?id=XME">Marble Mountain</a></li>
+				<li><a href="index_e.html?id=XMB">Marion Bridge<br/>(near Sydney)</a></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<div class="city-footer" id="top-footer">
+		<ul class="arrowedList">
+			<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=2B931828-1" title="About Image">About Image</a></li>
+			<li><a href="/radar/how-to-use_e.html" title="How to Use">How to Use</a></li>
+			<li><a href="http://climate.weather.gc.ca/radar/index_e.html" title="Historical Images">Historical Images</a></li>
+		</ul>
+	</div>
+</div>
+<div class="clearfix"></div>
+
+</section>
+
+<section class="hidden-print"  id="weather-topics">
+	<h2 class="wb-inv">What we are doing</h2>
+	 <div class="row wb-eqht">
+      <section class="col-lg-4 col-md-6">
+			<h3 class="wxo-footer-nav">Weather Forecasts</h3>
+      	<ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="../canada_e.html">Canadian Weather</a></li>
+            <li><a href="../radar/index_e.html">Radar - Canada</a></li>
+            <li><a href="/satellite/index_e.html">Satellite - Canada</a></li>
+            <li><a href="/marine/index_e.html">Marine - Canada</a></li>
+            <li><a href="../mainmenu/airquality_menu_e.html">Air Quality</a></li>
+            <li><a href="http://www.ec.gc.ca/glaces-ice/default.asp?lang=En&amp;n=D32C361E-1">Canadian Ice Service</a></li>
+				<li><a href="/saisons/index_e.html">Seasonal forecasts</a></li>
+				<li><a href="/forecast/public_bulletins_e.html">Extended forecast</a></li>
+			</ul>
+      </section>
+      <section class="col-lg-4 col-md-6">
+		<h3 class="wxo-footer-nav">Weather Alerts</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="../warnings/index_e.html">Public Alerts - Canada</a></li>
+            <li><a href="../lightning/index_e.html">Lightning</a></li>
+            <li><a href="/hurricane/index_e.html">Hurricane</a></li>
+            <li><a href="/warnings/weathersummaries_e.html">Weather Summaries</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=15E59C08-1">Hazardous Weather</a></li>
+      </ul>
+      </section>
+	  <section class="col-lg-4 col-md-6">
+	  <h3 class="wxo-footer-nav">Weather Resources</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="/model_forecast/model_e.html">Global and Regional forecast models</a></li>
+            <li><a href="/astro/index_e.html">Astronomy</a></li>
+            <li><a href="http://ec.gc.ca/rhc-wsc/default.asp?lang=En&amp;n=4EED50F1-1">Water Level and Flow</a></li>
+				<li><a href="http://climate.weather.gc.ca/index_e.html">Historical Climate Data</a></li>
+				<li><a href="https://flightplanning.navcanada.ca/cgi-bin/CreePage.pl?Langue=anglais&amp;NoSession=NS_Inconnu&amp;Page=forecast-observation&amp;TypeDoc=html">Aviation</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=4D51ECA8-1 ">Guide to Public forecasts</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=2EC4EC51-1">Guide to Marine forecasts</a></li>
+				<li><a href="http://ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=8E7198BB-1">Guide to Air Quality forecasts</a></li>
+		</ul>
+      </section>
+	</div>
+</section>
+<section class="gc-prtts"><h2>Features</h2><div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://ec.gc.ca/uv/default.asp?lang=En&amp;n=DCF1C20A-1">
+<h3 class="h5">UV Index and sun protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="../cacheable/images/banners/SM_123_03_30-UV-Index-and-Sun-Protection_button360x203.jpg?ver=1501615386" alt="" />
+</a>
+<p>Be weather wise!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://www.canada.ca/en/health-canada/services/sun-safety/extreme-heat-heat-waves.html">
+<h3 class="h5">Extreme Heat Protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="../cacheable/images/banners/SM_124_03_30-Extreme-Heat-02_button_360x203.jpg?ver=1501615386" alt="" />
+</a>
+<p>Be prepared!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://www.ec.gc.ca/foudre-lightning/default.asp?lang=En&amp;n=974AFF95-1">
+<h3 class="h5">Lightning Safety</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="../cacheable/images/banners/SM_121_03_30-Lightning-Safety_Button_360x203.jpg?ver=1501615386" alt="" />
+</a>
+<p>When thunder roars, GO INDOORS!</p></section></div></section><div class="row pagedetails">
+   <div class="col-sm-5 col-xs-12 datemod">
+      <dl id="wb-dtmd">
+         <dt>Date modified:&#32;</dt>
+         <dd><time property="dateModified">2017-05-25</time></dd>
+      </dl>
+   </div>
+   <div class="clear visible-xs"></div>
+   <div class="col-sm-4 col-xs-6"><a href="/mainmenu/contact_us_e.html" class="btn btn-default"><span class="glyphicon glyphicon-comment mrgn-rght-sm"></span>Feedback<span class="wb-inv"> about this web site</span></a></div>
+   <div class="col-sm-3 col-xs-6 text-right">
+      <div class="wb-share" data-wb-share='{"lnkClass": "btn btn-default"}'></div>
+   </div>
+   <div class="clear visible-xs"></div>
+</div>
+</main>
+<aside class="gc-nttvs container">
+<h2>Government of Canada activities and initiatives</h2>
+<div id="gcwb_prts" class="wb-eqht row" data-ajax-replace="/data/pco-fetch/features-en.html">
+<p class="mrgn-lft-md"><a href="http://www.canada.ca/activities.html">Access Government of Canada activities and initiatives</a></p>
+</div></aside>
+<footer role="contentinfo" id="wb-info">
+   <nav role="navigation" class="container wb-navcurr">
+      <h2 class="wb-inv">About government</h2>
+      <ul class="list-unstyled colcount-sm-2 colcount-md-3">
+   <li><a href="/mainmenu/contact_us_e.html">Contact us</a></li>
+   <li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+   <li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+   <li><a href="http://news.gc.ca/">News</a></li>
+   <li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+   <li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+   <li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+   <li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+   <li><a href="http://open.canada.ca/en/">Open government</a></li>
+</ul>
+   </nav>
+   <div class="brand">
+   <div class="container">
+      <div class="row ">
+         <nav class="col-md-10 ftr-urlt-lnk">
+            <h2 class="wb-inv">About this site</h2>
+            <ul>
+               <li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+               <li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+               <li><a href="http://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+               <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+               <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+            </ul>
+         </nav>
+         <div class="col-xs-6 visible-sm visible-xs tofpg">
+            <a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+         </div>
+         <div class="col-xs-6 col-md-2 text-right">
+            <object type="image/svg+xml" tabindex="-1" role="img" data="../template/GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+         </div>
+      </div>
+   </div>
+</div>
+</footer>
+
+
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="../template/GCWeb/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="/template/GCWeb/js/ie8-wet-boew2.min.js"></script>
+
+<![endif]-->
+<script src="../template/GCWeb/js/theme.min.js"></script>
+
+
+<script src="../cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="../cacheable/js/city/availableTags_e.min.js"></script>
+<script src="../city/js/cityjump.js"></script>
+<script>
+    document.getElementById("jump").className = "";
+    var max_chars = 50;
+
+    $('#city').keydown( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+
+    $('#city').keyup( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+</script>
+<script src="../template/GCWeb/js/deps/jquery.dataTables.min.js"></script>
+<script src="../city/js/jquery.h5validate.js"></script>
+<script src="../cacheable/js/myprofile/alerts-1.0.min.js"></script>
+<script src="../cacheable/js/myprofile/refresher-1.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('form').h5Validate({
+            errorClass:'white'
+        });
+    });
+</script>
+
+<script type="text/javascript" src="../cacheable/js/radar/init.js"></script>
+<script src="../cacheable/js/responsive/jquery.rwdImageMaps.js"></script>
+<script src="../cacheable/js/radar/cities_overlay.js"></script>
+<script src="../cacheable/js/radar/intensity_scale_local.js"></script>
+<script src="../cacheable/js/radar/cookie_manager.js"></script>
+
+<script src="../cacheable/js/radar/xmlhttpifr.js"></script> 
+<script src="../cacheable/js/radar/radar_controller.js"></script>
+<script src="../cacheable/js/radar/Animator.js"></script>
+
+<script src="../cacheable/js/radar/wxo-carousel-radar-CANADA-thunder.js"></script>
+<script>
+	var loaded = 0;
+	$(document).ready(function(e) {
+		window.animator = new Animator("NAT",{"regionName":"Canada","displayProduct":false,"image":{"width":"600px","height":"522px"},"overlay":{"height":"480px"},"products":{"active":"PRECIP_RAIN"},"durations":{"active":"short"},"timezone":{"id":"UTC","title":"","offset":""},"settings":"final"});
+
+		$('[name=duration]').click(function(){
+			var val = this.id + "-mob";
+			$("#" + val).prop('checked', true); 
+		});
+		addCityOverlay();
+		resizeComponents();
+	});
+
+	$(window).resize(function(){
+		resizeComponents();
+	}); 
+
+	$('img#animation-image').load( function() {
+		if (!loaded){
+			$('img[usemap]').rwdImageMaps();
+			loaded = 1;
+		}
+		resizeComponents();
+	});
+</script>
+<div class="device-xs visible-xs"></div>
+<div class="device-sm visible-sm"></div>
+<div class="device-md visible-md"></div>
+<div class="device-lg visible-lg"></div>
+	</body>
+</html>
+
