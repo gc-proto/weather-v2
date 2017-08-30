@@ -10,7 +10,10 @@
 
    /* 3822 fix FF - print truncated table */
    .wb-tabs > .tabpanels > .fade.in  { overflow: visible !important;}
-   .wb-tabs > .tabpanels > .fade.out { display: none  !important; }
+   .wb-tabs > .tabpanels > .fade.out { display: none !important; }
+
+	/* chrome print fade-in, not inherit hidden-print */
+	aside.hidden-print {display: none !important; }
 
     #wb-dtmd dd, #wb-dtmd dt { display:inline;}
 
@@ -24,17 +27,7 @@
     width: auto;
     min-width: 750px;
   	}
-	/* Chrome bug : city page prints as XS verion */
-	@media print {
-		@page { 	margin-left:0.3cm;
-					margin-right:0.3cm;
- 		}
-	}
-	/* force chrome to print on landscape */
-	@media print and (-webkit-min-device-pixel-ratio:0) { 
-		@page { size:landscape;}
-	}
-
+	
 	/*  removed double header if it has been at xs before printing  */
 	details[open] > summary.wxo-summ {
 		display:none !important;
@@ -116,7 +109,7 @@ abbr {
 div#warning, div#watch, div#statement, div#ended, div#noalert {
    border:2px solid black;
    margin:1em 0 .5em;
-   height: 100%;
+   /*height: 100%;*/ 
    padding:4px 0 5px;
 }
 div#warning {
@@ -320,7 +313,7 @@ h1{
    margin-top:0 !important;
 }
 #cityjump {
-   height: 2.5em;
+   height: 2.7em;
    text-align: left;
 }
 #cityjump {
@@ -481,3 +474,170 @@ details[open]#alertbox summary {border-bottom:1px solid #ddd;}
 {
     width: 72px;
 }
+
+#favourites-panel
+{
+	width: 380px;
+}
+
+.sortable-selected {
+	background-color: #3399FF !important;
+	color: #FFFFFF !important;
+}
+#favourites-inp-renaming {
+	color: #000000 !important;
+}
+
+.sortable {
+	padding: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	list-style: none;
+}
+.sortable li {
+	cursor: move;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	margin: 5px;
+	padding-left: 20px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	width: 100%;
+}
+
+.sortable li:hover {
+	background-color: #CCCCCC;
+	color: #000000;
+}
+
+#favourites-inp-renaming {
+	width: 90%;
+}
+
+#favourites-none {
+	text-align: center;
+}
+
+#favourites-list {
+	word-wrap: break-word;
+}
+
+.favourites-body {
+	padding-top: 0px;
+}
+
+.favourites-add-body {
+	margin-bottom: 40px;
+}
+.favourites-add-text {
+	width:80%; float:right;
+}
+
+.float-left {
+	float:left;
+}
+
+.underline_text {
+	text-decoration: underline;
+}
+
+.panel-greybkd {
+	background-color: #F6F6F6;
+}
+
+/** Modal Styling **/
+.popup-modal {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 1000%; 
+	overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.popup-modal-active {
+	display: block !important;
+}
+.popup-modal-div {
+	background-color: #FEFEFE;
+	margin: 15% auto;
+	border-radius: 4px;
+	border: 2px solid #d3080c;
+	width: 300px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: popup-animatetop;
+    -webkit-animation-duration: 0.4s;
+	-moz-animation-name: popup-animatetop;
+	-moz-animation-duration: 0.4s;
+    animation-name: popup-animatetop;
+    animation-duration: 0.4s;
+}
+.popup-modal-header {
+	background-color: #d3080c;
+	color: #FFF !important;
+}
+.popup-modal-header-text {
+	margin: 10px;
+	display: inline-block;
+}
+.popup-modal-content {
+	margin: 10px;
+}
+.popup-modal-close {
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.popup-modal-close:hover,
+.popup-modal-close:focus {
+	color: #e5e5e5;
+	text-decoration: none;
+}
+@-moz-keyframes popup-animatetop {
+	from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+@-webkit-keyframes popup-animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+@keyframes popup-animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/** End Modal Styling **/
+
+#important-notice>.popup-modal-div {
+	width: 800px;
+	max-width: 100%;
+	max-height: 75vh; /*calc(100vh - 15%) would be more accurate*/
+	overflow-y: auto;
+}
+
+/* Also a hack
+@media screen and (max-height: 767px) {
+	#important-notice>.popup-modal-div {
+		margin: 0;
+		height: 100vh;
+		overflow-y: scroll;
+	}
+}
+*/
+
+/* Bug in WET, overlay overrides panel styling */
+.panel-heading {
+	padding: 10px 15px !important;
+}
+
+/* image scaled down to give space for border & padding */
+img[usemap] {width:auto;}  
+
+.normalfont {font-weight:normal;}

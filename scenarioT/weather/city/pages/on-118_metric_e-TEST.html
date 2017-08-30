@@ -90,7 +90,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </section>
 </div>
 </div>
-<nav role="navigation" id="wb-sm" data-ajax-replace="../../ajax/sitemenu-en.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+<nav role="navigation" id="wb-sm" data-ajax-replace="./ajax/sitemenu-en.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
 <div class="container nvbar">
 <h2>Topics menu</h2>
 <div class="row">
@@ -123,50 +123,76 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </nav>
 </header>
 
+
+
 <div class="container hidden-print">
 
-<span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
-	<a href="#weather-shortcuts" class="overlay-lnk pull-right btn btn-default" aria-controls="mid-screen" role="button">Weather shortcuts</a>
-	<span id="wxo-divider" class="pull-right wb-invisible">|&#160;</span>
-	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
-   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Access city</label>
-   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city" placeholder="Find a city" />
+<div class="pnl-strt container nvbar  pull-right" style="width: 305px; z-index: 100; float: right; !important">
+	
+			
+						<details style="position: absolute; z-index:100; background-color: white;">
+							<summary>Weather Shortcuts</summary>
+							<ul role="menu">
+								<li><a href="#">Report Severe Weather</a></li>
+                                <li><a href="#">Canadian Weather</a></li>
+                                <li><a href="#">Radar - Canada</a></li>
+                                <li><a href="#">Canadian Weather</a></li>
+                                <li><a href="#">Canadian Weather</a></li>
+                                <li><a href="#">Canadian Weather</a></li>
+                                <li><a href="#">Canadian Weather</a></li>
+                                <li><a href="#">Canadian Weather</a></li>
+                                <li><a href="#">Canadian Weather</a></li>
+                                <li><a href="#">Canadian Weather</a></li>
+                                <li><a href="#">Canadian Weather</a></li>
+                                <li><a href="#">Canadian Weather</a></li>
+                                <li><a href="#">Canadian Weather</a></li>
+                                <li><a href="#">Canadian Weather</a></li>
+							
+							</ul>
+						</details>
+					</li>
+				
+    </div>
+
+<span class='pull-right profile-link'>&#160;|&#160;<a href='/myprofile/index_e.html'>My Weather Profile</a></span>
+
+
+   
+	<span id="wxo-divider" class="pull-right"></span>
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="/city/jump_e.html">
+   	<label id="search-label" for="city" accesskey="g" class="pull-right"></label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city"/>
    	<input type="hidden" name="lang" value="e"/>
    	<input type="hidden" name="unit" value=""/>
-   	<input type="submit" id="jump" class="" value="Go"/>
-   	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+   	<input type="submit" id="jump" class="wb-invisible" value="Go"/>
+ 
 	<div id="invalid-city"></div>
 </form>
-<section id="weather-shortcuts" class="wb-overlay modal-content overlay-def wb-panel-r">
-	<header class="modal-header">
-		<h2 class="modal-title">Weather shortcuts</h2>
-	</header>
-	<div class="modal-body">
-	
-                                <li><a href="../../../weather/canada_e.html">Canadian Weather</a></li>
-                                <li><a href="../../../weather/radar/index_e.html">Radar - Canada</a></li>
-                                <li><a href="../../../weather/satellite/index_e.html">Satellite - Canada</a></li>
-                                <li><a href="#">Marine - Canada</a></li>
-                                <li><a href="../../../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
-                                <li><a href="#">Canadian Ice Service</a></li>
-                                <li><a href="#">Seasonal forecasts</a></li>
-                                <li><a href="#">Extended forecasts</a></li>
-                                <li><a href="../../../weather/mainmenu/alert_menu_e.html">Public Alerts - Canada</a></li>
-                                <li><a href="../../../weather/lightning/index_e.html">Lightning</a></li>
-                                <li><a href="#">Hurricane</a></li>
-                                <li><a href="#">Weather Summaries</a></li>
-                                <li><a href="#">Hazardous Weather</a></li>
-                                <li><a href="#">Global and Regional forecast models</a></li>
-                                <li><a href="#">Astronomy</a></li>
-                                <li><a href="#">Historical Climate Data</a></li>
-                                <li><a href="#">Aviation</a></li>
-                                <li><a href="#">Guide to Public forecasts</a></li>
-                                <li><a href="#">Guide to Marine forecasts</a></li>
-                                <li><a href="#">Guide to Air Quality forecasts</a></li>
-	</div>
-	</div>
-</section>
+
+<!-- /////////////////////// -->
+
+
+
+
+
 </div>
+
+<!-- /////////////////////// -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="clearfix"></div>
 <div id='collapsible-alerts' class='container'></div>
@@ -1226,7 +1252,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </footer>
 <!--[if gte IE 9 | !IE ]><!-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-<script src="../../wet-boew/js/wet-boew.min.js"></script>
+<script src="/weather/wet-boew/js/wet-boew.min.js"></script>
 <!--<![endif]-->
 <!--[if lt IE 9]>
 <script src="/weather/wet-boew/js/ie8-wet-boew2.min.js"></script>
@@ -1240,5 +1266,21 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="../../../weather/cacheable/js/myprofile/refresher-1.0.min.js"></script>
 <script type="text/javascript" src="../../../weather/city/js/cityjump.js"></script>
 <script src="../../../weather/GCWeb/js/theme.min.js"></script>
+
+<script>
+    document.getElementById("jump").className = "";
+    var max_chars = 50;
+    $('#city').keydown( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+    $('#city').keyup( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+</script> 
+
 </body>
 </html>

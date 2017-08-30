@@ -118,19 +118,49 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     
   <div class="container hidden-print">
 
-<span class='pull-right profile-link'>&#160;|&#160;<a href='/myprofile/index_e.html'>My Weather Profile</a></span>
-	<a href="#weather-topics" class="pull-right">Weather Topics</a>
-	<span id="wxo-divider" class="pull-right">|&#160;</span>
-	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="/city/jump_e.html">
-   	<label id="search-label" for="city" accesskey="g" class="pull-right">Access city</label>
-   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city"/>
+<span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
+	<a href="#weather-shortcuts" class="overlay-lnk pull-right btn btn-default" aria-controls="mid-screen" role="button">Weather shortcuts</a>
+	<span id="wxo-divider" class="pull-right wb-invisible">|&#160;</span>
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
+   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Access city</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city" placeholder="Find a city" />
    	<input type="hidden" name="lang" value="e"/>
    	<input type="hidden" name="unit" value=""/>
-   	<input type="submit" id="jump" class="wb-invisible" value="Go"/>
+   	<input type="submit" id="jump" class="" value="Go"/>
    	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
 	<div id="invalid-city"></div>
 </form>
+<section id="weather-shortcuts" class="wb-overlay modal-content overlay-def wb-panel-r">
+	<header class="modal-header">
+		<h2 class="modal-title">Weather shortcuts</h2>
+	</header>
+	<div class="modal-body">
+	
+                                <li><a href="../weather/canada_e.html">Canadian Weather</a></li>
+                                <li><a href="../weather/radar/index_e.html">Radar - Canada</a></li>
+                                <li><a href="../weather/satellite/index_e.html">Satellite - Canada</a></li>
+                                <li><a href="#">Marine - Canada</a></li>
+                                <li><a href="../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
+                                <li><a href="#">Canadian Ice Service</a></li>
+                                <li><a href="#">Seasonal forecasts</a></li>
+                                <li><a href="#">Extended forecasts</a></li>
+                                <li><a href="../weather/warnings/index_e.html">Public Alerts - Canada</a></li>
+                                <li><a href="../weather/lightning/index_e.html">Lightning</a></li>
+                                <li><a href="#">Hurricane</a></li>
+                                <li><a href="#">Weather Summaries</a></li>
+                                <li><a href="#">Hazardous Weather</a></li>
+                                <li><a href="#">Global and Regional forecast models</a></li>
+                                <li><a href="#">Astronomy</a></li>
+                                <li><a href="#">Historical Climate Data</a></li>
+                                <li><a href="#">Aviation</a></li>
+                                <li><a href="#">Guide to Public forecasts</a></li>
+                                <li><a href="#">Guide to Marine forecasts</a></li>
+                                <li><a href="#">Guide to Air Quality forecasts</a></li>
+	</div>
+	</div>
+</section>
 </div>
+
 <div class="clearfix"></div>
 <div id='collapsible-alerts' class='container'></div>
 <div class="clearfix"></div>
@@ -204,7 +234,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		<li><a href="../weather/canada_e.html">Canadian Weather</a></li>
 		<li><a href="../weather/warnings/index_e.html">Public Alerts - Canada</a></li>
 		<li><a href="../weather/radar/index_e.html">Radar - Canada</a></li>
-		<li><a href="/weather/satellite/index_e.html">Satellite - Canada</a></li>
+		<li><a href="../weather/satellite/index_e.html">Satellite - Canada</a></li>
 		<li><a href="/weather/saisons/index_e.html">Seasonal forecasts</a></li>
 		<li><a href="../weather/mainmenu/airquality_menu_e.html">Air Quality </a></li>
 		<li><a href="/weather/marine/index_e.html">Marine - Canada</a></li>

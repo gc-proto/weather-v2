@@ -17,13 +17,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <link href="/weather/GCWeb/assets/favicon.ico" rel="shortcut icon" />
 <link rel="stylesheet" href="/weather/GCWeb/css/ie8-theme.min.css" />
 <link rel="stylesheet" href="/weather/cacheable/css/city/jquery-ui-1.10.3.custom.min.css">
-<script src="/weather/wet-boew/js/ie8-wet-boew.min.js"></script>
+<script src="../../weather/wet-boew/js/ie8-wet-boew.min.js"></script>
 <![endif]-->
 <!--[if lte IE 9]>
 <![endif]-->
 	<script src="../../weather/cacheable/js/radar/Animator.js"></script>
 
-<noscript><link rel="stylesheet" href="weather/wet-boew/css/noscript.min.css" /></noscript>
+<noscript><link rel="stylesheet" href="../../weather/wet-boew/css/noscript.min.css" /></noscript>
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
@@ -119,21 +119,53 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </nav>
 </header>
 
+
 <div class="container hidden-print">
-    <a href='/myprofile/index_e.html' class='pull-right profile-link'>My Weather Profile</a>
-    <span class='pull-right profile-link'>&nbsp;|&nbsp;</span>
-   <a class="pull-right" href="#weather-topics">Weather Topics</a>
-   <span id="wxo-divider" class="pull-right">&nbsp;|&nbsp;</span>
-<form class="pull-right" role="search" id="cityjump" method="GET" action="/city/jump_e.html">
-   <label id="search-label" style="white-space:nowrap;" for="city" accesskey="g" class="pull-right">Access city</label>
-   <input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city"/>
-   <input type="hidden" name="lang" value="e"/>
-   <input type="hidden" name="unit" value=""/>
-   <input type="submit" id="jump" class="wb-invisible" value="Go"/>
-   <noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
-<div id="invalid-city"></div>
+
+<span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
+	<a href="#weather-shortcuts" class="overlay-lnk pull-right btn btn-default" aria-controls="mid-screen" role="button">Weather shortcuts</a>
+	<span id="wxo-divider" class="pull-right wb-invisible">|&#160;</span>
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
+   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Access city</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city" placeholder="Find a city" />
+   	<input type="hidden" name="lang" value="e"/>
+   	<input type="hidden" name="unit" value=""/>
+   	<input type="submit" id="jump" class="" value="Go"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+	<div id="invalid-city"></div>
 </form>
+<section id="weather-shortcuts" class="wb-overlay modal-content overlay-def wb-panel-r">
+	<header class="modal-header">
+		<h2 class="modal-title">Weather shortcuts</h2>
+	</header>
+	<div class="modal-body">
+	
+                                <li><a href="../../weather/canada_e.html">Canadian Weather</a></li>
+                                <li><a href="../../weather/radar/index_e.html">Radar - Canada</a></li>
+                                <li><a href="../../weather/satellite/index_e.html">Satellite - Canada</a></li>
+                                <li><a href="#">Marine - Canada</a></li>
+                                <li><a href="../../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
+                                <li><a href="#">Canadian Ice Service</a></li>
+                                <li><a href="#">Seasonal forecasts</a></li>
+                                <li><a href="#">Extended forecasts</a></li>
+                                <li><a href="../../weather/warnings/index_e.html">Public Alerts - Canada</a></li>
+                                <li><a href="../../weather/lightning/index_e.html">Lightning</a></li>
+                                <li><a href="#">Hurricane</a></li>
+                                <li><a href="#">Weather Summaries</a></li>
+                                <li><a href="#">Hazardous Weather</a></li>
+                                <li><a href="#">Global and Regional forecast models</a></li>
+                                <li><a href="#">Astronomy</a></li>
+                                <li><a href="#">Historical Climate Data</a></li>
+                                <li><a href="#">Aviation</a></li>
+                                <li><a href="#">Guide to Public forecasts</a></li>
+                                <li><a href="#">Guide to Marine forecasts</a></li>
+                                <li><a href="#">Guide to Air Quality forecasts</a></li>
+	</div>
+	</div>
+</section>
 </div>
+
+
 <div class="clearfix"></div>
 <div id='collapsible-alerts' class='container'></div>
 <div class="clearfix"></div>
@@ -1172,7 +1204,7 @@ coords="148,157,158,164,156,177,159,184,145,199,142,208,150,218,143,232,147,238,
 </tr>
 </tbody></table>
 </details></div>	
-<section class="hidden-print"  id="weather-topics">
+<!-- <section class="hidden-print"  id="weather-topics">
 	<h2 class="wb-inv">What we are doing</h2>
 	 <div class="row wb-eqht">
       <section class="col-lg-4 col-md-6">
@@ -1214,7 +1246,7 @@ coords="148,157,158,164,156,177,159,184,145,199,142,208,150,218,143,232,147,238,
 	</div>
 </section>
 
-<!--<section class="gc-prtts hidden-print"><h2>Features</h2><div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<section class="gc-prtts hidden-print"><h2>Features</h2><div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md">
 <a rel="external" href="/redirect.php?url=http://ec.gc.ca/uv/default.asp?lang=En&amp;n=DCF1C20A-1">
 <h3 class="h5">UV Index and sun protection</h3>
 <img class="img-responsive thumbnail mrgn-bttm-sm" src="/weather/cacheable/images/banners/SM_123_03_30-UV-Index-and-Sun-Protection_button360x203.jpg" alt="" />
@@ -1232,23 +1264,6 @@ coords="148,157,158,164,156,177,159,184,145,199,142,208,150,218,143,232,147,238,
 <p>Air Quality Health Index</p></section></div></section> -->
 
 <div class="row pagedetails">
-   <div class="col-sm-5 col-xs-12 datemod">
-      <dl id="wb-dtmd">
-         <dt>Date modified:&#32;</dt>
-         <dd><time property="dateModified">2017-07-21</time></dd>
-      </dl>
-   </div>
-   <div class="clear visible-xs"></div>
-   <div class="col-sm-4 col-xs-6">
-      <a href="/mainmenu/contact_us_e.html" class="btn btn-default"><span class="glyphicon glyphicon-comment mrgn-rght-sm"></span>Feedback<span class="wb-inv"> about this web site</span></a>
-   </div>
-   <div class="col-sm-3 col-xs-6 text-right">
-      <div class="wb-share" data-wb-share='{"lnkClass": "btn btn-default"}'></div>
-   </div>
-   <div class="clear visible-xs"></div>
-</div>
-</main>
-<div class="row pagedetails">
 <div class="col-sm-6 col-lg-4 mrgn-tp-sm">
 <a href="https://www.canada.ca/en/report-problem.html" class="btn btn-default btn-block">Report a problem or mistake on this page</a>
 </div>
@@ -1263,6 +1278,8 @@ coords="148,157,158,164,156,177,159,184,145,199,142,208,150,218,143,232,147,238,
 </div>
 </div>
 </main>
+
+
 <footer role="contentinfo" id="wb-info">
 <nav role="navigation" class="container wb-navcurr">
 <h2 class="wb-inv">About government</h2>
@@ -1296,7 +1313,7 @@ coords="148,157,158,164,156,177,159,184,145,199,142,208,150,218,143,232,147,238,
 <a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
 </div>
 <div class="col-xs-6 col-md-2 text-right">
-<object type="image/svg+xml" tabindex="-1" role="img" data="/weather/GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+<object type="image/svg+xml" tabindex="-1" role="img" data="../../weather/GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
 </div>
 </div>
 </div>
@@ -1306,7 +1323,7 @@ coords="148,157,158,164,156,177,159,184,145,199,142,208,150,218,143,232,147,238,
 	
 <!--[if gte IE 9 | !IE ]><!-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-<script src="/weather/wet-boew/js/wet-boew.min.js"></script>
+<script src="../../weather/wet-boew/js/wet-boew.min.js"></script>
 <!--<![endif]-->
 <!--[if lt IE 9]>
 <script src="/weather/wet-boew/js/ie8-wet-boew2.min.js"></script>

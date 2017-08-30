@@ -17,14 +17,14 @@
 <meta name="dcterms.modified" title="W3CDTF" content="2017-05-25" />
 		<!-- Meta data-->
 		<!--[if gte IE 9 | !IE ]><!-->
-<link href="../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
-<link rel="stylesheet" href="../GCWeb/css/theme.min.css">
+<link href="../template/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="../template/GCWeb/css/theme.min.css">
 
 
 <!--<![endif]-->
 
-<!--[if lt IE 9]>
-<!-- Not sure what this is doing <link rel="stylesheet" href="/template/GCWeb/v4.0.22/css/ie8-wet-boew.min.css" /> -->
+<!--[if lt IE 9]> -->
+<link rel="stylesheet" href="../template/GCWeb/css/ie8-wet-boew.min.css" />
 <link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 <link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
 <link rel="stylesheet" href="../cacheable/css/city/jquery-ui-1.10.3.custom.min.css">
@@ -40,6 +40,7 @@
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
 <link rel="stylesheet" href="../cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" href="../template/wxo/css/wxo.css" />
 <!-- <link rel="stylesheet" href="/template/wxo/css/wxo.css" /> -->
 <!--[if IE 8]>
 <link href="../cacheable/css/radar/radar2.css" rel="stylesheet" type="text/css" />
@@ -161,19 +162,48 @@
 
 <div class="container hidden-print">
 
-<span class='pull-right profile-link'>&#160;|&#160;<a href='/myprofile/index_e.html'>My Weather Profile</a></span>
-	<a href="#weather-topics" class="pull-right">Weather Topics</a>
-	<span id="wxo-divider" class="pull-right">|&#160;</span>
-	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="/city/jump_e.html">
-   	<label id="search-label" for="city" accesskey="g" class="pull-right">Access city</label>
-   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city"/>
+<span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
+	<a href="#weather-shortcuts" class="overlay-lnk pull-right btn btn-default" aria-controls="mid-screen" role="button">Weather shortcuts</a>
+	<span id="wxo-divider" class="pull-right wb-invisible">|&#160;</span>
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
+   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Access city</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city" placeholder="Find a city" />
    	<input type="hidden" name="lang" value="e"/>
    	<input type="hidden" name="unit" value=""/>
-   	<input type="submit" id="jump" class="wb-invisible" value="Go"/>
+   	<input type="submit" id="jump" class="" value="Go"/>
    	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
 	<div id="invalid-city"></div>
 </form>
-</div>
+<section id="weather-shortcuts" class="wb-overlay modal-content overlay-def wb-panel-r">
+	<header class="modal-header">
+		<h2 class="modal-title">Weather shortcuts</h2>
+	</header>
+	<div class="modal-body">
+	
+                                <li><a href="../../weather/canada_e.html">Canadian Weather</a></li>
+                                <li><a href="../../weather/radar/index_e.html">Radar - Canada</a></li>
+                                <li><a href="../../weather/satellite/index_e.html">Satellite - Canada</a></li>
+                                <li><a href="#">Marine - Canada</a></li>
+                                <li><a href="../../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
+                                <li><a href="#">Canadian Ice Service</a></li>
+                                <li><a href="#">Seasonal forecasts</a></li>
+                                <li><a href="#">Extended forecasts</a></li>
+                                <li><a href="../../weather/warnings/index_e.html">Public Alerts - Canada</a></li>
+                                <li><a href="../../weather/lightning/index_e.html">Lightning</a></li>
+                                <li><a href="#">Hurricane</a></li>
+                                <li><a href="#">Weather Summaries</a></li>
+                                <li><a href="#">Hazardous Weather</a></li>
+                                <li><a href="#">Global and Regional forecast models</a></li>
+                                <li><a href="#">Astronomy</a></li>
+                                <li><a href="#">Historical Climate Data</a></li>
+                                <li><a href="#">Aviation</a></li>
+                                <li><a href="#">Guide to Public forecasts</a></li>
+                                <li><a href="#">Guide to Marine forecasts</a></li>
+                                <li><a href="#">Guide to Air Quality forecasts</a></li>
+	</div>
+	</div>
+</section>
+
 <div class="clearfix"></div>
 <div id='collapsible-alerts' class='container'></div>
 <div class="clearfix"></div>
@@ -803,7 +833,7 @@
 
 </section>
 
-<section class="hidden-print"  id="weather-topics">
+<!-- <section class="hidden-print"  id="weather-topics">
 	<h2 class="wb-inv">What we are doing</h2>
 	 <div class="row wb-eqht">
       <section class="col-lg-4 col-md-6">
@@ -842,7 +872,8 @@
 				<li><a href="http://ec.gc.ca/meteo-../default.asp?lang=En&amp;n=8E7198BB-1">Guide to Air Quality forecasts</a></li>
 		</ul>
       </section>
-	</div>
+	</div> -->
+    
 </section>
 <section class="gc-prtts hidden-print"><h2>Features</h2><div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md">
 <a rel="external" href="/redirect.php?url=http://ec.gc.ca/uv/default.asp?lang=En&amp;n=DCF1C20A-1">
@@ -937,11 +968,13 @@
 <!--[if gte IE 9 | !IE ]><!-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="../wet-boew/js/wet-boew.min.js"></script>
+<script src="../template/GCWeb/js/wet-boew.min.js"></script>
+
 <!--<![endif]-->
 <!--[if lt IE 9]>
 <script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
-<script src="../GCWeb/js/theme.min.js"></script>
+<script src="../template/GCWeb/js/theme.min.js"></script>
 <script src="../cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
 <script src="../cacheable/js/city/availableTags_e.min.js"></script>
 <script src="../city/js/cityjump.js"></script>
