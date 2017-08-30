@@ -8,7 +8,7 @@ $(document).ready(function(){
 	var lang = $('input[name=lang]');
 	var jump = $('#jump');
 	//Hide necessary elements
-	all.hide();
+//	all.hide();
 	jump.addClass("btn btn-default btn-sm mrgn-rght-sm");
 	//Add styling to label on hover
 	/*cityLabel.hover(function(){

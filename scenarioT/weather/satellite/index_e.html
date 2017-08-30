@@ -120,13 +120,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 <span class='pull-right profile-link'>&#160;|&#160;<a href='/myprofile/index_e.html'>My Weather Profile</a></span>
 	<a href="#weather-topics" class="pull-right">Weather Topics</a>
-	<span id="wxo-divider" class="pull-right">|&#160;</span>
+	<span id="wxo-divider" class="pull-right wb-invisible">|&#160;</span>
 	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="/city/jump_e.html">
-   	<label id="search-label" for="city" accesskey="g" class="pull-right">Access city</label>
-   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city"/>
+   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Access city</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city" placeholder="Find city" />
    	<input type="hidden" name="lang" value="e"/>
    	<input type="hidden" name="unit" value=""/>
-   	<input type="submit" id="jump" class="wb-invisible" value="Go"/>
+   	<input type="submit" id="jump" class="" value="Go"/>
    	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
 	<div id="invalid-city"></div>
 </form>
