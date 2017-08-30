@@ -7,7 +7,10 @@ $(document).ready(function(){
 	var jumpMsg = $('#jumpmsg');
 	var lang = $('input[name=lang]');
 	var jump = $('#jump');
+
 //	all.hide();
+	//weather-topics.addClass("wb-invisible");
+	$('#weather-topics').hide();
 	//Hide necessary elements
 	jump.addClass("btn btn-default btn-sm mrgn-rght-sm");
 	//Add styling to label on hover
