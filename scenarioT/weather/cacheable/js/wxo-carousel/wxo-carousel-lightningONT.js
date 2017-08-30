@@ -432,7 +432,7 @@ $(document).ready(function(){
           $.when(
                $.ajax({
                    type: 'GET',
-                   url: 'https://gc-proto.github.io/weather/lightning/include/xhr.php',
+                   url: 'https://gc-proto.github.io/weather/scenarioT/weather/lightning/include/xhr.php',
                     data: {id: animator.attr('data-image-lightning-id')}
                })).done(function(content) {
                    //state.imageSrcs = $.parseJSON(content)['imageSrc'];
