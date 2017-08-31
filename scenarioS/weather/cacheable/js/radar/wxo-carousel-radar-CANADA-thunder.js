@@ -36,7 +36,7 @@ $(document).ready(function(){
     //Initiate state variables
     //Interval/play related variables
     state.speed = {
-        initInterval : 2700,
+        initInterval : 500,
         maxInterval : 9000,
         minInterval : 199,
         increaseDelta : 300,
