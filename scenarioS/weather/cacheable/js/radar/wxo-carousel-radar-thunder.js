@@ -36,16 +36,16 @@ $(document).ready(function(){
     //Initiate state variables
     //Interval/play related variables
     state.speed = {
-        initInterval : 2700,
+        initInterval : 550,
         maxInterval : 9000,
         minInterval : 199,
         increaseDelta : 300,
         decreaseDelta : 300,
         lastFrameDelay : function(){
           if(state.interval === state.speed.minInterval){
-            return 500;
+            return 1250;
           }else{
-            return state.interval;
+            return 1250;
           }
         }
     };
