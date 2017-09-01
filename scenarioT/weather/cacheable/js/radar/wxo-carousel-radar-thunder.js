@@ -43,9 +43,9 @@ $(document).ready(function(){
         decreaseDelta : 300,
         lastFrameDelay : function(){
           if(state.interval === state.speed.minInterval){
-            return 950;
+            return 1250;
           }else{
-            return 950;
+            return 1250;
           }
         }
     };
