@@ -1,0 +1,1332 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]--><head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>Public Weather Alerts for Canada - Environment Canada</title>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link href="../../weather/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="../../weather/GCWeb/css/theme.min.css">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<link href="/weather/GCWeb/assets/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="/weather/GCWeb/css/ie8-theme.min.css" />
+<link rel="stylesheet" href="/weather/cacheable/css/city/jquery-ui-1.10.3.custom.min.css">
+<script src="../../weather/wet-boew/js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+<![endif]-->
+	<script src="../../weather/cacheable/js/radar/Animator.js"></script>
+
+<noscript><link rel="stylesheet" href="../../weather/wet-boew/css/noscript.min.css" /></noscript>
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<script>dataLayer1 = [];</script>
+<!-- End Google Tag Manager -->
+</head>
+<body vocab="http://schema.org/" typeof="WebPage">
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
+<!-- End Google Tag Manager -->
+<link rel="stylesheet" href="../../weather/cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" href="../../weather/template/wxo/css/wxo.css" />
+ 
+<link rel="stylesheet" type="text/css" href="../../weather/warnings/css/warnings.css" />
+
+
+<ul id="wb-tphp">
+<li class="wb-slc">
+<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+</li>
+<li class="wb-slc visible-sm visible-md visible-lg">
+<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+</li>
+</ul>
+<header role="banner">
+<div id="wb-bnr" class="container">
+<section id="wb-lng" class="visible-md visible-lg text-right">
+<h2 class="wb-inv">Language selection</h2>
+<div class="row">
+<div class="col-md-12">
+<ul class="list-inline margin-bottom-none">
+<li><a lang="fr" href="index-fr.html">Français</a></li>
+</ul>
+</div>
+</div>
+</section>
+<div class="row">
+<div class="brand col-xs-8 col-sm-9 col-md-6">
+<a href="https://www.canada.ca/en.html"><object type="image/svg+xml" tabindex="-1" data="../../weather/GCWeb/assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+</div>
+<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+<h2>Search and menus</h2>
+<ul class="list-inline text-right chvrn">
+<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl"></div>
+</section>
+<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+<h2>Search</h2>
+<form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
+<div class="form-group">
+<label for="wb-srch-q" class="wb-inv">Search website</label>
+<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca">
+<datalist id="wb-srch-q-ac">
+<!--[if lte IE 9]><select><![endif]-->
+<!--[if lte IE 9]></select><![endif]-->
+</datalist>
+</div>
+<div class="form-group submit">
+<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+</div>
+</form>
+</section>
+</div>
+</div>
+<nav role="navigation" id="wb-sm" data-ajax-replace="/weather/ajax/sitemenu-en.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+<div class="container nvbar">
+<h2>Topics menu</h2>
+<div class="row">
+<ul class="list-inline menu">
+<li><a href="http://www.esdc.gc.ca/en/jobs/index.page">Jobs</a></li>
+<li><a href="http://www.cic.gc.ca/english/index.asp">Immigration</a></li>
+<li><a href="https://travel.gc.ca/">Travel</a></li>
+<li><a href="https://www.canada.ca/en/services/business.html">Business</a></li>
+<li><a href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
+<li><a href="http://healthycanadians.gc.ca/index-eng.php">Health</a></li>
+<li><a href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
+<li><a href="https://www.canada.ca/en/services.html">More services</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+	<h2>You are here:</h2>
+	<div class="container">
+	<div class="row">
+		<ol class="breadcrumb">
+		<li><a href="../../weather/en.html">Home</a></li><li><a href="../../weather/services/environment.html">Environment and natural resources</a></li><li><a href="../../weather/index_e.html">Weather information</a></li>
+<li><a href="../../weather/mainmenu/weather_menu_e.html">Alerts</a></li>
+		</ol>
+	</div>
+</div>
+</nav>
+</header>
+
+
+<div class="container hidden-print">
+
+<span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
+	<a href="#weather-shortcuts" class="overlay-lnk pull-right btn btn-default" aria-controls="mid-screen" role="button">Weather shortcuts</a>
+	<span id="wxo-divider" class="pull-right wb-invisible">|&#160;</span>
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
+   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Access city</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city" placeholder="Find a city" />
+   	<input type="hidden" name="lang" value="e"/>
+   	<input type="hidden" name="unit" value=""/>
+   	<input type="submit" id="jump" class="" value="Go"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+	<div id="invalid-city"></div>
+</form>
+<section id="weather-shortcuts" class="wb-overlay modal-content overlay-def wb-panel-r">
+	<header class="modal-header">
+		<h2 class="modal-title">Weather shortcuts</h2>
+	</header>
+	<div class="modal-body">
+	
+                                <li><a href="../../weather/canada_e.html">Canadian Weather</a></li>
+                                <li><a href="../../weather/radar/index_e.html">Radar - Canada</a></li>
+                                <li><a href="../../weather/satellite/index_e.html">Satellite - Canada</a></li>
+                                <li><a href="#">Marine - Canada</a></li>
+                                <li><a href="../../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
+                                <li><a href="#">Canadian Ice Service</a></li>
+                                <li><a href="#">Seasonal forecasts</a></li>
+                                <li><a href="#">Extended forecasts</a></li>
+                                <li><a href="../../weather/warnings/index_e.html">Public Alerts - Canada</a></li>
+                                <li><a href="../../weather/lightning/index_e.html">Lightning</a></li>
+                                <li><a href="#">Hurricane</a></li>
+                                <li><a href="#">Weather Summaries</a></li>
+                                <li><a href="#">Hazardous Weather</a></li>
+                                <li><a href="#">Global and Regional forecast models</a></li>
+                                <li><a href="#">Astronomy</a></li>
+                                <li><a href="#">Historical Climate Data</a></li>
+                                <li><a href="#">Aviation</a></li>
+                                <li><a href="#">Guide to Public forecasts</a></li>
+                                <li><a href="#">Guide to Marine forecasts</a></li>
+                                <li><a href="#">Guide to Air Quality forecasts</a></li>
+	</div>
+	</div>
+</section>
+</div>
+
+
+<div class="clearfix"></div>
+<div id='collapsible-alerts' class='container'></div>
+<div class="clearfix"></div>
+<main role="main" property="mainContentOfPage" class="container">
+
+<h1 property="name" id="wb-cont">Public Weather Alerts for Canada</h1>
+		<div class="row">
+	    <div class="col-md-12">
+			<p class="text-center">Click on a province or territory for the latest alerts</p><img class="thumbnail center-block img-responsive wxo-pddng-sm"  src="../../weather/data/warningmap/canada_e.png" usemap="#canada" alt="Map of Canada" />
+<map name="canada" id="canada" title="Canada">
+<area title="Alberta" alt="Alberta" shape="poly"
+coords="210,384,255,398,203,572,179,567,160,559,158,548,162,536,156,522,147,502,142,487,141,474,134,466,141,451,163,402,179,369,210,384" href="/warnings/index_e.html?prov=ab" />
+<area title="British Columbia" alt="British Columbia" shape="poly"
+coords="56,290,75,305,103,325,140,349,164,363,178,368,136,457,134,467,141,476,141,490,148,503,157,527,162,535,159,545,157,551,160,557,150,557,117,542,85,527,57,528,35,503,25,467,17,427,15,394,24,375,56,290" href="/warnings/index_e.html?prov=bc" />
+<area title="Manitoba" alt="Manitoba" shape="poly"
+coords="350,417,380,419,379,434,382,440,392,438,398,462,397,468,411,463,428,470,387,520,370,536,368,600,356,602,334,600,305,596,298,594,303,552,309,495,316,444,322,413,350,417" href="/warnings/index_e.html?prov=mb" />
+<area title="New Brunswick" alt="New Brunswick" shape="poly"
+coords="706,569,710,573,715,579,723,578,721,585,716,596,710,602,703,608,704,617,700,620,693,612,688,609,687,606,682,606,675,585,671,581,666,583,663,585,660,584,666,578,667,575,667,569,672,568,681,565,683,560,691,561,699,558,702,551,705,555,706,569" href="/warnings/index_e.html?prov=nb" />
+<area title="Newfoundland and Labrador" alt="Newfoundland and Labrador" shape="poly"
+coords="637,381,650,390,656,389,672,407,675,416,684,416,700,419,709,416,720,419,725,428,733,426,743,428,756,445,760,451,764,476,775,473,789,471,801,473,812,479,826,492,830,508,816,511,801,522,789,516,759,534,752,526,750,517,753,503,750,473,747,464,743,455,726,463,685,484,674,482,676,492,655,495,652,485,646,490,642,480,629,466,631,457,632,450,646,453,648,447,661,450,657,436,645,423,642,404,631,399,631,391,625,389,614,365,620,363,628,371" href="/warnings/index_e.html?prov=nl" />
+<area title="Ontario - north" alt="Ontario - north" shape="poly"
+coords="452,485,467,492,479,491,494,493,496,501,498,514,499,527,511,541,518,543,523,551,529,547,543,614,549,625,558,632,553,636,544,641,533,643,525,654,507,652,488,640,485,631,480,622,481,616,469,617,462,603,446,606,439,612,429,619,424,619,406,619,396,615,380,610,369,605,369,590,370,536,429,470,439,476,445,483,452,485" href="/weather/warnings/on-s_index_e.html" />
+<area title="Quebec - north" alt="Quebec - north" shape="poly"
+coords="742,458,718,493,655,523,645,500,622,508,623,518,536,544,535,543,535,536,537,532,530,521,526,511,523,504,517,497,517,494,527,488,535,480,539,470,539,456,535,447,528,438,519,433,514,431,514,424,516,416,518,408,515,400,513,395,509,395,511,390,509,380,504,371,509,363,522,365,533,364,536,358,558,367,560,372,569,373,575,370,580,383,589,396,598,402,607,408,612,402,612,395,614,387,613,377,615,368,620,380,624,383,624,389,632,390,633,397,636,402,642,404,642,411,645,415,645,422,653,429,659,438,660,448,649,450,647,453,643,453,638,453,635,454,635,457,631,458,632,465,630,468,638,478,643,480,643,487,644,490,650,485,652,485,655,496,667,497,675,498,680,497,677,485,680,486,681,489,742,458" href="/warnings/index_e.html?prov=nqc" />
+<area title="Nova Scotia" alt="Nova Scotia" shape="poly"
+coords="752,545,758,551,765,552,769,560,765,570,760,581,744,599,735,608,730,621,722,631,708,626,708,616,712,602,719,594,724,581,734,579,743,577,746,571,752,545" href="/warnings/index_e.html?prov=ns" />
+<area title="Northwest Territories" alt="Northwest Territories" shape="poly"
+coords="215,187,258,142,282,118,343,95,300,242,285,238,264,227,242,227,231,247,263,306,276,309,281,322,329,342,319,410,295,406,257,397,226,387,202,379,176,367,149,354,152,338,137,329,137,314,138,305,134,299,143,273,140,251,148,246,149,239,146,233,151,219,144,207,148,198,160,184,167,177,178,178,215,187" href="/warnings/index_e.html?prov=nt" />
+<area title="Nunavut" alt="Nunavut" shape="poly"
+coords="464,19,476,30,469,67,459,113,458,154,457,174,468,184,492,210,507,209,537,216,595,259,600,283,612,350,606,356,559,355,510,346,495,364,476,383,528,466,521,480,512,480,379,418,340,414,322,411,333,341,283,321,278,307,266,304,234,246,244,228,265,228,287,240,303,242,346,89,392,66,426,33,464,19" href="/warnings/index_e.html?prov=nu" />
+<area title="Prince Edward Island" alt="Prince Edward Island" shape="poly"
+coords="728,568,737,560,744,561,741,570,735,576,722,574,713,569,713,562,728,568" href="/warnings/index_e.html?prov=pei" />
+<area title="Saskatchewan" alt="Saskatchewan" shape="poly"
+coords="287,406,319,412,308,484,300,554,297,593,274,591,248,585,216,577,204,573,226,501,256,398,287,406" href="/warnings/index_e.html?prov=sk" />
+<area title="Ontario - south" alt="Ontario - south" shape="poly"
+coords="577,635,580,634,583,638,588,638,592,637,597,639,602,632,609,632,614,634,610,641,606,643,602,650,589,663,586,668,574,670,563,675,564,683,566,689,556,693,550,698,535,700,523,712,518,716,513,712,513,707,520,703,520,694,526,689,527,680,528,670,531,665,526,657,528,653,532,660,535,644,547,641,556,635,560,632,570,632,577,635" href="../../weather/warnings/index_e.html" />
+<area title="Quebec - south" alt="Quebec - south" shape="poly"
+coords="612,635,610,632,604,632,599,635,596,638,592,637,588,638,585,638,582,637,579,635,575,634,571,633,557,631,550,627,545,619,543,616,542,607,539,598,536,583,532,559,530,544,536,546,537,544,624,519,623,509,644,501,655,523,717,495,742,457,745,460,747,465,737,474,736,482,734,495,730,499,739,544,737,553,733,553,702,546,700,549,698,553,697,556,694,558,688,559,682,559,678,565,675,567,666,568,665,570,663,573,664,580,659,584,657,584,655,593,654,602,653,607,655,611,654,615,652,624,648,626,646,630,615,642,611,641,612,635" href="/warnings/index_e.html?prov=sqc" />
+<area title="Yukon" alt="Yukon" shape="poly"
+coords="148,157,158,164,156,177,159,184,145,199,142,208,150,218,143,232,147,238,146,245,138,250,139,260,141,275,137,289,131,301,136,307,137,320,135,330,150,337,151,350,145,351,128,340,98,321,65,294,47,280,39,267,148,157" href="/warnings/index_e.html?prov=yt" />
+</map>
+<div class="mrgn-bttm-md">
+      <details>
+		         <summary>Legend</summary>
+<div class="row"><div class="col-sm-4"><p><span class="lightgreyBGdarkBDR"></span> No <a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=C9A8D735-1">alerts</a></p></div><div class="col-sm-4"><p><span class="whiteBGdarkBDR"></span> <a href="/warnings/forecastService_e.html">No forecast service</a></p></div><div class="col-sm-4"><p><img src="/hurricane/images/hurr_s.png" alt="Tropical Cyclone"/> <a href="http://www.ec.gc.ca/ouragans-hurricanes/default.asp?lang=En&amp;n=39BF03A7-1">Tropical Cyclone Statement</a></p></div></div><div class="row"><div class="col-sm-4"><p><span class="redBGdarkBDR"></span><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=C9A8D735-1">Warning</a></p></div><div class="col-sm-4"><p><span class="yellowBGdarkBDR"></span><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=C9A8D735-1">Watch</a></p></div><div class="col-sm-4"><p><span class="greyBGdarkBDR"></span><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=C9A8D735-1">Statement</a></p></div></div>	</details>
+</div>
+</div></div><div class="hidden-xs"><table class="table table-striped table-hover table-responsive table-condensed">
+
+ <thead>
+ <tr> <th class="wxo-tb-head">Location</th>
+ <th class="wxo-tb-head"><span class="redBGdarkBDR"></span><a href="https://web.archive.org/web/20170822171711/http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=C9A8D735-1">Warning</a></th>
+ <th class="wxo-tb-head"><span class="yellowBGdarkBDR"></span><a href="https://web.archive.org/web/20170822171711/http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=C9A8D735-1">Watch</a></th>
+ <th class="wxo-tb-head"><span class="greyBGdarkBDR"></span><a href="https://web.archive.org/web/20170822171711/http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=C9A8D735-1">Statement</a></th>
+ </tr> </thead><tbody>
+
+<tr><th class="alertHead" colspan="4"><a href="index_e.html?prov=bc"><b>British Columbia</b></a></th></tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc34">100 Mile</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc34#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc27">Arrow Lakes - Slocan Lake</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc27#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc29">Boundary</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc29#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc24">Cariboo</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc24#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc35">Chilcotin</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc35#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc20">East Columbia</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc20#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc19">East Kootenay</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc19#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc18">Elk Valley</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc18#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc36">Fraser Canyon</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc36#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc16">Kinbasket</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc16#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc21">Kootenay Lake</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc21#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc32">Nicola</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc32#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc23">North Columbia</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc23#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc25">North Thompson</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc25#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc30">Okanagan Valley</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc30#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc14">Prince George</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc14#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc26">Shuswap</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc26#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc31">Similkameen</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc31#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc33">South Thompson</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc33#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc22">West Columbia</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc22#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc28">West Kootenay</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc28#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc15">Yellowhead</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc15#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc17">Yoho Park - Kootenay Park</a></td>
+<td>
+&#160;
+</td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc17#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</td>
+</tr>
+<tr><th class="alertHead" colspan="4"><a href="index_e.html?prov=son"><b>Ontario - south</b></a></th></tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on34">Bancroft - Bon Echo Park</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on34#1307010501841108232201708220503ww1171cwto">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on10">Brockville - Leeds and Grenville</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on10#1302080981841108232201708220503ww1171cwto">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="../../weather/warnings/ottawa-report_e.html">City of Ottawa</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="../../weather/warnings/ottawa-report_e.html">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on6">Cornwall - Morrisburg</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on6#1302080981841108232201708220503ww1171cwto">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on26">Kingston - Prince Edward</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on26#1307010501841108232201708220503ww1171cwto">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on48">Prescott and Russell</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on48#1302080981841108232201708220503ww1171cwto">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on13">Renfrew - Pembroke - Barry's Bay</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on13#1302080981841108232201708220503ww1171cwto">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on43">Smiths Falls - Lanark - Sharbot Lake</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on43#1302080981841108232201708220503ww1171cwto">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on44">Stirling - Tweed - South Frontenac</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on44#1307010501841108232201708220503ww1171cwto">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><th class="alertHead" colspan="4"><a href="index_e.html?prov=sqc"><b>Quebec - south</b></a></th></tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc44">Beauce</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc44#809597311539083973201708220504ww1070cwul">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc45">Drummondville - Bois-Francs</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc45#809597311539083973201708220504ww1070cwul">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc43">Eastern Townships</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc43#809597311539083973201708220504ww1070cwul">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc68">Gatineau</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc68#1302080981841108232201708220503ww1171cwto">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc63">Lachute - Saint-Jérôme</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc63#809597311539083973201708220504ww1070cwul">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc64">Lanaudière</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc64#809597311539083973201708220504ww1070cwul">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc62">Laurentians</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc62#809597311539083973201708220504ww1070cwul">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc46">Mauricie</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc46#809597311539083973201708220504ww1070cwul">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc67">Metro Montréal - Laval</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc67#809597311539083973201708220504ww1070cwul">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc57">Pontiac</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc57#809597311539083973201708220504ww1070cwul">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc47">Québec</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc47#809597311539083973201708220504ww1070cwul">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc65">Richelieu Valley - Saint-Hyacinthe</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc65#809597311539083973201708220504ww1070cwul">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc58">Upper Gatineau - Lièvre - Papineau</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc58#809597311539083973201708220504ww1070cwul">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+<tr><td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc66">Vaudreuil - Soulanges - Huntingdon</a></td>
+<td>
+&#160;
+</td>
+<td>
+<ul class="margin-bottom-small margin-top-small list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc66#809597311539083973201708220504ww1070cwul">Severe thunderstorm</a></li>
+</ul>
+</td>
+<td>
+&#160;
+</td>
+</tr>
+</tbody></table>
+</div><div class="visible-xs"><h2 class="header">Alerts in Effect</h2>
+<details><summary>British Columbia</summary><p><a href="index_e.html?prov=bc">Map of British Columbia</a></p><table class="table table-striped table-hover table-responsive table-condensed wxo-width95">
+<tbody>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc34">100 Mile</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc34#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc27">Arrow Lakes - Slocan Lake</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc27#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc29">Boundary</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc29#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc24">Cariboo</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc24#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc35">Chilcotin</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc35#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc20">East Columbia</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc20#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc19">East Kootenay</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc19#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc18">Elk Valley</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc18#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc36">Fraser Canyon</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc36#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc16">Kinbasket</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc16#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc21">Kootenay Lake</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc21#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc32">Nicola</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc32#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc23">North Columbia</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc23#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc25">North Thompson</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc25#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc30">Okanagan Valley</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc30#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc14">Prince George</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc14#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc26">Shuswap</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc26#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc31">Similkameen</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc31#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc33">South Thompson</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc33#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc22">West Columbia</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc22#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc28">West Kootenay</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc28#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc15">Yellowhead</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc15#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="greyBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc17">Yoho Park - Kootenay Park</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?bc17#1626599051186721180201707080502wo2080cwvr">Air quality</a></li>
+</ul>
+</details></td>
+</tr>
+</tbody></table>
+</details>
+<details><summary>Ontario - south</summary><p><a href="index_e.html?prov=son">Map of Ontario - south</a></p><table class="table table-striped table-hover table-responsive table-condensed wxo-width95">
+<tbody>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on34">Bancroft - Bon Echo Park</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on34#1307010501841108232201708220503ww1171cwto">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on10">Brockville - Leeds and Grenville</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on10#1302080981841108232201708220503ww1171cwto">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="../../weather/warnings/ottawa-report_e.html">City of Ottawa</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="../../weather/warnings/ottawa-report_e.html">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on6">Cornwall - Morrisburg</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on6#1302080981841108232201708220503ww1171cwto">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on26">Kingston - Prince Edward</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on26#1307010501841108232201708220503ww1171cwto">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on48">Prescott and Russell</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on48#1302080981841108232201708220503ww1171cwto">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on13">Renfrew - Pembroke - Barry's Bay</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on13#1302080981841108232201708220503ww1171cwto">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on43">Smiths Falls - Lanark - Sharbot Lake</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on43#1302080981841108232201708220503ww1171cwto">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on44">Stirling - Tweed - South Frontenac</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?on44#1307010501841108232201708220503ww1171cwto">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+</tbody></table>
+</details>
+<details><summary>Quebec - south</summary><p><a href="index_e.html?prov=sqc">Map of Quebec - south</a></p><table class="table table-striped table-hover table-responsive table-condensed wxo-width95">
+<tbody>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc44">Beauce</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc44#809597311539083973201708220504ww1070cwul">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc45">Drummondville - Bois-Francs</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc45#809597311539083973201708220504ww1070cwul">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc43">Eastern Townships</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc43#809597311539083973201708220504ww1070cwul">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc68">Gatineau</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc68#1302080981841108232201708220503ww1171cwto">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc63">Lachute - Saint-Jérôme</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc63#809597311539083973201708220504ww1070cwul">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc64">Lanaudière</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc64#809597311539083973201708220504ww1070cwul">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc62">Laurentians</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc62#809597311539083973201708220504ww1070cwul">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc46">Mauricie</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc46#809597311539083973201708220504ww1070cwul">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc67">Metro Montréal - Laval</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc67#809597311539083973201708220504ww1070cwul">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc57">Pontiac</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc57#809597311539083973201708220504ww1070cwul">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc47">Québec</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc47#809597311539083973201708220504ww1070cwul">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc65">Richelieu Valley - Saint-Hyacinthe</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc65#809597311539083973201708220504ww1070cwul">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc58">Upper Gatineau - Lièvre - Papineau</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc58#809597311539083973201708220504ww1070cwul">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+<tr><td class="yellowBGdarkBDR fixWidth"></td>
+<td><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc66">Vaudreuil - Soulanges - Huntingdon</a>
+<details><summary></summary>
+<ul class="margin-bottom-small margin-top-small </li></ul>list-unstyled">
+<li><a href="/web/20170822171711/http://weather.gc.ca/warnings/report_e.html?qc66#809597311539083973201708220504ww1070cwul">Severe thunderstorm watch</a></li>
+</ul>
+</details></td>
+</tr>
+</tbody></table>
+</details></div>	
+<!-- <section class="hidden-print"  id="weather-topics">
+	<h2 class="wb-inv">What we are doing</h2>
+	 <div class="row wb-eqht">
+      <section class="col-lg-4 col-md-6">
+			<h3 class="wxo-footer-nav">Weather Forecasts</h3>
+      	<ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="../../weather/canada_e.html">Canadian Weather</a></li>
+            <li><a href="../../weather/radar/index_e.html">Radar - Canada</a></li>
+            <li><a href="/satellite/index_e.html">Satellite - Canada</a></li>
+            <li><a href="/marine/index_e.html">Marine - Canada</a></li>
+            <li><a href="../../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
+            <li><a href="http://www.ec.gc.ca/glaces-ice/default.asp?lang=En&amp;n=D32C361E-1">Canadian Ice Service</a></li>
+				<li><a href="/saisons/index_e.html">Seasonal forecasts</a></li>
+				<li><a href="/forecast/public_bulletins_e.html">Extended forecast</a></li>
+			</ul>
+      </section>
+      <section class="col-lg-4 col-md-6">
+		<h3 class="wxo-footer-nav">Weather Alerts</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="../../weather/warnings/index_e.html">Public Alerts - Canada</a></li>
+            <li><a href="../../weather/lightning/index_e.html">Lightning</a></li>
+            <li><a href="/hurricane/index_e.html">Hurricane</a></li>
+            <li><a href="/warnings/weathersummaries_e.html">Weather Summaries</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=15E59C08-1">Hazardous Weather</a></li>
+      </ul>
+     </section>
+	  <section class="col-lg-4 col-md-6">
+	  <h3 class="wxo-footer-nav">Weather Resources</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="/model_forecast/model_e.html">Global and Regional forecast models</a></li>
+            <li><a href="/astro/index_e.html">Astronomy</a></li>
+				<li><a href="http://ec.gc.ca/rhc-wsc/default.asp?lang=En&amp;n=4EED50F1-1">Water Level and Flow</a></li>
+				<li><a href="http://climate.weather.gc.ca/index_e.html">Historical Climate Data</a></li>
+				<li><a href="https://flightplanning.navcanada.ca/cgi-bin/CreePage.pl?Langue=anglais&amp;NoSession=NS_Inconnu&amp;Page=forecast-observation&amp;TypeDoc=html">Aviation</a></li>
+				 <li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=4D51ECA8-1 ">Guide to Public forecasts</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=2EC4EC51-1">Guide to Marine forecasts</a></li>
+				<li><a href="http://ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=8E7198BB-1">Guide to Air Quality forecasts</a></li>
+		</ul>
+      </section>
+	</div>
+</section>
+
+<section class="gc-prtts hidden-print"><h2>Features</h2><div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://ec.gc.ca/uv/default.asp?lang=En&amp;n=DCF1C20A-1">
+<h3 class="h5">UV Index and sun protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="/weather/cacheable/images/banners/SM_123_03_30-UV-Index-and-Sun-Protection_button360x203.jpg" alt="" />
+</a>
+<p>Be weather wise!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://www.canada.ca/en/health-canada/services/sun-safety/extreme-heat-heat-waves.html">
+<h3 class="h5">Extreme Heat Protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="/weather/cacheable/images/banners/SM_124_03_30-Extreme-Heat-02_button_360x203.jpg" alt="" />
+</a>
+<p>Be prepared!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://www.ec.gc.ca/cas-aqhi/">
+<h3 class="h5">Be Air Aware</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="/weather/cacheable/images/banners/SM_120_03_30-Air-Quality_01_360x203.jpg" alt="" />
+</a>
+<p>Air Quality Health Index</p></section></div></section> -->
+
+<div class="row pagedetails">
+<div class="col-sm-6 col-lg-4 mrgn-tp-sm">
+<a href="https://www.canada.ca/en/report-problem.html" class="btn btn-default btn-block">Report a problem or mistake on this page</a>
+</div>
+<div class="col-sm-3 mrgn-tp-sm pull-right">
+<div class="wb-share" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>
+</div>
+<div class="datemod col-xs-12 mrgn-tp-lg">
+<dl id="wb-dtmd">
+<dt>Date modified:&#32;</dt>
+<dd><time property="dateModified">2017-07-22</time></dd>
+</dl>
+</div>
+</div>
+</main>
+
+
+<footer role="contentinfo" id="wb-info">
+<nav role="navigation" class="container wb-navcurr">
+<h2 class="wb-inv">About government</h2>
+<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
+<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+<li><a href="http://news.gc.ca/">News</a></li>
+<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+<li><a href="http://open.canada.ca/en/">Open government</a></li>
+</ul>
+</nav>
+<div class="brand">
+<div class="container">
+<div class="row">
+<nav class="col-md-10 ftr-urlt-lnk">
+<h2 class="wb-inv">About this site</h2>
+<ul>
+<li><a href="https://www1.canada.ca/en/contact/feedback.html">Feedback</a></li>
+<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+</ul>
+</nav>
+<div class="col-xs-6 visible-sm visible-xs tofpg">
+<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+</div>
+<div class="col-xs-6 col-md-2 text-right">
+<object type="image/svg+xml" tabindex="-1" role="img" data="../../weather/GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+</div>
+</div>
+</div>
+</div>
+</footer>
+	
+	
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="../../weather/wet-boew/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="/weather/wet-boew/js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+</body>
+</html>
