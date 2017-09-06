@@ -8,13 +8,13 @@
 	<meta content="width=device-width, initial-scale=1" name="viewport"/>
    <meta name="dcterms.creator" content="Environment Canada" />
 	<meta name="dcterms.language" title="ISO639-2" content="eng" />
-	<meta name="description" content="Current conditions and forecasts including 7 day outlook, daily high/low temperature, warnings, chance of precipitation, pressure, humidity/wind chill (when applicable) historical data, normals, record values and sunrise/sunset times" />
-   <meta name="dcterms.subject" title="scheme" content="meteorology;weather;weather warnings;weather forecasts" />
+	<meta name="description" content="Conditions actuelles et prévisions, y compris les tendances sur 7 jours, les températures maximales et minimales quotidiennes, les avertissements, les probabilités de précipitations, la pression, l'humidex ou l'indice de refroidissement éolien (le cas échéant), les données historiques, les valeurs normales, les valeurs record, et les heures de lever et du coucher du soleil" />
+   <meta name="dcterms.subject" title="scheme" content="Conditions atmosphériques; Météorologie; Climat; Prévisions météorologiques; Tendances" />
    <meta name="dcterms.issued" title="W3CDTF" content="2013-04-16" />
    <meta name="dcterms.modified" title="W3CDTF" content="2017-09-05" />
 <!--wxo-b3-->
-<title>Ottawa (Kanata - Orléans), ON - 7 Day Forecast - Environment Canada</title>
-<meta name="dcterms.title" content="Ottawa (Kanata - Orléans) - 7 Day Forecast - Environment Canada">
+<title>Ottawa (Kanata - Orléans), ON - Prévisions sur 7 jours - d'Environnement Canada</title>
+<meta name="dcterms.title" content="Ottawa (Kanata - Orléans) - Prévisions sur 7 jours - d'Environnement Canada">
 <!--[if gte IE 9 | !IE ]><!-->
  <link href="../../../weather/template/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
  <link rel="stylesheet" href="../../../weather/template/GCWeb/css/theme.min.css" />
@@ -50,26 +50,30 @@
 <!-- End Google Tag Manager -->
 
 <ul id="wb-tphp">
-	<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
-	<li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About this site"</a></li>
+	<li class="wb-slc">
+		<a class="wb-sl" href="#wb-cont">Passer au contenu principal</a>
+	</li>
+	<li class="wb-slc visible-sm visible-md visible-lg">
+		<a class="wb-sl" href="#wb-info">Passer à «&#160;À propos de ce site&#160;»</a>
+	</li>
 </ul>
-
 <header role="banner">
 	<div id="wb-bnr" class="container">
 		<section id="wb-lng" class="visible-md visible-lg text-right">
-			<h2 class="wb-inv">Language selection</h2>
+			<h2 class="wb-inv">Sélection de la langue</h2>
 			<div class="row">
 	<div class="col-md-12">
 		<ul class="list-inline margin-bottom-none">
-			<li><a lang="fr" href="/include/lang.php">Français</a></li>
+			<li><a lang="en" href="/include/lang.php">English</a></li>
 		</ul>
 	</div>
 </div>
 		</section>
 
 <div class="row">
+			
 	<div class="brand col-xs-8 col-sm-9 col-md-6">
-		<a href="https://www.canada.ca/en.html"><object type="image/svg+xml" tabindex="-1" data="../../../weather/template/GCWeb/assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+		<a href="https://www.canada.ca/fr.html"><object type="image/svg+xml" tabindex="-1" data="../../../weather/template/GCWeb/assets/sig-blk-fr.svg"></object><span class="wb-inv"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
 	</div>
 
 	<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn" >
@@ -82,58 +86,62 @@
          </section>
 
 
+        <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn" >
+            <h2>Recherche et menus</h2>
+            <ul class="list-inline text-right chvrn">
+   <li><a href="#mb-pnl" title="Recherche et menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Recherche et menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl"></div>
+         </section>
          <section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
-            <h2>Search</h2>
+            <h2>Recherche</h2>
             <form action="http://recherche-search.gc.ca/rGs/s_r?#wb-land" method="get" name="cse-search-box" role="search" class="form-inline">
    <div class="form-group">
-      <label for="wb-srch-q" class="wb-inv">Search website</label>
+      <label for="wb-srch-q" class="wb-inv">Recherchez le site Web</label>
       <input name="cdn" value="canada" type="hidden"/>
       <input name="st" value="s" type="hidden"/>
       <input name="num" value="10" type="hidden"/>
-      <input name="langs" value="eng" type="hidden"/>
+      <input name="langs" value="fra" type="hidden"/>
       <input name="st1rt" value="0" type="hidden">
       <input name="s5bm3ts21rch" value="x" type="hidden"/>
-      <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca" />
+      <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Rechercher dans Canada.ca" />
       <datalist id="wb-srch-q-ac">
          <!--[if lte IE 9]><select><![endif]-->
          <!--[if lte IE 9]></select><![endif]-->
       </datalist>
    </div>
    <div class="form-group submit">
-      <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+      <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Recherche</span></button>
    </div>
 </form>
          </section>
 </div>
 </div>
-
-<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-replace="/data/pco-fetch/sitemenu-en.html" typeof="SiteNavigationElement">	
-		
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-replace="/data/pco-fetch/sitemenu-fr.html" typeof="SiteNavigationElement">
 <div class="container nvbar">
-	<h2>Topics menu</h2>
+	<h2>Menu des sujets</h2>
     <div class="row">
         <ul class="list-inline menu">
-            <li><a href="https://www.canada.ca/en/services/jobs.html">Jobs</a></li>
-            <li><a href="http://www.cic.gc.ca/english/index.asp">Immigration</a></li>
-            <li><a href="https://travel.gc.ca">Travel</a></li>
-            <li><a href="https://www.canada.ca/en/services/business.html">Business</a></li>
-            <li><a href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
-            <li><a href="https://www.canada.ca/en/services/health.html">Health</a></li>
-            <li><a href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
-            <li><a href="https://www.canada.ca/en/services.html">More services</a></li>
+            <li><a href="https://www.canada.ca/fr/services/emplois.html">Emplois</a></li>
+            <li><a href="http://www.cic.gc.ca/francais/index.asp">Immigration</a></li>
+            <li><a href="https://voyage.gc.ca">Voyage</a></li>
+            <li><a href="https://www.canada.ca/fr/services/entreprises.html">Entreprises</a></li>
+            <li><a href="https://www.canada.ca/fr/services/prestations.html">Prestations</a></li>
+            <li><a href="https://www.canada.ca/fr/services/sante.html">Santé</a></li>
+            <li><a href="https://www.canada.ca/fr/services/impots.html">Impôts</a></li>
+            <li><a href="https://www.canada.ca/fr/services.html">Autres services</a></li>
         </ul>
     </div>
 </div>
 </nav>
-
 <nav role="navigation" id="wb-bc" class="" property="breadcrumb">
 	<h2>You are here:</h2>
 	<div class="container">
 	<div class="row">
 		<ol class="breadcrumb">
-		<li><a href="../../../weather/en.html">Home</a></li><li><a href="../../../weather/services/environment.html">Environment and natural resources</a></li><li><a href="../../../weather/index_e.html">Weather information</a></li>
-<li><a href="../../../weather/mainmenu/weather_menu_e.html">Weather</a></li>
-<li><a href="../../../weather/canada_e.html">Local forecasts</a></li>
+		<li><a href="../../../weather/en.html">Accueil</a></li><li><a href="../../../weather/services/environment.html">Environnement et ressources naturelles</a></li><li><a href="../../../weather/index_e.html">Information météo</a></li>
+<li><a href="../../../weather/mainmenu/weather_menu_e.html">Météo</a></li>
+<li><a href="../../../weather/canada_e.html">Prévisions locales</a></li>
 <li><a href="../../../weather/forecast/canada/ON_index_e.html" title="Ontario">Ontario</a></li>
 		</ol>
 	</div>
@@ -144,32 +152,33 @@
 <div class="container hidden-print">
 
 <span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
-	<a href="#weather-shortcuts" class="overlay-lnk pull-right btn btn-default" aria-controls="mid-screen" role="button">Weather shortcuts</a>
+	<a href="#weather-shortcuts" class="overlay-lnk pull-right btn btn-default" aria-controls="mid-screen" role="button">Sujets météorologiques</a>
 	<span id="wxo-divider" class="pull-right wb-invisible">|&#160;</span>
 	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
-   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Access city</label>
-   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city" placeholder="Find a city" />
+   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Accéder à une ville</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="S’il vous plaît taper au moins deux caractères (Au maximum 50)" required data-h5-errorid="invalid-city" placeholder="Accéder à une ville" />
    	<input type="hidden" name="lang" value="e"/>
    	<input type="hidden" name="unit" value=""/>
-   	<input type="submit" id="jump" class="" value="Go"/>
-   	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+   	<input type="submit" id="jump" class="" value="Aller"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Aller" formnovalidate/></noscript>
 	<div id="invalid-city"></div>
 </form>
+
 <section id="weather-shortcuts" class="wb-overlay modal-content overlay-def wb-panel-r">
 	<header class="modal-header">
-		<h2 class="modal-title">Weather shortcuts</h2>
+		<h2 class="modal-title">Sujets météorologiques</h2>
 	</header>
 	<div class="modal-body">
 	
-                                <li><a href="../../../weather/canada_e.html">Canadian Weather</a></li>
+                                <li><a href="../../../weather/canada_e.html">Météo au Canada</a></li>
                                 <li><a href="../../../weather/radar/index_e.html">Radar - Canada</a></li>
                                 <li><a href="../../../weather/satellite/index_e.html">Satellite - Canada</a></li>
-                                <li><a href="#">Marine - Canada</a></li>
-                                <li><a href="../../../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
-                                <li><a href="#">Canadian Ice Service</a></li>
-                                <li><a href="#">Seasonal forecasts</a></li>
-                                <li><a href="#">Extended forecasts</a></li>
-                                <li><a href="../../../weather/mainmenu/alert_menu_e.html">Public Alerts - Canada</a></li>
+                                <li><a href="#">Maritime - Canada</a></li>
+                                <li><a href="../../../weather/mainmenu/airquality_menu_e.html">Qualité de l'air</a></li>
+                                <li><a href="#">Service canadien des glaces</a></li>
+                                <li><a href="#">Prévisions saisonnières</a></li>
+                                <li><a href="#">Prévisions à long terme</a></li>
+                                <li><a href="../../../weather/mainmenu/alert_menu_e.html">Alertes météo publiques - Canada</a></li>
                                 <li><a href="../../../weather/lightning/index_e.html">Lightning</a></li>
                                 <li><a href="#">Hurricane</a></li>
                                 <li><a href="#">Weather Summaries</a></li>
