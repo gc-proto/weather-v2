@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-<title>Ottawa (Kanata - Orléans), ON - 7 Day Forecast - Environment Canada</title>
+<title>Ottawa (Kanata - Orléans), ON - Prévisions sur 7 jours - d'Environnement Canada</title>
 <meta content="width=device-width,initial-scale=1" name="viewport">
 <!-- Meta data -->
 <meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
@@ -42,81 +42,91 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <link rel="stylesheet" href="../../weather/cacheable/css/city/city_js.css">
 <link rel="stylesheet" href="../../weather/template/wxo/css/wxo.css" />
 <ul id="wb-tphp">
-<li class="wb-slc">
-<a class="wb-sl" href="#wb-cont">Skip to main content</a>
-</li>
-<li class="wb-slc visible-sm visible-md visible-lg">
-<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
-</li>
+	<li class="wb-slc">
+		<a class="wb-sl" href="#wb-cont">Passer au contenu principal</a>
+	</li>
+	<li class="wb-slc visible-sm visible-md visible-lg">
+		<a class="wb-sl" href="#wb-info">Passer à «&#160;À propos de ce site&#160;»</a>
+	</li>
 </ul>
 <header role="banner">
-<div id="wb-bnr" class="container">
-<section id="wb-lng" class="visible-md visible-lg text-right">
-<h2 class="wb-inv">Language selection</h2>
-<div class="row">
-<div class="col-md-12">
-<ul class="list-inline margin-bottom-none">
-<li><a lang="fr" href="index-fr.html">Français</a></li>
-</ul>
+	<div id="wb-bnr" class="container">
+		<section id="wb-lng" class="visible-md visible-lg text-right">
+			<h2 class="wb-inv">Sélection de la langue</h2>
+			<div class="row">
+	<div class="col-md-12">
+		<ul class="list-inline margin-bottom-none">
+			<li><a lang="en" href="/include/lang.php">English</a></li>
+		</ul>
+	</div>
 </div>
-</div>
-</section>
+		</section>
+
 <div class="row">
 <div class="brand col-xs-8 col-sm-9 col-md-6">
-<a href="https://www.canada.ca/en.html"><object type="image/svg+xml" tabindex="-1" data="../../weather/GCWeb/assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+<a href="https://www.canada.ca/en.html"><object type="image/svg+xml" tabindex="-1" data="../../weather/GCWeb/assets/sig-blk-fr.svg"></object><span class="wb-inv"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
 </div>
-<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
-<h2>Search and menus</h2>
-<ul class="list-inline text-right chvrn">
-<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+
+
+	
+<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn" >
+            <h2>Recherche et menus</h2>
+            <ul class="list-inline text-right chvrn">
+   <li><a href="#mb-pnl" title="Recherche et menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Recherche et menus</span></span></span></a></li>
 </ul>
 <div id="mb-pnl"></div>
-</section>
-<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
-<h2>Search</h2>
-<form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
-<div class="form-group">
-<label for="wb-srch-q" class="wb-inv">Search website</label>
-<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca">
-<datalist id="wb-srch-q-ac">
-<!--[if lte IE 9]><select><![endif]-->
-<!--[if lte IE 9]></select><![endif]-->
-</datalist>
-</div>
-<div class="form-group submit">
-<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
-</div>
+         </section>
+         <section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+            <h2>Recherche</h2>
+            <form action="http://recherche-search.gc.ca/rGs/s_r?#wb-land" method="get" name="cse-search-box" role="search" class="form-inline">
+   <div class="form-group">
+      <label for="wb-srch-q" class="wb-inv">Recherchez le site Web</label>
+      <input name="cdn" value="canada" type="hidden"/>
+      <input name="st" value="s" type="hidden"/>
+      <input name="num" value="10" type="hidden"/>
+      <input name="langs" value="fra" type="hidden"/>
+      <input name="st1rt" value="0" type="hidden">
+      <input name="s5bm3ts21rch" value="x" type="hidden"/>
+      <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Rechercher dans Canada.ca" />
+      <datalist id="wb-srch-q-ac">
+         <!--[if lte IE 9]><select><![endif]-->
+         <!--[if lte IE 9]></select><![endif]-->
+      </datalist>
+   </div>
+   <div class="form-group submit">
+      <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Recherche</span></button>
+   </div>
 </form>
-</section>
+         </section>
 </div>
 </div>
-<nav role="navigation" id="wb-sm" data-ajax-replace="/weather/ajax/sitemenu-en.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-replace="/data/pco-fetch/sitemenu-fr.html" typeof="SiteNavigationElement">
 <div class="container nvbar">
-<h2>Topics menu</h2>
-<div class="row">
-<ul class="list-inline menu">
-<li><a href="http://www.esdc.gc.ca/en/jobs/index.page">Jobs</a></li>
-<li><a href="http://www.cic.gc.ca/english/index.asp">Immigration</a></li>
-<li><a href="https://travel.gc.ca/">Travel</a></li>
-<li><a href="https://www.canada.ca/en/services/business.html">Business</a></li>
-<li><a href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
-<li><a href="http://healthycanadians.gc.ca/index-eng.php">Health</a></li>
-<li><a href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
-<li><a href="https://www.canada.ca/en/services.html">More services</a></li>
-</ul>
-</div>
+	<h2>Menu des sujets</h2>
+    <div class="row">
+        <ul class="list-inline menu">
+            <li><a href="https://www.canada.ca/fr/services/emplois.html">Emplois</a></li>
+            <li><a href="http://www.cic.gc.ca/francais/index.asp">Immigration</a></li>
+            <li><a href="https://voyage.gc.ca">Voyage</a></li>
+            <li><a href="https://www.canada.ca/fr/services/entreprises.html">Entreprises</a></li>
+            <li><a href="https://www.canada.ca/fr/services/prestations.html">Prestations</a></li>
+            <li><a href="https://www.canada.ca/fr/services/sante.html">Santé</a></li>
+            <li><a href="https://www.canada.ca/fr/services/impots.html">Impôts</a></li>
+            <li><a href="https://www.canada.ca/fr/services.html">Autres services</a></li>
+        </ul>
+    </div>
 </div>
 </nav>
 
 <nav role="navigation" id="wb-bc" class="" property="breadcrumb">
-	<h2>You are here:</h2>
+	<h2>Vous êtes ici :</h2>
 	<div class="container">
 	<div class="row">
 		<ol class="breadcrumb">
-		<li><a href="../../weather/en.html">Home</a></li><li><a href="../../weather/services/environment.html">Environment and natural resources</a></li><li><a href="../../weather/index_e.html">Weather information</a></li>
-<li><a href="../../weather/mainmenu/alert_menu_e.html">Alerts</a></li>
-<li><a href="../../weather/canada_e.html">Warnings, Watches and Statements</a></li>
-<li><a href="../../weather/forecast/canada/ON_index_e.html" title="Ontario">Ontario - south</a></li>
+		<li><a href="../../weather/en.html">Accueil</a></li><li><a href="../../weather/services/environment.html">Environnement et ressources naturelles</a></li><li><a href="../../weather/index_e.html">Information météo</a></li>
+<li><a href="../../weather/mainmenu/alert_menu_e.html">Alertes</a></li>
+<li><a href="../../weather/canada_e.html">Avertissements, veilles et bulletins</a></li>
+<li><a href="../../weather/forecast/canada/ON_index_e.html" title="Ontario">Ontario - sud</a></li>
 		</ol>
 	</div>
 </div>
@@ -126,165 +136,85 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <div class="container hidden-print">
 
 <span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
-	<a href="#weather-shortcuts" class="overlay-lnk pull-right btn btn-default" aria-controls="mid-screen" role="button">Weather shortcuts</a>
+	<a href="#weather-shortcuts" class="overlay-lnk pull-right btn btn-default" aria-controls="mid-screen" role="button">Sujets météorologiques</a>
 	<span id="wxo-divider" class="pull-right wb-invisible"></span>
 	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
-   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Access city</label>
-   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city" placeholder="Find a city" />
+   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Accéder à une ville</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="S’il vous plaît taper au moins deux caractères (Au maximum 50)" required data-h5-errorid="invalid-city" placeholder="Accéder à une ville" />
    	<input type="hidden" name="lang" value="e"/>
    	<input type="hidden" name="unit" value=""/>
-   	<input type="submit" id="jump" class="" value="Go"/>
-   	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+   	<input type="submit" id="jump" class="" value="Aller"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Aller" formnovalidate/></noscript>
 	<div id="invalid-city"></div>
 </form>
+
 <section id="weather-shortcuts" class="wb-overlay modal-content overlay-def wb-panel-r">
 	<header class="modal-header">
-		<h2 class="modal-title">Weather shortcuts</h2>
+		<h2 class="modal-title">Sujets météorologiques</h2>
 	</header>
 	<div class="modal-body">
 	
-                                <li><a href="../../weather/canada_e.html">Canadian Weather</a></li>
+                                <li><a href="../../weather/canada_e.html">Météo au Canada</a></li>
                                 <li><a href="../../weather/radar/index_e.html">Radar - Canada</a></li>
                                 <li><a href="../../weather/satellite/index_e.html">Satellite - Canada</a></li>
-                                <li><a href="#">Marine - Canada</a></li>
-                                <li><a href="../../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
-                                <li><a href="#">Canadian Ice Service</a></li>
-                                <li><a href="#">Seasonal forecasts</a></li>
-                                <li><a href="#">Extended forecasts</a></li>
-                                <li><a href="../../weather/warnings/index_e.html">Public Alerts - Canada</a></li>
-                                <li><a href="../../weather/lightning/index_e.html">Lightning</a></li>
-                                <li><a href="#">Hurricane</a></li>
-                                <li><a href="#">Weather Summaries</a></li>
-                                <li><a href="#">Hazardous Weather</a></li>
-                                <li><a href="#">Global and Regional forecast models</a></li>
-                                <li><a href="#">Astronomy</a></li>
-                                <li><a href="#">Historical Climate Data</a></li>
+                                <li><a href="#">Maritime - Canada</a></li>
+                                <li><a href="../../weather/mainmenu/airquality_menu_e.html">Qualité de l'air</a></li>
+                                <li><a href="#">Service canadien des glaces</a></li>
+                                <li><a href="#">Prévisions saisonnières</a></li>
+                                <li><a href="#">Prévisions à long terme</a></li>
+                                <li><a href="../../weather/warnings/index_e.html">Alertes météo publiques - Canada</a></li>
+                                <li><a href="../../weather/lightning/index_e.html">Foudre</a></li>
+                                <li><a href="#">Ouragans</a></li>
+                                <li><a href="#">Résumés météorologiques</a></li>
+                                <li><a href="#">Conditions météorologiques dangereuses</a></li>
+                                <li><a href="#">Modèles global et régional de prévision</a></li>
+                                <li><a href="#">Astronomie</a></li>
+                                <li><a href="#">Niveau d'eau et débit</a></li>
                                 <li><a href="#">Aviation</a></li>
-                                <li><a href="#">Guide to Public forecasts</a></li>
-                                <li><a href="#">Guide to Marine forecasts</a></li>
-                                <li><a href="#">Guide to Air Quality forecasts</a></li>
+                                <li><a href="#">Guide des prévisions météorologiques</a></li>
+                                <li><a href="#">Guide des prévisions maritimes</a></li>
+                                <li><a href="#">Guide sur les prévisions de la cote air santé</a></li>
 	</div>
 	</div>
 </section>
 </div>
 </div>
+
 <div class="clearfix"></div>
 <div id='collapsible-alerts' class='container'></div>
 <div class="clearfix"></div>
 <main role="main" property="mainContentOfPage" class="container">
-<h1 id="wb-cont" property="name">Alerts for: City of Ottawa
+<h1 id="wb-cont" property="name">Alertes pour : ville d'Ottawa
 </h1>
 
 <div class="row">
 	 <div class="col-xs-12">
 
-    <h2>Watches</h2> <p><span id="ottawatest">5:00 AM EST Thursday 24 August 2017</span><br/> <strong>Severe thunderstorm watch in effect for:</strong> </p> 
+    <h2>Veilles</h2> <p><span id="ottawatest">17h00 HAE le jeudi 24 août 2017</span><br/> <strong>Veille d’orages violents en vigueur pour :</strong> </p> 
 <ul> <li>Ottawa (Kanata - Orléans), ON</li> <li>Ottawa (Richmond - Metcalfe), ON</li></ul>
- <p>Conditions are favourable for the development of severe thunderstorms this afternoon and this evening.<br/><br/>An unstable airmass to the southwest will lead to thunderstorms this afternoon and this evening.  Some of these thunderstorms may become severe with the main threats being hail to the size of loonies and rainfall amounts up to 50 mm.</p>
- <p>Rapidly rising rivers and creeks can sweep away bridges, culverts, buildings, and people. Very large hail can damage property, break windows, dent vehicles and cause serious injury. Intense lightning is likely with any thunderstorm that develops. Remember, severe thunderstorms can produce tornadoes. Heavy downpours can cause flash floods and water pooling on roads. Lightning kills and injures Canadians every year. Remember, when thunder roars, go indoors!<br/><br/>Severe thunderstorm watches are issued when atmospheric conditions are favourable for the development of thunderstorms that could produce one or more of the following: large hail, damaging winds, torrential rainfall.<br/><br/>Please continue to monitor alerts and forecasts issued by Environment Canada. To report severe weather, send an email to ec.storm.ec@canada.ca or tweet reports using #NTStorm.</p>
+ <p>Les conditions sont propices à la formation d’orages violents en après-midi et en soirée.<br/><br/>Une masse d’air instable au sud-ouest entraînera des orages cet après-midi et ce soir. Certains de ces orages pourraient devenir violents, les principales menaces étant des grêlons de la taille d’une pièce d’un dollar et des précipitations d’au plus 50 mm.</p>
+ <p>La montée rapide des eaux des rivières et des ruisseaux peut emporter des ponts, des ponceaux, des bâtiments et des gens. Les averses de gros grêlons peuvent endommager des propriétés, briser des fenêtres, abîmer des véhicules et causer des blessures graves. La formation d’un orage peut donner lieu à des éclairs intenses. N’oubliez pas que les orages violents peuvent produire des tornades. Les averses abondantes peuvent causer des crues soudaines et des accumulations d’eau sur les routes. La foudre tue et blesse des Canadiens chaque année. N’oubliez pas de vous mettre à l’abri lorsque le tonnerre gronde!<br/><br/>Des veilles d’orages violents sont diffusées lorsque les conditions atmosphériques sont propices à la formation d’orages pouvant produire des gros grêlons, des vents destructeurs ou des pluies torrentielles.<br/><br/>Veuillez continuer à surveiller les alertes et les prévisions émises par Environnement Canada. Pour signaler du temps violent, envoyez un courriel à ec.storm.ec@canada.ca ou publiez un gazouillis en utilisant le mot-clic #NTMétéo.</p>
 
  
  
  
  
-<section class="followus hidden-print"><h2>Follow:</h2><ul class="list-inline mrgn-tp-lg"><li><a href="/rss/battleboard/nt16_e.xml"><img src="../../weather/cacheable/images/img/feed-icon-14x14.png" alt="ATOM feed" class="mrgn-rght-sm">ATOM</a></li>
+<section class="followus hidden-print"><h2>Suivez :</h2><ul class="list-inline mrgn-tp-lg"><li><a href="/rss/battleboard/nt16_e.xml"><img src="../../weather/cacheable/images/img/feed-icon-14x14.png" alt="ATOM feed" class="mrgn-rght-sm">ATOM</a></li>
 </ul>
 </section></div>
 </div>
 
-<div class="device-xs visible-xs"></div>
-<div class="device-sm visible-sm"></div>
-<div class="device-md visible-md"></div>
-<div class="device-lg visible-lg"></div>
-<section class="hidden-print"  id="weather-topics">
-	<h2 class="wb-inv">What we are doing</h2>
-	 <div class="row wb-eqht">
-      <section class="col-lg-4 col-md-6">
-			<h3 class="wxo-footer-nav">Weather Forecasts</h3>
-      	<ul class="mrgn-bttm-lg lst-spcd">
-            <li><a href="../../weather/canada_e.html">Canadian Weather</a></li>
-            <li><a href="../../weather/radar/index_e.html">Radar - Canada</a></li>
-            <li><a href="/satellite/index_e.html">Satellite - Canada</a></li>
-            <li><a href="/marine/index_e.html">Marine - Canada</a></li>
-            <li><a href="../../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
-            <li><a href="http://www.ec.gc.ca/glaces-ice/default.asp?lang=En&amp;n=D32C361E-1">Canadian Ice Service</a></li>
-				<li><a href="/saisons/index_e.html">Seasonal forecasts</a></li>
-				<li><a href="/forecast/public_bulletins_e.html">Extended forecast</a></li>
-			</ul>
-      </section>
-      <section class="col-lg-4 col-md-6">
-		<h3 class="wxo-footer-nav">Weather Alerts</h3>
-      <ul class="mrgn-bttm-lg lst-spcd">
-            <li><a href="../../weather/mainmenu/alert_menu_e.html">Public Alerts - Canada</a></li>
-            <li><a href="../../weather/lightning/index_e.html">Lightning</a></li>
-            <li><a href="/hurricane/index_e.html">Hurricane</a></li>
-            <li><a href="/warnings/weathersummaries_e.html">Weather Summaries</a></li>
-				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=15E59C08-1">Hazardous Weather</a></li>
-      </ul>
-     </section>
-	  <section class="col-lg-4 col-md-6">
-	  <h3 class="wxo-footer-nav">Weather Resources</h3>
-      <ul class="mrgn-bttm-lg lst-spcd">
-            <li><a href="/model_forecast/model_e.html">Global and Regional forecast models</a></li>
-            <li><a href="/astro/index_e.html">Astronomy</a></li>
-				<li><a href="http://ec.gc.ca/rhc-wsc/default.asp?lang=En&amp;n=4EED50F1-1">Water Level and Flow</a></li>
-				<li><a href="http://climate.weather.gc.ca/index_e.html">Historical Climate Data</a></li>
-				<li><a href="https://flightplanning.navcanada.ca/cgi-bin/CreePage.pl?Langue=anglais&amp;NoSession=NS_Inconnu&amp;Page=forecast-observation&amp;TypeDoc=html">Aviation</a></li>
-				 <li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=4D51ECA8-1 ">Guide to Public forecasts</a></li>
-				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=2EC4EC51-1">Guide to Marine forecasts</a></li>
-				<li><a href="http://ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=8E7198BB-1">Guide to Air Quality forecasts</a></li>
-		</ul>
-      </section>
-	</div>
-</section>
 
-<!-- <section class="gc-prtts hidden-print"><h2>Features</h2><div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md">
-<a rel="external" href="/redirect.php?url=http://ec.gc.ca/uv/default.asp?lang=En&amp;n=DCF1C20A-1">
-<h3 class="h5">UV Index and sun protection</h3>
-<img class="img-responsive thumbnail mrgn-bttm-sm" src="/weather/cacheable/images/banners/SM_123_03_30-UV-Index-and-Sun-Protection_button360x203.jpg" alt="" />
-</a>
-<p>Be weather wise!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
-<a rel="external" href="/redirect.php?url=http://www.canada.ca/en/health-canada/services/sun-safety/extreme-heat-heat-waves.html">
-<h3 class="h5">Extreme Heat Protection</h3>
-<img class="img-responsive thumbnail mrgn-bttm-sm" src="/weather/cacheable/images/banners/SM_124_03_30-Extreme-Heat-02_button_360x203.jpg" alt="" />
-</a>
-<p>Be prepared!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
-<a rel="external" href="/redirect.php?url=http://www.ec.gc.ca/cas-aqhi/">
-<h3 class="h5">Be Air Aware</h3>
-<img class="img-responsive thumbnail mrgn-bttm-sm" src="/weather/cacheable/images/banners/SM_120_03_30-Air-Quality_01_360x203.jpg" alt="" />
-</a>
-<p>Air Quality Health Index</p></section></div></section>
-
-
- <div class="row pagedetails"> 
-   <div class="col-sm-5 col-xs-12 datemod">
-      <dl id="wb-dtmd">
-         <dt>Date modified:&#32;</dt>
-         <dd><time property="dateModified">2017-07-21</time></dd>
-      </dl>
-   </div>
-   <div class="clear visible-xs"></div>
-   <div class="col-sm-4 col-xs-6">
-      <a href="/mainmenu/contact_us_e.html" class="btn btn-default"><span class="glyphicon glyphicon-comment mrgn-rght-sm"></span>Feedback<span class="wb-inv"> about this web site</span></a>
-   </div>
-   <div class="col-sm-3 col-xs-6 text-right">
-      <div class="wb-share" data-wb-share='{"lnkClass": "btn btn-default"}'></div> 
-   </div>
-   <div class="clear visible-xs"></div>
-</div>
-</main> -->
-
-
-<div class="row pagedetails">
+ <div class="row pagedetails">
 <div class="col-sm-6 col-lg-4 mrgn-tp-sm">
-<a href="https://www.canada.ca/en/report-problem.html" class="btn btn-default btn-block">Report a problem or mistake on this page</a>
+<a href="https://www.canada.ca/en/report-problem.html" class="btn btn-default btn-block">Rétroaction</a>
 </div>
 <div class="col-sm-3 mrgn-tp-sm pull-right">
 <div class="wb-share" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>
 </div>
 <div class="datemod col-xs-12 mrgn-tp-lg">
 <dl id="wb-dtmd">
-<dt>Date modified:&#32;</dt>
+<dt>Date de modification :&#32;</dt>
 <dd><time property="dateModified">2017-07-22</time></dd>
 </dl>
 </div>
@@ -308,27 +238,27 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </ul>
 </nav>
 <div class="brand">
-<div class="container">
-<div class="row">
-<nav class="col-md-10 ftr-urlt-lnk">
-<h2 class="wb-inv">About this site</h2>
-<ul>
-<li><a href="https://www1.canada.ca/en/contact/feedback.html">Feedback</a></li>
-<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
-<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
-<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
-<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-</ul>
-</nav>
-<div class="col-xs-6 visible-sm visible-xs tofpg">
-<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
-</div>
-<div class="col-xs-6 col-md-2 text-right">
-<object type="image/svg+xml" tabindex="-1" role="img" data="../../weather/GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
-</div>
-</div>
-</div>
+   <div class="container">
+      <div class="row ">
+         <nav class="col-md-10 ftr-urlt-lnk">
+            <h2 class="wb-inv">À propos de ce site</h2>
+            <ul>
+               <li><a href="https://www.canada.ca/en/social.html">Médias sociaux</a></li>
+               <li><a href="https://www.canada.ca/en/mobile.html">Applications mobiles</a></li>
+               <li><a href="https://www1.canada.ca/en/newsite.html">À propos de Canada.ca
+</a></li>
+               <li><a href="https://www.canada.ca/en/transparency/terms.html">Avis</a></li>
+               <li><a href="https://www.canada.ca/en/transparency/privacy.html">Confidentialité</a></li>
+            </ul>
+         </nav>
+         <div class="col-xs-6 visible-sm visible-xs tofpg">
+            <a href="#wb-cont">Haut de la page <span class="glyphicon glyphicon-chevron-up"></span></a>
+         </div>
+         <div class="col-xs-6 col-md-2 text-right">
+            <object type="image/svg+xml" tabindex="-1" role="img" data="../../weather/template/GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+         </div>
+      </div>
+   </div>
 </div>
 </footer>
 <!--[if gte IE 9 | !IE ]><!-->
