@@ -123,20 +123,44 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </nav>
 </header>
 
+<!-- <style>
+
+.btn  {
+				display: inline; !important 
+		
+
+}
+
+</style> -->
+
 <div class="container hidden-print">
 
-<span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
-	<a href="#weather-shortcuts" class="overlay-lnk pull-right btn btn-default" aria-controls="mid-screen" role="button">Weather shortcuts</a>
+	<ul class="btn-toolbar list-inline pull-right mrgn-tp-sm" role="toolbar">
+	<li class="btn-group">
+	
 	<span id="wxo-divider" class="pull-right wb-invisible">|&#160;</span>
-	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
-   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Access city</label>
-   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city" placeholder="Find a city" />
+	<form class="mrgn-rght-sm pull-right btn" role="search" id="cityjump" method="GET" action="">
+	
+   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible"> </label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" style="width: 30%;" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city" placeholder="Find a city" />
+	
    	<input type="hidden" name="lang" value="e"/>
    	<input type="hidden" name="unit" value=""/>
    	<input type="submit" id="jump" class="" value="Go"/>
+	<a class="btn btn-default overlay-lnk"  href="#weather-shortcuts" role="button">Weather shortcuts</a>
    	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+
 	<div id="invalid-city"></div>
+	
+
+	</li>
 </form>
+</ul>
+</div>
+
+
+
+
 <section id="weather-shortcuts" class="wb-overlay modal-content overlay-def wb-panel-r">
 	<header class="modal-header">
 		<h2 class="modal-title">Weather shortcuts</h2>
