@@ -104,7 +104,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </div>
 </nav>
 
-<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+<nav role="navigation" id="wb-bc" class="hidden-xs" property="breadcrumb">
 		<h2>You are here:</h2>
 		<div class="container">
 	<div class="row">
@@ -119,6 +119,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	</div>
 </div>
 	</nav>
+    
+    <nav role="navigation" id="wb-bc" class="visible-xs" property="breadcrumb">
+	<h2>You are here:</h2>
+	<div class="container">
+	<div class="row">
+		<ol class="breadcrumb">
+		<li><a href="../../../weather/en.html">Home</a></li><li>...</li>
+		<li><a href="../../../weather/city/pages/on-118_metric_e.html">Ottawa (Kanata - Orléans)</a></li>
+		</ol>
+	</div>
+</div>
+</nav>
 </header>
     
   <div class="container hidden-print">
@@ -170,8 +182,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <div id='collapsible-alerts' class='container'></div>
 <div class="clearfix"></div>
 <main role="main" property="mainContentOfPage" class="container">
-<h1 id="wb-cont">24 Hour Forecast - Ottawa (Kanata - Orléans)</h1>
-<div id="watch"><h2><a href="../../../weather/warnings/ottawa-report_e.html">SEVERE THUNDERSTORM WATCH IN EFFECT</a></h2></div>
+<h1 id="wb-cont">Hourly Forecast - Ottawa (Kanata - Orléans)</h1>
+ <div id="watch"<div id="watch" style="border: solid 1px #CCC !important; padding: 13px; border-radius: 3px !important; font-size: 18px;"> <h2 style="line-height: 25px !important;"><a href="../../../weather/warnings/ottawa-report_e.html" style="text-decoration: underline !important;">SEVERE THUNDERSTORM WATCH IN EFFECT - DETAILS >></a></h2></div>
 <div class="table-responsive">
   <table class="table table-striped table-hover table-condensed wxo-media">
     <colgroup>
@@ -277,6 +289,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         </td>
       </tr>
       <tr>
+         
+            
+            
         <td headers="header1" class="text-center">14:00</td>
         <td headers="header2" class="text-center">15</td>
         <td headers="header3" class="media"><span class="pull-left"><img class="media-object" height="35" width="35" src="../../weathericons/small/19.png" alt="Periods of rain" /></span><div class="media-body">
@@ -300,27 +315,28 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
           <abbr title="South">SW</abbr> 20<br />
         </td>
       </tr>
-     
+
       <tr>
-        <td headers="header1" class="text-center">16:00</td>
+              <td headers="header1" class="text-center">16:00</td>
         <td headers="header2" class="text-center">13</td>
         <td headers="header3" class="media"><span class="pull-left"><img class="media-object" height="35" width="35" src="../../weathericons/small/19.png" alt="Periods of rain" /></span><div class="media-body">
             <p>Periods of rain. Risk of severe thunderstorms</p>
-          </div>
         </td>
         <td headers="header4" class="text-center">High</td>
         <td headers="header5" class="text-center">
           <abbr title="Southwest">SW</abbr> 20<br />
         </td>
       </tr>
+    
       <tr>
+    
         <td headers="header1" class="text-center">17:00</td>
         <td headers="header2" class="text-center">13</td>
         <td headers="header3" class="media"><span class="pull-left"><img class="media-object" height="35" width="35" src="../../weathericons/small/06.png" alt="Periods of rain" /></span><div class="media-body">
             <p>Chance of showers</p>
           </div>
         </td>
-        <td headers="header4" class="text-center">High</td>
+        <td headers="header4" class="text-center">High  <div id="tonight"></div></td>
         <td headers="header5" class="text-center">
           <abbr title="Southwest">SW</abbr> 20<br />
         </td>
@@ -337,6 +353,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
           <abbr title="Southwest">SW</abbr> 20<br />
         </td>
       </tr>
+      
       <tr>
         <td headers="header1" class="text-center">19:00</td>
         <td headers="header2" class="text-center">11</td>
