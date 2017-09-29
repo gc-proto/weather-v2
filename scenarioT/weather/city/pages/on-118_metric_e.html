@@ -108,7 +108,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </div>
 </nav>
 
-<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+<nav role="navigation" id="wb-bc" class="hidden-xs" property="breadcrumb">
 	<h2>You are here:</h2>
 	<div class="container">
 	<div class="row">
@@ -123,15 +123,26 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </nav>
 </header>
 
-<!-- <style>
 
-.btn  {
-				display: inline; !important 
-		
 
-}
+<nav role="navigation" id="wb-bc" class="visible-xs" property="breadcrumb">
+	<h2>You are here:</h2>
+	<div class="container">
+	<div class="row">
+		<ol class="breadcrumb">
+		<li><a href="../../../weather/en.html">Home</a></li><li>...</li>
+		<li><a href="../../../weather/canada_e.html">Local forecasts</a></li>
+		</ol>
+	</div>
+</div>
+</nav>
+</header>
 
-</style> -->
+
+
+
+
+
 
 <div class="container hidden-print">
 
@@ -188,8 +199,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <main role="main" property="mainContentOfPage" class="container">
 <h1 id="wb-cont" property="name">Ottawa (Kanata - Orléans), <abbr title="Ontario">ON</abbr>
 </h1>
+
+
 <div id="container">
-  <div id="watch"><h2><a href="../../../weather/warnings/ottawa-report_e.html">SEVERE THUNDERSTORM WATCH IN EFFECT</a></h2></div>
+  <div id="watch"<div id="watch" style="border: solid 1px grey !important; padding: 8px; border-radius: 3px !important; font-size: 18px;"> <h2 style="line-height: 22px !important;"><a href="../../../weather/warnings/ottawa-report_e.html" style="border-bottom: 1px solid black !important;">SEVERE THUNDERSTORM WATCH IN EFFECT - DETAILS >></a></h2></div>
   <div id="mainContent" class="mrgn-tp-lg">
     <section>
       <details class="panel panel-default hidden-xs" open="open">
@@ -208,7 +221,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             <a href="../../../weather/satellite/index_e.html">Satellite</a>
           </li>
           <li class="brdr-lft">
-            <a href="../../../weather/lightning/index_e.html">Lightning</a>
+            <a href="../../../weather/lightning/ONT-index_e.html">Lightning</a>
           </li>
         </ul>
         <div class="row no-gutters wb-eqht hidden-print">
@@ -467,7 +480,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         </summary>
         <ul class="hidden-print pull-right list-inline mrgn-rght-sm mrgn-bttm-0 wxo-moveup">
           <li class="brdr-rght">
-            <a href="../../../weather/forecast/hourly/on-118_metric_e.html" title="24 Hour Forecast">24 Hour Forecast</a>
+            <a href="../../../weather/forecast/hourly/on-118_metric_e.html" title="Hourly Forecast">Hourly Forecast</a>
           </li>
           <li class="brdr-rght">
             <abbr title=""><a href="../../../weather/airquality/pages/onaq-008_e.html">AQHI</a>
@@ -482,8 +495,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         </ul>
         <table class="table table-condensed mrgn-bttm-0 wxo-iconfore">
           <tr>
-            <th scope="col">
-              <a href="../../../weather/forecast/hourly/on-118_metric_e.html">
+            <th scope="col" style="background-color: yellow;">
+              <a href="../../../weather/forecast/hourly/on-118_metric_e.html" style="color: black; !important">
                 <strong title="Thursday">Thu</strong>
                 <br>24 <abbr title="August">Aug</abbr>
               </a>
@@ -556,8 +569,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               </p>
               <p class="mrgn-bttm-0 pop text-center" title="Chance of Precipitation">
                 <small> <p>
-				</small>
-              </p>
+				
+              </small></p>
               <p class="mrgn-bttm-0">A mix of sun and cloud</p>
             </td>
             <td><img width="60" height="51" src="../../../weather/weathericons/01.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">23&deg;<abbr title="Celsius">C</abbr>
@@ -565,8 +578,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                 </span>
               </p>
               <p class="mrgn-bttm-0 pop text-center" title="Chance of Precipitation">
-                <small> <p></small>
-              </p>
+                <small> <p>
+              </small></p>
               <p class="mrgn-bttm-0">Sunny</p>
             </td>
             <td><img width="60" height="51" src="../../../weather/weathericons/06.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">23&deg;<abbr title="Celsius">C</abbr>
@@ -580,7 +593,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             </td>
           </tr>
           <tr>
-            <th scope="col">Tonight</th>
+            <th scope="col" style="background-color: yellow;">Tonight</th>
             <th scope="col" title="Monday night, 26 June"> Night</th>
             <th scope="col" title="Tuesday night, 27 June"> Night</th>
             <th scope="col" title="Wednesday night, 28 June"> Night</th>
@@ -670,7 +683,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                 </tr>
                 <tr class="pdg-tp-0">
                   <td>
+                  <a href="../../../weather/forecast/hourly/on-118_metric_e.html">
                     <strong title="Thursday night">Tonight</strong>
+                    </a>
                   </td>
                   <td>A few showers or thunderstorms ending late this evening then mainly cloudy. Risk of a severe thunderstorm. Wind southwest 20 km/h. Low 11.</td>
                 </tr>
@@ -759,42 +774,69 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         </table>
       </details>
     </section>
+    
+<!-- LINKS MOVED UP -->
+
+   
+    <ul class="list-unstyled visible-xs wxo-btn">
+      
+      <li>
+        <a class="btn btn-default btn-sm btn-block" a href="../../../weather/forecast/hourly/on-118_metric_e.html">Hourly Forecast</a>
+      </li>
+        <a class="btn btn-default btn-sm btn-block" href="../../../weather/radar/xft-index_e.html">Radar</a>
+      </li>
+      <li>
+        <a class="btn btn-default btn-sm btn-block" href="../../../weather/lightning/ONT-index_e.html">Lightning</a>
+      </li>
+     
+    </ul>
+      
+      
     <section class="mrgn-tp-lg visible-xs">
       <details class="panel panel-default wxo-fcst" open="open">
         <summary class="panel-heading">
-          <h2>Forecast<span class="small visible-print-inline-block pull-right">Issued: 5:00 AM EST Thursday 24 August 2017</span></h2>
+          <h2 >Forecast<span class="small visible-print-inline-block pull-right">Issued: 5:00 AM EST Thursday 24 August 2017</span></h2>
         </summary>
         <section>
-          <h3 class="h5 mrgn-lft-md hidden-print"><span class="wb-inv">Detailed Forecast</span>Issued: 5:00 AM EST Thursday 24 August 2017</h3>
-          <div class="row">
-            <div class="col-xs-6"><img width="60" height="51" src="../../../weather/weathericons/09.gif" alt="A few showers or thunderstorms" class="pull-right" title="A few showers or thunderstorms"></div>
-            <div class="col-xs-6">
-			
-		
-              <a href="../../../weather/forecast/hourly/on-118_metric_e.html">
-                <strong title="Friday">Today</strong>
-              </a>
+          <h3 class="h5 mrgn-lft-md hidden-print"><span class="wb-inv" >Detailed Forecast</span>Issued: 5:00 AM EST Thursday 24 August 2017</h3>
+           
+          <div class="row" style="background-color: yellow !important; padding-top: 10px; border-top: solid #CCC 1px;">
+          <a href="../../../weather/forecast/hourly/on-118_metric_e.html">
+            <div class="col-xs-6"  style="background-color: yellow !important;"><img width="60" height="51" src="../../../weather/weathericons/09.gif" alt="A few showers or thunderstorms" class="pull-right" title="A few showers or thunderstorms"></div>
+            <div class="col-xs-6"  style="background-color: yellow !important;">
+            
+                <strong title="Friday" style="color: black; !important">Today</strong> 
+          </a>
+              
               <br><span class="high wxo-metric-hide" title="max">21&deg;<abbr title="Celsius">C</abbr>
               </span><span class="high wxo-imperial-hide wxo-city-hidden" title="max">84&deg;<abbr title="Fahrenheit">F</abbr>
               </span>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12 brdr-bttm mrgn-bttm-md">Increasing cloudiness. A few showers or thunderstorms beginning near noon. Risk of a severe thunderstorm. Wind becoming southwest 20 km/h this afternoon. High 21.</div>
+          
+          
+          <div class="row" style="background-color: yellow !important;">
+            <div class="col-xs-12 brdr-bttm mrgn-bttm-md" style="padding-bottom: 7px;">Increasing cloudiness. A few showers or thunderstorms beginning near noon. Risk of a severe thunderstorm. Wind becoming southwest 20 km/h this afternoon. High 21.</div>
           </div>
-          <div class="row">
+          <div class="row" style="background-color: yellow !important;">
+          
+          <a href="../../../weather/forecast/hourly/on-118_metric_e.html">
             <div class="col-xs-6"><img width="60" height="51" src="../../../weather/weathericons/39.gif" alt="Chance of showers" class="pull-right" title="Chance of showers"></div>
             <div class="col-xs-6">
-              <strong title="Friday night">Tonight</strong>
+              <strong title="Friday night" style="color: black; !important">Tonight</strong>
+          </a>
+              
+              
                <br><span class="high wxo-metric-hide" title="max">12&deg;<abbr title="Celsius">C</abbr>
               </span><span class="low wxo-imperial-hide wxo-city-hidden" title="min">61&deg;<abbr title="Fahrenheit">F</abbr>
               </span>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12 brdr-bttm mrgn-bttm-md">A few showers or thunderstorms ending late this evening then mainly cloudy. Risk of a severe thunderstorm. Wind southwest 20 km/h. Low 11.</div>
+          </a>
+          <div class="row" style="background-color: yellow !important;">
+            <div class="col-xs-12 brdr-bttm" style="padding-bottom: 7px;">A few showers or thunderstorms ending late this evening then mainly cloudy. Risk of a severe thunderstorm. Wind southwest 20 km/h. Low 11.</div>
           </div>
-          <div class="row">
+          <div class="row" style="padding-top: 7px;">
             <div class="col-xs-6"><img width="60" height="51" src="../../../weather/weathericons/06.gif" alt="Chance of showers" class="pull-right" title="Chance of showers"></div>
             <div class="col-xs-6">
               <strong>
@@ -913,7 +955,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
       </details>
     </section>
     <section class="mrgn-tp-lg">
-      <details class="panel panel-default wxo-avgextrm" open="open">
+      <details class="panel panel-default wxo-avgextrm">
         <summary class="panel-heading">
           <h2>Averages and extremes</h2>
         </summary>
@@ -999,7 +1041,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
       </details>
     </section>
     <section class="mrgn-tp-lg">
-      <details class="panel panel-default" open="open">
+      <details class="panel panel-default">
         <summary class="panel-heading">
           <h2>Yesterday's Data</h2>
         </summary>
@@ -1047,18 +1089,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         <a class="btn btn-default btn-sm btn-block wxo-imperial-hide wxo-city-hidden" role="button" href="../../../weather/past_conditions/index_e.html">Past 24 hour Conditions</a>
       </li>
       <li>
-        <a href="../../../weather/radar/xft-index_e.html" class="btn btn-default btn-sm btn-block">Radar</a>
-      </li>
-      <li>
         <a href="../../../weather/satellite/index_e.html" class="btn btn-default btn-sm btn-block">Satellite</a>
       </li>
-      <li>
-        <a href="../../../weather/lightning/index_e.html" class="btn btn-default btn-sm btn-block">Lightning</a>
-      </li>
-      <li>
-        <a href="../../../weather/forecast/hourly/on-118_metric_e.html" class="btn btn-default btn-sm btn-block">24 Hour Forecast</a>
-      </li>
-      <li>
         <a href="../../../weather/airquality/pages/onaq-008_e.html" class="btn btn-default btn-sm btn-block">Air Quality Health Index</a>
       </li>
       <li>

@@ -1,0 +1,483 @@
+/*
+  css for the entire wxo site
+*/
+
+@media print{
+   a[href]:after { content: "" !important;}
+	abbr:after { content: "" !important;}
+	aside.gc-nttvs { display: none !important;}
+	.gc-prtts {display: none !important;}
+
+   /* 3822 fix FF - print truncated table */
+   .wb-tabs > .tabpanels > .fade.in  { overflow: visible !important;}
+   .wb-tabs > .tabpanels > .fade.out { display: none  !important; }
+
+    #wb-dtmd dd, #wb-dtmd dt { display:inline;}
+
+	/* fix IE - print xs version in print view */
+  	body {
+    margin: 0;
+	 padding: 0 !important;
+    min-width: 768px;
+  	}
+  	.container {
+    width: auto;
+    min-width: 750px;
+  	}
+	/* Chrome bug : city page prints as XS verion */
+	@media print {
+		@page { 	margin-left:0.3cm;
+					margin-right:0.3cm;
+ 		}
+	}
+	/* force chrome to print on landscape */
+	@media print and (-webkit-min-device-pixel-ratio:0) { 
+		@page { size:landscape;}
+	}
+
+	/*  removed double header if it has been at xs before printing  */
+	details[open] > summary.wxo-summ {
+		display:none !important;
+	}	
+
+	/* IE 9 bug - table disappears if table spans to more than one page */
+	section#wxo-cityforecast {  float:none; }
+	
+
+} /* MEDIA PRINT */
+
+/* deleted in template 4.0.22 */
+details > *:not(summary) { margin-left:1.1em; }
+
+/*  gc-nttvs changed on wet4.0.12 themse.css  */
+.gc-nttvs  img.pull-right {
+	float:right;
+	margin: auto; 
+}
+
+.gc-nttvs  img.center-block {
+   float:none;
+   margin: auto;
+}
+
+/*  details/summary changed on wet4.0.12 wet-boew.css  */
+details	{padding-left: 0;} 
+details > summary {margin-left:auto;}
+
+/* table css deleted from wet4.0.10 theme.css */
+table {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    width: 100%; }
+th {
+    background-color: #ccc;
+    border: 1px solid #ddd;
+    color: #000;
+    font-weight: normal;
+    padding: 8px; }
+th a {
+      color: #000; }
+th a:hover, th a:focus {
+      color: #000;
+      text-decoration: none; }
+td {
+    border: 1px solid #ddd;
+    padding: 8px; }
+caption {
+    font-weight: bold; }
+
+/* table css  */
+
+abbr { 
+	border:none !important; 
+	text-decoration: none;
+}
+
+.wxo-pddng-sm { padding:2px; }
+
+.wxo-dpl-inline { display:inline; }
+
+.wxo-btn a { text-align: left; padding: 3px 5px; }
+
+.wxo-mrgn-hurr { margin-top:-4.5em; margin-left:3em; }
+
+.wxo-pddn-tp-md { padding-top:5px; }
+
+.wxo-th-bkg {background-color:#ccc !important;}
+
+.wxo-tb-head {font-weight:600; text-align:center;}
+.wxo-tb-head_marine {font-weight:600;}
+
+.wxo-media tr td { white-space:normal !important ;}
+
+
+
+/* City Warning Banner Styling */
+div#warning, div#watch, div#statement, div#ended, div#noalert {
+   border:2px solid black;
+   margin:1em 0 .5em;
+   height: 100%;
+   padding:4px 0 5px;
+}
+div#warning {
+   background-color:#b00;
+}
+
+div#watch {
+   background-color:#ff0;
+}
+
+div#statement {
+   background-color:#707070;
+}
+
+div#ended{
+   background-color:#6c6;
+}
+
+div#warning h2,
+div#watch h2,
+div#statement h2,
+div#ended h2
+{
+   font-size:1em;
+   font-weight: bold;
+   margin-bottom:0;
+   margin-top:0;
+   padding-bottom:4px;
+   text-align:center;
+   text-decoration:none;
+}
+
+div#noalert h2 {
+	 font-size:1em;
+	 font-weight: bold;
+	 margin:0 0 0 5px;
+	 text-decoration:none;
+}
+
+div#warning h2:last-child,
+div#watch h2:last-child,
+div#statement h2:last-child,
+div#ended h2:last-child
+{
+	padding-bottom:0;
+}
+
+div#warning a:link,
+div#warning a:visited,
+div#statement a:link,
+div#statement a:visited
+{
+   color:white;
+   text-decoration:none;
+}
+div#ended a:link,
+div#ended a:visited,
+div#watch a:link,
+div#watch a:visited,
+div#noalert a:link,
+div#noalert a:visited
+{
+   color:black;
+   text-decoration: none;
+}
+
+div#warning a:hover, div#statement a:hover, div#watch a:hover, div#ended a:hover, div#noalert a:hover {
+   text-decoration: underline;
+}
+
+/* My Profile Banner Styling for multiple banners (use classes instead of IDs)*/
+
+div.warning-myprofile, div.watch-myprofile, div.statement-myprofile, div.ended-myprofile, div.noalert-myprofile {
+   border:2px solid black;
+   margin:1em 0 .5em;
+   height: 100%;
+   padding:4px 0 5px;
+}
+div.warning-myprofile {
+   background-color:#b00;
+}
+
+div.watch-myprofile {
+   background-color:#ff0;
+}
+
+div.statement-myprofile {
+   background-color:#707070;
+}
+
+div.ended-myprofile{
+   background-color:#6c6;
+}
+
+div.warning-myprofile h2,
+div.watch-myprofile h2,
+div.statement-myprofile h2,
+div.ended-myprofile h2
+{
+   font-size:1em;
+   font-weight: bold;
+   margin-bottom:0;
+   margin-top:0;
+   padding-bottom:4px;
+   text-align:center;
+   text-decoration:none;
+}
+
+div.noalert-myprofile h2 {
+   font-size:1em;
+   font-weight: bold;
+   margin:0 0 0 5px;
+   text-decoration:none;
+}
+
+div.warning-myprofile h2:last-child,
+div.watch-myprofile h2:last-child,
+div.statement-myprofile h2:last-child,
+div.ended-myprofile h2:last-child
+{
+  padding-bottom:0;
+}
+
+div.warning-myprofile a:link,
+div.warning-myprofile a:visited,
+div.statement-myprofile a:link,
+div.statement-myprofile a:visited
+{
+   color:white;
+   text-decoration:none;
+}
+div.ended-myprofile a:link,
+div.ended-myprofile a:visited,
+div.watch-myprofile a:link,
+div.watch-myprofile a:visited,
+div.noalert-myprofile a:link,
+div.noalert-myprofile a:visited
+{
+   color:black;
+   text-decoration: none;
+}
+
+
+div.warning-myprofile a:hover, div.statement-myprofile a:hover, div.watch-myprofile a:hover, div.ended-myprofile a:hover, div.noalert-myprofile a:hover {
+   text-decoration: underline;
+}
+
+/*  trends table  */
+
+.highTemp {
+   background-color:#ffaaaa !important;
+}
+
+.lowTemp {
+   background-color:#aaaaff !important;
+}
+
+/* home */
+@media screen and (min-width:1200px) {
+   .hurrHome{
+     position:relative;
+     left:630px;
+     top:-70px;
+     z-index:100;
+     width:35px;
+     height:40px;
+   }
+}
+
+@media screen and (min-width:992px) and (max-width:1199px) {
+   .hurrHome{
+      position:relative;
+      left:560px;
+      top:-70px;
+      z-index:100;
+      width:35px;
+      height:40px;
+   }
+}
+
+
+@media screen and (min-width:768px) and (max-width:991px) {
+   .hurrHome{
+      position:relative;
+      left:615px;
+      top:-70px;
+      z-index:100;
+      width:35px;
+      height:40px;
+   }
+}
+
+.wxo-no-pad {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+h1{
+   margin-top:0 !important;
+}
+.h1{
+   margin-top:0 !important;
+}
+#cityjump {
+   height: 2.5em;
+   text-align: left;
+}
+#cityjump {
+       text-align: right !important;
+}
+p + #cityjump, ul + #cityjump{
+   margin-top: 0;
+}
+
+#cityjump label{
+   text-decoration:underline;
+   color:#295376;
+   cursor:pointer;
+   font-weight:300;
+
+}
+
+#cityjump #city {
+   width: 10em;
+   margin: 0;
+}
+
+#cityjump #jump, #cityjump #jumpnojs {
+   width: 5em;
+   display: inline;
+}
+
+#jumpmsg {
+   text-align: right;
+   color: #A00;
+}
+
+#jumpmsg p{
+   margin: 0;
+}
+
+#jumpresults #cityjump {
+   height: auto;
+   margin-top:2em;
+   text-align:left;
+}
+
+.white {
+   background-color:transparent;
+   color:inherit;
+}
+
+#invalid-city{
+   display:none;
+ background:none;
+   border:none;
+   color:#B00;
+}
+
+#container label[for=city], #container label[htmlFor=city]{
+   text-decoration:underline;
+   color:#295376;
+   cursor:pointer;
+   font-weight:300;
+}
+
+.no-js label[for=city], .no-js label[htmlFor=city]{
+   text-decoration:none !important;
+   color:#000000 !important;
+   cursor:text !important;
+}
+
+/* Bottom - 3 Column Navigation */
+
+.wxo-footer-nav {
+	border-top: 8px solid #003D79;
+	border-bottom: 1px solid #CCC;
+	color: #666;
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+/* Make sure pre tag does not wrap text */
+
+pre {
+	word-wrap: normal !important;
+
+}
+
+/*  warning hurricane */
+div.centrebar {
+   clear:both;
+   background-color:#ccc;
+   color:#ccc;
+   height:1px;
+   width:60%;
+   text-align:center;
+   font-size:1px;
+   line-height:0px;
+   margin:20px auto;
+   padding:0;
+   border:0 none;
+}
+/*responsive data table has scroll bar on large screen*/
+.dataTables_wrapper {width:99.5% !important}
+
+.vertical-center {
+  vertical-align: middle !important
+}
+
+.extreme-temp {
+  font-size: 0.7em;
+  margin-left: 5px;
+}
+
+/* Alert box */
+details#alertbox {padding-left:2px; padding-right:15px; border-width:0 0 0 20px; background: #f3e9e8 none repeat scroll 0 0;}
+details.warning { border-color: #b00; }
+details.watch { border-color: #ff0; }
+details.statement { border-color: #83837f; }
+details.ended { border-color: #6c6; }
+details#alertbox {padding-top:0; padding-bottom:0;}
+details#alertbox h3 {padding-top:0; padding-bottom:0;}
+details#alertbox ul {padding-bottom:5px;}
+details#alertbox summary {border:0;}
+details[open]#alertbox summary {border-bottom:1px solid #ddd;}
+
+
+.shift-left {padding-left: 0px; padding-right: 30px;}
+
+/* Refresh items */
+.align_right {float:right;}
+.refresh_btn_fix {height:8px;}
+
+/* hack! Should fix later */
+@media screen and (min-width: 768px) {
+    .uniform_width {width:193px !important;}
+}
+@media screen and (max-width: 767px) {
+    .uniform_width {width:0px !important;}
+}
+
+/* Fix alert banner */
+.alert summary
+{
+    text-decoration: none !important;
+}
+.alert summary h1:hover, 
+.alert summary h2:hover,
+.alert summary h3:hover,
+.alert summary h4:hover,
+.alert summary h5:hover,
+.alert summary h6:hover
+{
+    text-decoration: underline !important;
+}
+
+.dataTables_length select
+{
+    width: 72px;
+}
