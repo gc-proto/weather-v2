@@ -12,6 +12,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!--[if gte IE 9 | !IE ]><!-->
 <link href="./GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
 <link rel="stylesheet" href="./GCWeb/css/theme.min.css">
+
+
+
+<link rel="stylesheet" href="../weather/city/styles/city.css">
+<link rel="stylesheet" href="../weather/cacheable/css/city/city_js.css">
+<link rel="stylesheet" href="../weather/template/wxo/css/wxo.css" />
+
 <!--<![endif]-->
 <!--[if lt IE 9]>
 <link href="./GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -23,16 +30,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 
 <noscript><link rel="stylesheet" href="./wet-boew/css/noscript.min.css" /></noscript>
-
-<!-- ACCESS CITY -->
-
-<script type="text/javascript" src="../weather/city/js/cityjump.js"></script>
-
-<link rel="stylesheet" href="../weather/city/styles/city.css">
-<link rel="stylesheet" href="../weather/cacheable/css/city/city_js.css">
-<link rel="stylesheet" href="../weather/template/wxo/css/wxo.css" />
-
-<!-- ACCESS CITY -->
 
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <script>dataLayer1 = [];</script>
@@ -217,6 +214,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
    	<noscript><input type="submit" id="jumpnojs" value="Aller" formnovalidate/></noscript>
 	<div id="invalid-city"></div>
 </form>
+</div>
 
  <div class="row"> 
   <div class="col-md-12"> 
@@ -374,5 +372,32 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="./wet-boew/js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
 <script src="./GCWeb/js/theme.min.js"></script>
+
+<!-- ACCESS CITY -->
+
+<script src="../weather/cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="../weather/cacheable/js/city/availableTags_e.min.js"></script>
+<script type="text/javascript" src="../weather/city/js/cityjump.js"></script>
+
+<script>
+    document.getElementById("jump").className = "";
+    var max_chars = 50;
+
+    $('#city').keydown( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+
+    $('#city').keyup( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+</script>
+
+<!-- ACCESS CITY -->
+
+
 </body>
 </html>
