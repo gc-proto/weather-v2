@@ -23,6 +23,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 
 <noscript><link rel="stylesheet" href="./wet-boew/css/noscript.min.css" /></noscript>
+
+<!-- ACCESS CITY -->
+
+<script type="text/javascript" src="../weather/city/js/cityjump.js"></script>
+
+<link rel="stylesheet" href="../weather/city/styles/city.css">
+<link rel="stylesheet" href="../weather/cacheable/css/city/city_js.css">
+<link rel="stylesheet" href="../weather/template/wxo/css/wxo.css" />
+
+<!-- ACCESS CITY -->
+
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
@@ -189,6 +200,24 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         <main role="main" property="mainContentOfPage" class="container">
             <div class="mwstext section"><h1 property="name" id="wb-cont" class="wb-inv">Bienvenue au site Canada.ca</h1> 
 <section> 
+
+
+<!-- ACCESS CITY -->
+
+<div class="container hidden-print" style="padding-top: 15px;">
+
+<span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
+	
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
+   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Accéder à une ville</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="S’il vous plaît taper au moins deux caractères (Au maximum 50)" required data-h5-errorid="invalid-city" placeholder="Accéder à une ville" />
+   	<input type="hidden" name="lang" value="e"/>
+   	<input type="hidden" name="unit" value=""/>
+   	<input type="submit" id="jump" class="" value="Aller"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Aller" formnovalidate/></noscript>
+	<div id="invalid-city"></div>
+</form>
+
  <div class="row"> 
   <div class="col-md-12"> 
    <h1 class="h1">Services et renseignements les plus demandés</h1> 
@@ -260,6 +289,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
   </section> 
  </div> 
 </section> 
+
+
+
 <section class="gc-prtts hidden-print"><h2>Activités et initiatives du gouvernement du Canada</h2><div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md">
 <a rel="external" href="/redirect.php?url=http://ec.gc.ca/uv/default.asp?lang=En&amp;n=DCF1C20A-1">
 <h3 class="h5">Le raid de Dieppe</h3>
