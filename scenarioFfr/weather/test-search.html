@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +15,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script>
 
 
@@ -42,6 +44,7 @@ $(document).ready(function(){
    	<noscript><input type="submit" id="jumpnojs" value="Aller" formnovalidate/></noscript>
 	<div id="invalid-city"></div>
 </form>
+
 
 </div>
 
@@ -72,7 +75,50 @@ $(document).ready(function(){
             $(this).val($(this).val().substr(0, max_chars));
         }
     });
+	
+	
 </script>
+
+<script>
+
+function snoopCities(event, ui) {
+    if (ui.item === null || typeof(ui.item) === 'undefined') {
+        $("#city").data("ref", null);
+        return;
+    }
+    
+    switch(ui.item.label) {
+        case "Otterburn Park, QC": {
+            $("#city").data("ref", "weather-v1/scenarioFfr/weather/city/pages/on-118_metric_e.html");
+            break;
+			
+		}
+
+        default: {
+            $("#city").data("ref", null);
+        }
+    }
+}
+
+$("#city").autocomplete("option", "select", snoopCities);
+
+$("#cityjump").on("submit", function(e) {
+    e.preventDefault();
+
+    var targetUrl = $("#city").data("ref");
+    if (targetUrl !== null) {
+        window.location.href = targetUrl;
+    }
+    /*
+    else {
+        //Todo: remove this.
+        alert("Unknown destination.");
+    }
+    */
+});
+
+</script>
+
 </body>
 
 
