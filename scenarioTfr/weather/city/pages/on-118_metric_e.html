@@ -117,7 +117,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     </div>
 </div>
 </nav>
-<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+<nav role="navigation" id="wb-bc" class="hidden-xs" property="breadcrumb">
 	<h2>Vous êtes ici :</h2>
 	<div class="container">
 	<div class="row">
@@ -130,6 +130,19 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	</div>
 </div>
 </nav>
+
+<nav role="navigation" id="wb-bc" class="visible-xs" property="breadcrumb">
+	<h2>YVous êtes ici :</h2>
+	<div class="container">
+	<div class="row">
+		<ol class="breadcrumb">
+		<li><a href="../../../weather/en.html">Accueil</a></li><li>...</li>
+		<li><a href="../../../weather/canada_e.html">Prévisions locales</a></li>
+		</ol>
+	</div>
+</div>
+</nav>
+
 </header>
 
 <div class="container hidden-print">
@@ -186,7 +199,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <h1 id="wb-cont" property="name">Ottawa (Kanata - Orléans), <abbr title="Ontario">ON</abbr>
 </h1>
 <div id="container">
-  <div id="watch"><h2><a href="../../../weather/warnings/ottawa-report_e.html">VEILLE D'ORAGES VIOLENTS EN VIGUEUR</a></h2></div>
+  <div id="watch"<div id="watch" style="border: solid 1px #CCC !important; padding: 13px; border-radius: 3px !important; font-size: 18px;"> <h2 style="line-height: 25px !important;"><a href="../../../weather/warnings/ottawa-report_e.html" style="text-decoration: underline !important;">VEILLE D'ORAGES VIOLENTS EN VIGUEUR - DÉTAILS >> </a></h2></div>
   <div id="mainContent" class="mrgn-tp-lg">
     <section>
       <details class="panel panel-default hidden-xs" open="open">
@@ -464,7 +477,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         </summary>
         <ul class="hidden-print pull-right list-inline mrgn-rght-sm mrgn-bttm-0 wxo-moveup">
           <li class="brdr-rght">
-            <a href="../../../weather/forecast/hourly/on-118_metric_e.html" title="24 Hour Forecast">Prévisions 24 heures</a>
+            <a href="../../../weather/forecast/hourly/on-118_metric_e.html" title="24 Hour Forecast">Prévisions horaires</a>
           </li>
           <li class="brdr-rght">
             <abbr title=""><a href="../../../weather/airquality/pages/onaq-008_e.html">CAS</a>
@@ -479,8 +492,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         </ul>
         <table class="table table-condensed mrgn-bttm-0 wxo-iconfore">
           <tr>
-            <th scope="col">
-              <a href="../../../weather/forecast/hourly/on-118_metric_e.html">
+            <th scope="col" style="background-color: yellow;">
+              <a href="../../../weather/forecast/hourly/on-118_metric_e.html" style="color: black; !important">
                 <strong title="Thursday">jeu</strong>
                 <br>24 <abbr title="August">aoû</abbr>
               </a>
@@ -577,7 +590,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             </td>
           </tr>
           <tr>
-            <th scope="col">Ce soir et cette nuit</th>
+            <th scope="col" style="background-color: yellow;"><a href="../../../weather/forecast/hourly/on-118_metric_e.html#soir" style="color: black !important;">Ce soir et cette nuit</th>
             <th scope="col" title="sam soir, 26 aoû"> Nuit</th>
             <th scope="col" title="dim soir, 27 aoû"> Nuit</th>
             <th scope="col" title="lun soir, 28 aoû"> Nuit</th>
@@ -647,13 +660,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         <section>
           <details open="open" class="wxo-detailedfore">
             <summary class="blackfont hidden-print">
-              <h3 class="h5"><span class="wb-inv">Prévisions 24 heures</span>Émises à : 5h00 HAE le jeudi 24 août 2017</h3>
+              <h3 class="h5"><span class="wb-inv">Prévisions horaires</span>Émises à : 5h00 HAE le jeudi 24 août 2017</h3>
             </summary>
             <table class="table mrgn-bttm-md mrgn-tp-md textforecast">
               <thead>
                 <tr>
                   <th class="wb-inv" scope="col">date</th>
-                  <th class="wb-inv" scope="col">Prévisions 24 heures</th>
+                  <th class="wb-inv" scope="col">Prévisions horaires</th>
                 </tr>
               </thead>
               <tbody>
@@ -755,43 +768,67 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
           </tr>
         </table>
       </details>
-    </section>
+	  
+	  </section>
+	  
+	  <ul class="list-unstyled visible-xs wxo-btn">
+
+	<li>
+        <a href="../../../weather/forecast/hourly/on-118_metric_e.html" class="btn btn-default btn-sm btn-block">Prévisions horaires</a>
+      </li>
+     
+      <li>
+        <a href="../../../weather/radar/xft-index_e.html" class="btn btn-default btn-sm btn-block">Radar</a>
+      </li>
+      <li>
+        <a href="../../../weather/lightning/index_e.html" class="btn btn-default btn-sm btn-block">Foudre</a>
+      </li>
+   
+    </ul>
+  </div>
+    
     <section class="mrgn-tp-lg visible-xs">
       <details class="panel panel-default wxo-fcst" open="open">
         <summary class="panel-heading">
           <h2>Prévisions<span class="small visible-print-inline-block pull-right">Émises à : 5h00 HAE le jeudi 24 août 2017</span></h2>
         </summary>
         <section>
-          <h3 class="h5 mrgn-lft-md hidden-print"><span class="wb-inv">Prévisions 24 heures</span>Émises à : 5h00 HAE le jeudi 24 août 2017</h3>
-          <div class="row">
-            <div class="col-xs-6"><img width="60" height="51" src="../../../weather/weathericons/09.gif" alt="Pluie intermittente ou orages" class="pull-right" title="Pluie intermittente ou orages"></div>
+          <h3 class="h5 mrgn-lft-md hidden-print"><span class="wb-inv">Prévisions horaires</span>Émises à : 5h00 HAE le jeudi 24 août 2017</h3>
+          <div class="row" style="background-color: #fffcd4 !important; padding-top: 10px; border-top: solid #ccc 1px; border-left: solid 5px yellow;">
+		  <a href="../../../weather/forecast/hourly/on-118_metric_e.html">
+            <div class="col-xs-6" style="background-color: #fffcd4 !important;"><img width="60" height="51" src="../../../weather/weathericons/09.gif" alt="Pluie intermittente ou orages" class="pull-right" title="Pluie intermittente ou orages"></div>
             <div class="col-xs-6">
 			
 		
-              <a href="../../../weather/forecast/hourly/on-118_metric_e.html">
-                <strong title="Friday">Aujourd'hui</strong>
-              </a>
-              <br><span class="high wxo-metric-hide" title="max">21&deg;<abbr title="Celsius">C</abbr>
+        
+                <strong title="Friday" style="color: black !important; text-decoration: underline !important;">Aujourd'hui</strong>
+              
+              <br><span class="high wxo-metric-hide" style="color: black; !important" title="max">21&deg;<abbr title="Celsius">C</abbr>
               </span><span class="high wxo-imperial-hide wxo-city-hidden" title="max">84&deg;<abbr title="Fahrenheit">F</abbr>
               </span>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12 brdr-bttm mrgn-bttm-md">Généralement nuageux. Pluie intermittente ou d'orages cet après-midi. Risque d'orages violents. Vents devenant du sud-ouest à 20 km/h cet après-midi. Maximum 21.</div>
+		  </a>
+          <div class="row" style="background-color: #fffcd4 !important; border-left: solid 5px yellow;">
+            <div class="col-xs-12 mrgn-bttm-md" style="padding-bottom: 7px; border-bottom: dashed #ccc 1px;">Généralement nuageux. Pluie intermittente ou d'orages cet après-midi. Risque d'orages violents. Vents devenant du sud-ouest à 20 km/h cet après-midi. Maximum 21.</div>
           </div>
-          <div class="row">
+          <div class="row" style="background-color: #fffcd4 !important; border-left: solid 5px yellow;">
+		  
+		   <a href="../../../weather/forecast/hourly/on-118_metric_e.html#soir">
             <div class="col-xs-6"><img width="60" height="51" src="../../../weather/weathericons/39.gif" alt="Possibilité d'averses" class="pull-right" title="Possibilité d'averses"></div>
             <div class="col-xs-6">
-              <strong title="ven soir">Ce soir et cette nuit</strong>
-               <br><span class="high wxo-metric-hide" title="max">12&deg;<abbr title="Celsius">C</abbr>
+              <strong title="ven soir" style="color: black !important; text-decoration: underline !important;">Ce soir et cette nuit</strong>
+               <br><span class="high wxo-metric-hide" style="color: black; !important" title="max">12&deg;<abbr title="Celsius">C</abbr>
               </span><span class="low wxo-imperial-hide wxo-city-hidden" title="min">61&deg;<abbr title="Fahrenheit">F</abbr>
               </span>
             </div>
+			  </a>
           </div>
-          <div class="row">
-            <div class="col-xs-12 brdr-bttm mrgn-bttm-md">Quelques averses ou d'orages cessant cet après-midi. Nuageux par la suite. Risque d'orages violents. Vents du sud-ouest de 20 km/h devenant légers ce soir. Minimum 12.</div>
+	
+          <div class="row" style="background-color: #fffcd4 !important; border-left: solid 5px yellow;">
+            <div class="col-xs-12 brdr-bttm" style="padding-bottom: 7px;">Quelques averses ou d'orages cessant cet après-midi. Nuageux par la suite. Risque d'orages violents. Vents du sud-ouest de 20 km/h devenant légers ce soir. Minimum 12.</div>
           </div>
-          <div class="row">
+          <div class="row" style="padding-top: 7px;">
             <div class="col-xs-6"><img width="60" height="51" src="../../../weather/weathericons/06.gif" alt="Possibilité d'averses" class="pull-right" title="Possibilité d'averses"></div>
             <div class="col-xs-6">
               <strong>
@@ -910,7 +947,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
       </details>
     </section>
     <section class="mrgn-tp-lg">
-      <details class="panel panel-default wxo-avgextrm" open="open">
+      <details class="panel panel-default wxo-avgextrm">
         <summary class="panel-heading">
           <h2>Moyennes et extrêmes</h2>
         </summary>
@@ -996,7 +1033,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
       </details>
     </section>
     <section class="mrgn-tp-lg">
-      <details class="panel panel-default" open="open">
+      <details class="panel panel-default">
         <summary class="panel-heading">
           <h2>Données d'hier</h2>
         </summary>
@@ -1044,16 +1081,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         <a class="btn btn-default btn-sm btn-block wxo-imperial-hide wxo-city-hidden" role="button" href="../../../weather/past_conditions/index_e.html">Dernières 24 heures</a>
       </li>
       <li>
-        <a href="../../../weather/radar/xft-index_e.html" class="btn btn-default btn-sm btn-block">Radar</a>
-      </li>
-      <li>
         <a href="../../../weather/satellite/index_e.html" class="btn btn-default btn-sm btn-block">Satellite</a>
-      </li>
-      <li>
-        <a href="../../../weather/lightning/index_e.html" class="btn btn-default btn-sm btn-block">Foudre</a>
-      </li>
-      <li>
-        <a href="../../../weather/forecast/hourly/on-118_metric_e.html" class="btn btn-default btn-sm btn-block">Prévisions 24 heure</a>
       </li>
       <li>
         <a href="../../../weather/airquality/pages/onaq-008_e.html" class="btn btn-default btn-sm btn-block">Cote air santé</a>
