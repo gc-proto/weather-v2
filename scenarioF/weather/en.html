@@ -12,6 +12,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!--[if gte IE 9 | !IE ]><!-->
 <link href="./GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
 <link rel="stylesheet" href="./GCWeb/css/theme.min.css">
+<link rel="stylesheet" href="../weather/city/styles/city.css">
+<link rel="stylesheet" href="../weather/cacheable/css/city/city_js.css">
+<!-- <link rel="stylesheet" href="../weather/template/wxo/css/wxo.css" /> -->
+<link rel="stylesheet" href="../weather/cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
+
 <!--<![endif]-->
 <!--[if lt IE 9]>
 <link href="./GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -228,10 +233,27 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
    <h3 class="h5"><a href="/en/services/benefits/disability.html">Disability benefits</a></h3> 
    <p>Includes disability pensions and children’s benefits, savings plans and a gasoline tax refund program.</p> 
   </section> 
+  
   <section class="col-lg-4 col-md-6"> 
    <h3 class="h5"><a href="index_e.html">Weather</a></h3> 
+   
+   
+   <!-- ACCESS CITY -->
+<div>
+	
+	<form role="search" id="cityjump" method="GET" action="">
+   	<label id="search-label" for="city" accesskey="g" class="wb-invisible">Find a city</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="S’il vous plaît taper au moins deux caractères (Au maximum 50)" required data-h5-errorid="invalid-city" placeholder="Find a city" />
+   	<input type="submit" id="jump" class="" value="Go"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+	<div id="invalid-city"></div>
+</form>
+   
+ </div>
    <p>Information on current conditions, short and long-term forecasts and public weather alerts, access marine forecasts, the Air Quality Health Index and historical climate data.</p> 
-  </section> 
+   
+   
+    </section> 
   <section class="col-lg-4 col-md-6"> 
    <h3 class="h5"><a href="http://www.cic.gc.ca/english/residents/passport.asp">Get a passport</a></h3> 
    <p>Includes passport applications, passport offices and processing times for renewals and new applications.</p> 
@@ -340,5 +362,90 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="./wet-boew/js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
 <script src="./GCWeb/js/theme.min.js"></script>
+<script src="../weather/cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="../weather/cacheable/js/city/availableTags_e.min.js"></script>
+<script type="text/javascript" src="../weather/city/js/cityjump.js"></script>
+
+<script>
+    document.getElementById("jump").className = "";
+    var max_chars = 50;
+
+    $('#city').keydown( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+
+    $('#city').keyup( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+	
+	
+</script>
+
+<script>
+
+$(document).ready(function() {
+
+function snoopCities(event, ui) {
+    if (ui.item === null || typeof(ui.item) === 'undefined') {
+        $("#city").data("ref", null);
+        return;
+    }
+    
+    switch(ui.item.label) {
+        case "Montréal, QC": {
+            $("#city").data("ref", "city/pages/qc-147_metric_e.html");
+            break;
+			
+		}
+		 case "Ottawa (Kanata - Orléans), ON": {
+            $("#city").data("ref", "city/pages/on-118_metric_e.html");
+            break;
+			
+		}
+
+		case "Toronto, ON": {
+            $("#city").data("ref", "city/pages/on-143_metric_e.html");
+            break;
+			
+		}
+		
+		case "Arnprior, ON": {
+            $("#city").data("ref", "city/pages/on-58_metric_e.html");
+            break;
+			
+		}
+
+        default: {
+            $("#city").data("ref", null);
+        }
+    }
+}
+
+$("#city").autocomplete("option", "select", snoopCities);
+
+$("#cityjump").on("submit", function(e) {
+    e.preventDefault();
+
+    var targetUrl = $("#city").data("ref");
+    if (targetUrl !== null) {
+        window.location.href = targetUrl;
+    }
+    /*
+    else {
+        //Todo: remove this.
+        alert("Unknown destination.");
+    }
+    */
+});
+
+});
+
+</script>
+
+
 </body>
 </html>
