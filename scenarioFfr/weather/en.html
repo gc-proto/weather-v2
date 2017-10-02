@@ -12,12 +12,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!--[if gte IE 9 | !IE ]><!-->
 <link href="./GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
 <link rel="stylesheet" href="./GCWeb/css/theme.min.css">
-
-
-
 <link rel="stylesheet" href="../weather/city/styles/city.css">
 <link rel="stylesheet" href="../weather/cacheable/css/city/city_js.css">
-<link rel="stylesheet" href="../weather/template/wxo/css/wxo.css" />
+<!-- <link rel="stylesheet" href="../weather/template/wxo/css/wxo.css" /> -->
+<link rel="stylesheet" href="../weather/cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
 
 <!--<![endif]-->
 <!--[if lt IE 9]>
@@ -199,23 +197,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <section> 
 
 
-<!-- ACCESS CITY -->
-
-<div class="container hidden-print" style="padding-top: 15px;">
-
-<span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
-	
-	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
-   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Accéder à une ville</label>
-   	<input id="city" type="text" name="city" pattern=".{2,50}" title="S’il vous plaît taper au moins deux caractères (Au maximum 50)" required data-h5-errorid="invalid-city" placeholder="Accéder à une ville" />
-   	<input type="hidden" name="lang" value="e"/>
-   	<input type="hidden" name="unit" value=""/>
-   	<input type="submit" id="jump" class="" value="Aller"/>
-   	<noscript><input type="submit" id="jumpnojs" value="Aller" formnovalidate/></noscript>
-	<div id="invalid-city"></div>
-</form>
-</div>
-
  <div class="row"> 
   <div class="col-md-12"> 
    <h1 class="h1">Services et renseignements les plus demandés</h1> 
@@ -228,6 +209,25 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
   </div> 
  </div> 
  <div class="wb-eqht row"> 
+  <section class="col-lg-4 col-md-6"> 
+   <h3 class="h5"><a href="./index_e.html">Météo</a></h3> 
+   
+    <!-- ACCESS CITY -->
+<div>
+	
+	<form role="search" id="cityjump" method="GET" action="">
+   	<label id="search-label" for="city" accesskey="g" class="wb-invisible">Accéder à une ville</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="S’il vous plaît taper au moins deux caractères (Au maximum 50)" required data-h5-errorid="invalid-city" placeholder="Accéder à une ville" />
+   	<input type="submit" id="jump" class="" value="Aller"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+	<div id="invalid-city"></div>
+</form>
+   
+ </div>
+ 
+ 
+   <p>Renseignements sur les conditions actuelles, les prévisions à court et long terme et les alertes météo publiques, accès aux prévisions maritimes, à la Cote air santé et aux données climatiques historiques.</p> 
+  </section> 
   <section class="col-lg-4 col-md-6"> 
     <h3 class="h5"><a href="/fr/services/emplois/opportunites.html">Trouver un emploi</a></h3> 
    <p>Trouvez des possibilités d’emploi et des programmes d’embauche dans les secteurs public et privé, demandez ou prolongez un permis de travail, obtenez un numéro d’assurance sociale, une vérification du casier judiciaire ou une vérification de sécurité.</p> 
@@ -256,10 +256,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
    <h3 class="h5"><a href="/fr/services/prestations/handicap.html">Prestations d’invalidité</a></h3> 
    <p>Comprend des prestations d’invalidité et la prestation pour enfants handicapés, des régimes d’épargne et un programme de remboursement de la taxe d'accise sur l'essence.</p> 
   </section> 
-  <section class="col-lg-4 col-md-6"> 
-   <h3 class="h5"><a href="./index_e.html">Météo</a></h3> 
-   <p>Renseignements sur les conditions actuelles, les prévisions à court et long terme et les alertes météo publiques, accès aux prévisions maritimes, à la Cote air santé et aux données climatiques historiques.</p> 
-  </section> 
+
   <!--<div class="clearfix visible-md"></div> --> 
   <section class="col-lg-4 col-md-6"> 
    <h3 class="h5"><a href="http://www.cic.gc.ca/francais/passeport/index.asp">Obtenir un passeport</a></h3> 
@@ -373,8 +370,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="./GCWeb/js/theme.min.js"></script>
 
-<!-- ACCESS CITY -->
-
+<script src="./GCWeb/js/theme.min.js"></script>
 <script src="../weather/cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
 <script src="../weather/cacheable/js/city/availableTags_e.min.js"></script>
 <script type="text/javascript" src="../weather/city/js/cityjump.js"></script>
@@ -394,10 +390,70 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             $(this).val($(this).val().substr(0, max_chars));
         }
     });
+	
+	
 </script>
 
-<!-- ACCESS CITY -->
+<script>
 
+$(document).ready(function() {
+
+function snoopCities(event, ui) {
+    if (ui.item === null || typeof(ui.item) === 'undefined') {
+        $("#city").data("ref", null);
+        return;
+    }
+    
+    switch(ui.item.label) {
+        case "Montréal, QC": {
+            $("#city").data("ref", "city/pages/qc-147_metric_e.html");
+            break;
+			
+		}
+		 case "Ottawa (Kanata - Orléans), ON": {
+            $("#city").data("ref", "city/pages/on-118_metric_e.html");
+            break;
+			
+		}
+
+		case "Toronto, ON": {
+            $("#city").data("ref", "city/pages/on-143_metric_e.html");
+            break;
+			
+		}
+		
+		case "Arnprior, ON": {
+            $("#city").data("ref", "city/pages/on-58_metric_e.html");
+            break;
+			
+		}
+
+        default: {
+            $("#city").data("ref", null);
+        }
+    }
+}
+
+$("#city").autocomplete("option", "select", snoopCities);
+
+$("#cityjump").on("submit", function(e) {
+    e.preventDefault();
+
+    var targetUrl = $("#city").data("ref");
+    if (targetUrl !== null) {
+        window.location.href = targetUrl;
+    }
+    /*
+    else {
+        //Todo: remove this.
+        alert("Unknown destination.");
+    }
+    */
+});
+
+});
+
+</script>
 
 </body>
 </html>
