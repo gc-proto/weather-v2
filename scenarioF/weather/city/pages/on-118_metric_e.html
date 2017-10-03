@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" dir="ltr"> <!--<![endif]--><head>
@@ -126,7 +125,7 @@
 </div>
 </nav>
 
-<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+<nav role="navigation" id="wb-bc" class="hidden-xs" property="breadcrumb">
 	<h2>You are here:</h2>
 	<div class="container">
 	<div class="row">
@@ -139,6 +138,19 @@
 	</div>
 </div>
 </nav>
+
+<nav role="navigation" id="wb-bc" class="visible-xs" property="breadcrumb">
+	<h2>You are here:</h2>
+	<div class="container">
+	<div class="row">
+		<ol class="breadcrumb">
+		<li><a href="../../../weather/en.html">Home</a></li><li>...</li>
+		<li><a href="../../../weather/canada_e.html">Local forecasts</a></li>
+		</ol>
+	</div>
+</div>
+</nav>
+
 </header>
 
 <div class="container hidden-print">
@@ -193,26 +205,28 @@
 <h1 id="wb-cont" property="name">Ottawa (Kanata - Orléans), <abbr title="Ontario">ON</abbr>
 </h1>
 <div id="container">
-  <div id="noalert" class="hidden-print"><h2><a href="../../../weather/warnings/index_e.html">No Alerts in effect</a></h2></div>
+  <!-- <div id="noalert" class="hidden-print"><h2><a href="../../../weather/warnings/index_e.html">No Alerts in effect</a></h2></div> -->
   <div id="mainContent" class="mrgn-tp-lg">
     <section>
       <details class="panel panel-default hidden-xs" open="open">
         <summary class="panel-heading">
           <h2>Current Conditions<span class="small visible-print-inline-block pull-right">Observed at: Ottawa Macdonald-Cartier Int'l Airport   3:30 PM EST Tuesday 5 September 2017</span></h2>
         </summary>
+		
+		
     <ul class="hidden-print hidden-xs pull-right list-inline mrgn-rght-sm mrgn-bttm-0 wxo-moveup">
           <li>
-            <a class="wxo-metric-hide" href="../../past_conditions/index_e.html">Past 24 hours</a>
-            <a class="wxo-imperial-hide wxo-city-hidden" href="../../past_conditions/index_e.html">Past 24 hours</a>
+            <a class="wxo-metric-hide" href="../../../weather/radar/xft-index_e.html">Radar</a>
+            <a class="wxo-imperial-hide wxo-city-hidden" href="../../../weather/radar/xft-index_e.html">Radar</a>
           </li>
           <li class="brdr-lft">
-            <a href="../../../weather/radar/xft-index_e.html">Radar</a>
+			 <a href="../../../weather/satellite/index_e.html">Satellite</a>
           </li>
           <li class="brdr-lft">
-            <a href="../../../weather/satellite/index_e.html">Satellite</a>
+		    <a href="../../../weather/lightning/ONT-index_e.html">Lightning</a>
           </li>
           <li class="brdr-lft">
-            <a href="../../../weather/lightning/index_e.html">Lightning</a>
+		  <a href="../../../weather/past_conditions/index_e.html">Past 24 hours</a>
           </li>
         </ul>
 		
@@ -472,7 +486,7 @@
         </summary>
         <ul class="hidden-print pull-right list-inline mrgn-rght-sm mrgn-bttm-0 wxo-moveup">
           <li class="brdr-rght">
-            <a href="../../../weather/forecast/hourly/on-118_metric_e.html">24 Hour Forecast</a>
+            <a href="../../../weather/forecast/hourly/on-118_metric_e.html">Hourly Forecast</a>
           </li>
           <li class="brdr-rght">
             <abbr title=""><a href="../../../weather/airquality/pages/onaq-008_e.html">AQHI</a>
@@ -754,6 +768,24 @@
         </table>
       </details>
     </section>
+	
+	<!-- LINKS MOVED UP -->
+
+   
+    <ul class="list-unstyled visible-xs wxo-btn">
+      
+      <li>
+        <a class="btn btn-default btn-sm btn-block" a href="../../../weather/forecast/hourly/on-118_metric_e.html">Hourly Forecast</a>
+      </li>
+        <a class="btn btn-default btn-sm btn-block" href="../../../weather/radar/xft-index_e.html">Radar</a>
+      </li>
+      <li>
+        <a class="btn btn-default btn-sm btn-block" href="../../../weather/lightning/ONT-index_e.html">Lightning</a>
+      </li>
+     
+    </ul>
+	
+	
     <section class="mrgn-tp-lg visible-xs">
       <details class="panel panel-default wxo-fcst" open="open">
         <summary class="panel-heading">
@@ -762,28 +794,35 @@
         <section>
           <h3 class="h5 mrgn-lft-md hidden-print"><span class="wb-inv">Detailed Forecast</span>Issued: 11:00 AM EST Tuesday 5 September 2017</h3>
           <div class="row">
+		  <a href="../../../weather/forecast/hourly/on-118_metric_e.html">
             <div class="col-xs-6"><img width="60" height="51" src="../../../weather/weathericons/01.gif" alt="Mainly sunny" class="pull-right"></div>
             <div class="col-xs-6">
-              <a href="../../../weather/forecast/hourly/on-118_metric_e.html">
-                <strong title="Tuesday">Today</strong>
-              </a>
-              <br><span class="high wxo-metric-hide" title="max">22&deg;<abbr title="Celsius">C</abbr>
+             
+                <strong title="Tuesday" style="color: black !important; text-decoration: underline !important;">Today</strong>
+             
+              <br><span class="high wxo-metric-hide" style="color: black; !important" title="max">22&deg;<abbr title="Celsius">C</abbr>
               </span><span class="high wxo-imperial-hide wxo-city-hidden" title="max">72&deg;<abbr title="Fahrenheit">F</abbr>
               </span>
             </div>
+			
+			 </a>
+			 
           </div>
           <div class="row">
             <div class="col-xs-12 brdr-bttm mrgn-bttm-md">Mainly sunny. Wind southwest 30 km/h gusting to 50. High 22. Humidex 25. UV index 6 or high.</div>
           </div>
           <div class="row">
+		  <a href="../../../weather/forecast/hourly/on-118_metric_e.html#tonight">
             <div class="col-xs-6"><img width="60" height="51" src="../../../weather/weathericons/31.gif" alt="A few clouds" class="pull-right"></div>
             <div class="col-xs-6">
-              <strong title="Tuesday night">Tonight</strong>
-              <br><span class="low wxo-metric-hide" title="min">15&deg;<abbr title="Celsius">C</abbr>
+			
+              <strong title="Tuesday night" style="color: black !important; text-decoration: underline !important;">Tonight</strong>
+              <br><span class="low wxo-metric-hide" style="color: black !important; font-weight: bold !important;" title="min">15&deg;<abbr title="Celsius">C</abbr>
               </span><span class="low wxo-imperial-hide wxo-city-hidden" title="min">59&deg;<abbr title="Fahrenheit">F</abbr>
               </span>
             </div>
           </div>
+		  </a>
           <div class="row">
             <div class="col-xs-12 brdr-bttm mrgn-bttm-md">A few clouds. Wind southwest 30 km/h gusting to 50. Low 15.</div>
           </div>
@@ -906,7 +945,7 @@
       </details>
     </section>
     <section class="mrgn-tp-lg">
-      <details class="panel panel-default wxo-avgextrm" open="open">
+      <details class="panel panel-default wxo-avgextrm">
         <summary class="panel-heading">
           <h2>Averages and extremes</h2>
         </summary>
@@ -992,9 +1031,9 @@
       </details>
     </section>
     <section class="mrgn-tp-lg">
-      <details class="panel panel-default" open="open">
+      <details class="panel panel-default">
         <summary id="yesterday" class="panel-heading">
-          <h2>Yesterday's Data</h2>
+          <h2>Yesterday's data</h2>
         </summary>
         <ul class="hidden-print hidden-xs pull-right list-inline mrgn-rght-sm mrgn-bttm-0 wxo-moveup">
           <li>
@@ -1045,18 +1084,11 @@
         <a class="btn btn-default btn-sm btn-block wxo-metric-hide" role="button" href="../../../weather/past_conditions/index_e.html">Past 24 hour Conditions</a>
         <a class="btn btn-default btn-sm btn-block wxo-imperial-hide wxo-city-hidden" role="button" href="../../../weather/past_conditions/index_e.html">Past 24 hour Conditions</a>
       </li>
-      <li>
-        <a href="../../../weather/radar/index_e.html" class="btn btn-default btn-sm btn-block">Radar</a>
-      </li>
+    
       <li>
         <a href="../../../weather/satellite/index_e.html" class="btn btn-default btn-sm btn-block">Satellite</a>
       </li>
-      <li>
-        <a href="../../../weather/lightning/index_e.html" class="btn btn-default btn-sm btn-block">Lightning</a>
-      </li>
-      <li>
-        <a href="../../../weather/forecast/hourly/on-118_metric_e.html" class="btn btn-default btn-sm btn-block">24 Hour Forecast</a>
-      </li>
+     
       <li>
         <a href="../../../weather/airquality/pages/onaq-008_e.html" class="btn btn-default btn-sm btn-block">Air Quality Health Index</a>
       </li>
