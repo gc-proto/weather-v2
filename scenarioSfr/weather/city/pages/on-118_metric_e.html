@@ -133,7 +133,7 @@
     </div>
 </div>
 </nav>
-<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+<nav role="navigation" id="wb-bc" class="hidden-xs" property="breadcrumb">
 	<h2>Vous êtes ici :</h2>
 	<div class="container">
 	<div class="row">
@@ -146,6 +146,19 @@
 	</div>
 </div>
 </nav>
+
+<nav role="navigation" id="wb-bc" class="visible-xs" property="breadcrumb">
+	<h2>Vous êtes ici :</h2>
+	<div class="container">
+	<div class="row">
+		<ol class="breadcrumb">
+		<li><a href="../../../weather/en.html">Accueil</a></li><li>...</li>
+		<li><a href="../../../weather/canada_e.html">Prévisions locales</a></li>
+		</ol>
+	</div>
+</div>
+</nav>
+
 </header>
 
 <div class="container hidden-print">
@@ -203,8 +216,8 @@
 </h1>
 <div id="container">
 												<div id="statement">
-										 <h2>
-    <a href="../../../weather/warnings/ottawa-report_e.html">BULLETIN MÉTÉOROLOGIQUE SPÉCIAL EN VIGUEUR</a>
+										 <h2  style="text-decoration: underline !important;">
+    <a href="../../../weather/warnings/ottawa-report_e.html">AVIS DE POUDRERIE EN VIGUEUR EN VIGUEUR - DÉTAILS >></a>
   </h2>
 					</div>
 				<div id="mainContent" class="mrgn-tp-lg">
@@ -214,20 +227,21 @@
           <h2>Conditions actuelles<span class="small visible-print-inline-block pull-right">Enregistrées à : Aéroport int. Macdonald-Cartier d'Ottawa   14h00 HNE le dimanche 1 janvier 2017</span></h2>
         </summary>
         <ul class="hidden-print hidden-xs pull-right list-inline mrgn-rght-sm mrgn-bttm-0 wxo-moveup">
-          <li>
-            <a class="wxo-metric-hide" href="../../../weather/past_conditions/index_e.html">24 dernières heures</a>
-            <a class="wxo-imperial-hide wxo-city-hidden" href="../../../weather/past_conditions/index_e.html">24 dernières heures</a>
-          </li>
-           <li class="brdr-lft">
-            <a href="../../../weather/radar/xft-index_e.html">Radar</a>
+           <li>
+            <a class="wxo-metric-hide" href="../../../weather/radar/xft-index_e.html">Radar</a>
+            <a class="wxo-imperial-hide wxo-city-hidden" href="../../../weather/radar/xft-index_e.html">Radar</a>
           </li>
           <li class="brdr-lft">
-            <a href="../../../weather/satellite/index_e.html">Satellite</a>
+			<a href="../../../weather/satellite/index_e.html">Satellite</a>
           </li>
           <li class="brdr-lft">
-            <a href="../../../weather/lightning/index_e.html">Foudre</a>
+			<a href="../../../weather/lightning/ONT-index_e.html">Foudre</a>
+          </li>
+          <li class="brdr-lft">
+            <a href="../../../weather/past_conditions/index_e.html">24 dernières heures</a>
           </li>
         </ul>
+
         <div class="row no-gutters wb-eqht hidden-print">
           <div class="col-sm-2 brdr-rght  text-center"><img width="60" height="51" class="center-block mrgn-tp-md" src="../../../weather/weathericons/25.gif" alt="Neige" title="Neige"><p class="visible-xs text-center">Neige</p>
             <div>
@@ -499,8 +513,8 @@
         </ul>
         <table class="table table-condensed mrgn-bttm-0 wxo-iconfore">
           <tr>
-            <th scope="col">
-              <a href="../../../weather/forecast/hourly/on-118_metric_e.html">
+            <th scope="col" style="background-color: #707070 !important;">
+              <a href="../../../weather/forecast/hourly/on-118_metric_e.html" style="color: white !important;">
                 <strong title="dimanche">dim</strong>
                 <br>1 <abbr title="January">jan</abbr>
               </a>
@@ -597,7 +611,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="col">Ce soir et cette nuit</th>
+            <th scope="col" style="background-color: #707070 !important;"><a href="../../../weather/forecast/hourly/on-118_metric_e.html#soir" style="color: white !important;"> Ce soir et cette nuit</th></a>
             <th scope="col" title="lundi soir, 02 janvier"> Nuit</th>
             <th scope="col" title="mardi soir, 03 janvier"> Nuit</th>
             <th scope="col" title="mercredi soir, 04 janvier"> Nuit</th>
@@ -686,7 +700,9 @@
                 </tr>
                 <tr class="pdg-tp-0">
                   <td>
+				   <a href="../../../weather/forecast/hourly/on-118_metric_e.html#soir">
                     <strong title="Sunday night">Ce soir et cette nuit</strong>
+					</a>
                   </td>
                   <td>Passages nuageux avec neige. Minimum moins 6.</td>
                 </tr>
@@ -775,6 +791,21 @@
         </table>
       </details>
     </section>
+	
+	<ul class="list-unstyled visible-xs wxo-btn">
+     
+      <li>
+        <a href="../../../weather/radar/xft-index_e.html" class="btn btn-default btn-sm btn-block">Radar</a>
+      </li>
+      <li>
+        <a href="../../../weather/lightning/ONT-index_e.html" class="btn btn-default btn-sm btn-block">Foudre</a>
+      </li>
+<li>
+        <a href="../../../weather/forecast/hourly/on-118_metric_e.html" class="btn btn-default btn-sm btn-block">Prévisions horaires</a>
+      </li>	  
+    </ul>
+
+	
     <section class="mrgn-tp-lg visible-xs">
       <details class="panel panel-default wxo-fcst" open="open">
         <summary class="panel-heading">
@@ -782,34 +813,62 @@
         </summary>
         <section>
           <h3 class="h5 mrgn-lft-md hidden-print"><span class="wb-inv">Prévisions détaillées</span>Émises à : 5h00 HNE le dimanche 1 janvier 20177</h3> 
-          <div class="row">
-            <div class="col-xs-6">
-			<img width="60" height="51" src="../../../weather/weathericons/16.gif" alt="Neige" class="pull-right" title="Neige"></div>
-            <div class="col-xs-6">
-              <a href="../../../weather/forecast/hourly/on-118_metric_e.html">
-                <strong title="dimanche">Aujourd'hui</strong>
-              </a>
-              <br><span class="high wxo-metric-hide" title="max">-2&deg;<abbr title="Celsius">C</abbr>
-              </span><span class="high wxo-imperial-hide wxo-city-hidden" title="max">28&deg;<abbr title="Fahrenheit">F</abbr>
+          
+		   <div class="row" style="background-color: #707070 !important; padding-top: 10px; border-top: solid #ccc 1px; border-left: solid 5px #707070;">
+          <a href="../../../weather/warnings/ottawa-report_e.html">
+           
+            <div style="background-color: #707070 !important; text-align: center !important; padding-bottom: 5px;">
+            
+                <strong title="Friday" style="color: white !important; text-decoration: underline !important; text-align: centered !important; font-size: 15px;">AVIS DE POUDRERIE EN VIGUEUR EN VIGUEUR - DÉTAILS >></strong> 
+          
+             
+            </div>
+          </div>
+          </a>
+
+		  
+              
+          <div class="row" style="background-color: #dee5ff !important; padding-top: 10px; border-top: solid #ccc 1px; border-left: solid 5px #707070;">
+          <a href="../../../weather/forecast/hourly/on-118_metric_e.html">
+            <div class="col-xs-6"  style="background-color: #dee5ff !important;"><img width="60" height="51" src="../../../weather/weathericons/16.gif" alt="Neige" class="pull-right" title="Neige"></div>
+            <div class="col-xs-6"  style="background-color: #dee5ff !important;">
+            
+                <strong title="Friday" style="color: black !important; text-decoration: underline !important;">Aujourd'hui</strong> 
+          
+              
+              <br><span class="high wxo-metric-hide"  style="color: black; !important" title="max">-2&deg;<abbr title="Celsius">C</abbr>
+              </span><span class="high wxo-imperial-hide wxo-city-hidden" style="color: black; !important" title="max">84&deg;<abbr title="Fahrenheit">F</abbr>
               </span>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12 brdr-bttm mrgn-bttm-md">Généralement nuageux. Neige intermittente. Maximum moins 2.</div>
+          </a>
+          
+          
+          <div class="row" style="background-color: #dee5ff !important; border-left: solid 5px #707070;">
+            <div class="col-xs-12 mrgn-bttm-md" style="padding-bottom: 7px; border-bottom: dashed #ccc 1px;">Généralement nuageux. Neige intermittente. Maximum moins 2.</div>
           </div>
-          <div class="row">
+          <div class="row" style="background-color: #dee5ff !important; border-left: solid 5px #707070;">
+          
+          <a href="../../../weather/forecast/hourly/on-118_metric_e.html#soir">
             <div class="col-xs-6"><img width="60" height="51" src="../../../weather/weathericons/38.gif" alt="Neige" class="pull-right" title="Neige"></div>
             <div class="col-xs-6">
-              <strong title="dimanche night">Ce soir et cette nuit</strong>
-              <br><span class="low wxo-metric-hide" title="min">-6&deg;<abbr title="Celsius">C</abbr>
-              </span><span class="low wxo-imperial-hide wxo-city-hidden" title="min">21&deg;<abbr title="Fahrenheit">F</abbr>
+              <strong title="Friday night" style="color: black !important; text-decoration: underline !important;">Ce soir et cette nuit</strong>
+          
+              
+              
+               <br><span class="high wxo-metric-hide" style="color: black; !important"title="max">-6&deg;<abbr title="Celsius">C</abbr>
+              </span><span class="low wxo-imperial-hide wxo-city-hidden" style="color: black; !important" title="min">61&deg;<abbr title="Fahrenheit">F</abbr>
               </span>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12 brdr-bttm mrgn-bttm-md">Passages nuageux avec neige. Minimum moins 6.</div>
+          </a>
+          <div class="row" style="background-color: #dee5ff !important; border-left: solid 5px #707070;">
+            <div class="col-xs-12 brdr-bttm" style="padding-bottom: 7px;">Passages nuageux avec neige. Minimum moins 6.</div>
           </div>
-          <div class="row">
+
+		  
+		  
+          <div class="row" style="padding-top: 7px;">
             <div class="col-xs-6"><img width="60" height="51" src="../../../weather/weathericons/16.gif" alt="Neige" class="pull-right" title="Neige"></div>
             <div class="col-xs-6">
               <strong>
@@ -875,7 +934,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-12">Alternance de soleil et de nuages avec 30 pour cent de probabilité d'averses de neige ou de pluie. Maximum -9.</div>
+            <div class="col-xs-12">Alternance de soleil et de nuages avec 30 pour cent de probabilité d'averses de neige ou de pluie. Maximum  moins 9.</div>
           </div>
           <div class="row">
             <div class="col-xs-12 brdr-bttm mrgn-bttm-md">
@@ -928,7 +987,7 @@
       </details>
     </section>
     <section class="mrgn-tp-lg">
-      <details class="panel panel-default wxo-avgextrm" open="open">
+      <details class="panel panel-default wxo-avgextrm">
         <summary class="panel-heading">
           <h2>Moyennes et extrêmes</h2>
         </summary>
@@ -1020,7 +1079,7 @@
 	
 	
     <section class="mrgn-tp-lg">
-      <details class="panel panel-default" open="open">
+      <details class="panel panel-default">
         <summary class="panel-heading">
           <h2>Données d'hier</h2>
         </summary>
@@ -1068,18 +1127,11 @@
         <a class="btn btn-default btn-sm btn-block wxo-metric-hide" role="button" href="../../../weather/past_conditions/index_e.html">Dernières 24 heures</a>
         <a class="btn btn-default btn-sm btn-block wxo-imperial-hide wxo-city-hidden" role="button" href="../../../weather/past_conditions/index_e.html">Dernières 24 heures</a>
       </li>
-      <li>
-        <a href="../../../weather/radar/xft-index_e.html" class="btn btn-default btn-sm btn-block">Radar</a>
-      </li>
+     
       <li>
         <a href="../../../weather/satellite/index_e.html" class="btn btn-default btn-sm btn-block">Satellite</a>
       </li>
-      <li>
-        <a href="../../../weather/lightning/index_e.html" class="btn btn-default btn-sm btn-block">Foudre</a>
-      </li>
-      <li>
-        <a href="../../../weather/forecast/hourly/on-118_metric_e.html" class="btn btn-default btn-sm btn-block">Prévisions 24 heures</a>
-      </li>
+ 
       <li>
         <a href="../../../weather/airquality/pages/onaq-008_e.html" class="btn btn-default btn-sm btn-block">Cote air santé</a>
       </li>
