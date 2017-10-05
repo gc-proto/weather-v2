@@ -41,6 +41,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <link rel="stylesheet" href="../../../weather/city/styles/city.css">
 <link rel="stylesheet" href="../../../weather/cacheable/css/city/city_js.css">
 <link rel="stylesheet" href="../../../weather/template/wxo/css/wxo.css" />
+<!-- Script for the radar include call-->
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script> 
+$(function(){
+  $("#radarmap").load("/includes/franktown-radar.html"); 
+});
+</script> 
+<!--end include call script-->
 <ul id="wb-tphp">
 <li class="wb-slc">
 <a class="wb-sl" href="#wb-cont">Skip to main content</a>
@@ -968,6 +976,20 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         </div>
       </details>
     </section>
+    
+    <!-- including the radar map-->
+    
+    <section class="mrgn-tp-lg">
+      <details class="panel panel-default wxo-avgextrm">
+        <summary class="panel-heading">
+          <h2>Weather radar</h2>
+	  <div id='radarmap'></div>   
+        </summary>
+      </details>
+    </section>
+    <!-- radar map end-->
+				      
+				      
     <section class="mrgn-tp-lg">
       <details class="panel panel-default wxo-avgextrm">
         <summary class="panel-heading">
