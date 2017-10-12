@@ -191,7 +191,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 <div id="container">
-  <a href="../../../weather/warnings/ottawa-report_e.html" style="text-decoration: none !important;"><div id="watch" style="padding-top: 20px; padding-bottom: 15px; padding-left: 15px; padding-right: 15px; border: solid 1px #CCC !important; border-radius: 3px !important;"><h2 style="line-height: 20px !important; text-align: left !important; color: black; font-size: 19px;"><img src="../../img/weather/lightning_icon.png" style="height: 25px; padding-right: 5px;">SEVERE THUNDERSTORM WATCH IN EFFECT</h2><p style="text-decoration: underline !important; font-weight: bold !important; color: black; padding-top: 10px;">Conditions are favourable for the development of severe thunderstorms this afternoon and this evening - details >></p></div></a>
+  <a href="../../../weather/warnings/ottawa-report_e.html" style="text-decoration: none !important;"><div id="watch" style="padding-top: 20px; padding-bottom: 15px; padding-left: 15px; padding-right: 15px; border: none !important;"><h2 style="line-height: 20px !important; text-align: left !important; color: black; font-size: 19px;"><img src="../../img/weather/lightning_icon.png" style="height: 25px; padding-right: 5px;">SEVERE THUNDERSTORM WATCH IN EFFECT</h2><p style="text-decoration: underline !important; font-weight: bold !important; color: black; padding-top: 10px;">Conditions are favourable for the development of severe thunderstorms this afternoon and this evening - details >></p></div></a>
+  
   
   <div id="mainContent" class="mrgn-tp-lg">
     <section>
@@ -212,10 +213,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		 <div style="margin-left: 0px !important; padding-left: 30px !important; border: none !important; background-color: #fff !important; border-bottom: 1px #ddd solid !important;">
 		 
 		 <ul class="hidden-print hidden-xs list-inline wxo-move" style="margin-bottom: 0 !important;">
-          <li>
-            <a class="wxo-metric-hide" href="../../../weather/radar/xft-index_e.html">Weather radar</a>
-            <a class="wxo-imperial-hide wxo-city-hidden" href="../../../weather/radar/xft-index_e.html">Weather radar</a>
-          </li>
           <li  style="padding-left: 12px !important; padding-right 12px !important;">
 		    <a href="../../../weather/lightning/ONT-index_e.html">Lightning</a>
           </li>
@@ -520,9 +517,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
       </details>
     </section>
 	
-
-		
-	<a href="../../../weather/lightning/ONT-index_e.html" style="text-decoration: none !important;">
+	 <a href="../../../weather/lightning/ONT-index_e.html" style="text-decoration: none !important;">
 	<div class="alert alert-danger">
 	<h3> Lightning is currently striking your area</h3> <p style="text-decoration: underline;"> See the lightning map for current lightning strikes >></p>
 	</div>
@@ -531,7 +526,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	<!-- ADDING IN RADAR -->
 	
 <section class="mrgn-tp-lg">
-      <details class="panel panel-default wxo-avgextrm" open="open">
+      <details class="panel panel-default wxo-avgextrm" id="radar" open="open">
 			<summary class="panel-heading" style="background-color: white !important;">
 				<h2>Current weather radar</h2>
 			</summary>
@@ -904,7 +899,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         <section>
           <details class="wxo-detailedfore">
             <summary class="blackfont hidden-print">
-              <h3 class="h5"><span class="wb-inv">Detailed Forecast</span>Issued: 5:00 AM EST Thursday 24 August 2017</h3>
+              <h3 class="h5"><span class="wb-inv">Detailed Forecast</span>Detailed Forecast</h3>
             </summary>
             <table class="table mrgn-bttm-md mrgn-tp-md textforecast">
               <thead>
@@ -1022,8 +1017,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     <ul class="list-unstyled visible-xs wxo-btn" style="margin-top: 25px;">
       
   
-        <a class="btn btn-default btn-sm btn-block" href="../../../weather/radar/xft-index_e.html">Weather radar</a>
-      </li>
+       <!-- hide <a class="btn btn-default btn-sm btn-block" href="../../../weather/radar/xft-index_e.html">Weather radar</a>
+      </li> -->
       <li>
         <a class="btn btn-default btn-sm btn-block" href="../../../weather/lightning/ONT-index_e.html">Lightning</a>
       </li>
@@ -1575,6 +1570,16 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="../../../weather/cacheable/js/radar/cookie_manager.js"></script>
 <script src="../../../weather/cacheable/js/radar/xmlhttpifr.js"></script> 
 <script src="../../../weather/cacheable/js/radar/radar_controller.js"></script> 
-<script src="../../../weather/cacheable/js/radar/wxo-carousel-radar-city.js"></script>
+<script src="../../../weather/cacheable/js/radar/wxo-carousel-radar-city.js"></script> 
+
+<script>
+$(document).ready(function(){
+		    $('#radar').click(function(){
+	       if (!$("radar" ).hasClass("open"))
+		       getGPSLocation();
+	     });
+ 	});
+</script>
+
 </body>
 </html>
