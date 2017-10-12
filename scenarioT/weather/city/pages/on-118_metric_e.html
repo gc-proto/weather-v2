@@ -21,6 +21,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="/weather/wet-boew/js/ie8-wet-boew.min.js"></script>
 <![endif]-->
 <!--[if lte IE 9]>
+<!--[if lte IE 9]>
 
 
 <![endif]-->
@@ -41,6 +42,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <link rel="stylesheet" href="../../../weather/city/styles/city.css">
 <link rel="stylesheet" href="../../../weather/cacheable/css/city/city_js.css">
 <link rel="stylesheet" href="../../../weather/template/wxo/css/wxo.css" />
+<link rel="stylesheet" href="../../../weather/cacheable/css/radar/controller.css" />
+<link rel="stylesheet" href="../../../weather/cacheable/css/radar/radar2.css" />
+
+
 <ul id="wb-tphp">
 <li class="wb-slc">
 <a class="wb-sl" href="#wb-cont">Skip to main content</a>
@@ -211,13 +216,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             <a class="wxo-metric-hide" href="../../../weather/radar/xft-index_e.html">Weather radar</a>
             <a class="wxo-imperial-hide wxo-city-hidden" href="../../../weather/radar/xft-index_e.html">Weather radar</a>
           </li>
-          <li class="brdr-lft" style="padding-left: 12px !important; padding-right 12px !important;">
+          <li  style="padding-left: 12px !important; padding-right 12px !important;">
 		    <a href="../../../weather/lightning/ONT-index_e.html">Lightning</a>
           </li>
-		     <li class="brdr-lft" style="padding-left: 12px !important; padding-right 12px !important;">
+		     <li  style="padding-left: 12px !important; padding-right 12px !important;">
 			 <a href="../../../weather/satellite/index_e.html">Satellite</a>
           </li>
-          <li class="brdr-lft" style="padding-left: 12px !important; padding-right 12px !important;">
+          <li  style="padding-left: 12px !important; padding-right 12px !important;">
 		  <a href="../../../weather/past_conditions/index_e.html">Past 24 hours</a>
           </li>
         </ul>
@@ -263,7 +268,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               <dd class="mrgn-bttm-0">7:00 AM EST Thursday 24 August 2017</dd>
             </dl>
             <div class="row no-gutters wb-eqht brdr-tp">
-              <div class="col-sm-4 brdr-rght-city">
+              <div class="col-sm-4">
                 <dl class="dl-horizontal wxo-conds-col1">
                   <dt>Condition:</dt>
 				  <dd class="mrgn-bttm-0">Mostly Cloudy</dd>
@@ -275,7 +280,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				  <dd class="mrgn-bttm-0">Falling</dd>
                 </dl>
               </div>
-              <div class="col-sm-4 brdr-rght-city">
+              <div class="col-sm-4">
                 <dl class="dl-horizontal wxo-conds-col2">
                   <dt>Temperature:</dt>
 				  <dd class="mrgn-bttm-0 wxo-metric-hide">20.2&deg;<abbr title="Celsius">C</abbr>
@@ -523,6 +528,173 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	</div>
 	</a>
 	
+	<!-- ADDING IN RADAR -->
+	
+<section class="mrgn-tp-lg">
+      <details class="panel panel-default wxo-avgextrm" open="open">
+			<summary class="panel-heading" style="background-color: white !important;">
+				<h2>Current weather radar</h2>
+			</summary>
+		
+
+
+		
+<div class="animator" id="animator" >
+
+	<div class="content row">
+
+		<div id="animation" class="col-md-12">
+
+		
+				<p class="text-center margin-bottom-none center-block img-responsive" style="background-color: black; width: 580px; color: white";>PRECIPET - Rain / Pluie</p>
+			
+
+			<div id="animation-info" class="row text-center animation-info">
+			</div>
+
+			
+			<div style="position: relative;">
+
+				<img 
+ 				alt="Radar image for Franktown." 
+				title="Radar image for Franktown." 
+				src="../../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_12_00.GIF" 
+				width="580"  
+				height="480"
+				class="wxo-radar-img hidden-xs img-responsive"
+				style="z-index: -1;"	
+
+				/>
+			
+			
+
+			<img class="overlay-img img-responsive center-block" src="../../cacheable/images/radar/layers_detailed/default_cities/xft_towns.gif" alt="Cities" id="composite-cities-image" style="z-index: 60;">
+
+			<img class="overlay-img img-responsive center-block"  src="../../cacheable/images/radar/layers_detailed/roads/XFT_roads.gif" id="roads" alt="Roads" style="z-index: 56;">
+
+			<img class="overlay-img-nojs overlay-img img-responsive wxo-hide-overlay"  src="../../cacheable/images/radar/layers_detailed/road_labels/xft_labs.gif" id="road_num" alt="Road Numbers" style="z-index: 57;">
+
+			<img class="overlay-img img-responsive center-block" src="../../cacheable/images/radar/layers_detailed/radar_circle/radar_circle.gif" alt="Radar Circles" id="radar_circle" style="z-index: 58;">
+			
+			
+
+				<div class="wrapper">
+			
+			
+					<div id="wxo-animator" data-image-current="6" data-image-count="7" data-image-lightning-id="NAT" 
+					data-wxo-anim-0="../../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_10_00.GIF" data-wxo-label-0="#1" 
+					data-wxo-anim-1="../../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_10_20.GIF" data-wxo-label-1="#2" 
+					data-wxo-anim-2="../../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_10_40.GIF" data-wxo-label-2="#3" 
+					data-wxo-anim-3="../../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_11_00.GIF" data-wxo-label-3="#4" 
+					data-wxo-anim-4="../../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_11_20.GIF" data-wxo-label-4="#5" 
+					data-wxo-anim-5="../../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_11_40.GIF" data-wxo-label-5="#6" 
+					data-wxo-anim-6="../../data/radar/detailed/temp_image/XFT_PRECIP_RAIN_2017_08_22_12_00.GIF" data-wxo-label-6="#7" >
+
+						<div id="wxo-carousel" class="wxo-ie8-hide">
+					
+						<p class="wxo-loading-msg text-center mrgn-tp-lg mrgn-bttm-lg">Loading images...</p>
+											
+						 <canvas id="wxo-canvas" class="wxo-active img-responsive center-block" data-image-current="6" data-image-count="7">Please enable JavaScript to view the animation.</canvas>
+				
+					
+						</div>
+
+					</div> 
+				
+				</div><!-- wrapper -->
+			
+			</div>
+
+		</div><!-- id="animation" class="col-md-8" -->
+		
+	
+	</div>
+
+
+</div>
+	
+	<div id="animator-controller" class="hidden-print" style="margin-left: 25px !important; margin-right: 25px !important; margin-bottom: 25px !important;">
+		<div class="hidden-xs" >
+			<b>Animation</b>
+	</div>
+
+	<div class="controller-box row">
+			<div class="col-sm-5 col-xs-10 controller-set  margin-top-medium">
+				
+				<button class="wxo-anim-play btn btn-default btn-sm" title="Play">
+          			<span class="glyphicon glyphicon-play"></span>
+          			<span class="wb-inv">Play</span> 
+				</button>
+				   
+				 <button class="wxo-anim-stop btn btn-default btn-sm" title="Pause">
+					<span class="glyphicon glyphicon-stop"></span>
+					<span class="wb-inv">Pause</span>
+				</button>
+				
+				<button class="wxo-anim-first btn btn-default btn-sm" title="First Image">
+					<span class="glyphicon glyphicon-fast-backward"></span>
+					<span class="wb-inv">First Image</span>
+				</button>
+	  
+				 <button class="wxo-anim-prev btn btn-default btn-sm" title="Previous Image">
+					<span class="glyphicon glyphicon-backward"></span>
+					<span class="wb-inv">Previous Image</span>
+				</button>
+
+				<button class="wxo-anim-next btn btn-default btn-sm" title="Next Image">
+					<span class="glyphicon glyphicon-forward"></span>
+					<span class="wb-inv">Next Image</span>
+				</button>
+
+				<button class="wxo-anim-last btn btn-default btn-sm mrgn-rght-md" title="Last Image">
+					<span class="glyphicon glyphicon-fast-forward"></span>
+					<span class="wb-inv">Last Image</span>
+				</button>
+			</div>
+			<div class="col-sm-4 col-xs-10 controller-set margin-top-medium">
+				<span>
+					Speed:
+				</span>
+				 <button class="wxo-anim-slower btn btn-default btn-sm" title="Slower">
+						<span class="glyphicon glyphicon-minus-sign"></span>
+						<span class="wb-inv">Slower</span>
+				</button>
+				
+				<button class="wxo-anim-faster btn btn-default btn-sm" title="Faster">
+						<span class="glyphicon glyphicon-plus-sign"></span>
+						<span class="wb-inv">"Faster</span>
+				</button>
+				
+				<button class="wxo-anim-speed-reset btn btn-default btn-sm">Reset
+				</button>
+			
+			</div>
+
+			<div class="hidden-xs col-sm-3 controller-set margin-top-small">
+			
+					<div id="duration-label" >Time:</div>
+					
+					
+					<div class="radio">
+						<label>
+							<input type="radio" name="group1" value="short" checked> Short (1hr) <br>
+						</label> 
+					</div>
+				
+					<div class="radio">
+						<label>
+							<input type="radio" name="group1" value="long" > Long (3hr) <br>
+						</label>
+				</div>
+					
+
+			</div>
+
+	</div>
+
+		</details>
+		</section>
+	
 	
 	<!-- <div style="padding: 13px; font-size: 18px; background-color: #f2dede !important; padding-top: 10px; border-left: solid 5px red !important;"><img src="../../img/weather/lightning_icon.png">
 
@@ -544,14 +716,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
           <li>
              <a href="../../../weather/forecast/hourly/on-118_metric_e.html" title="Hourly forecast">Hourly forecast</a>
           </li>
-          <li class="brdr-lft" style="padding-left: 12px !important; padding-right 12px !important;">
+          <li  style="padding-left: 12px !important; padding-right 12px !important;">
 		   <a href="../../../weather/airquality/pages/onaq-008_e.html">Air Quality Health Index</a>
           
           </li>
-		     <li class="brdr-lft" style="padding-left: 12px !important; padding-right 12px !important;">
+		     <li  style="padding-left: 12px !important; padding-right 12px !important;">
 			   <a href="../../../weather/warnings/index_e.html">Alerts</a>
           </li>
-          <li class="brdr-lft" style="padding-left: 12px !important; padding-right 12px !important;">
+          <li style="padding-left: 12px !important; padding-right 12px !important;">
 		 <a href="/jet_stream/index_e.html">Jet stream</a>
           </li>
         </ul>
@@ -562,29 +734,29 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
       
         <table class="table table-condensed mrgn-bttm-0 wxo-iconfore">
           <tr>
-            <th scope="col" style="background-color: yellow; border-bottom: none !important; border-right: 2px #ccc solid;">
+            <th scope="col" style="background-color: yellow; border-bottom: none !important; border-right: 1px #ccc solid;">
               <a href="../../../weather/forecast/hourly/on-118_metric_e.html" style="color: black; !important;">
                 <strong title="Thursday">Thu</strong>
                 <br>24 <abbr title="August">Aug</abbr>
               </a>
             </th>
-            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 2px #ccc solid;">
+            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 1px #ccc solid;">
               <strong title="Friday">Fri</strong>
               <br>25 <abbr title="August">Aug</abbr>
             </th>
-            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 2px #ccc solid;">
+            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 1px #ccc solid;">
               <strong title="Saturday">Sat</strong>
               <br>26 <abbr title="August">Aug</abbr>
             </th>
-            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 2px #ccc solid;">
+            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 1px #ccc solid;">
               <strong title="Sunday">Sun</strong>
               <br>27 <abbr title="August">Aug</abbr>
             </th>
-            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 2px #ccc solid;">
+            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 1px #ccc solid;">
               <strong title="Monday">Mon</strong>
               <br>28 <abbr title="August">Aug</abbr>
             </th>
-            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 2px #ccc solid;">
+            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 1px #ccc solid;">
               <strong title="Tuesday">Tue</strong>
               <br>29 <abbr title="August">Aug</abbr>
             </th>
@@ -594,7 +766,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             </th>
           </tr>
           <tr >
-            <td style="border-right: 2px #ccc solid;">  <a href="../../../weather/forecast/hourly/on-118_metric_e.html" style="color: black; !important; text-decoration: none !important;"><img width="60" height="51" src="../../../weather/weathericons/09.gif" alt="A few showers or thunderstorms" class="center-block" title="A few showers or thunderstorms"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">21&deg;<abbr title="Celsius">C</abbr>
+            <td style="border-right: 1px #ccc solid;">  <a href="../../../weather/forecast/hourly/on-118_metric_e.html" style="color: black; !important; text-decoration: none !important;"><img width="60" height="51" src="../../../weather/weathericons/09.gif" alt="A few showers or thunderstorms" class="center-block" title="A few showers or thunderstorms"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">21&deg;<abbr title="Celsius">C</abbr>
                 </span><span class="high wxo-imperial-hide wxo-city-hidden" title="max">70&deg;<abbr title="Fahrenheit">F</abbr>
                 </span>
               </p>
@@ -604,7 +776,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               <p class="mrgn-bttm-0">A few showers or thunderstorms</p>
             </td>
 			</a>
-            <td style="border-right: 2px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/06.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">20&deg;<abbr title="Celsius">C</abbr>
+            <td style="border-right: 1px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/06.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">20&deg;<abbr title="Celsius">C</abbr>
                 </span><span class="high wxo-imperial-hide wxo-city-hidden" title="max">68&deg;<abbr title="Fahrenheit">F</abbr>
                 </span>
               </p>
@@ -613,7 +785,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               </p>
               <p class="mrgn-bttm-0">Chance of showers</p>
             </td>
-            <td style="border-right: 2px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/06.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">24&deg;<abbr title="Celsius">C</abbr>
+            <td style="border-right: 1px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/06.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">24&deg;<abbr title="Celsius">C</abbr>
                 </span><span class="high wxo-imperial-hide wxo-city-hidden" title="max">75&deg;<abbr title="Fahrenheit">F</abbr>
                 </span>
               </p>
@@ -622,7 +794,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               </p>
               <p class="mrgn-bttm-0">Chance of showers</p>
             </td>
-            <td style="border-right: 2px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/06.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">20&deg;<abbr title="Celsius">C</abbr>
+            <td style="border-right: 1px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/06.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">20&deg;<abbr title="Celsius">C</abbr>
                 </span><span class="high wxo-imperial-hide wxo-city-hidden" title="max">68&deg;<abbr title="Fahrenheit">F</abbr>
                 </span>
               </p>
@@ -631,7 +803,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               </p>
               <p class="mrgn-bttm-0">Chance of showers</p>
             </td>
-            <td style="border-right: 2px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/02.gif" alt="A mix of sun and cloud" class="center-block" title="A mix of sun and cloud"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">23&deg;<abbr title="Celsius">C</abbr>
+            <td style="border-right: 1px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/02.gif" alt="A mix of sun and cloud" class="center-block" title="A mix of sun and cloud"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">23&deg;<abbr title="Celsius">C</abbr>
                 </span><span class="high wxo-imperial-hide wxo-city-hidden" title="max">73&deg;<abbr title="Fahrenheit">F</abbr>
                 </span>
               </p>
@@ -641,7 +813,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               </small></p>
               <p class="mrgn-bttm-0">A mix of sun and cloud</p>
             </td>
-            <td style="border-right: 2px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/01.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">23&deg;<abbr title="Celsius">C</abbr>
+            <td style="border-right: 1px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/01.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="high wxo-metric-hide" title="max">23&deg;<abbr title="Celsius">C</abbr>
                 </span><span class="high wxo-imperial-hide wxo-city-hidden" title="max">73&deg;<abbr title="Fahrenheit">F</abbr>
                 </span>
               </p>
@@ -661,17 +833,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             </td>
           </tr>
           <tr>
-            <th scope="col" style="background-color: yellow; border-top: none !important; border-bottom: none !important; border-right: 2px #ccc solid;"> <a href="../../../weather/forecast/hourly/on-118_metric_e.html#tonight" style="color: black !important;">Tonight </a></th>
-            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 2px #ccc solid;" title="Monday night, 26 June"> Night</th>
-            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 2px #ccc solid;" title="Tuesday night, 27 June"> Night</th>
-            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 2px #ccc solid;" title="Wednesday night, 28 June"> Night</th>
-            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 2px #ccc solid;" title="Thursday night, 29 June"> Night</th>
-            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 2px #ccc solid;" title="Friday night, 30 June"> Night</th>
-            <th class="blankcell" scope="col"> </th>
+            <th scope="col" style="background-color: yellow; border-top: none !important; border-bottom: none !important; border-right: 1px #ccc solid;"> <a href="../../../weather/forecast/hourly/on-118_metric_e.html#tonight" style="color: black !important;">Tonight </a></th>
+            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 1px #ccc solid;" title="Monday night, 26 June"> Night</th>
+            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 1px #ccc solid;" title="Tuesday night, 27 June"> Night</th>
+            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 1px #ccc solid;" title="Wednesday night, 28 June"> Night</th>
+            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 1px #ccc solid;" title="Thursday night, 29 June"> Night</th>
+            <th scope="col" style="border-top: none !important; border-bottom: none !important; border-right: 1px #ccc solid;" title="Friday night, 30 June"> Night</th>
+            <th class="blankcell" scope="col" style="border-bottom: none !important;"> </th>
           </tr>
           <tr>
           <tr>
-            <td style="border-right: 2px #ccc solid;"><a href="../../../weather/forecast/hourly/on-118_metric_e.html" style="color: black; !important; text-decoration: none !important;"><img width="60" height="51" src="../../../weather/weathericons/39.gif" alt="A few showers or thunderstorms" class="center-block" title="A few showers or thunderstorms"><p class="mrgn-bttm-0"><span class="low wxo-metric-hide" title="min">12&deg;<abbr title="Celsius">C</abbr>
+            <td style="border-right: 1px #ccc solid;"><a href="../../../weather/forecast/hourly/on-118_metric_e.html" style="color: black; !important; text-decoration: none !important;"><img width="60" height="51" src="../../../weather/weathericons/39.gif" alt="A few showers or thunderstorms" class="center-block" title="A few showers or thunderstorms"><p class="mrgn-bttm-0"><span class="low wxo-metric-hide" title="min">12&deg;<abbr title="Celsius">C</abbr>
                 </span><span class="low wxo-imperial-hide wxo-city-hidden" title="min">54&deg;<abbr title="Fahrenheit">F</abbr>
                 </span>
               </p>
@@ -681,7 +853,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               <p class="mrgn-bttm-0">A few showers or severe thunderstorms</p>
             </td>
 			</a>
-            <td style="border-right: 2px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/36.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="low wxo-metric-hide" title="min">11&deg;<abbr title="Celsius">C</abbr>
+            <td style="border-right: 1px #ccc solid; border-top: none !important;"><img width="60" height="51" src="../../../weather/weathericons/36.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="low wxo-metric-hide" title="min">11&deg;<abbr title="Celsius">C</abbr>
                 </span><span class="low wxo-imperial-hide wxo-city-hidden" title="min">52&deg;<abbr title="Fahrenheit">F</abbr>
                 </span>
               </p>
@@ -690,7 +862,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               </p>
               <p class="mrgn-bttm-0">Chance of showers</p>
             </td>
-            <td style="border-right: 2px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/36.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="low wxo-metric-hide" title="min">12&deg;<abbr title="Celsius">C</abbr>
+            <td style="border-right: 1px #ccc solid; border-top: none !important;"><img width="60" height="51" src="../../../weather/weathericons/36.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="low wxo-metric-hide" title="min">12&deg;<abbr title="Celsius">C</abbr>
                 </span><span class="low wxo-imperial-hide wxo-city-hidden" title="min">54&deg;<abbr title="Fahrenheit">F</abbr>
                 </span>
               </p>
@@ -699,7 +871,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               </p>
               <p class="mrgn-bttm-0">Chance of showers</p>
             </td>
-            <td style="border-right: 2px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/32.gif" alt="Cloudy periods" class="center-block" title="Cloudy periods"><p class="mrgn-bttm-0"><span class="low wxo-metric-hide" title="min">12&deg;<abbr title="Celsius">C</abbr>
+            <td style="border-right: 1px #ccc solid; border-top: none !important;"><img width="60" height="51" src="../../../weather/weathericons/32.gif" alt="Cloudy periods" class="center-block" title="Cloudy periods"><p class="mrgn-bttm-0"><span class="low wxo-metric-hide" title="min">12&deg;<abbr title="Celsius">C</abbr>
                 </span><span class="low wxo-imperial-hide wxo-city-hidden" title="min">54&deg;<abbr title="Fahrenheit">F</abbr>
                 </span>
               </p>
@@ -708,7 +880,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               </p>
               <p class="mrgn-bttm-0">Cloudy periods</p>
             </td>
-            <td style="border-right: 2px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/32.gif" alt="Cloudy periods" class="center-block" title="Cloudy periods"><p class="mrgn-bttm-0"><span class="low wxo-metric-hide" title="min">11&deg;<abbr title="Celsius">C</abbr>
+            <td style="border-right: 1px #ccc solid; border-top: none !important;"><img width="60" height="51" src="../../../weather/weathericons/32.gif" alt="Cloudy periods" class="center-block" title="Cloudy periods"><p class="mrgn-bttm-0"><span class="low wxo-metric-hide" title="min">11&deg;<abbr title="Celsius">C</abbr>
                 </span><span class="low wxo-imperial-hide wxo-city-hidden" title="min">52&deg;<abbr title="Fahrenheit">F</abbr>
                 </span>
               </p>
@@ -717,7 +889,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               </p>
               <p class="mrgn-bttm-0">Cloudy periods</p>
             </td>
-            <td style="border-right: 2px #ccc solid;"><img width="60" height="51" src="../../../weather/weathericons/36.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="low wxo-metric-hide" title="min">15&deg;<abbr title="Celsius">C</abbr>
+            <td style="border-right: 1px #ccc solid; border-top: none !important;"><img width="60" height="51" src="../../../weather/weathericons/36.gif" alt="Chance of showers" class="center-block" title="Chance of showers"><p class="mrgn-bttm-0"><span class="low wxo-metric-hide" title="min">15&deg;<abbr title="Celsius">C</abbr>
                 </span><span class="low wxo-imperial-hide wxo-city-hidden" title="min">59&deg;<abbr title="Fahrenheit">F</abbr>
                 </span>
               </p>
@@ -726,11 +898,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               </p>
               <p class="mrgn-bttm-0">Chance of showers</p>
             </td>
-            <td class="greybkgrd"> </td>
+            <td class="greybkgrd" style="border-top: none !important;"> </td>
           </tr>
         </table>
         <section>
-          <details open="open" class="wxo-detailedfore">
+          <details class="wxo-detailedfore">
             <summary class="blackfont hidden-print">
               <h3 class="h5"><span class="wb-inv">Detailed Forecast</span>Issued: 5:00 AM EST Thursday 24 August 2017</h3>
             </summary>
@@ -1048,6 +1220,24 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         </div>
       </details>
     </section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<!-- A&E -->	
+	
+	
     <section class="mrgn-tp-lg">
       <details class="panel panel-default wxo-avgextrm">
         <summary class="panel-heading">
@@ -1378,5 +1568,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="../../../weather/cacheable/js/myprofile/refresher-1.0.min.js"></script>
 <script type="text/javascript" src="../../../weather/city/js/cityjump.js"></script>
 <script src="../../../weather/GCWeb/js/theme.min.js"></script>
+<script type="text/javascript" src="../cacheable/js/radar/init.js"></script>
+<script src="../../../weather/cacheable/js/responsive/jquery.rwdImageMaps.js"></script>
+<script src="../../../weather/cacheable/js/radar/cities_overlay.js"></script>
+<script src="../../../weather/cacheable/js/radar/intensity_scale_local.js"></script>
+<script src="../../../weather/cacheable/js/radar/cookie_manager.js"></script>
+<script src="../../../weather/cacheable/js/radar/xmlhttpifr.js"></script> 
+<script src="../../../weather/cacheable/js/radar/radar_controller.js"></script> 
+<script src="../../../weather/cacheable/js/radar/wxo-carousel-radar-city.js"></script>
 </body>
 </html>
