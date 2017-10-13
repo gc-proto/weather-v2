@@ -9,7 +9,7 @@
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<meta name="dcterms.creator" content="Environment Canada" />
 		<meta name="dcterms.language" title="ISO639-2" content="eng" />
-	<title>Change city result - Environment Canada</title>
+	<title>Location not found - Environment Canada</title>
 	<meta name="dcterms.description" content="Change city result - Environment Canada" />
 	<meta name="dcterms.subject" title="scheme" content="Meteorology; Weather" />
    <meta name="dcterms.issued" title="W3CDTF" content="2013-04-16" />
@@ -150,19 +150,15 @@
 <div id='collapsible-alerts' class='container'></div>
 
 		<main role="main" property="mainContentOfPage" class="container">
-   <h1 property="name" id="wb-cont" style="padding-top: 10px !important;">No forecast for "Arnprior"</h1>
+   <h1 property="name" id="wb-cont" style="padding-top: 10px !important;">No forecast for Arnprior, Ontario</h1>
 
-<p>Try searching for nearby locations to find a relevant forecast.</p>
+<p>View the forecast for these locations near Arnprior, Ontario:</p>
+<ul>
+<li><a href="../../city/pages/on-118_metric_e.html">Pontiac, Quebec (25 km)</a></li>
+<li><a href="../../city/pages/on-118_metric_e.html">Renfrew, Ontario (27 km)</a></li>
+</ul>
 
-<form class="pull-left" role="search" id="cityjump" method="GET" action="">
-	<label class="pull-left" for="city"><b>Try another location</b></label><br />
-   	<input class="pull-left" id="city" type="text" name="city" pattern=".{2,50}" required data-h5-errorid="invalid-city" placeholder="" size="50" style="margin-right: 1em;"/>
-   	<input type="submit" id="jump" class="pull-left" value="Go"/>
-   	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
-	<div id="invalid-city"></div>
-</form>
-
-<p style="clear: both !important; padding-top: 3em !important;">Or, choose a province or territory for a complete list of available forecast locations:</p>
+<p>Or choose a province or territory for a complete list of available forecast locations:</p>
 
 <ul>
 <li><a title="Alberta" href="/forecast/canada/index_e.html?id=AB">Alberta</a></li>
@@ -181,13 +177,27 @@
 </ul>
 
 
+<p>You can also try searching for nearby locations to find a relevant forecast</p>
+
+
+
+<form class="pull-left" role="search" id="cityjump" method="GET" action="">
+	
+   	<input class="pull-left" id="city" type="text" name="city" pattern=".{2,50}" required data-h5-errorid="invalid-city" placeholder="" size="50" style="margin-right: 1em;"/>
+   	<input type="submit" id="jump" class="pull-left" value="Go"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Go" formnovalidate/></noscript>
+	<div id="invalid-city"></div>
+</form>
+
+
+
 <!-- <p style="clear: both !important; padding-top: 18px !important;">Not all city forecasts are available, try looking for other locations around <b>Arnprior</b>.</p> -->
 
 
 
 
 
-<p style="clear: both !important; padding-top: 18px !important;"> Instead of "Arnprior", did you mean?</p>
+<p style="clear: both !important; padding-top: 45px !important;"> Instead of "Arnprior", did you mean?</p>
 <ul>
 <li><a href="/city/pages/nu-10_metric_e.html">Arctic Bay, NU</a></li>
 <li><a href="/city/pages/on-111_metric_e.html">Armstrong, ON</a></li>
