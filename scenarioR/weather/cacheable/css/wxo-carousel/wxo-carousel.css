@@ -1,0 +1,57 @@
+#wxo-canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.wxo-ie8-show {
+    display: none;
+    visibility: hidden;
+}
+
+.wxo-anim-controls select{
+  display: inline !important;
+}
+
+.wxo-anim-to-time{
+	padding-right: 5px;
+}
+
+.wxo-anim-from-time{
+	padding-right: 5px;
+}
+
+input[class^="wxo-anim-"]+label, label[for^="wxo-anim-"]{
+  font-weight: normal;
+}
+
+@media only print{
+  .wxo-anim-controls > div{
+    display: none !important;
+  }
+
+  .wxo-anim-controls > .img-info{
+    display: block !important;
+  }
+}
+
+.form-control-clean-text
+{
+    display: inline;
+    width: 200px;
+    height: 28px;
+    background-color: initial !important;
+    cursor: default !important;
+}
+
+.span-clean-text 
+{
+    display: inline-block;
+    width: 200px;
+    height: 28px;
+    background-color: #FFF !important;
+    cursor: default !important;
+    padding: 3px; 
+}
