@@ -1,0 +1,282 @@
+ /*START:Position the image at the top of the page, centred */
+
+@media(max-width:767px){
+	.wxo-rad-err-msg{
+		text-align: left;
+	}
+	img#composite-cities-image{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		z-index: 5;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	img.wxo-radar-img {
+		display:block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 5px;
+		padding-right: 5px;
+
+	}	
+
+	img.wxo-radar-img-nojs{
+		min-width: 430px;
+		max-width: 430px;		
+	}
+
+	img.overlay-img{
+		display:block !important;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 5px;
+		padding-right: 5px;
+		
+
+	}	
+
+	img.overlay-img-nojs{
+		min-width: 430px;
+		max-width: 430px;
+	}
+
+	div.animation-frame-nat-nojs{
+		height: 400px;
+		width: 100%;
+	}
+
+	div.animation-frame-reg-nojs{
+		height: 260px;
+		width: 100%;
+	}
+
+}
+@media(min-width:768px){
+	.wxo-rad-err-msg{
+		text-align: center;
+	}
+	img#composite-cities-image{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		z-index: 5;
+	}
+	img.wxo-radar-img {
+		display:block !important;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	img.overlay-img{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	div.animation-frame-nat-nojs{
+		height: 522px;
+		width: 100%;
+	}
+
+
+	div.animation-frame-reg-nojs{
+		height: 320px;
+		width: 100%;
+	}
+
+}
+@media(min-width:992px){
+	.wxo-rad-err-msg{
+		text-align: center;
+	}
+	img#composite-cities-image{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		z-index: 5;
+	}
+	img.wxo-radar-img {
+		display:block !important;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}		
+	img.overlay-img{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	div.animation-frame-nat-nojs{
+		height: 522px;
+		width: 100%;
+	}
+
+}
+@media(min-width:1200px){
+	.wxo-rad-err-msg{
+		text-align: center;
+	}
+	img#composite-cities-image{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		z-index: 5;
+	}
+
+	img.wxo-radar-img {
+		display:block !important;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+	img.overlay-img{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+	div.animation-frame-nat-nojs{
+		height: 522px;
+		width: 100%;
+	}
+
+}
+
+div.animation-frame-nat{
+	height: 522px;
+	width: 100%;
+}
+
+div.animation-frame{
+	height: 320px;
+	width: 100%;
+}
+
+
+img#animation-frame {
+	height: 300;
+	margin-left:  auto;
+	margin-right:  auto;
+	clear: both;
+	overflow: hidden;
+	position: relative;
+	vertical-align: middle;
+	display: block;
+}
+
+/* END:Position the image at the top of the page, centred */
+
+/* START: Position, look for datestamp/header info */
+div.animation-info {
+	margin-left:  auto;
+	margin-right:  auto;
+	width:600px;
+	background-color:black;
+	color:white;
+}
+
+div.animation-info-resp {
+	overflow: hidden;
+	background-color:black;
+	color:white;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Hide preloaded images */
+#hidden-Preloaded-Images {
+	display: none;
+	visibility: hidden;
+	z-index: -1;
+}
+/* END: Hide preloaded images */
+
+
+/* END: Positioning, black box for datestamp/header info */
+
+.wxo-radar-width {
+	margin: auto;
+}
+
+
+/* END: Controller boundary */
+
+/*Adjust ul/li position for Canada link in mobile menu*/
+
+.cdn-ul li {
+	margin-left: -23px;
+	margin-bottom: -10px;
+}
+
+@-moz-document url-prefix() {
+    .cdn-ul li {
+		margin-left: -21px;
+		margin-bottom: -10px;
+		padding-left: 1px;
+    }
+}
+
+
+/*toggleCityOverlay css function, wb-inv causes problems.*/
+.wxo-hide-overlay{
+	visibility: hidden;
+}
+
+.wxo-lbl-clr{
+	font-weight: 300 !important;
+	display: inline !important;
+	margin-left: 7px;
+} /*override default label to maintain look and feel of a few labels*/
+
+
+.rad-loc{
+	margin-left: -20px;
+}
+
+#animation-info span.name.product{
+	float: left;
+	margin-left: 0.5em;
+}
+
+#intensity-detailed{
+	margin-left: 7px;
+}
+
+#intensity-detailed-label{
+	margin-left: 20px;
+}
+
+
+#intensity-standard{
+	margin-left: 70px;
+}
+#intensity-standard-label{
+	margin-left: 20px;
+}
+
+
