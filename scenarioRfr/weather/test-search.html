@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="./GCWeb/css/theme.min.css">
+
+
+
+<link rel="stylesheet" href="../weather/city/styles/city.css">
+<link rel="stylesheet" href="../weather/cacheable/css/city/city_js.css">
+<link rel="stylesheet" href="../weather/template/wxo/css/wxo.css" />
+<link rel="stylesheet" href="../weather/cacheable/css/city/jquery-ui-1.10.3.custom.min.css" /><!-- missing from some pages and causing style loss -->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+
+
+$(document).ready(function(){
+  $("button").on('click', function(){
+     window.location = "http://www.google.com/";    
+	});
+});
+
+</script>
+</head>
+<body>
+
+
+
+
+
+<div class="container hidden-print" style="padding-top: 15px;">
+
+<span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
+	
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
+   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Accéder à une ville</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="S’il vous plaît taper au moins deux caractères (Au maximum 50)" required data-h5-errorid="invalid-city" placeholder="Accéder à une ville" />
+   	<input type="submit" id="jump" class="" value="Aller"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Aller" formnovalidate/></noscript>
+	<div id="invalid-city"></div>
+</form>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script src="../weather/cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="../weather/cacheable/js/city/availableTags_e.min.js"></script>
+<script type="text/javascript" src="../weather/city/js/cityjump.js"></script>
+
+<script>
+    document.getElementById("jump").className = "";
+    var max_chars = 50;
+
+    $('#city').keydown( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+
+    $('#city').keyup( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+	
+	
+</script>
+
+</body>
+</html>
+
+<script>
+
+$(document).ready(function() {
+
+function snoopCities(event, ui) {
+    if (ui.item === null || typeof(ui.item) === 'undefined') {
+        $("#city").data("ref", null);
+        return;
+    }
+    
+    switch(ui.item.label) {
+        case "Montréal, QC": {
+            $("#city").data("ref", "city/pages/qc-147_metric_e.html");
+            break;
+			
+		}
+		 case "Ottawa (Kanata - Orléans), ON": {
+            $("#city").data("ref", "city/pages/on-118_metric_e.html");
+            break;
+			
+		}
+
+		case "Toronto, ON": {
+            $("#city").data("ref", "city/pages/on-143_metric_e.html");
+            break;
+			
+		}
+
+        default: {
+            $("#city").data("ref", null);
+        }
+    }
+}
+
+$("#city").autocomplete("option", "select", snoopCities);
+
+$("#cityjump").on("submit", function(e) {
+    e.preventDefault();
+
+    var targetUrl = $("#city").data("ref");
+    if (targetUrl !== null) {
+        window.location.href = targetUrl;
+    }
+    /*
+    else {
+        //Todo: remove this.
+        alert("Unknown destination.");
+    }
+    */
+});
+
+});
+
+</script>
+
+<!-- City Search uses jquery auto complete library -->
+
+<!-- </html>$(document).ready(function(){
+    $("button").click(function(){
+        alert($("#w3s").attr("href"));
+    });
+}); -->

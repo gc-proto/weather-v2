@@ -1,0 +1,946 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]--><head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>Weather Information - Environment Canada</title>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link rel="stylesheet" href="../../cacheable/css/mainmenu/index-e.css" media="screen">
+<link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="../../GCWeb/css/theme.min.css">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<link href="../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="/cacheable/css/mainmenu/index-ie8-e.css" media="screen">
+<link rel="stylesheet" href="../../GCWeb/css/ie8-theme.min.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="../../wet-boew/js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+<![endif]-->
+
+<noscript><link rel="stylesheet" href="../../wet-boew/css/noscript.min.css" /></noscript>
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<script>dataLayer1 = [];</script>
+<!-- End Google Tag Manager -->
+<link rel="stylesheet" href="../../cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" href="../../template/wxo/css/wxo.css" />
+
+</head>
+<body vocab="http://schema.org/" typeof="WebPage">
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
+<!-- End Google Tag Manager -->
+<ul id="wb-tphp">
+<li class="wb-slc">
+<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+</li>
+<li class="wb-slc visible-sm visible-md visible-lg">
+<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+</li>
+</ul>
+<header role="banner">
+<div id="wb-bnr" class="container">
+<section id="wb-lng" class="visible-md visible-lg text-right">
+<h2 class="wb-inv">Language selection</h2>
+<div class="row">
+<div class="col-md-12">
+<ul class="list-inline margin-bottom-none">
+<li><a lang="fr" href="index-fr.html">English</a></li>
+</ul>
+</div>
+</div>
+</section>
+<div class="row">
+<div class="brand col-xs-8 col-sm-9 col-md-6">
+<a href="https://www.canada.ca/en.html"><object type="image/svg+xml" tabindex="-1" data="../../GCWeb/assets/sig-blk-fr.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+</div>
+<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+<h2>Search and menus</h2>
+<ul class="list-inline text-right chvrn">
+<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl"></div>
+</section>
+<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+<h2>Search</h2>
+<form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
+<div class="form-group">
+<label for="wb-srch-q" class="wb-inv">Search website</label>
+<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Rechercher dans Canada.ca">
+<datalist id="wb-srch-q-ac">
+<!--[if lte IE 9]><select><![endif]-->
+<!--[if lte IE 9]></select><![endif]-->
+</datalist>
+</div>
+<div class="form-group submit">
+<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+</div>
+</form>
+</section>
+</div>
+</div>
+<nav role="navigation" id="wb-sm" data-ajax-replace="../../ajax/sitemenu-fr.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+<div class="container nvbar">
+<h2>Topics menu</h2>
+<div class="row">
+<ul class="list-inline menu">
+<li><a href="http://www.esdc.gc.ca/en/jobs/index.page">Emplois</a></li>
+<li><a href="http://www.cic.gc.ca/english/index.asp">Immigration</a></li>
+<li><a href="https://travel.gc.ca/">Voyage</a></li>
+<li><a href="https://www.canada.ca/en/services/business.html">Entreprises</a></li>
+<li><a href="https://www.canada.ca/en/services/benefits.html">Prestations</a></li>
+<li><a href="http://healthycanadians.gc.ca/index-eng.php">Santé</a></li>
+<li><a href="https://www.canada.ca/en/services/taxes.html">Impôts</a></li>
+<li><a href="https://www.canada.ca/en/services.html">Autres services</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+		<h2>You are here:</h2>
+		<div class="container">
+	<div class="row">
+		<ol class="breadcrumb">
+<li><a href="../../../weather/en.html">Accueil</a></li><li><a href="../../../weather/services/environment.html">Environnement et ressources naturelles</a></li>
+		</ol>
+	</div>
+</div>
+	</nav>
+</header>
+    
+<div class="container hidden-print">
+
+<span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
+	<a href="#weather-shortcuts" class="overlay-lnk pull-right btn btn-default" aria-controls="mid-screen" role="button">Sujets météorologiques</a>
+	<span id="wxo-divider" class="pull-right wb-invisible">|&#160;</span>
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
+   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Access city</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city" placeholder="Accéder à une ville" />
+   	<input type="hidden" name="lang" value="e"/>
+   	<input type="hidden" name="unit" value=""/>
+   	<input type="submit" id="jump" class="" value="Aller"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Aller" formnovalidate/></noscript>
+	<div id="invalid-city"></div>
+</form>
+<section id="weather-shortcuts" class="wb-overlay modal-content overlay-def wb-panel-r">
+	<header class="modal-header">
+		<h2 class="modal-title">Liens Météo</h2>
+	</header>
+	<div class="modal-body">
+	
+                                <li><a href="../../../weather/canada_e.html">Météo au Canada</a></li>
+                                <li><a href="../../../weather/radar/index_e.html">Radar - Canada</a></li>
+                                <li><a href="../../../weather/satellite/index_e.html">Satellite - Canada</a></li>
+                                <li><a href="#">Marine - Canada</a></li>
+                                <li><a href="../../../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
+                                <li><a href="#">Canadian Ice Service</a></li>
+                                <li><a href="#">Seasonal forecasts</a></li>
+                                <li><a href="#">Extended forecasts</a></li>
+                                <li><a href="../../../weather/warnings/index_e.html">Alertes météo publiques - Canada</a></li>
+                                <li><a href="../../../weather/lightning/index_e.html">Lightning</a></li>
+                                <li><a href="#">Hurricane</a></li>
+                                <li><a href="#">Weather Summaries</a></li>
+                                <li><a href="#">Hazardous Weather</a></li>
+                                <li><a href="#">Global and Regional forecast models</a></li>
+                                <li><a href="#">Astronomy</a></li>
+                                <li><a href="#">Historical Climate Data</a></li>
+                                <li><a href="#">Aviation</a></li>
+                                <li><a href="#">Guide to Public forecasts</a></li>
+                                <li><a href="#">Guide to Marine forecasts</a></li>
+                                <li><a href="#">Guide to Air Quality forecasts</a></li>
+	</div>
+	</div>
+</section>
+
+
+</div>
+<div class="clearfix"></div>
+<div id='collapsible-alerts' class='container'></div>
+<div class="clearfix"></div>
+
+
+<main role="main" property="mainContentOfPage" class="container">
+
+ <h1 id="wb-cont" property="name">Ontario - Prévisions et conditions par endroits</h1>
+
+	<section><details class='alert alert-info' id='alert-info' open='open'><summary><h2 class="h5">Point chaud et froid de l'heure ...</h2></summary>
+	<div>
+<p class="mrgn-bttm-0">Point chaud en <strong>Ontario</strong>: <span class="visible-metric">21.2 &#176;<abbr title="degrees Celsius">C</abbr></span><span class="visible-imperial wb-inv">70.2 &#176;<abbr title="degrees Fahrenheit">F</abbr></span> Toronto Buttonville Municipal Airport</p>
+<p class="mrgn-bttm-0">Point froid en <strong>Ontario</strong>: <span class="visible-metric">5.1 &#176;<abbr title="degrees Celsius">C</abbr></span><span class="visible-imperial wb-inv">41.2 &#176;<abbr title="degrees Fahrenheit">F</abbr></span> Big Trout Lake</p>
+</div>
+<hr class="mrgn-tp-sm mrgn-bttm-sm"/><div>
+<p class="mrgn-bttm-0">Point chaud en <strong>Canada</strong>: <span class="visible-metric">27.0 &#176;<abbr title="degrees Celsius">C</abbr></span><span class="visible-imperial wb-inv">80.6 &#176;<abbr title="degrees Fahrenheit">F</abbr></span> Ingonish Beach, NS</p>
+<p class="mrgn-bttm-0">Point froid en <strong>Canada</strong>: <span class="visible-metric">-1.3 &#176;<abbr title="degrees Celsius">C</abbr></span><span class="visible-imperial wb-inv">29.7 &#176;<abbr title="degrees Fahrenheit">F</abbr></span> Stefansson Island, NU</p>
+</div>
+	</details></section>
+
+<div class="row">
+     <div class="col-md-8">
+
+
+    <img src="images/on_e.jpg" alt="Ontario" usemap="#ON" class="thumbnail center-block img-responsive wxo-pddng-sm"/>
+<map id="ON" name="ON" title="ON">
+  <area href="/city/pages/on-40_metric_e.html" coords="211,219,259,256" shape="rect" alt="Greater Sudbury" title="Greater Sudbury" />
+  <area href="/city/pages/on-70_metric_e.html" coords="129,163,190,194" shape="rect" alt="Greenstone (Geraldton)" title="Greenstone (Geraldton)" />
+  <area href="/city/pages/on-77_metric_e.html" coords="270,317,340,331" shape="rect" alt="Hamilton" title="Hamilton" />
+  <area href="/city/pages/on-96_metric_e.html" coords="30,182,85,201" shape="rect" alt="Kenora" title="Kenora" />
+  <area href="/city/pages/on-69_metric_e.html" coords="317,273,356,300" shape="rect" alt="Kingston" title="Kingston" />
+  <area href="/city/pages/on-137_metric_e.html" coords="247,330,301,348" shape="rect" alt="London" title="London" />
+  <area href="/city/pages/on-113_metric_e.html" coords="194,118,262,150" shape="rect" alt="Moosonee" title="Moosonee" />
+  <area href="/city/pages/on-139_metric_e.html" coords="262,236,323,258" shape="rect" alt="North Bay" title="North Bay" />
+  <area href="../../../weather/city/pages/on-118_metric_e.html" coords="324,247,361,274" shape="rect" alt="Ottawa (Kanata - Orléans)" title="Ottawa (Kanata - Orléans)" />
+  <area href="/city/pages/on-103_metric_e.html" coords="240,259,310,281" shape="rect" alt="Parry Sound" title="Parry Sound" />
+  <area href="/city/pages/on-121_metric_e.html" coords="244,280,317,300" shape="rect" alt="Peterborough" title="Peterborough" />
+  <area href="/city/pages/on-147_metric_e.html" coords="187,322,244,343" shape="rect" alt="Sarnia" title="Sarnia" />
+  <area href="/city/pages/on-162_metric_e.html" coords="149,231,209,263" shape="rect" alt="Sault Ste. Marie" title="Sault Ste. Marie" />
+  <area href="/city/pages/on-135_metric_e.html" coords="58,151,110,182" shape="rect" alt="Sioux Lookout" title="Sioux Lookout" />
+  <area href="/city/pages/on-100_metric_e.html" coords="71,200,150,224" shape="rect" alt="Thunder Bay" title="Thunder Bay" />
+  <area href="/city/pages/on-127_metric_e.html" coords="215,189,273,214" shape="rect" alt="Timmins" title="Timmins" />
+  <area href="../../../weather/city/pages/on-143_metric_e.html" coords="234,300,297,317" shape="rect" alt="Toronto" title="Toronto" />
+  <area href="/city/pages/on-138_metric_e.html" coords="168,204,211,230" shape="rect" alt="Wawa" title="Wawa" />
+  <area href="/city/pages/on-94_metric_e.html" coords="171,341,243,365" shape="rect" alt="Windsor" title="Windsor" />
+</map>
+
+   
+	</div>
+	<aside class="col-md-4 hidden-xs hidden-sm">
+		      <div class="well">
+<h2 class="mrgn-tp-0">Liens Météo</h2>
+	<ul class="lst-spcd">
+		<li><a href="../../../weather/index_e.html">Canadian Weather</a></li>
+		<li><a href="../../../weather/warnings/index_e.html">Alertes météo publiques - Canada</a></li>
+		<li><a href="../../../weather/radar/index_e.html">Radar - Canada</a></li>
+		<li><a href="../../../weather/satellite/index_e.html">Satellite - Canada</a></li>
+		<li><a href="/weather/saisons/index_e.html">Prévisions saisonnières</a></li>
+		<li><a href="../../../weather/mainmenu/airquality_menu_e.html">Qualité de l'air</a></li>
+		<li><a href="/weather/marine/index_e.html">Maritime - Canada</a></li>
+		<li><a href="http://ec.gc.ca/rhc-wsc/default.asp?lang=En&amp;n=4EED50F1-1">Niveau d'eau et débit</a></li>
+	</ul>
+</div>
+	</aside>
+  </div>
+   			<div>
+          <details id="gps-jq">
+          <summary>Utiliser emplacement actuel</summary>
+            <div id="GPSResults"></div>
+          </details>
+         </div>
+
+     <span class="hidden-xs">ou choisissez une province ou un territoire :</span>
+		 <ul class="nav nav-pills hidden-xs">
+<li><a title="Alberta" href="/forecast/canada/index_e.html?id=AB"><span class="wb-inv">Alberta</span>AB</a></li>
+<li><a title="British Columbia" href="/forecast/canada/index_e.html?id=BC"><span class="wb-inv">British Columbia</span>BC</a></li>
+<li><a title="Manitoba" href="/forecast/canada/index_e.html?id=MB"><span class="wb-inv">Manitoba</span>MB</a></li>
+<li><a title="New Brunswick" href="/forecast/canada/index_e.html?id=NB"><span class="wb-inv">New Brunswick</span>NB</a></li>
+<li><a title="Newfoundland and Labrador" href="/forecast/canada/index_e.html?id=NL"><span class="wb-inv">Newfoundland and Labrador</span>NL</a></li>
+<li><a title="Nova Scotia" href="/forecast/canada/index_e.html?id=NS"><span class="wb-inv">Nova Scotia</span>NS</a></li>
+<li><a title="Northwest Territories" href="/forecast/canada/index_e.html?id=NT"><span class="wb-inv">Northwest Territories</span>NT</a></li>
+<li><a title="Nunavut" href="/forecast/canada/index_e.html?id=NU"><span class="wb-inv">Nunavut</span>NU</a></li>
+<li class='disabled'><a title="Ontario" href="/forecast/canada/index_e.html?id=ON"><span class="wb-inv">Ontario</span>ON</a></li>
+<li><a title="Prince Edward Island" href="/forecast/canada/index_e.html?id=PE"><span class="wb-inv">Prince Edward Island</span>PE</a></li>
+<li><a title="Quebec" href="/forecast/canada/index_e.html?id=QC"><span class="wb-inv">Quebec</span>QC</a></li>
+<li><a title="Saskatchewan" href="/forecast/canada/index_e.html?id=SK"><span class="wb-inv">Saskatchewan</span>SK</a></li>
+<li><a title="Yukon" href="/forecast/canada/index_e.html?id=YT"><span class="wb-inv">Yukon</span>YT</a></li>
+</ul>
+<div class="visible-xs">
+<details>
+<summary>Régions de prévisions</summary>
+<ul class="list-unstyled wxo-btn">
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=AB">Alberta</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=BC">British Columbia</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=MB">Manitoba</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=NB">New Brunswick</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=NL">Newfoundland and Labrador</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=NT">Northwest Territories</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=NS">Nova Scotia</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=NU">Nunavut</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/weather/forecast/canada/ON_index_e.html">Ontario weather</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=PE">Prince Edward Island</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=QC">Quebec</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=SK">Saskatchewan</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=YT">Yukon</a></li>
+</ul></details></div>
+
+  		<div class="visible-xs">
+          <details>
+          <summary>Ontario - Localité</summary>
+          <nav role="navigation">
+            <h2 class="wb-inv">Ville</h2>
+            <ul class="list-inline">
+						<li><a href="#A" role="button" class="btn btn-default btn-xs">A - D</a></li>
+<li><a href="#E" role="button" class="btn btn-default btn-xs">E - H</a></li>
+<li><a href="#I" role="button" class="btn btn-default btn-xs">I - M</a></li>
+<li><a href="#N" role="button" class="btn btn-default btn-xs">N - Q</a></li>
+<li><a href="#R" role="button" class="btn btn-default btn-xs">R - S</a></li>
+<li><a href="#T" role="button" class="btn btn-default btn-xs">T - Y</a></li>
+            </ul>
+          </nav>
+          <div>
+             <div class="well"><div class="row">
+<section><h2 class="mrgn-tp-0"><a id="A">A-D</a></h2>
+<ul class="list-unstyled">
+<li><a href="/city/pages/on-122_metric_e.html">Alexandria</a></li>
+<li><a href="/city/pages/on-1_metric_e.html">Algonquin Park (Brent)</a></li>
+<li><a href="/city/pages/on-29_metric_e.html">Algonquin Park (Lake of Two Rivers)</a></li>
+<li><a href="/city/pages/on-114_metric_e.html">Alliston</a></li>
+<li><a href="/city/pages/on-30_metric_e.html">Apsley</a></li>
+<li><a href="/city/pages/on-111_metric_e.html">Armstrong</a></li>
+<li><a href="/city/pages/on-148_metric_e.html">Atikokan</a></li>
+<li><a href="/city/pages/on-164_metric_e.html">Attawapiskat</a></li>
+<li><a href="/city/pages/on-102_metric_e.html">Bancroft</a></li>
+<li><a href="/city/pages/on-151_metric_e.html">Barrie</a></li>
+<li><a href="/city/pages/on-133_metric_e.html">Barry's Bay</a></li>
+<li><a href="/city/pages/on-3_metric_e.html">Belleville</a></li>
+<li><a href="/city/pages/on-124_metric_e.html">Big Trout Lake</a></li>
+<li><a href="/city/pages/on-21_metric_e.html">Blind River</a></li>
+<li><a href="/city/pages/on-9_metric_e.html">Bracebridge</a></li>
+<li><a href="/city/pages/on-4_metric_e.html">Brampton</a></li>
+<li><a href="/city/pages/on-86_metric_e.html">Brantford</a></li>
+<li><a href="/city/pages/on-8_metric_e.html">Brockville</a></li>
+<li><a href="/city/pages/on-31_metric_e.html">Burk's Falls</a></li>
+<li><a href="/city/pages/on-95_metric_e.html">Burlington</a></li>
+<li><a href="/city/pages/on-32_metric_e.html">Caledon</a></li>
+<li><a href="/city/pages/on-81_metric_e.html">Cambridge</a></li>
+<li><a href="/city/pages/on-91_metric_e.html">Chapleau</a></li>
+<li><a href="/city/pages/on-11_metric_e.html">Chatham-Kent</a></li>
+<li><a href="/city/pages/on-75_metric_e.html">Cobourg</a></li>
+<li><a href="/city/pages/on-33_metric_e.html">Cochrane</a></li>
+<li><a href="/city/pages/on-150_metric_e.html">Collingwood</a></li>
+<li><a href="/city/pages/on-152_metric_e.html">Cornwall</a></li>
+<li><a href="/city/pages/on-83_metric_e.html">Deep River</a></li>
+<li><a href="/city/pages/on-34_metric_e.html">Dorion</a></li>
+<li><a href="/city/pages/on-72_metric_e.html">Dryden</a></li>
+<li><a href="/city/pages/on-35_metric_e.html">Dunchurch</a></li>
+<li><a href="/city/pages/on-36_metric_e.html">Dundalk</a></li>
+</ul></section>
+</div></div>
+<div class="well"><div class="row">
+<section><h2 class="mrgn-tp-0"><a id="E">E-H</a></h2>
+<ul class="list-unstyled">
+<li><a href="/city/pages/on-167_metric_e.html">Ear Falls</a></li>
+<li><a href="/city/pages/on-136_metric_e.html">Earlton</a></li>
+<li><a href="/city/pages/on-170_metric_e.html">Elliot Lake</a></li>
+<li><a href="/city/pages/on-173_metric_e.html">Fort Albany</a></li>
+<li><a href="/city/pages/on-12_metric_e.html">Fort Erie</a></li>
+<li><a href="/city/pages/on-159_metric_e.html">Fort Frances</a></li>
+<li><a href="/city/pages/on-171_metric_e.html">Fort Severn</a></li>
+<li><a href="/city/pages/on-90_metric_e.html">Gananoque</a></li>
+<li><a href="/city/pages/on-160_metric_e.html">Goderich</a></li>
+<li><a href="/city/pages/on-37_metric_e.html">Gogama</a></li>
+<li><a href="/city/pages/on-144_metric_e.html">Gore Bay</a></li>
+<li><a href="/city/pages/on-38_metric_e.html">Gravenhurst</a></li>
+<li><a href="/city/pages/on-39_metric_e.html">Greater Napanee</a></li>
+<li><a href="/city/pages/on-40_metric_e.html">Greater Sudbury</a></li>
+<li><a href="/city/pages/on-153_metric_e.html">Greenstone (Beardmore)</a></li>
+<li><a href="/city/pages/on-70_metric_e.html">Greenstone (Geraldton)</a></li>
+<li><a href="/city/pages/on-97_metric_e.html">Greenstone (Nakina)</a></li>
+<li><a href="/city/pages/on-5_metric_e.html">Guelph</a></li>
+<li><a href="/city/pages/on-41_metric_e.html">Gull Bay</a></li>
+<li><a href="/city/pages/on-42_metric_e.html">Haldimand County</a></li>
+<li><a href="/city/pages/on-165_metric_e.html">Haliburton</a></li>
+<li><a href="/city/pages/on-68_metric_e.html">Halton Hills</a></li>
+<li><a href="/city/pages/on-77_metric_e.html">Hamilton</a></li>
+<li><a href="/city/pages/on-71_metric_e.html">Hawkesbury</a></li>
+<li><a href="/city/pages/on-73_metric_e.html">Hearst</a></li>
+<li><a href="/city/pages/on-78_metric_e.html">Hornepayne</a></li>
+<li><a href="/city/pages/on-88_metric_e.html">Huntsville</a></li>
+</ul></section>
+</div></div>
+<div class="well"><div class="row">
+<section><h2 class="mrgn-tp-0"><a id="I">I-M</a></h2>
+<ul class="list-unstyled">
+<li><a href="/city/pages/on-156_metric_e.html">Ignace</a></li>
+<li><a href="/city/pages/on-145_metric_e.html">Kakabeka Falls</a></li>
+<li><a href="/city/pages/on-43_metric_e.html">Kaladar</a></li>
+<li><a href="/city/pages/on-142_metric_e.html">Kapuskasing</a></li>
+<li><a href="/city/pages/on-44_metric_e.html">Kawartha Lakes (Fenelon Falls)</a></li>
+<li><a href="/city/pages/on-168_metric_e.html">Kawartha Lakes (Lindsay)</a></li>
+<li><a href="/city/pages/on-74_metric_e.html">Kemptville</a></li>
+<li><a href="/city/pages/on-96_metric_e.html">Kenora</a></li>
+<li><a href="/city/pages/on-146_metric_e.html">Killarney</a></li>
+<li><a href="/city/pages/on-28_metric_e.html">Kincardine</a></li>
+<li><a href="/city/pages/on-69_metric_e.html">Kingston</a></li>
+<li><a href="/city/pages/on-76_metric_e.html">Kirkland Lake</a></li>
+<li><a href="/city/pages/on-82_metric_e.html">Kitchener-Waterloo</a></li>
+<li><a href="/city/pages/on-45_metric_e.html">Lake Superior (Provincial Park)</a></li>
+<li><a href="/city/pages/on-46_metric_e.html">Lambton Shores</a></li>
+<li><a href="/city/pages/on-87_metric_e.html">Lansdowne House</a></li>
+<li><a href="/city/pages/on-23_metric_e.html">Leamington</a></li>
+<li><a href="/city/pages/on-47_metric_e.html">Lincoln</a></li>
+<li><a href="/city/pages/on-137_metric_e.html">London</a></li>
+<li><a href="/city/pages/on-108_metric_e.html">Marathon</a></li>
+<li><a href="/city/pages/on-85_metric_e.html">Markham</a></li>
+<li><a href="/city/pages/on-169_metric_e.html">Midland</a></li>
+<li><a href="/city/pages/on-48_metric_e.html">Mine Centre</a></li>
+<li><a href="/city/pages/on-24_metric_e.html">Mississauga</a></li>
+<li><a href="/city/pages/on-163_metric_e.html">Montreal River Harbour</a></li>
+<li><a href="/city/pages/on-113_metric_e.html">Moosonee</a></li>
+<li><a href="/city/pages/on-92_metric_e.html">Morrisburg</a></li>
+<li><a href="/city/pages/on-89_metric_e.html">Mount Forest</a></li>
+<li><a href="/city/pages/on-93_metric_e.html">Muskoka</a></li>
+</ul></section>
+</div></div>
+<div class="well"><div class="row">
+<section><h2 class="mrgn-tp-0"><a id="N">N-Q</a></h2>
+<ul class="list-unstyled">
+<li><a href="/city/pages/on-49_metric_e.html">New Tecumseth</a></li>
+<li><a href="/city/pages/on-25_metric_e.html">Newmarket</a></li>
+<li><a href="/city/pages/on-125_metric_e.html">Niagara Falls</a></li>
+<li><a href="/city/pages/on-26_metric_e.html">Nipigon</a></li>
+<li><a href="/city/pages/on-50_metric_e.html">Norfolk</a></li>
+<li><a href="/city/pages/on-139_metric_e.html">North Bay</a></li>
+<li><a href="/city/pages/on-51_metric_e.html">North Perth</a></li>
+<li><a href="/city/pages/on-79_metric_e.html">Oakville</a></li>
+<li><a href="/city/pages/on-101_metric_e.html">Ogoki</a></li>
+<li><a href="/city/pages/on-140_metric_e.html">Orangeville</a></li>
+<li><a href="/city/pages/on-13_metric_e.html">Orillia</a></li>
+<li><a href="/city/pages/on-117_metric_e.html">Oshawa</a></li>
+<li><a href="../../../weather/city/pages/on-118_metric_e.html">Ottawa (Kanata - Orléans)</a></li>
+<li><a href="/city/pages/on-52_metric_e.html">Ottawa (Richmond - Metcalfe)</a></li>
+<li><a href="/city/pages/on-7_metric_e.html">Owen Sound</a></li>
+<li><a href="/city/pages/on-53_metric_e.html">Oxtongue Lake</a></li>
+<li><a href="/city/pages/on-103_metric_e.html">Parry Sound</a></li>
+<li><a href="/city/pages/on-99_metric_e.html">Peawanuck</a></li>
+<li><a href="/city/pages/on-131_metric_e.html">Pembroke</a></li>
+<li><a href="/city/pages/on-112_metric_e.html">Petawawa</a></li>
+<li><a href="/city/pages/on-121_metric_e.html">Peterborough</a></li>
+<li><a href="/city/pages/on-54_metric_e.html">Pickering</a></li>
+<li><a href="/city/pages/on-120_metric_e.html">Pickle Lake</a></li>
+<li><a href="/city/pages/on-55_metric_e.html">Pikangikum</a></li>
+<li><a href="/city/pages/on-56_metric_e.html">Port Carling</a></li>
+<li><a href="/city/pages/on-80_metric_e.html">Port Colborne</a></li>
+<li><a href="/city/pages/on-19_metric_e.html">Port Elgin</a></li>
+<li><a href="/city/pages/on-149_metric_e.html">Port Perry</a></li>
+<li><a href="/city/pages/on-27_metric_e.html">Prince Edward (Picton)</a></li>
+<li><a href="/city/pages/on-57_metric_e.html">Quinte West</a></li>
+</ul></section>
+</div></div>
+<div class="well"><div class="row">
+<section><h2 class="mrgn-tp-0"><a id="R">R-S</a></h2>
+<ul class="list-unstyled">
+<li><a href="/city/pages/on-104_metric_e.html">Red Lake</a></li>
+<li><a href="/city/pages/on-58_metric_e.html">Renfrew</a></li>
+<li><a href="/city/pages/on-59_metric_e.html">Richmond Hill</a></li>
+<li><a href="/city/pages/on-172_metric_e.html">Rodney</a></li>
+<li><a href="/city/pages/on-141_metric_e.html">Rondeau (Provincial Park)</a></li>
+<li><a href="/city/pages/on-105_metric_e.html">Sachigo Lake</a></li>
+<li><a href="/city/pages/on-129_metric_e.html">Sandy Lake</a></li>
+<li><a href="/city/pages/on-147_metric_e.html">Sarnia</a></li>
+<li><a href="/city/pages/on-60_metric_e.html">Saugeen Shores</a></li>
+<li><a href="/city/pages/on-162_metric_e.html">Sault Ste. Marie</a></li>
+<li><a href="/city/pages/on-134_metric_e.html">Savant Lake</a></li>
+<li><a href="/city/pages/on-61_metric_e.html">Sharbot Lake</a></li>
+<li><a href="/city/pages/on-84_metric_e.html">Shelburne</a></li>
+<li><a href="/city/pages/on-161_metric_e.html">Simcoe</a></li>
+<li><a href="/city/pages/on-135_metric_e.html">Sioux Lookout</a></li>
+<li><a href="/city/pages/on-166_metric_e.html">Sioux Narrows</a></li>
+<li><a href="/city/pages/on-106_metric_e.html">Smiths Falls</a></li>
+<li><a href="/city/pages/on-62_metric_e.html">South Bruce Peninsula</a></li>
+<li><a href="/city/pages/on-107_metric_e.html">St. Catharines</a></li>
+<li><a href="/city/pages/on-98_metric_e.html">St. Thomas</a></li>
+<li><a href="/city/pages/on-115_metric_e.html">Stirling</a></li>
+<li><a href="/city/pages/on-116_metric_e.html">Stratford</a></li>
+<li><a href="/city/pages/on-18_metric_e.html">Strathroy</a></li>
+<li><a href="/city/pages/on-174_metric_e.html">Sudbury (Greater)</a></li>
+<li><a href="/city/pages/on-63_metric_e.html">Sydenham</a></li>
+</ul></section>
+</div></div>
+<div class="well"><div class="row">
+<section><h2 class="mrgn-tp-0"><a id="T">T-Y</a></h2>
+<ul class="list-unstyled">
+<li><a href="/city/pages/on-22_metric_e.html">Temiskaming Shores</a></li>
+<li><a href="/city/pages/on-123_metric_e.html">Terrace Bay</a></li>
+<li><a href="/city/pages/on-100_metric_e.html">Thunder Bay</a></li>
+<li><a href="/city/pages/on-17_metric_e.html">Tillsonburg</a></li>
+<li><a href="/city/pages/on-127_metric_e.html">Timmins</a></li>
+<li><a href="/city/pages/on-157_metric_e.html">Tobermory</a></li>
+<li><a href="../../../weather/city/pages/on-143_metric_e.html">Toronto</a></li>
+<li><a href="/city/pages/on-128_metric_e.html">Toronto Island</a></li>
+<li><a href="/city/pages/on-126_metric_e.html">Trenton</a></li>
+<li><a href="/city/pages/on-154_metric_e.html">Upsala</a></li>
+<li><a href="/city/pages/on-64_metric_e.html">Vaughan</a></li>
+<li><a href="/city/pages/on-109_metric_e.html">Vineland</a></li>
+<li><a href="/city/pages/on-16_metric_e.html">Walkerton</a></li>
+<li><a href="/city/pages/on-138_metric_e.html">Wawa</a></li>
+<li><a href="/city/pages/on-132_metric_e.html">Webequie</a></li>
+<li><a href="/city/pages/on-14_metric_e.html">Welland</a></li>
+<li><a href="/city/pages/on-65_metric_e.html">West Nipissing</a></li>
+<li><a href="/city/pages/on-66_metric_e.html">Westport</a></li>
+<li><a href="/city/pages/on-119_metric_e.html">Whitby</a></li>
+<li><a href="/city/pages/on-67_metric_e.html">White River</a></li>
+<li><a href="/city/pages/on-130_metric_e.html">Wiarton</a></li>
+<li><a href="/city/pages/on-155_metric_e.html">Winchester</a></li>
+<li><a href="/city/pages/on-94_metric_e.html">Windsor</a></li>
+<li><a href="/city/pages/on-110_metric_e.html">Wingham</a></li>
+<li><a href="/city/pages/on-15_metric_e.html">Woodstock</a></li>
+<li><a href="/city/pages/on-158_metric_e.html">Wunnummin Lake</a></li>
+</ul></section>
+</div></div>
+          </div>
+          </details>
+                    <ul class="list-unstyled mrgn-tp-sm"><li><a class="btn btn-default btn-sm btn-block" role="button" href="/provincialsummary_table/index_e.html?prov=on"><p class="text-left mrgn-lft-md mrgn-bttm-0">Sommaire provincial</p></a></li>
+         </ul>
+      </div>
+    
+<div class="hidden-xs">
+<p><a href="/provincialsummary_table/index_e.html?prov=on">[Sommaire provincial]</a>&nbsp;</p>
+<div class="well"><div class="row">
+<ul class="list-unstyled col-sm-4">
+<li><a href="/city/pages/on-122_metric_e.html">Alexandria</a></li>
+<li><a href="/city/pages/on-1_metric_e.html">Algonquin Park (Brent)</a></li>
+<li><a href="/city/pages/on-29_metric_e.html">Algonquin Park (Lake of Two Rivers)</a></li>
+<li><a href="/city/pages/on-114_metric_e.html">Alliston</a></li>
+<li><a href="/city/pages/on-30_metric_e.html">Apsley</a></li>
+<li><a href="/city/pages/on-111_metric_e.html">Armstrong</a></li>
+<li><a href="/city/pages/on-148_metric_e.html">Atikokan</a></li>
+<li><a href="/city/pages/on-164_metric_e.html">Attawapiskat</a></li>
+<li><a href="/city/pages/on-102_metric_e.html">Bancroft</a></li>
+<li><a href="/city/pages/on-151_metric_e.html">Barrie</a></li>
+<li><a href="/city/pages/on-133_metric_e.html">Barry's Bay</a></li>
+<li><a href="/city/pages/on-3_metric_e.html">Belleville</a></li>
+<li><a href="/city/pages/on-124_metric_e.html">Big Trout Lake</a></li>
+<li><a href="/city/pages/on-21_metric_e.html">Blind River</a></li>
+<li><a href="/city/pages/on-9_metric_e.html">Bracebridge</a></li>
+<li><a href="/city/pages/on-4_metric_e.html">Brampton</a></li>
+<li><a href="/city/pages/on-86_metric_e.html">Brantford</a></li>
+<li><a href="/city/pages/on-8_metric_e.html">Brockville</a></li>
+<li><a href="/city/pages/on-31_metric_e.html">Burk's Falls</a></li>
+<li><a href="/city/pages/on-95_metric_e.html">Burlington</a></li>
+<li><a href="/city/pages/on-32_metric_e.html">Caledon</a></li>
+<li><a href="/city/pages/on-81_metric_e.html">Cambridge</a></li>
+<li><a href="/city/pages/on-91_metric_e.html">Chapleau</a></li>
+<li><a href="/city/pages/on-11_metric_e.html">Chatham-Kent</a></li>
+<li><a href="/city/pages/on-75_metric_e.html">Cobourg</a></li>
+<li><a href="/city/pages/on-33_metric_e.html">Cochrane</a></li>
+<li><a href="/city/pages/on-150_metric_e.html">Collingwood</a></li>
+<li><a href="/city/pages/on-152_metric_e.html">Cornwall</a></li>
+<li><a href="/city/pages/on-83_metric_e.html">Deep River</a></li>
+<li><a href="/city/pages/on-34_metric_e.html">Dorion</a></li>
+<li><a href="/city/pages/on-72_metric_e.html">Dryden</a></li>
+<li><a href="/city/pages/on-35_metric_e.html">Dunchurch</a></li>
+<li><a href="/city/pages/on-36_metric_e.html">Dundalk</a></li>
+<li><a href="/city/pages/on-167_metric_e.html">Ear Falls</a></li>
+<li><a href="/city/pages/on-136_metric_e.html">Earlton</a></li>
+<li><a href="/city/pages/on-170_metric_e.html">Elliot Lake</a></li>
+<li><a href="/city/pages/on-173_metric_e.html">Fort Albany</a></li>
+<li><a href="/city/pages/on-12_metric_e.html">Fort Erie</a></li>
+<li><a href="/city/pages/on-159_metric_e.html">Fort Frances</a></li>
+<li><a href="/city/pages/on-171_metric_e.html">Fort Severn</a></li>
+<li><a href="/city/pages/on-90_metric_e.html">Gananoque</a></li>
+<li><a href="/city/pages/on-160_metric_e.html">Goderich</a></li>
+<li><a href="/city/pages/on-37_metric_e.html">Gogama</a></li>
+<li><a href="/city/pages/on-144_metric_e.html">Gore Bay</a></li>
+<li><a href="/city/pages/on-38_metric_e.html">Gravenhurst</a></li>
+<li><a href="/city/pages/on-39_metric_e.html">Greater Napanee</a></li>
+<li><a href="/city/pages/on-40_metric_e.html">Greater Sudbury</a></li>
+<li><a href="/city/pages/on-153_metric_e.html">Greenstone (Beardmore)</a></li>
+<li><a href="/city/pages/on-70_metric_e.html">Greenstone (Geraldton)</a></li>
+<li><a href="/city/pages/on-97_metric_e.html">Greenstone (Nakina)</a></li>
+<li><a href="/city/pages/on-5_metric_e.html">Guelph</a></li>
+<li><a href="/city/pages/on-41_metric_e.html">Gull Bay</a></li>
+<li><a href="/city/pages/on-42_metric_e.html">Haldimand County</a></li>
+<li><a href="/city/pages/on-165_metric_e.html">Haliburton</a></li>
+<li><a href="/city/pages/on-68_metric_e.html">Halton Hills</a></li>
+<li><a href="/city/pages/on-77_metric_e.html">Hamilton</a></li>
+<li><a href="/city/pages/on-71_metric_e.html">Hawkesbury</a></li>
+</ul>
+<ul class="list-unstyled col-sm-4">
+<li><a href="/city/pages/on-73_metric_e.html">Hearst</a></li>
+<li><a href="/city/pages/on-78_metric_e.html">Hornepayne</a></li>
+<li><a href="/city/pages/on-88_metric_e.html">Huntsville</a></li>
+<li><a href="/city/pages/on-156_metric_e.html">Ignace</a></li>
+<li><a href="/city/pages/on-145_metric_e.html">Kakabeka Falls</a></li>
+<li><a href="/city/pages/on-43_metric_e.html">Kaladar</a></li>
+<li><a href="/city/pages/on-142_metric_e.html">Kapuskasing</a></li>
+<li><a href="/city/pages/on-44_metric_e.html">Kawartha Lakes (Fenelon Falls)</a></li>
+<li><a href="/city/pages/on-168_metric_e.html">Kawartha Lakes (Lindsay)</a></li>
+<li><a href="/city/pages/on-74_metric_e.html">Kemptville</a></li>
+<li><a href="/city/pages/on-96_metric_e.html">Kenora</a></li>
+<li><a href="/city/pages/on-146_metric_e.html">Killarney</a></li>
+<li><a href="/city/pages/on-28_metric_e.html">Kincardine</a></li>
+<li><a href="/city/pages/on-69_metric_e.html">Kingston</a></li>
+<li><a href="/city/pages/on-76_metric_e.html">Kirkland Lake</a></li>
+<li><a href="/city/pages/on-82_metric_e.html">Kitchener-Waterloo</a></li>
+<li><a href="/city/pages/on-45_metric_e.html">Lake Superior (Provincial Park)</a></li>
+<li><a href="/city/pages/on-46_metric_e.html">Lambton Shores</a></li>
+<li><a href="/city/pages/on-87_metric_e.html">Lansdowne House</a></li>
+<li><a href="/city/pages/on-23_metric_e.html">Leamington</a></li>
+<li><a href="/city/pages/on-47_metric_e.html">Lincoln</a></li>
+<li><a href="/city/pages/on-137_metric_e.html">London</a></li>
+<li><a href="/city/pages/on-108_metric_e.html">Marathon</a></li>
+<li><a href="/city/pages/on-85_metric_e.html">Markham</a></li>
+<li><a href="/city/pages/on-169_metric_e.html">Midland</a></li>
+<li><a href="/city/pages/on-48_metric_e.html">Mine Centre</a></li>
+<li><a href="/city/pages/on-24_metric_e.html">Mississauga</a></li>
+<li><a href="/city/pages/on-163_metric_e.html">Montreal River Harbour</a></li>
+<li><a href="/city/pages/on-113_metric_e.html">Moosonee</a></li>
+<li><a href="/city/pages/on-92_metric_e.html">Morrisburg</a></li>
+<li><a href="/city/pages/on-89_metric_e.html">Mount Forest</a></li>
+<li><a href="/city/pages/on-93_metric_e.html">Muskoka</a></li>
+<li><a href="/city/pages/on-49_metric_e.html">New Tecumseth</a></li>
+<li><a href="/city/pages/on-25_metric_e.html">Newmarket</a></li>
+<li><a href="/city/pages/on-125_metric_e.html">Niagara Falls</a></li>
+<li><a href="/city/pages/on-26_metric_e.html">Nipigon</a></li>
+<li><a href="/city/pages/on-50_metric_e.html">Norfolk</a></li>
+<li><a href="/city/pages/on-139_metric_e.html">North Bay</a></li>
+<li><a href="/city/pages/on-51_metric_e.html">North Perth</a></li>
+<li><a href="/city/pages/on-79_metric_e.html">Oakville</a></li>
+<li><a href="/city/pages/on-101_metric_e.html">Ogoki</a></li>
+<li><a href="/city/pages/on-140_metric_e.html">Orangeville</a></li>
+<li><a href="/city/pages/on-13_metric_e.html">Orillia</a></li>
+<li><a href="/city/pages/on-117_metric_e.html">Oshawa</a></li>
+<li><a href="../../../weather/city/pages/on-118_metric_e.html">Ottawa (Kanata - Orléans)</a></li>
+<li><a href="/city/pages/on-52_metric_e.html">Ottawa (Richmond - Metcalfe)</a></li>
+<li><a href="/city/pages/on-7_metric_e.html">Owen Sound</a></li>
+<li><a href="/city/pages/on-53_metric_e.html">Oxtongue Lake</a></li>
+<li><a href="/city/pages/on-103_metric_e.html">Parry Sound</a></li>
+<li><a href="/city/pages/on-99_metric_e.html">Peawanuck</a></li>
+<li><a href="/city/pages/on-131_metric_e.html">Pembroke</a></li>
+<li><a href="/city/pages/on-112_metric_e.html">Petawawa</a></li>
+<li><a href="/city/pages/on-121_metric_e.html">Peterborough</a></li>
+<li><a href="/city/pages/on-54_metric_e.html">Pickering</a></li>
+<li><a href="/city/pages/on-120_metric_e.html">Pickle Lake</a></li>
+<li><a href="/city/pages/on-55_metric_e.html">Pikangikum</a></li>
+<li><a href="/city/pages/on-56_metric_e.html">Port Carling</a></li>
+</ul>
+<ul class="list-unstyled col-sm-4">
+<li><a href="/city/pages/on-80_metric_e.html">Port Colborne</a></li>
+<li><a href="/city/pages/on-19_metric_e.html">Port Elgin</a></li>
+<li><a href="/city/pages/on-149_metric_e.html">Port Perry</a></li>
+<li><a href="/city/pages/on-27_metric_e.html">Prince Edward (Picton)</a></li>
+<li><a href="/city/pages/on-57_metric_e.html">Quinte West</a></li>
+<li><a href="/city/pages/on-104_metric_e.html">Red Lake</a></li>
+<li><a href="/city/pages/on-58_metric_e.html">Renfrew</a></li>
+<li><a href="/city/pages/on-59_metric_e.html">Richmond Hill</a></li>
+<li><a href="/city/pages/on-172_metric_e.html">Rodney</a></li>
+<li><a href="/city/pages/on-141_metric_e.html">Rondeau (Provincial Park)</a></li>
+<li><a href="/city/pages/on-105_metric_e.html">Sachigo Lake</a></li>
+<li><a href="/city/pages/on-129_metric_e.html">Sandy Lake</a></li>
+<li><a href="/city/pages/on-147_metric_e.html">Sarnia</a></li>
+<li><a href="/city/pages/on-60_metric_e.html">Saugeen Shores</a></li>
+<li><a href="/city/pages/on-162_metric_e.html">Sault Ste. Marie</a></li>
+<li><a href="/city/pages/on-134_metric_e.html">Savant Lake</a></li>
+<li><a href="/city/pages/on-61_metric_e.html">Sharbot Lake</a></li>
+<li><a href="/city/pages/on-84_metric_e.html">Shelburne</a></li>
+<li><a href="/city/pages/on-161_metric_e.html">Simcoe</a></li>
+<li><a href="/city/pages/on-135_metric_e.html">Sioux Lookout</a></li>
+<li><a href="/city/pages/on-166_metric_e.html">Sioux Narrows</a></li>
+<li><a href="/city/pages/on-106_metric_e.html">Smiths Falls</a></li>
+<li><a href="/city/pages/on-62_metric_e.html">South Bruce Peninsula</a></li>
+<li><a href="/city/pages/on-107_metric_e.html">St. Catharines</a></li>
+<li><a href="/city/pages/on-98_metric_e.html">St. Thomas</a></li>
+<li><a href="/city/pages/on-115_metric_e.html">Stirling</a></li>
+<li><a href="/city/pages/on-116_metric_e.html">Stratford</a></li>
+<li><a href="/city/pages/on-18_metric_e.html">Strathroy</a></li>
+<li><a href="/city/pages/on-174_metric_e.html">Sudbury (Greater)</a></li>
+<li><a href="/city/pages/on-63_metric_e.html">Sydenham</a></li>
+<li><a href="/city/pages/on-22_metric_e.html">Temiskaming Shores</a></li>
+<li><a href="/city/pages/on-123_metric_e.html">Terrace Bay</a></li>
+<li><a href="/city/pages/on-100_metric_e.html">Thunder Bay</a></li>
+<li><a href="/city/pages/on-17_metric_e.html">Tillsonburg</a></li>
+<li><a href="/city/pages/on-127_metric_e.html">Timmins</a></li>
+<li><a href="/city/pages/on-157_metric_e.html">Tobermory</a></li>
+<li><a href="../../../weather/city/pages/on-143_metric_e.html">Toronto</a></li>
+<li><a href="/city/pages/on-128_metric_e.html">Toronto Island</a></li>
+<li><a href="/city/pages/on-126_metric_e.html">Trenton</a></li>
+<li><a href="/city/pages/on-154_metric_e.html">Upsala</a></li>
+<li><a href="/city/pages/on-64_metric_e.html">Vaughan</a></li>
+<li><a href="/city/pages/on-109_metric_e.html">Vineland</a></li>
+<li><a href="/city/pages/on-16_metric_e.html">Walkerton</a></li>
+<li><a href="/city/pages/on-138_metric_e.html">Wawa</a></li>
+<li><a href="/city/pages/on-132_metric_e.html">Webequie</a></li>
+<li><a href="/city/pages/on-14_metric_e.html">Welland</a></li>
+<li><a href="/city/pages/on-65_metric_e.html">West Nipissing</a></li>
+<li><a href="/city/pages/on-66_metric_e.html">Westport</a></li>
+<li><a href="/city/pages/on-119_metric_e.html">Whitby</a></li>
+<li><a href="/city/pages/on-67_metric_e.html">White River</a></li>
+<li><a href="/city/pages/on-130_metric_e.html">Wiarton</a></li>
+<li><a href="/city/pages/on-155_metric_e.html">Winchester</a></li>
+<li><a href="/city/pages/on-94_metric_e.html">Windsor</a></li>
+<li><a href="/city/pages/on-110_metric_e.html">Wingham</a></li>
+<li><a href="/city/pages/on-15_metric_e.html">Woodstock</a></li>
+<li><a href="/city/pages/on-158_metric_e.html">Wunnummin Lake</a></li>
+</ul>
+</div></div>
+</div>
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
+<section class="hidden-print"  id="weather-topics">
+	<h2 class="wb-inv">What we are doing</h2>
+	 <div class="row wb-eqht">
+      <section class="col-lg-4 col-md-6">
+			<h3 class="wxo-footer-nav">Weather Forecasts</h3>
+      	<ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="../../../weather/canada_e.html">Canadian Weather</a></li>
+            <li><a href="../../../weather/radar/index_e.html">Radar - Canada</a></li>
+            <li><a href="/satellite/index_e.html">Satellite - Canada</a></li>
+            <li><a href="/marine/index_e.html">Marine - Canada</a></li>
+            <li><a href="../../../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
+            <li><a href="http://www.ec.gc.ca/glaces-ice/default.asp?lang=En&amp;n=D32C361E-1">Canadian Ice Service</a></li>
+				<li><a href="/saisons/index_e.html">Seasonal forecasts</a></li>
+				<li><a href="/forecast/public_bulletins_e.html">Extended forecast</a></li>
+			</ul>
+      </section>
+      <section class="col-lg-4 col-md-6">
+		<h3 class="wxo-footer-nav">Weather Alerts</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="../../../weather/warnings/index_e.html">Public Alerts - Canada</a></li>
+            <li><a href="../../../weather/lightning/index_e.html">Lightning</a></li>
+            <li><a href="/hurricane/index_e.html">Hurricane</a></li>
+            <li><a href="/warnings/weathersummaries_e.html">Weather Summaries</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=15E59C08-1">Hazardous Weather</a></li>
+      </ul>
+      </section>
+	  <section class="col-lg-4 col-md-6">
+	  <h3 class="wxo-footer-nav">Weather Resources</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="/model_forecast/model_e.html">Global and Regional forecast models</a></li>
+            <li><a href="/astro/index_e.html">Astronomy</a></li>
+            <li><a href="http://ec.gc.ca/rhc-wsc/default.asp?lang=En&amp;n=4EED50F1-1">Water Level and Flow</a></li>
+				<li><a href="http://climate.weather.gc.ca/index_e.html">Historical Climate Data</a></li>
+				<li><a href="https://flightplanning.navcanada.ca/cgi-bin/CreePage.pl?Langue=anglais&amp;NoSession=NS_Inconnu&amp;Page=forecast-observation&amp;TypeDoc=html">Aviation</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=4D51ECA8-1 ">Guide to Public forecasts</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=2EC4EC51-1">Guide to Marine forecasts</a></li>
+				<li><a href="http://ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=8E7198BB-1">Guide to Air Quality forecasts</a></li>
+		</ul>
+      </section>
+	</div>
+</section>
+<section class="gc-prtts"><h2>Features</h2><div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://ec.gc.ca/uv/default.asp?lang=En&amp;n=DCF1C20A-1">
+<h3 class="h5">UV Index and sun protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="../../../weather/cacheable/images/banners/SM_123_03_30-UV-Index-and-Sun-Protection_button360x203.jpg?ver=1499874128" alt="" />
+</a>
+<p>Be weather wise!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://www.canada.ca/en/health-canada/services/sun-safety/extreme-heat-heat-waves.html">
+<h3 class="h5">Extreme Heat Protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="../../../weather/cacheable/images/banners/SM_124_03_30-Extreme-Heat-02_button_360x203.jpg?ver=1499874128" alt="" />
+</a>
+<p>Be prepared!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://www.ec.gc.ca/cas-aqhi/">
+<h3 class="h5">Be Air Aware</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="../../../weather/cacheable/images/banners/SM_120_03_30-Air-Quality_01_360x203.jpg?ver=1499874128" alt="" />
+</a>
+<p>Air Quality Health Index</p></section></div></section>
+<div class="row pagedetails">
+<div class="col-sm-6 col-lg-4 mrgn-tp-sm">
+<a href="https://www.canada.ca/en/report-problem.html" class="btn btn-default btn-block">Report a problem or mistake on this page</a>
+</div>
+<div class="col-sm-3 mrgn-tp-sm pull-right">
+<div class="wb-share" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>
+</div>
+<div class="datemod col-xs-12 mrgn-tp-lg">
+<dl id="wb-dtmd">
+<dt>Date modified:&#32;</dt>
+<dd><time property="dateModified">2017-07-22</time></dd>
+</dl>
+</div>
+</div>
+</main>
+
+
+<footer role="contentinfo" id="wb-info">
+<nav role="navigation" class="container wb-navcurr">
+<h2 class="wb-inv">About government</h2>
+<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
+<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+<li><a href="http://news.gc.ca/">News</a></li>
+<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+<li><a href="http://open.canada.ca/en/">Open government</a></li>
+</ul>
+</nav>
+<div class="brand">
+<div class="container">
+<div class="row">
+<nav class="col-md-10 ftr-urlt-lnk">
+<h2 class="wb-inv">About this site</h2>
+<ul>
+<li><a href="https://www1.canada.ca/en/contact/feedback.html">Feedback</a></li>
+<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+</ul>
+</nav>
+<div class="col-xs-6 visible-sm visible-xs tofpg">
+<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+</div>
+<div class="col-xs-6 col-md-2 text-right">
+<object type="image/svg+xml" tabindex="-1" role="img" data="../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="../../wet-boew/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="../../wet-boew/js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+<script src="../../GCWeb/js/theme.min.js"></script>
+
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="../../template/GCWeb/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="/template/gcweb/js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+<script src="../../GCWeb/css/theme.min.css"></script>
+
+
+<script src="../../cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="../../cacheable/js/city/availableTags_e.min.js"></script>
+<script src="../../city/js/cityjump.js"></script>
+<script>
+    document.getElementById("jump").className = "";
+    var max_chars = 50;
+    $('#city').keydown( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+    $('#city').keyup( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+</script>
+<script src="../../template/GCWeb/js/deps/jquery.dataTables.min.js"></script>
+<script src="../../city/js/jquery.h5validate.js"></script>
+<script src="../../cacheable/js/myprofile/alerts-1.0.min.js"></script>
+<script src="../../cacheable/js/myprofile/refresher-1.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('form').h5Validate({
+            errorClass:'white'
+        });
+    });
+</script>
+<script>LANG = "en-CA";</script><script src="../../gps/js/translate.js"></script>
+<script src="../../gps/js/gps.js"></script>
+<script src="../../gps/js/langStrings.js"></script>
+<script src="../../gps/js/cityLatLon.js"></script>
+
+<script>
+$(document).ready(function(){
+		    $('#gps-jq').click(function(){
+	       if (!$("#gps-jq" ).hasClass("open"))
+		       getGPSLocation();
+	     });
+ 	});
+</script>
+
+<script>
+    document.getElementById("jump").className = "";
+    var max_chars = 50;
+
+    $('#city').keydown( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+
+    $('#city').keyup( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+	
+	
+</script>
+
+<script>
+
+$(document).ready(function() {
+
+function snoopCities(event, ui) {
+    if (ui.item === null || typeof(ui.item) === 'undefined') {
+        $("#city").data("ref", null);
+        return;
+    }
+    
+    switch(ui.item.label) {
+        case "Montréal, QC": {
+            $("#city").data("ref", "../../city/pages/qc-147_metric_e.html");
+            break;
+			
+		}
+		 case "Ottawa (Kanata - Orléans), ON": {
+            $("#city").data("ref", "../../city/pages/on-118_metric_e.html");
+            break;
+			
+		}
+		 case "Ottawa": {
+            $("#city").data("ref", "../../city/pages/on-118_metric_e.html");
+            break;
+			
+		}
+
+		case "Toronto, ON": {
+            $("#city").data("ref", "../../city/pages/on-143_metric_e.html");
+            break;
+			
+		}
+		
+		case "Renfrew, ON": {
+            $("#city").data("ref", "../../city/pages/on-58_metric_e.html");
+            break;
+			
+		}
+
+        default: {
+            $("#city").data("ref", "../../city/jump_e.html");
+        }
+    }
+}
+
+$("#city").autocomplete("option", "select", snoopCities);
+
+// if city is undefined, get the contents of cityjump.city and use that to populate another set of cases for 
+
+$("#cityjump").on("submit", function(e) {
+
+    e.preventDefault();
+
+    var targetUrl = $("#city").data("ref");
+    if (targetUrl == null) {
+        window.location.href = "../../city/jump_e.html";
+    }
+
+    else {
+		window.location.href = targetUrl;
+    }
+
+});
+
+});
+
+</script>
+
+	</body>
+</html>

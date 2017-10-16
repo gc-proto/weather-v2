@@ -1,0 +1,592 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]--><head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>La météo au Canada</title>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link rel="stylesheet" href="./cacheable/css/mainmenu/index-e.css" media="screen">
+<link href="./GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="./GCWeb/css/theme.min.css">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<link href="./GCWeb/assets/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="/cacheable/css/mainmenu/index-ie8-e.css" media="screen">
+<link rel="stylesheet" href="./GCWeb/css/ie8-theme.min.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./wet-boew/js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+<![endif]-->
+
+<noscript><link rel="stylesheet" href="./wet-boew/css/noscript.min.css" /></noscript>
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<script>dataLayer1 = [];</script>
+<!-- End Google Tag Manager -->
+<link rel="stylesheet" href="./cacheable/css/city/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" href="./template/wxo/css/wxo.css" />
+
+</head>
+<body vocab="http://schema.org/" typeof="WebPage">
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
+<!-- End Google Tag Manager -->
+<ul id="wb-tphp">
+<li class="wb-slc">
+<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+</li>
+<li class="wb-slc visible-sm visible-md visible-lg">
+<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+</li>
+</ul>
+<header role="banner">
+<div id="wb-bnr" class="container">
+<section id="wb-lng" class="visible-md visible-lg text-right">
+<h2 class="wb-inv">Language selection</h2>
+<div class="row">
+<div class="col-md-12">
+<ul class="list-inline margin-bottom-none">
+<li><a lang="fr" href="index-fr.html">Français</a></li>
+</ul>
+</div>
+</div>
+</section>
+<div class="row">
+<div class="brand col-xs-8 col-sm-9 col-md-6">
+<a href="https://www.canada.ca/en.html"><object type="image/svg+xml" tabindex="-1" data="./GCWeb/assets/sig-blk-fr.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+</div>
+<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+<h2>Search and menus</h2>
+<ul class="list-inline text-right chvrn">
+<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl"></div>
+</section>
+<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+<h2>Search</h2>
+<form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
+<div class="form-group">
+<label for="wb-srch-q" class="wb-inv">Search website</label>
+<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca">
+<datalist id="wb-srch-q-ac">
+<!--[if lte IE 9]><select><![endif]-->
+<!--[if lte IE 9]></select><![endif]-->
+</datalist>
+</div>
+<div class="form-group submit">
+<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+</div>
+</form>
+</section>
+</div>
+</div>
+<nav role="navigation" id="wb-sm" data-ajax-replace="./ajax/sitemenu-fr.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+<div class="container nvbar">
+<h2>Topics menu</h2>
+<div class="row">
+ <ul class="list-inline menu">
+            <li><a href="https://www.canada.ca/fr/services/emplois.html">Emplois</a></li>
+            <li><a href="http://www.cic.gc.ca/francais/index.asp">Immigration</a></li>
+            <li><a href="http://voyage.gc.ca">Voyage</a></li>
+            <li><a href="http://www.canada.ca/fr/services/entreprises.html">Entreprises</a></li>
+            <li><a href="http://www.canada.ca/fr/services/prestations.html">Prestations</a></li>
+            <li><a href="http://www.canada.ca/fr/services/sante.html">Santé</a></li>
+            <li><a href="http://www.canada.ca/fr/services/impots.html">Impôts</a></li>
+            <li><a href="http://www.canada.ca/fr/services.html">Autres services</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+		<h2>You are here:</h2>
+		<div class="container">
+	<div class="row">
+		<ol class="breadcrumb">
+<li><a href="../weather/en.html">Accueil</a></li><li><a href="../weather/services/environment.html">Environnement et ressources naturelles</a></li><li><a href="../weather/index_e.html">Information météo</a></li><li><a href="../weather/mainmenu/weather_menu_e.html">Météo</a></li>
+		</ol>
+	</div>
+</div>
+	</nav>
+</header>
+    
+  <div class="container hidden-print">
+
+<span class='pull-right profile-link'><a href='/myprofile/index_e.html'></a></span>
+	<a href="#weather-shortcuts" class="overlay-lnk pull-right btn btn-default" aria-controls="mid-screen" role="button">Sujets météorologiques</a>
+	<span id="wxo-divider" class="pull-right wb-invisible">|&#160;</span>
+	<form class="mrgn-rght-sm pull-right" role="search" id="cityjump" method="GET" action="">
+   	<label id="search-label" for="city" accesskey="g" class="pull-right wb-invisible">Accéder à une ville</label>
+   	<input id="city" type="text" name="city" pattern=".{2,50}" title="Please enter at least two characters (Up to 50)" required data-h5-errorid="invalid-city" placeholder="Accéder à une ville" />
+   	<input type="hidden" name="lang" value="e"/>
+   	<input type="hidden" name="unit" value=""/>
+   	<input type="submit" id="jump" class="" value="Aller"/>
+   	<noscript><input type="submit" id="jumpnojs" value="Aller" formnovalidate/></noscript>
+	<div id="invalid-city"></div>
+</form>
+<section id="weather-shortcuts" class="wb-overlay modal-content overlay-def wb-panel-r">
+	<header class="modal-header">
+		<h2 class="modal-title">Weather shortcuts</h2>
+	</header>
+	<div class="modal-body">
+	
+                                <li><a href="../weather/canada_e.html">Canadian Weather</a></li>
+                                <li><a href="../weather/radar/index_e.html">Radar - Canada</a></li>
+                                <li><a href="../weather/satellite/index_e.html">Satellite - Canada</a></li>
+                                <li><a href="#">Marine - Canada</a></li>
+                                <li><a href="../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
+                                <li><a href="#">Canadian Ice Service</a></li>
+                                <li><a href="#">Seasonal forecasts</a></li>
+                                <li><a href="#">Extended forecasts</a></li>
+                                <li><a href="../weather/warnings/index_e.html">Public Alerts - Canada</a></li>
+                                <li><a href="../weather/lightning/index_e.html">Lightning</a></li>
+                                <li><a href="#">Hurricane</a></li>
+                                <li><a href="#">Weather Summaries</a></li>
+                                <li><a href="#">Hazardous Weather</a></li>
+                                <li><a href="#">Global and Regional forecast models</a></li>
+                                <li><a href="#">Astronomy</a></li>
+                                <li><a href="#">Historical Climate Data</a></li>
+                                <li><a href="#">Aviation</a></li>
+                                <li><a href="#">Guide to Public forecasts</a></li>
+                                <li><a href="#">Guide to Marine forecasts</a></li>
+                                <li><a href="#">Guide to Air Quality forecasts</a></li>
+	</div>
+	</div>
+</section>
+</div>
+
+<div class="clearfix"></div>
+<div id='collapsible-alerts' class='container'></div>
+<div class="clearfix"></div>
+
+
+<main role="main" property="mainContentOfPage" class="container">
+
+  <h1 property="name" id="wb-cont">La météo au Canada</h1>
+		<section><details class='alert alert-info' id='alert-info' open='open'><summary><h2 class="h5">Point chaud et froid de l'heure ...</h2></summary>
+	<div>
+<p class="mrgn-bttm-0">Point chaud au <strong>Canada</strong>: <span class="visible-metric">25,8 &#176;<abbr title="degrees Celsius">C</abbr></span><span class="visible-imperial wb-inv">78,4 &#176;<abbr title="degrees Fahrenheit">F</abbr></span> Chéticamp, NS</p>
+<p class="mrgn-bttm-0">Point froid au <strong>Canada</strong>: <span class="visible-metric">-1,3 &#176;<abbr title="degrees Celsius">C</abbr></span><span class="visible-imperial wb-inv">29,7 &#176;<abbr title="degrees Fahrenheit">F</abbr></span> CFS Alert, NU; Stefansson Island, NU</p>
+</div>
+	</details></section>
+
+	<div class="row">
+      <div class="col-md-12">
+		<map name="FPMap1" id="FPMap1" title="navigation">
+		 <area href="/city/pages/yt-16_metric_e.html" title="Whitehorse" alt="Whitehorse" shape="poly" coords="66,233,57,233,56,223,39,223,39,212,53,212,53,198,60,170,95,170,95,198,67,202,67,212,95,212,95,226,67,223" />
+		 <area href="/forecast/canada/index_e.html?id=YT" title="Yukon" alt="Yukon" shape="poly" coords="99,128,26,208,112,265,112,251,102,247,99,230,99,194,106,184,102,177,106,173,102,167,102,163,113,146" />
+
+		 <area href="/city/pages/nt-24_metric_e.html" title="Yellowknife" alt="Yellowknife" shape="poly" coords="163,265,176,265,176,258,228,258,228,247,190,248,190,237,221,237,218,206,176,206,176,233,169,237" />
+		 <area href="/forecast/canada/index_e.html?id=NT" title="Northwest Territories" alt="Northwest Territories" shape="poly" coords="235,82,228,112,228,120,228,127,217,147,214,176,203,182,183,172,172,175,162,190,182,221,193,225,204,238,235,249,228,302,186,291,130,274,109,265,113,253,105,249,96,236,99,229,99,210,99,194,105,187,101,176,98,169,102,169,103,157,112,148,119,144,148,151,165,154,162,137,176,123,175,116,192,95,207,89,229,80" />
+
+		 <area href="/city/pages/nu-21_metric_e.html" title="Iqaluit" alt="Iqaluit" shape="poly" coords="393,234,396,241,407,241,404,233,421,233,421,219,393,219,393,212,410,206,407,178,375,177,375,209,365,213,369,223,385,227" />
+		<area href="/forecast/canada/index_e.html?id=NU" title="Nunavut" alt="Nunavut" shape="poly" coords="233,252,225,248,218,245,209,242,200,239,198,235,193,228,187,227,177,214,162,189,168,172,185,173,210,180,218,149,231,80,294,32,305,25,316,23,320,24,324,27,327,28,322,55,316,107,318,140,326,139,337,151,353,156,368,161,379,174,414,189,415,202,413,212,418,237,417,250,353,256,349,274,368,333,362,346,365,374,353,374,353,371,353,330,268,300,250,300,239,299,227,298,230,277,231,261" />
+		 <area href="/city/pages/bc-74_metric_e.html" title="Vancouver" alt="Vancouver" shape="poly" coords="59,357,108,360,107,362,110,381,111,423,98,430,100,428,80,432,66,430" />
+		 <area href="/city/pages/bc-85_metric_e.html" title="Victoria" alt="Victoria" shape="poly" coords="7,367,56,370,55,372,60,389,59,433,46,440,48,438,28,442,14,440" />
+		 <area href="/city/pages/bc-79_metric_e.html" title="Prince George" alt="Prince George" shape="poly" coords="84,334,95,334,98,328,119,328,119,317,81,314,81,303,109,303,109,275,74,275,74,299,70,307,69,314,50,313,53,328" />
+		 <area href="/forecast/canada/index_e.html?id=BC" title="British Columbia" alt="British Columbia" shape="poly" coords="130,275,102,342,123,388,120,394,126,408,64,381,56,388,42,370,32,342,39,338,46,325,39,321,36,322,32,321,25,321,19,315,22,304,22,290,35,300,32,307,42,311,43,297,55,286,50,275,51,234,33,234,36,216" />
+
+		 <area href="/city/pages/ab-52_metric_e.html" title="Calgary" alt="Calgary" shape="poly" coords="130,377,127,384,116,384,116,394,134,395,134,408,140,415,141,437,179,440,179,405,151,405,147,398,155,395,158,384,140,384,140,377" />
+		 <area href="/city/pages/ab-50_metric_e.html" title="Edmonton" alt="Edmonton" shape="poly" coords="141,359,140,352,123,352,123,342,140,342,140,328,144,324,144,300,182,300,182,331,154,335,154,345,176,345,176,355,151,355" />
+		 <area href="/forecast/canada/index_e.html?id=AB" title="Alberta" alt="Alberta" shape="poly" coords="186,290,130,272,102,342,109,352,112,360,116,370,120,381,126,391,120,394,123,405,155,415" />
+		 <area href="/city/pages/sk-32_metric_e.html" title="Regina" alt="Regina" shape="poly" coords="179,390,179,415,183,447,224,447,224,415,203,415,204,401,211,401,211,390" />
+		 <area href="/city/pages/sk-40_metric_e.html" title="Saskatoon" alt="Saskatoon" shape="poly" coords="182,387,193,387,193,377,221,377,221,369,200,366,197,355,228,352,228,324,190,324,186,355,183,366,172,366,172,380,179,380" />
+		 <area href="/forecast/canada/index_e.html?id=SK" title="Saskatchewan" alt="Saskatchewan" shape="poly" coords="228,300,224,349,221,426,154,412,183,290" />
+
+		 <area href="/city/pages/mb-38_metric_e.html" title="Winnipeg" alt="Winnipeg" shape="poly" coords="245,415,245,411,259,411,260,418,274,418,274,432,259,432,259,439,280,439,280,468,252,471,246,447,242,440,242,429,228,429,228,415" />
+		 <area href="/forecast/canada/index_e.html?id=MB" title="Manitoba" alt="Manitoba" shape="poly" coords="228,300,224,342,221,423,266,426,266,381,305,338,291,329,284,331,277,314,270,315,270,303" />
+
+		 <area href="../weather/city/pages/on-118_metric_e.html" title="Ottawa" alt="Ottawa" shape="poly" coords="417,445,428,445,431,453,442,453,442,463,427,463,427,474,462,474,462,508,420,508,417,480,414,463,406,463,406,449" />
+		 <area href="/city/pages/on-100_metric_e.html" title="Thunder Bay" alt="Thunder Bay" shape="poly" coords="304,437,318,437,319,430,361,430,361,416,333,416,333,406,360,405,360,374,325,374,319,405,318,419,298,416" />
+		 <area href="../weather/city/pages/on-143_metric_e.html" title="Toronto" alt="Toronto" shape="poly" coords="354,465,354,479,358,493,358,517,392,518,392,482,403,482,403,465" />
+		 <area href="../weather/forecast/canada/ON_index_e.html" title="Ontario" alt="Ontario" shape="poly" coords="305,337,266,382,263,424,295,438,315,438,319,427,333,435,343,438,350,452,372,459,375,480,371,497,385,490,403,483,400,473,413,469,438,449,428,442,414,452,410,445,396,442,385,431,378,389,361,382,368,372,351,368,351,350,333,351" />
+
+		 <area href="/city/pages/qc-133_metric_e.html" title="Qu&eacute;bec City" alt="Qu&eacute;bec City" shape="poly" coords="445,416,445,426,456,426,456,416,474,415,474,402,456,401,459,391,484,391,487,360,446,360,449,388,442,388,442,401,435,405,438,416" />
+		 <area href="../weather/city/pages/qc-147_metric_e.html" title="Montr&eacute;al" alt="Montr&eacute;al" shape="poly" coords="445,447,432,447,432,439,414,439,414,432,400,429,400,419,407,415,404,390,442,387,442,415,417,422,424,429,438,429,463,429,446,440" />
+		 <area href="../weather/forecast/canada/QC_index_e.html" title="Quebec" alt="Quebec" shape="poly" coords="432,441,426,442,418,445,411,445,406,442,400,440,394,440,389,439,383,432,383,426,373,387,375,383,379,383,377,376,373,368,370,359,366,350,364,350,370,344,377,340,378,334,378,325,375,317,371,312,366,307,361,306,360,300,363,295,364,288,358,280,358,275,358,271,353,266,355,262,361,260,367,260,372,260,375,258,377,256,381,259,387,261,391,264,397,265,403,266,404,274,408,281,412,286,418,287,423,287,427,285,429,279,432,276,430,270,429,265,429,260,433,268,437,274,441,274,443,280,444,283,448,285,450,294,455,302,461,309,462,317,453,317,449,319,442,318,438,321,440,325,442,333,448,336,449,342,456,342,460,348,469,348,475,348,474,343,472,336,475,343,490,336,510,325,518,322,518,326,515,332,510,339,507,347,503,367,497,368,493,370,490,382,486,390,479,390,472,396,467,397,465,402,464,408,458,414,458,424,458,432,454,436,453,440,428,448" />
+
+			 <area href="/city/pages/nl-24_metric_e.html" title="St John&#39;s" alt="St John&#39;s" shape="poly" coords="568,344,571,351,579,351,582,341,582,330,558,330,558,320,600,320,599,288,546,285,547,316,540,316,541,330,533,330,536,344" />
+		 <area href="/forecast/canada/index_e.html?id=NL" title="Newfoundland and Labrador" alt="Newfoundland and Labrador" shape="poly" coords="432,265,445,282,453,289,456,307,467,321,460,321,446,317,443,327,442,335,453,342,463,349,477,353,469,335,477,334,481,349,491,335,505,332,522,321,528,321,523,331,526,345,526,359,529,374,533,377,536,370,547,366,550,370,554,364,561,363,568,357,578,360,571,346,572,342,561,332,551,335,547,335,540,339,536,339,533,321,529,311,519,304,505,300,494,297,484,297,473,294,466,286,460,280,452,275,442,272" />
+
+		 <area href="/city/pages/nb-29_metric_e.html" title="Fredericton" alt="Fredericton" shape="poly" coords="495,415,495,408,481,405,481,415,463,412,460,421,463,429,466,443,467,457,467,471,508,471,505,443,491,440,481,439,481,429,498,426,512,426,509,415" />
+		 <area href="/forecast/canada/index_e.html?id=NB" title="New Brunswick" alt="New Brunswick" shape="poly" coords="506,404,504,407,503,409,501,411,500,414,497,417,494,421,491,424,488,426,484,426,481,423,477,419,475,416,474,412,473,407,470,405,467,407,465,408,466,402,467,398,472,396,476,394,478,391,483,391,486,391,489,391,490,390,491,396,493,397,496,399,498,401,499,403,503,404" />
+
+		 <area href="/city/pages/pe-5_metric_e.html" title="Charlottetown" alt="Charlottetown" shape="poly" coords="519,401,578,401,578,387,512,384,512,380,540,377,540,349,495,349,494,390,505,398,508,404,513,405" />
+		 <area href="/forecast/canada/index_e.html?id=PE" title="Prince Edward Island" alt="Prince Edward Island" shape="poly" coords="498,394,508,397,522,397,519,404,509,405,502,405" />
+
+		 <area href="/city/pages/ns-19_metric_e.html" title="Halifax" alt="Halifax" shape="poly" coords="512,411,522,412,557,415,557,426,547,429,550,439,582,439,582,471,540,471,540,443,533,440,533,429,522,425,512,425" />
+		 <area href="/forecast/canada/index_e.html?id=NS" title="Nova Scotia" alt="Nova Scotia" shape="poly" coords="522,401,522,383,530,387,536,398,530,405,526,415,519,422,515,422,512,433,512,440,501,439,498,433,498,426,498,419,501,409,508,405" />
+		</map>
+<div class="row">
+	<div class="col-md-8">
+ 		<img src="../weather/data/wxoimages/wocanmap0_e.jpg" class="thumbnail center-block img-responsive wxo-pddng-sm"  usemap="#FPMap1" alt="map of Canada"/>	
+	</div>
+	<aside class="col-md-4 hidden-xs hidden-sm">
+   	<div class="well">
+<h2 class="mrgn-tp-0">Liens Météo</h2>
+	<ul class="lst-spcd">
+		<li><a href="../weather/canada_e.html">Météo au Canada</a></li>
+		<li><a href="../weather/warnings/index_e.html">Alertes météo publiques - Canada</a></li>
+		<li><a href="../weather/radar/index_e.html">Radar - Canada</a></li>
+		<li><a href="../weather/satellite/index_e.html">Satellite - Canada</a></li>
+		<li><a href="/weather/saisons/index_e.html">Prévisions saisonnières</a></li>
+		<li><a href="../weather/mainmenu/airquality_menu_e.html">Qualité de l'air </a></li>
+		<li><a href="/weather/marine/index_e.html">Maritime - Canada</a></li>
+		<li><a href="http://ec.gc.ca/rhc-wsc/default.asp?lang=En&amp;n=4EED50F1-1">Niveau d'eau et débit</a></li>
+	</ul>
+</div>
+	</aside>
+	</div> </div></div>
+
+
+    <div>
+      <details id="gps-jq">
+      <summary>Utiliser emplacement actuel</summary>
+      <div id="GPSResults"></div>
+      </details>
+	</div>	
+
+	 <div>
+	 <span class="hidden-xs">ou choisissez une province ou un territoire :</span>
+      <ul class="nav nav-pills hidden-xs">
+<li><a title="Alberta" href="/forecast/canada/index_e.html?id=AB"><span class="wb-inv">Alberta</span>AB</a></li>
+<li><a title="British Columbia" href="/forecast/canada/index_e.html?id=BC"><span class="wb-inv">British Columbia</span>BC</a></li>
+<li><a title="Manitoba" href="/forecast/canada/index_e.html?id=MB"><span class="wb-inv">Manitoba</span>MB</a></li>
+<li><a title="New Brunswick" href="/forecast/canada/index_e.html?id=NB"><span class="wb-inv">New Brunswick</span>NB</a></li>
+<li><a title="Newfoundland and Labrador" href="/forecast/canada/index_e.html?id=NL"><span class="wb-inv">Newfoundland and Labrador</span>NL</a></li>
+<li><a title="Nova Scotia" href="/forecast/canada/index_e.html?id=NS"><span class="wb-inv">Nova Scotia</span>NS</a></li>
+<li><a title="Northwest Territories" href="/forecast/canada/index_e.html?id=NT"><span class="wb-inv">Northwest Territories</span>NT</a></li>
+<li><a title="Nunavut" href="/forecast/canada/index_e.html?id=NU"><span class="wb-inv">Nunavut</span>NU</a></li>
+<li><a title="Ontario" href="../weather/forecast/canada/ON_index_e.html"><span class="wb-inv">Ontario</span>ON</a></li>
+<li><a title="Prince Edward Island" href="/forecast/canada/index_e.html?id=PE"><span class="wb-inv">Prince Edward Island</span>PE</a></li>
+<li><a title="Quebec" href="../weather/forecast/canada/QC_index_e.html"><span class="wb-inv">Quebec</span>QC</a></li>
+<li><a title="Saskatchewan" href="/forecast/canada/index_e.html?id=SK"><span class="wb-inv">Saskatchewan</span>SK</a></li>
+<li><a title="Yukon" href="/forecast/canada/index_e.html?id=YT"><span class="wb-inv">Yukon</span>YT</a></li>
+</ul>
+<div class="visible-xs">
+<details>
+<summary>Forecast Regions</summary>
+<ul class="list-unstyled wxo-btn">
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=AB">Alberta</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=BC">British Columbia</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=MB">Manitoba</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=NB">New Brunswick</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=NL">Newfoundland and Labrador</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=NT">Northwest Territories</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=NS">Nova Scotia</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=NU">Nunavut</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/weather/forecast/canada/index_e.html?id=ON">Ontario</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=PE">Prince Edward Island</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=QC">Quebec</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=SK">Saskatchewan</a></li>
+<li><a class="btn btn-default btn-sm btn-block" role="button" href="/forecast/canada/index_e.html?id=YT">Yukon</a></li>
+</ul></details></div>   </div>
+   <div id="wxo-section">
+      <span id="wxo-sum" class="hidden-md hidden-lg">Conditions actuelles</span>
+      <div class="table-responsive"><table class="table table-hover table-striped table-condensed">
+<thead>
+<tr>
+	<th scope="col">Ville</th>
+	<th scope="col">Condition</th>
+	<th scope="col">Température</th>
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td><a href='/city/pages/ab-52_metric_e.html'>Calgary</a></td><td>Généralement ensoleillé</td><td>11&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/pe-5_metric_e.html'>Charlottetown</a></td><td>Pluie faible</td><td>21&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/ab-50_metric_e.html'>Edmonton</a></td><td></td><td>16&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/nb-29_metric_e.html'>Fredericton</a></td><td>Nuageux</td><td>22&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/ns-19_metric_e.html'>Halifax</a></td><td>Partiellement nuageux</td><td>20&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/nu-21_metric_e.html'>Iqaluit</a></td><td>Partiellement nuageux</td><td>9&deg;C</td></tr>
+<tr>
+<td><a href='../weather/city/pages/qc-147_metric_e.html'>Montréal</a></td><td>Ensoleillé</td><td>21&deg;C</tr>
+<tr>
+<td><a href='../weather/city/pages/on-118_metric_e.html'>Ottawa (Kanata - Orléans)</a></td><td>Ensoleillé</td><td>21&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/bc-79_metric_e.html'>Prince George</a></td><td></td><td>11&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/qc-133_metric_e.html'>Québec</a></td><td>Généralement nuageux</td><td>20&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/sk-32_metric_e.html'>Regina</a></td><td>Généralement ensoleillé</td><td>11&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/sk-40_metric_e.html'>Saskatoon</a></td><td>Généralement ensoleillé</td><td>12&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/nl-24_metric_e.html'>St. John's</a></td><td>Généralement nuageux</td><td>19&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/on-100_metric_e.html'>Thunder Bay</a></td><td>Partiellement nuageux</td><td>10&deg;C</td></tr>
+<tr>
+<td><a href='../weather/city/pages/on-143_metric_e.html'>Toronto</a></td><td>Ensoleillé</td><td>21&deg;C</tr>
+<tr>
+<td><a href='/city/pages/bc-74_metric_e.html'>Vancouver</a></td><td>Généralement nuageux</td><td>15&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/bc-85_metric_e.html'>Victoria</a></td><td>Généralement nuageux</td><td>13&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/yt-16_metric_e.html'>Whitehorse</a></td><td>Pluie faible</td><td>9&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/mb-38_metric_e.html'>Winnipeg</a></td><td>	Pluie faible</td><td>12&deg;C</td></tr>
+<tr>
+<td><a href='/city/pages/nt-24_metric_e.html'>Yellowknife</a></td><td>Partiellement nuageux</td><td>13&deg;C</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
+<section class="hidden-print"  id="weather-topics">
+	<h2 class="wb-inv">What we are doing</h2>
+	 <div class="row wb-eqht">
+      <section class="col-lg-4 col-md-6">
+			<h3 class="wxo-footer-nav">Weather Forecasts</h3>
+      	<ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="/canada_e.html">Canadian Weather</a></li>
+            <li><a href="../weather/radar/index_e.html">Radar - Canada</a></li>
+            <li><a href="/satellite/index_e.html">Satellite - Canada</a></li>
+            <li><a href="/marine/index_e.html">Marine - Canada</a></li>
+            <li><a href="../weather/mainmenu/airquality_menu_e.html">Air Quality</a></li>
+            <li><a href="http://www.ec.gc.ca/glaces-ice/default.asp?lang=En&amp;n=D32C361E-1">Canadian Ice Service</a></li>
+				<li><a href="/saisons/index_e.html">Seasonal forecasts</a></li>
+				<li><a href="/forecast/public_bulletins_e.html">Extended forecast</a></li>
+			</ul>
+      </section>
+      <section class="col-lg-4 col-md-6">
+		<h3 class="wxo-footer-nav">Weather Alerts</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="../weather/warnings/index_e.html">Public Alerts - Canada</a></li>
+            <li><a href="../weather/lightning/index_e.html">Lightning</a></li>
+            <li><a href="/hurricane/index_e.html">Hurricane</a></li>
+            <li><a href="/warnings/weathersummaries_e.html">Weather Summaries</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=15E59C08-1">Hazardous Weather</a></li>
+      </ul>
+      </section>
+	  <section class="col-lg-4 col-md-6">
+	  <h3 class="wxo-footer-nav">Weather Resources</h3>
+      <ul class="mrgn-bttm-lg lst-spcd">
+            <li><a href="/model_forecast/model_e.html">Global and Regional forecast models</a></li>
+            <li><a href="/astro/index_e.html">Astronomy</a></li>
+            <li><a href="http://ec.gc.ca/rhc-wsc/default.asp?lang=En&amp;n=4EED50F1-1">Water Level and Flow</a></li>
+				<li><a href="http://climate.weather.gc.ca/index_e.html">Historical Climate Data</a></li>
+				<li><a href="https://flightplanning.navcanada.ca/cgi-bin/CreePage.pl?Langue=anglais&amp;NoSession=NS_Inconnu&amp;Page=forecast-observation&amp;TypeDoc=html">Aviation</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=4D51ECA8-1 ">Guide to Public forecasts</a></li>
+				<li><a href="http://www.ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=2EC4EC51-1">Guide to Marine forecasts</a></li>
+				<li><a href="http://ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=8E7198BB-1">Guide to Air Quality forecasts</a></li>
+		</ul>
+      </section>
+	</div>
+</section>
+<section class="gc-prtts"><h2>Features</h2><div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://ec.gc.ca/uv/default.asp?lang=En&amp;n=DCF1C20A-1">
+<h3 class="h5">UV Index and sun protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="cacheable/images/banners/SM_123_03_30-UV-Index-and-Sun-Protection_button360x203.jpg?ver=1499874128" alt="" />
+</a>
+<p>Be weather wise!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://www.canada.ca/en/health-canada/services/sun-safety/extreme-heat-heat-waves.html">
+<h3 class="h5">Extreme Heat Protection</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="cacheable/images/banners/SM_124_03_30-Extreme-Heat-02_button_360x203.jpg?ver=1499874128" alt="" />
+</a>
+<p>Be prepared!</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="/redirect.php?url=http://www.ec.gc.ca/cas-aqhi/">
+<h3 class="h5">Be Air Aware</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="cacheable/images/banners/SM_120_03_30-Air-Quality_01_360x203.jpg?ver=1499874128" alt="" />
+</a>
+<p>Air Quality Health Index</p></section></div></section>
+<div class="row pagedetails">
+<div class="col-sm-6 col-lg-4 mrgn-tp-sm">
+<a href="https://www.canada.ca/en/report-problem.html" class="btn btn-default btn-block">Report a problem or mistake on this page</a>
+</div>
+<div class="col-sm-3 mrgn-tp-sm pull-right">
+<div class="wb-share" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>
+</div>
+<div class="datemod col-xs-12 mrgn-tp-lg">
+<dl id="wb-dtmd">
+<dt>Date modified:&#32;</dt>
+<dd><time property="dateModified">2017-07-22</time></dd>
+</dl>
+</div>
+</div>
+</main>
+
+
+<footer role="contentinfo" id="wb-info">
+<nav role="navigation" class="container wb-navcurr">
+<h2 class="wb-inv">About government</h2>
+<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
+<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+<li><a href="http://news.gc.ca/">News</a></li>
+<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+<li><a href="http://open.canada.ca/en/">Open government</a></li>
+</ul>
+</nav>
+<div class="brand">
+<div class="container">
+<div class="row">
+<nav class="col-md-10 ftr-urlt-lnk">
+<h2 class="wb-inv">About this site</h2>
+<ul>
+<li><a href="https://www1.canada.ca/en/contact/feedback.html">Feedback</a></li>
+<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+</ul>
+</nav>
+<div class="col-xs-6 visible-sm visible-xs tofpg">
+<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+</div>
+<div class="col-xs-6 col-md-2 text-right">
+<object type="image/svg+xml" tabindex="-1" role="img" data="./GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="./wet-boew/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="./wet-boew/js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+<script src="./GCWeb/js/theme.min.js"></script>
+
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="./template/gcweb/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="/template/gcweb/js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+<script src="./GCWeb/js/theme.min.js"></script>
+<script src="../weather/cacheable/js/city/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="../weather/cacheable/js/city/availableTags_e.min.js"></script>
+<script type="text/javascript" src="../weather/city/js/cityjump.js"></script>
+<script>LANG = "en-CA";</script><script src="./gps/js/translate.js"></script>
+<script src="./gps/js/gps.js"></script>
+<script src="./gps/js/langStrings.js"></script>
+<script src="./gps/js/cityLatLon.js"></script>
+
+<script>
+$(document).ready(function(){
+		    $('#gps-jq').click(function(){
+	       if (!$("#gps-jq" ).hasClass("open"))
+		       getGPSLocation();
+	     });
+ 	});
+</script>
+
+<script>
+    document.getElementById("jump").className = "";
+    var max_chars = 50;
+
+    $('#city').keydown( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+
+    $('#city').keyup( function(e){
+        if ($(this).val().length > max_chars) {
+            $(this).val($(this).val().substr(0, max_chars));
+        }
+    });
+	
+	
+</script>
+
+<script>
+
+$(document).ready(function() {
+
+function snoopCities(event, ui) {
+    if (ui.item === null || typeof(ui.item) === 'undefined') {
+        $("#city").data("ref", null);
+        return;
+    }
+    
+    switch(ui.item.label) {
+        case "Montréal, QC": {
+            $("#city").data("ref", "city/pages/qc-147_metric_e.html");
+            break;
+			
+		}
+		 case "Ottawa (Kanata - Orléans), ON": {
+            $("#city").data("ref", "city/pages/on-118_metric_e.html");
+            break;
+			
+		}
+		 case "Ottawa": {
+            $("#city").data("ref", "city/pages/on-118_metric_e.html");
+            break;
+			
+		}
+
+		case "Toronto, ON": {
+            $("#city").data("ref", "city/pages/on-143_metric_e.html");
+            break;
+			
+		}
+		
+		case "Renfrew, ON": {
+            $("#city").data("ref", "city/pages/on-58_metric_e.html");
+            break;
+			
+		}
+
+        default: {
+            $("#city").data("ref", "city/jump_e.html");
+        }
+    }
+}
+
+$("#city").autocomplete("option", "select", snoopCities);
+
+// if city is undefined, get the contents of cityjump.city and use that to populate another set of cases for 
+
+$("#cityjump").on("submit", function(e) {
+
+    e.preventDefault();
+
+    var targetUrl = $("#city").data("ref");
+    if (targetUrl == null) {
+        window.location.href = "city/jump_e.html";
+    }
+
+    else {
+		window.location.href = targetUrl;
+    }
+
+});
+
+});
+
+</script>
+
+	</body>
+</html>
