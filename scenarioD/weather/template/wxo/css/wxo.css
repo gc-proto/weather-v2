@@ -98,7 +98,7 @@ abbr {
 
 .wxo-th-bkg {background-color:#ccc !important;}
 
-.wxo-tb-head {font-weight:600; text-align:center;}
+.wxo-tb-head {font-weight:600; text-align:center; white-space:normal !important ;}
 .wxo-tb-head_marine {font-weight:600;}
 
 .wxo-media tr td { white-space:normal !important ;}
@@ -332,12 +332,12 @@ p + #cityjump, ul + #cityjump{
 }
 
 #cityjump #city {
-   width: 10em;
+   width: 8em;
    margin: 0;
 }
 
 #cityjump #jump, #cityjump #jumpnojs {
-   width: 5em;
+   width: 3em;
    display: inline;
 }
 
