@@ -267,6 +267,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               </ul>
             </div>
           </div>
+          
+          
 
           <div class="col-sm-8 text-left">
             <dl class="dl-horizontal mrgn-bttm-0 hidden-xs wxo-conds-tmp mrgn-tp-sm">
@@ -278,7 +280,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			   <div class="brdr-tp">
 					<p style="text-align: left; margin-bottom: 5px !important; margin-top: 10px; margin-left: 30px !important;">Wind: <b><abbr title="South-Southwest">S</abbr> 15 <abbr title="kilometres per hour">km/h</b> </p>
 					<p style="text-align: left; margin-bottom: 5px !important; margin-left: 30px !important;"><a href="https://web.archive.org/web/20170625161729/http://ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=6C5D4990-1#humidex">Humidex: </a> <b>23</b></p>
-					<p style="text-align: left; margin-bottom: 5px !important; margin-left: 30px !important; margin-bottom: 10px !important;">Visibility: <b>24 km</b></p>
+					<p style="text-align: left; margin-bottom: 5px !important; margin-left: 30px !important;">Visibility: <b>24 km</b></p>
+                    <p style="text-align: left; margin-bottom: 5px !important; margin-left: 30px !important; margin-bottom: 10px !important;">UV: <b>1 Low</b></p>
 				</div>
 
 
@@ -287,7 +290,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="brdr-tp">
 					<p style="text-align: left; margin-bottom: 5px !important; margin-top: 10px;">Pressure: <b>101.2 <abbr title="kilopascals">kPa (falling) </b></abbr> </p>
 					<p style="text-align: left; margin-bottom: 5px !important;">Dew point: <b>13.6 C </b></p>
-					<p style="text-align: left; margin-bottom: 5px !important; margin-bottom: 10px !important;">Humidity: <b>65% </b></p>
+					<p style="text-align: left; margin-bottom: 5px !important;">Humidity: <b>65% </b></p>
+                    <p style="text-align: left; margin-bottom: 5px !important; margin-bottom: 10px !important;">Air Quality Health Index: <b>2 Low risk </b></p>
 				</div>
 
 
@@ -437,6 +441,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         </div>
 
 	        <div>
+            
+            <!-- modified 2 column conditions format -->
 
 		<details class="wxo-detailsconds mrgn-tp-md" style="margin-bottom: 0px !important; border: none !important;">
           <summary style="border: none !important;">Conditions details </summary>
@@ -458,7 +464,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
               <a href="http://ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=6C5D4990-1#humidex">Humidex</a>:</dt>
             <dd >23</dd>
 			<dt>Pressure:</dt>
-            <dd >101.2 <abbr title="kilopascals">kPa (falling)</abbr>
+            <dd >101.2 <abbr title="kilopascals">kPa <br>(falling)</abbr>
+            </dd>
+            <dt>UV:</dt>
+            <dd >1 Low
             </dd>
 
 
@@ -475,6 +484,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
             <dt>Humidity:</dt>
             <dd >65%</dd>
+            
+            <dt>Air Quality <br>Health Index:</dt>
+            <dd >2 Low Risk</dd>
 </div>
           </dl>
 
@@ -482,6 +494,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
         </div>
+        
+<!-- end modified 2 column conditions -->
+    
 
 
  		<details class="panel-default visible-xs" style="margin-top: 0px !important; margin-bottom: 0px !important;">
@@ -562,11 +577,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			div.hourly p.lop {
 
 				line-height: 1;
-
-				color: #888;
-
+				color: #555;
 				font-size: 13px;
-
+				margin-bottom: 0px; 
+				margin-top: 3px;
+				
 				}
 
 
@@ -575,7 +590,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 				line-height: 1;
 
-				color: #888;
+				color: #555;
 
 				margin-bottom: 0.5em;
 
@@ -706,23 +721,30 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 					</p>
 
+					
+                    <p class="lop text-center" title="Less than 40% chance of rain">
 
-
-					<p class="">Mostly cloudy</p>
-
-
-
-					<p class="lop text-center" title="Less than 40% chance of rain">
-
-					&lt; 40% chance of rain
-
+					<small> &lt; 40% </small>
 					</p>
 
 
 
+					<p>Chance of showers</p>
+                    
+                
+
+
 					<p class="wind text-center">
 
-					Wind 15 km/h south
+					Humidex: <b>23 </b>
+
+					</p>
+					
+
+
+					<p class="wind text-center">
+
+					Wind: <b>South 15 km/h  </b>
 
 					</p>
 
@@ -748,23 +770,29 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-					<p class="">Risk of thunderstorms</p>
-
-
-
 					<p class="lop text-center" title="More than 70% chance of rain">
 
-					&gt; 70% chance of rain
+					<small>&gt; 70% </small>
 
 					</p>
 
+					<p class="">Risk of thunderstorms</p>
+                   
+
+					<p class="wind text-center">
+
+					Humidex: <b>23 </b>
+
+					</p>
+					
 
 
 					<p class="wind text-center">
 
-					Wind 15 km/h south
+					Wind: <b>South 15 km/h  </b>
 
 					</p>
+
 
 
 
@@ -788,21 +816,27 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-					<p class="">Risk of thunderstorms</p>
-
-
-
+					
 					<p class="lop text-center" title="More than 70% chance of rain">
 
-					&gt; 70% chance of rain
+					<small>&gt; 70% </small>
 
 					</p>
 
+					<p class="">Risk of thunderstorms</p>
+                   
+
+					<p class="wind text-center">
+
+					Humidex: <b>23 </b>
+
+					</p>
+					
 
 
 					<p class="wind text-center">
 
-					Wind 15 km/h south
+					Wind: <b>South 15 km/h  </b>
 
 					</p>
 
@@ -828,21 +862,27 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-					<p class="">Risk of thunderstorms</p>
-
-
-
+					
 					<p class="lop text-center" title="More than 70% chance of rain">
 
-					&gt; 70% chance of rain
+					<small>&gt; 70% </small>
 
 					</p>
 
+					<p class="">Risk of thunderstorms</p>
+                   
+
+					<p class="wind text-center">
+
+					Humidex: <b>23 </b>
+
+					</p>
+					
 
 
 					<p class="wind text-center">
 
-					Wind 15 km/h south
+					Wind: <b>South 15 km/h  </b>
 
 					</p>
 
@@ -868,21 +908,27 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-					<p class="">Risk of thunderstorms</p>
-
-
-
+					
 					<p class="lop text-center" title="More than 70% chance of rain">
 
-					&gt; 70% chance of rain
+					<small>&gt; 70% </small>
 
 					</p>
 
+					<p class="">Risk of thunderstorms</p>
+                   
+
+					<p class="wind text-center">
+
+					Humidex: <b>* </b>
+
+					</p>
+					
 
 
 					<p class="wind text-center">
 
-					Wind 20 km/h south
+					Wind: <b>South 20 km/h  </b>
 
 					</p>
 
@@ -908,21 +954,26 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-					<p class="">Risk of thunderstorms</p>
-
-
-
 					<p class="lop text-center" title="More than 70% chance of rain">
 
-					&gt; 70% chance of rain
+					<small>&gt; 70% </small>
 
 					</p>
 
+					<p class="">Risk of thunderstorms</p>
+                   
+
+					<p class="wind text-center">
+
+					Humidex: <b>* </b>
+
+					</p>
+					
 
 
 					<p class="wind text-center">
 
-					Wind 20 km/h south
+					Wind: <b>South 20 km/h  </b>
 
 					</p>
 
@@ -948,21 +999,26 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-					<p class="">Chance of showers</p>
-
-
-
 					<p class="lop text-center" title="More than 70% chance of rain">
 
-					&gt; 70% chance of rain
+					<small>&gt; 70% </small>
 
 					</p>
 
+					<p class="">Chance of showers</p>
+                   
+
+					<p class="wind text-center">
+
+					Humidex: <b>* </b>
+
+					</p>
+					
 
 
 					<p class="wind text-center">
 
-					Wind 20 km/h south
+					Wind: <b>South 20 km/h  </b>
 
 					</p>
 
@@ -988,24 +1044,28 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-					<p class="">Chance of showers</p>
-
-
-
 					<p class="lop text-center" title="More than 70% chance of rain">
 
-					&gt; 70% chance of rain
+					<small>&gt; 70% </small>
 
 					</p>
 
+					<p class="">Chance of showers</p>
+                   
+
+					<p class="wind text-center">
+
+					Humidex: <b>* </b>
+
+					</p>
+					
 
 
 					<p class="wind text-center">
 
-					Wind 20 km/h south
+					Wind: <b>South 20 km/h  </b>
 
 					</p>
-
 
 
 			   </td>
@@ -1028,21 +1088,26 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-					<p class="">Chance of showers</p>
-
-
-
 					<p class="lop text-center" title="More than 70% chance of rain">
 
-					&gt; 70% chance of rain
+					<small>&gt; 70% </small>
 
 					</p>
 
+					<p class="">Chance of showers</p>
+                   
+
+					<p class="wind text-center">
+
+					Humidex: <b>* </b>
+
+					</p>
+					
 
 
 					<p class="wind text-center">
 
-					Wind 20 km/h south
+					Wind: <b>South 20 km/h  </b>
 
 					</p>
 
@@ -1068,21 +1133,26 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-					<p class="">Risk of thunderstorms</p>
-
-
-
 					<p class="lop text-center" title="More than 70% chance of rain">
 
-					&gt; 70% chance of rain
+					<small>&gt; 70% </small>
 
 					</p>
 
+					<p class="">Risk of thunderstorms</p>
+                   
+
+					<p class="wind text-center">
+
+					Humidex: <b>* </b>
+
+					</p>
+					
 
 
 					<p class="wind text-center">
 
-					Wind 20 km/h south
+					Wind: <b>South 20 km/h  </b>
 
 					</p>
 
@@ -1108,24 +1178,28 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-					<p class="">Risk of thunderstorms</p>
-
-
-
 					<p class="lop text-center" title="More than 70% chance of rain">
 
-					&gt; 70% chance of rain
+					<small>&gt; 70% </small>
 
 					</p>
 
+					<p class="">Risk of thunderstorms</p>
+                   
+
+					<p class="wind text-center">
+
+					Humidex: <b>* </b>
+
+					</p>
+					
 
 
 					<p class="wind text-center">
 
-					Wind 20 km/h south
+					Wind: <b>South 20 km/h  </b>
 
 					</p>
-
 
 
 			   </td>
@@ -1148,21 +1222,26 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-					<p class="">Partly cloudy</p>
+					<p class="lop text-center" title="More than 70% chance of rain">
 
-
-
-					<p class="lop text-center" title="0% chance of rain">
-
-					No precipitation
+					<small>No precipitation </small>
 
 					</p>
 
+					<p class="">Partly cloudy</p>
+                   
+
+					<p class="wind text-center">
+
+					Humidex: <b>* </b>
+
+					</p>
+					
 
 
 					<p class="wind text-center">
 
-					Wind 20 km/h south
+					Wind: <b>South 20 km/h  </b>
 
 					</p>
 
@@ -1188,23 +1267,29 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-					<p class="">Partly cloudy</p>
+					<p class="lop text-center" title="More than 70% chance of rain">
 
-
-
-					<p class="lop text-center" title="0% chance of rain">
-
-					No precipitation
+					<small>No precipitation </small>
 
 					</p>
 
+					<p class="">Partly cloudy</p>
+                   
+
+					<p class="wind text-center">
+
+					Humidex: <b>* </b>
+
+					</p>
+					
 
 
 					<p class="wind text-center">
 
-					Wind 20 km/h south
+					Wind: <b>South 20 km/h  </b>
 
 					</p>
+
 
 
 
@@ -1228,23 +1313,29 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-					<p class="">Mostly cloudy</p>
+					<p class="lop text-center" title="More than 70% chance of rain">
 
-
-
-					<p class="lop text-center" title="0% chance of rain">
-
-					No precipitation
+					<small>No precipitation </small>
 
 					</p>
 
+					<p class="">Partly cloudy</p>
+                   
+
+					<p class="wind text-center">
+
+					Humidex: <b>* </b>
+
+					</p>
+					
 
 
 					<p class="wind text-center">
 
-					Wind 20 km/h south
+					Wind: <b>South 20 km/h  </b>
 
 					</p>
+
 
 
 
@@ -1474,7 +1565,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         <section>
           <details class="wxo-detailedfore">
             <summary class="blackfont hidden-print">
-              <h3 class="h5"><span class="wb-inv">Detailed forecast</span>Detailed forecast</h3>
+              <h3 class="h5"><span class="wb-inv">Detailed forecast</span>Detailed forecast - issued: 5:00 AM EST Thursday 24 August 2017</h3>
             </summary>
             <table class="table mrgn-bttm-md mrgn-tp-md textforecast">
               <thead>
@@ -1594,9 +1685,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
        <!-- hide <a class="btn btn-default btn-sm btn-block" href="../../../weather/radar/xft-index_e.html">Weather radar</a>
       </li> -->
-      <li>
-        <a class="btn btn-default btn-sm btn-block" href="../../../weather/lightning/ONT-index_e.html">Lightning</a>
-      </li>
+  
 	   <li>
         <a class="btn btn-default btn-sm btn-block" href="../../../weather/satellite/index_e.html">Satellite</a>
       </li>
@@ -1613,9 +1702,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         </summary>
         <section>
      
+<h3 class="h5 mrgn-lft-md hidden-print"><span class="wb-inv" >Detailed Forecast</span>Issued: 5:00 AM EST Thursday 24 August 2017</h3>
 
-
-		   <div class="row" style="background-color: yellow !important; padding-top: 10px; border-left: solid 5px yellow;">
+		   <div class="row" style="background-color: yellow !important; padding-top: 10px; border-left: solid 5px yellow; border-top: solid 1px #ccc;">
           <a href="../../../weather/warnings/ottawa-report_e.html">
 
             <div style="background-color: yellow !important; text-align: center !important; padding-bottom: 5px;">
@@ -1944,7 +2033,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
           <li>
         <a class="btn btn-default btn-sm btn-block" a href="../../../weather/forecast/hourly/on-118_metric_e.html">Hourly forecast</a>
       </li>
-
+   <li>
+        <a class="btn btn-default btn-sm btn-block" href="../../../weather/lightning/ONT-index_e.html">Lightning</a>
+      </li>
 
       <li>
         <a class="btn btn-default btn-sm btn-block" href="../../../weather/warnings/index_e.html">Alerts</a>
